@@ -1,4 +1,4 @@
-name: LVS Tool Availability Check
+name: Sky130 KLayout LVS
 
 on:
   workflow_dispatch:
@@ -7,22 +7,66 @@ permissions:
   contents: read
 
 jobs:
-  check-tools:
+  lvs:
     runs-on: ubuntu-24.04
-    steps:
-      - name: Check ORFS tools and Sky130 LVS files
-        run: |
-          docker run --rm openroad/orfs bash -lc '
-            echo "=== TOOL VERSIONS ==="
-            for tool in klayout magic netgen yosys openroad; do
-              echo "--- $tool ---"
-              command -v "$tool" || true
-            done
+    timeout-minutes: 120
 
-            echo
-            echo "=== SKY130 LVS FILES ==="
-            find /OpenROAD-flow-scripts/flow/platforms/sky130hd \
-              -maxdepth 3 -type f \
-              \( -name "*.cdl" -o -name "*.lylvs" -o -name "*.lib" \) \
-              -print 2>/dev/null | sort
-          '
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Sky130 RTL-to-GDS and LVS
+        run: |
+          docker run --rm \
+            -v "${GITHUB_WORKSPACE}:/work" \
+            -w /work \
+            openroad/orfs \
+            bash -lc '
+              set -euo pipefail
+              source /OpenROAD-flow-scripts/env.sh
+
+              design_dir=/OpenROAD-flow-scripts/flow/designs/sky130hd/spi_timer_top
+              mkdir -p "$design_dir"
+
+              cp /work/physical_design/openroad/config.mk "$design_dir/config.mk"
+              cp /work/physical_design/openroad/constraint.sdc "$design_dir/constraint.sdc"
+
+              cd /OpenROAD-flow-scripts/flow
+              config=./designs/sky130hd/spi_timer_top/config.mk
+
+              set +e
+              make DESIGN_CONFIG="$config" NUM_CORES=4
+              flow_status=$?
+
+              if [ "$flow_status" -eq 0 ]; then
+                make DESIGN_CONFIG="$config" NUM_CORES=4 lvs
+                lvs_status=$?
+              else
+                lvs_status=$flow_status
+              fi
+              set -e
+
+              out=/work/physical_design/lvs_output
+              mkdir -p "$out"
+
+              for stage in reports logs results; do
+                src="$stage/sky130hd/spi_timer_top/base"
+                if [ -d "$src" ]; then
+                  cp -a "$src" "$out/$stage"
+                fi
+              done
+
+              echo "Physical design status: $flow_status"
+              echo "LVS command status: $lvs_status"
+
+              exit "$lvs_status"
+            '
+
+      - name: Upload LVS reports and results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: spi-timer-sky130-lvs-results
+          path: physical_design/lvs_output/
+          if-no-files-found: warn
+          retention-days: 14
