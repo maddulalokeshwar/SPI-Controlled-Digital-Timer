@@ -1,0 +1,21 @@
+name: Sky130 Timing Corner Discovery
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  discover-corners:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Inspect Sky130 HD timing libraries
+        run: |
+          docker run --rm openroad/orfs bash -lc '
+            set -e
+            echo "=== Sky130 HD Liberty files ==="
+            find /OpenROAD-flow-scripts/flow/platforms/sky130hd \
+              -type f \( -name "*.lib" -o -name "*.lib.gz" \) \
+              | sort
+          '
