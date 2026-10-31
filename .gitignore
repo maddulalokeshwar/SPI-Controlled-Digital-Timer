@@ -1,0 +1,7 @@
+build/
+*.vcd
+*.log
+*.jou
+*.str
+vivado_proj/
+.cache/
