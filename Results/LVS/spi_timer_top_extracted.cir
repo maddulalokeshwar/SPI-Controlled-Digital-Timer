@@ -1,0 +1,3066 @@
+* Extracted by KLayout on : 31/10/2026 12:21
+
+.SUBCKT spi_timer_top VDD VNB|VSS rst_n running synth_1 synth_10 synth_100
++ synth_101 synth_102 synth_103 synth_104 synth_105 synth_106 synth_107
++ synth_108 synth_109 synth_11 synth_110 synth_111 synth_112 synth_113
++ synth_114 synth_115 synth_116 synth_117 synth_118 synth_119 synth_12
++ synth_120 synth_121 synth_122 synth_123 synth_124 synth_125 synth_126
++ synth_127 synth_128 synth_129 synth_13 synth_130 synth_131 synth_132
++ synth_133 synth_134 synth_135 synth_136 synth_137 synth_138 synth_139
++ synth_14 synth_140 synth_141 synth_142 synth_143 synth_144 synth_145
++ synth_146 synth_147 synth_148 synth_149 synth_15 synth_150 synth_151
++ synth_152 synth_153 synth_154 synth_155 synth_156 synth_157 synth_158
++ synth_159 synth_16 synth_160 synth_161 synth_162 synth_163 synth_164
++ synth_165 synth_166 synth_167 synth_168 synth_169 synth_17 synth_170
++ synth_171 synth_172 synth_173 synth_174 synth_175 synth_176 synth_177
++ synth_178 synth_179 synth_18 synth_180 synth_181 synth_182 synth_183
++ synth_184 synth_185 synth_186 synth_187 synth_188 synth_189 synth_19
++ synth_190 synth_191 synth_192 synth_193 synth_194 synth_195 synth_196
++ synth_197 synth_198 synth_199 synth_2 synth_20 synth_200 synth_201 synth_202
++ synth_203 synth_204 synth_205 synth_206 synth_207 synth_208 synth_209
++ synth_21 synth_210 synth_211 synth_212 synth_213 synth_214 synth_215
++ synth_216 synth_217 synth_218 synth_219 synth_22 synth_220 synth_221
++ synth_222 synth_223 synth_224 synth_225 synth_226 synth_227 synth_228
++ synth_229 synth_23 synth_230 synth_231 synth_232 synth_233 synth_234
++ synth_235 synth_236 synth_237 synth_238 synth_239 synth_24 synth_240
++ synth_241 synth_242 synth_243 synth_244 synth_245 synth_246 synth_247
++ synth_248 synth_249 synth_25 synth_250 synth_251 synth_252 synth_253
++ synth_254 synth_255 synth_256 synth_257 synth_258 synth_259 synth_26
++ synth_260 synth_261 synth_262 synth_263 synth_264 synth_265 synth_266
++ synth_267 synth_268 synth_269 synth_27 synth_270 synth_271 synth_272
++ synth_273 synth_274 synth_275 synth_276 synth_277 synth_278 synth_279
++ synth_28 synth_280 synth_281 synth_282 synth_283 synth_284 synth_285
++ synth_286 synth_287 synth_288 synth_289 synth_29 synth_290 synth_291
++ synth_292 synth_293 synth_294 synth_295 synth_296 synth_297 synth_298
++ synth_299 synth_3 synth_30 synth_300 synth_301 synth_302 synth_303 synth_304
++ synth_305 synth_306 synth_307 synth_308 synth_309 synth_31 synth_310
++ synth_311 synth_312 synth_313 synth_314 synth_315 synth_316 synth_317
++ synth_318 synth_319 synth_32 synth_320 synth_321 synth_322 synth_323
++ synth_324 synth_325 synth_326 synth_327 synth_328 synth_329 synth_33
++ synth_330 synth_331 synth_332 synth_333 synth_334 synth_335 synth_336
++ synth_337 synth_338 synth_339 synth_34 synth_340 synth_341 synth_342
++ synth_343 synth_344 synth_345 synth_346 synth_347 synth_348 synth_349
++ synth_35 synth_350 synth_351 synth_352 synth_353 synth_354 synth_355
++ synth_356 synth_357 synth_358 synth_359 synth_36 synth_360 synth_361
++ synth_362 synth_363 synth_364 synth_365 synth_366 synth_367 synth_368
++ synth_369 synth_37 synth_370 synth_371 synth_372 synth_373 synth_374
++ synth_375 synth_376 synth_377 synth_378 synth_379 synth_38 synth_380
++ synth_381 synth_382 synth_383 synth_384 synth_385 synth_386 synth_387
++ synth_388 synth_389 synth_39 synth_390 synth_391 synth_392 synth_393
++ synth_394 synth_395 synth_396 synth_397 synth_398 synth_399 synth_4 synth_40
++ synth_400 synth_401 synth_402 synth_403 synth_404 synth_405 synth_406
++ synth_407 synth_408 synth_409 synth_41 synth_410 synth_411 synth_412
++ synth_413 synth_414 synth_415 synth_416 synth_417 synth_418 synth_419
++ synth_42 synth_420 synth_421 synth_422 synth_423 synth_424 synth_425
++ synth_426 synth_427 synth_428 synth_429 synth_43 synth_430 synth_431
++ synth_432 synth_433 synth_434 synth_435 synth_436 synth_437 synth_438
++ synth_439 synth_44 synth_440 synth_441 synth_442 synth_443 synth_444
++ synth_445 synth_446 synth_447 synth_448 synth_449 synth_45 synth_450
++ synth_451 synth_452 synth_453 synth_454 synth_455 synth_456 synth_457
++ synth_458 synth_459 synth_46 synth_460 synth_461 synth_462 synth_463
++ synth_464 synth_465 synth_466 synth_467 synth_468 synth_469 synth_47
++ synth_470 synth_471 synth_472 synth_473 synth_474 synth_475 synth_476
++ synth_477 synth_478 synth_479 synth_48 synth_480 synth_481 synth_482
++ synth_483 synth_484 synth_485 synth_486 synth_487 synth_488 synth_489
++ synth_49 synth_490 synth_491 synth_492 synth_493 synth_494 synth_495
++ synth_496 synth_497 synth_498 synth_499 synth_5 synth_50 synth_500 synth_501
++ synth_502 synth_503 synth_504 synth_505 synth_506 synth_507 synth_508
++ synth_509 synth_51 synth_510 synth_511 synth_512 synth_513 synth_514
++ synth_515 synth_516 synth_517 synth_518 synth_519 synth_52 synth_520
++ synth_521 synth_522 synth_523 synth_524 synth_525 synth_526 synth_527
++ synth_528 synth_529 synth_53 synth_530 synth_531 synth_532 synth_533
++ synth_534 synth_535 synth_536 synth_537 synth_538 synth_539 synth_54
++ synth_540 synth_541 synth_542 synth_543 synth_544 synth_545 synth_546
++ synth_547 synth_548 synth_549 synth_55 synth_550 synth_551 synth_552
++ synth_553 synth_554 synth_555 synth_556 synth_557 synth_558 synth_559
++ synth_56 synth_560 synth_561 synth_562 synth_563 synth_564 synth_565
++ synth_566 synth_567 synth_568 synth_569 synth_57 synth_570 synth_571
++ synth_572 synth_573 synth_574 synth_575 synth_576 synth_577 synth_578
++ synth_579 synth_58 synth_580 synth_581 synth_582 synth_583 synth_584
++ synth_585 synth_586 synth_587 synth_588 synth_589 synth_59 synth_590
++ synth_591 synth_592 synth_593 synth_594 synth_595 synth_596 synth_597
++ synth_598 synth_599 synth_6 synth_60 synth_600 synth_601 synth_602 synth_603
++ synth_604 synth_605 synth_606 synth_607 synth_608 synth_609 synth_61
++ synth_610 synth_611 synth_612 synth_613 synth_614 synth_615 synth_616
++ synth_617 synth_618 synth_619 synth_62 synth_620 synth_621 synth_622
++ synth_623 synth_624 synth_625 synth_626 synth_627 synth_628 synth_629
++ synth_63 synth_630 synth_631 synth_632 synth_633 synth_634 synth_635
++ synth_636 synth_637 synth_638 synth_639 synth_64 synth_640 synth_641
++ synth_642 synth_643 synth_644 synth_645 synth_646 synth_647 synth_648
++ synth_649 synth_65 synth_650 synth_651 synth_652 synth_653 synth_654
++ synth_655 synth_656 synth_657 synth_658 synth_659 synth_66 synth_660
++ synth_661 synth_662 synth_663 synth_664 synth_665 synth_666 synth_667
++ synth_668 synth_669 synth_67 synth_670 synth_671 synth_672 synth_673
++ synth_674 synth_675 synth_676 synth_677 synth_68 synth_69 synth_7 synth_70
++ synth_71 synth_72 synth_73 synth_74 synth_75 synth_76 synth_77 synth_78
++ synth_79 synth_8 synth_80 synth_81 synth_82 synth_83 synth_84 synth_85
++ synth_86 synth_87 synth_88 synth_89 synth_9 synth_90 synth_91 synth_92
++ synth_93 synth_94 synth_95 synth_96 synth_97 synth_98 synth_99
+X$26 VDD synth_602 synth_635 synth_654 synth_655 synth_626 synth_660 VDD
++ VNB|VSS VNB|VSS sky130_fd_sc_hd__a221o_1
+X$27 VDD synth_480 synth_485 synth_179 synth_603 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nand3b_1
+X$28 VDD synth_447 synth_448 synth_468 synth_82 synth_79 VDD synth_457 VNB|VSS
++ VNB|VSS sky130_fd_sc_hd__a311oi_1
+X$29 VDD synth_364 synth_45 synth_380 synth_312 synth_114 VDD synth_404 VNB|VSS
++ VNB|VSS sky130_fd_sc_hd__a311oi_1
+X$30 VDD synth_305 synth_82 synth_511 synth_496 synth_516 VDD synth_515 VNB|VSS
++ VNB|VSS sky130_fd_sc_hd__a311oi_1
+X$31 VDD synth_445 VDD VNB|VSS VNB|VSS sky130_fd_sc_hd__clkinvlp_4
+X$32 VNB|VSS synth_221 synth_210 synth_290 synth_340 synth_199 synth_295
++ synth_308 VDD VDD VNB|VSS sky130_fd_sc_hd__mux4_2
+X$33 VNB|VSS synth_185 synth_140 synth_45 synth_497 synth_199 synth_431
++ synth_473 VDD VDD VNB|VSS sky130_fd_sc_hd__mux4_2
+X$34 VDD synth_620 synth_611 synth_615 synth_612 synth_622 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor4bb_1
+X$35 VDD synth_378 synth_349 synth_160 synth_379 synth_408 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__or4_1
+X$36 VDD synth_207 synth_98 synth_221 synth_235 synth_272 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__or4_1
+X$37 VDD synth_89 synth_272 synth_211 synth_338 synth_310 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__or4_1
+X$38 VDD synth_304 synth_219 synth_160 synth_356 synth_324 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__or4_1
+X$39 VDD synth_417 synth_355 synth_320 synth_414 synth_420 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__or4_1
+X$40 VNB|VSS synth_493 synth_424 synth_460 synth_307 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$41 VNB|VSS synth_201 synth_209 synth_142 synth_210 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$42 VNB|VSS synth_500 synth_439 synth_474 synth_480 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$43 VNB|VSS synth_598 synth_582 synth_567 synth_259 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$44 VNB|VSS synth_564 synth_555 synth_460 synth_140 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$45 VNB|VSS synth_544 synth_522 synth_502 synth_259 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$46 VNB|VSS synth_548 synth_478 synth_524 synth_307 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$47 VNB|VSS synth_331 synth_172 synth_318 synth_307 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$48 VNB|VSS synth_395 synth_371 synth_352 synth_259 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$49 VNB|VSS synth_435 synth_394 synth_424 synth_259 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$50 VNB|VSS synth_589 synth_199 synth_572 synth_307 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$51 VNB|VSS synth_562 synth_425 synth_461 synth_307 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$52 VNB|VSS synth_351 synth_345 synth_394 synth_259 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$53 VNB|VSS synth_518 synth_478 synth_225 synth_259 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$54 VNB|VSS synth_240 synth_225 synth_172 synth_259 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$55 VNB|VSS synth_546 synth_425 synth_478 synth_259 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$56 VNB|VSS synth_581 synth_567 synth_480 synth_259 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$57 VDD synth_520 synth_622 synth_567 synth_582 synth_480 VDD synth_600
++ VNB|VSS VNB|VSS sky130_fd_sc_hd__o311ai_0
+X$58 VNB|VSS synth_552 synth_490 synth_522 synth_259 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$59 VNB|VSS synth_409 synth_140 synth_410 synth_307 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$60 VNB|VSS synth_498 synth_502 synth_452 synth_259 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$61 VNB|VSS synth_373 synth_207 synth_341 synth_199 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$62 VNB|VSS synth_472 synth_462 synth_378 synth_140 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$63 VNB|VSS synth_569 synth_585 synth_461 synth_140 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$64 VNB|VSS synth_601 synth_480 synth_499 synth_307 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$65 VNB|VSS synth_381 synth_352 synth_345 synth_259 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$66 VNB|VSS synth_458 synth_452 synth_371 synth_259 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$67 VNB|VSS synth_453 synth_424 synth_425 synth_259 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$68 VNB|VSS synth_346 synth_225 synth_308 synth_307 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$69 VNB|VSS synth_280 synth_210 synth_316 synth_259 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$70 VDD synth_146 synth_531 synth_574 VDD synth_527 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$71 VDD synth_242 synth_243 synth_244 VDD synth_226 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$72 VDD synth_308 synth_82 synth_90 VDD synth_337 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$73 VDD synth_305 synth_542 synth_575 VDD synth_559 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$74 VDD synth_559 synth_565 synth_556 synth_82 synth_305 synth_588 VDD VNB|VSS
++ VNB|VSS sky130_fd_sc_hd__o221ai_1
+X$75 VDD synth_469 synth_243 synth_441 VDD synth_455 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$76 VDD synth_554 synth_82 synth_90 VDD synth_556 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$77 VDD synth_423 synth_243 synth_306 VDD synth_291 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$78 VDD synth_211 synth_237 synth_221 VDD synth_266 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$79 VDD synth_591 synth_512 synth_659 VDD synth_671 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$80 VDD synth_591 synth_540 synth_613 VDD synth_619 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$81 VDD synth_479 synth_476 synth_464 VDD synth_466 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$82 VDD synth_290 synth_82 synth_90 VDD synth_265 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$83 VDD synth_354 synth_82 synth_90 VDD synth_350 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$84 VDD synth_398 synth_243 synth_283 VDD synth_282 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$85 VDD synth_313 synth_47 synth_314 VDD synth_330 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$86 VDD synth_460 synth_82 synth_90 VDD synth_477 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$87 VDD synth_669 synth_591 synth_668 VDD synth_662 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$88 VDD synth_572 synth_82 synth_90 VDD synth_561 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$89 VDD synth_440 synth_243 synth_442 VDD synth_421 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$90 VDD synth_450 synth_433 synth_451 VDD synth_531 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$91 VDD synth_318 synth_82 synth_90 VDD synth_325 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$92 VDD synth_333 synth_332 synth_38 VDD synth_314 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$93 VDD synth_372 synth_82 synth_90 VDD synth_459 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$94 VDD synth_480 synth_576 synth_583 VDD synth_590 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$95 VDD synth_605 VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__clkinv_4
+X$96 VDD synth_171 synth_47 synth_196 VDD synth_173 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$97 VDD synth_320 synth_414 synth_400 VDD synth_429 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$98 VDD synth_591 synth_645 synth_663 VDD synth_661 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$99 VDD synth_480 synth_495 synth_541 VDD synth_484 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$100 VDD synth_484 synth_199 synth_485 synth_201 synth_480 synth_456 synth_540
++ VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__a222oi_1
+X$101 VDD synth_591 synth_646 synth_642 VDD synth_653 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$102 VDD synth_320 synth_414 synth_431 VDD synth_448 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$103 VDD synth_591 synth_508 synth_623 VDD synth_632 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$104 VDD synth_385 synth_243 synth_386 VDD synth_365 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$105 VDD synth_320 synth_375 synth_341 VDD synth_370 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$106 VDD synth_199 synth_392 synth_393 VDD synth_391 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$107 VDD synth_513 synth_82 synth_90 VDD synth_516 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$108 VDD synth_259 synth_610 synth_615 synth_611 VNB|VSS VDD synth_587 VNB|VSS
++ sky130_fd_sc_hd__and4_1
+X$109 VDD synth_403 synth_390 synth_487 synth_463 VNB|VSS VDD synth_533 VNB|VSS
++ sky130_fd_sc_hd__and4_1
+X$110 VDD synth_463 synth_474 synth_475 synth_321 VDD VNB|VSS synth_433 VNB|VSS
++ sky130_fd_sc_hd__or4b_1
+X$111 VDD synth_227 synth_105 synth_313 synth_258 VNB|VSS VDD synth_332 VNB|VSS
++ sky130_fd_sc_hd__and4_1
+X$112 VDD synth_297 synth_230 synth_180 synth_167 VNB|VSS VDD synth_403 VNB|VSS
++ sky130_fd_sc_hd__and4_1
+X$113 VDD synth_612 synth_611 synth_664 synth_665 VDD VNB|VSS synth_635 VNB|VSS
++ sky130_fd_sc_hd__nand4bb_1
+X$114 VDD synth_371 synth_573 synth_394 synth_490 VDD VNB|VSS synth_491 VNB|VSS
++ sky130_fd_sc_hd__nand4bb_1
+X$115 VDD synth_160 synth_159 synth_149 synth_168 synth_135 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o211ai_1
+X$116 VDD synth_665 synth_612 synth_664 synth_597 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3b_1
+X$117 VDD synth_125 synth_221 synth_183 synth_248 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3b_1
+X$118 VDD synth_345 synth_352 synth_353 synth_141 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3b_1
+X$119 VDD synth_268 synth_146 synth_144 synth_303 synth_286 synth_269 VNB|VSS
++ VDD VNB|VSS sky130_fd_sc_hd__a32oi_1
+X$120 VDD synth_270 synth_146 synth_251 synth_248 synth_144 synth_250 VNB|VSS
++ VDD VNB|VSS sky130_fd_sc_hd__a32oi_1
+X$121 VDD synth_305 synth_114 synth_539 synth_390 VDD synth_551 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a211o_1
+X$122 VDD synth_114 synth_336 synth_362 synth_382 VDD synth_361 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a211o_1
+X$123 VDD synth_534 synth_459 synth_305 synth_558 VDD synth_578 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a211o_1
+X$124 VDD synth_556 synth_450 synth_390 synth_542 VDD synth_565 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a211o_1
+X$125 VDD synth_135 synth_114 synth_203 synth_144 VDD synth_202 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a211o_1
+X$126 VDD synth_510 synth_480 synth_591 synth_550 VNB|VSS synth_602 VDD VNB|VSS
++ sky130_fd_sc_hd__a211oi_1
+X$127 VDD synth_132 synth_216 synth_247 synth_350 VNB|VSS synth_228 VDD VNB|VSS
++ sky130_fd_sc_hd__a211oi_1
+X$128 VDD synth_521 synth_199 synth_480 synth_507 VNB|VSS synth_509 VDD VNB|VSS
++ sky130_fd_sc_hd__a211oi_1
+X$129 VDD synth_149 synth_180 synth_114 synth_89 VNB|VSS synth_298 VDD VNB|VSS
++ sky130_fd_sc_hd__a211oi_1
+X$130 VDD synth_319 synth_199 synth_210 synth_284 VNB|VSS synth_302 VDD VNB|VSS
++ sky130_fd_sc_hd__a211oi_1
+X$131 VDD synth_554 synth_524 synth_140 synth_576 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__mux2i_1
+X$132 VDD synth_616 synth_469 synth_396 synth_618 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__mux2i_1
+X$133 VDD synth_220 synth_271 synth_160 synth_288 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__mux2i_1
+X$134 VDD synth_260 synth_223 synth_224 synth_241 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__mux2i_1
+X$135 VDD synth_236 synth_207 synth_237 synth_233 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__mux2i_1
+X$136 VDD synth_494 synth_462 synth_549 synth_543 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__mux2i_1
+X$137 VDD synth_483 synth_410 synth_140 synth_495 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__mux2i_1
+X$138 VDD synth_372 synth_318 synth_140 synth_319 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__mux2i_1
+X$139 VDD synth_607 synth_572 synth_140 synth_606 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__mux2i_1
+X$140 VDD synth_513 synth_499 synth_140 synth_521 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__mux2i_1
+X$141 VDD synth_570 synth_535 synth_480 synth_568 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__mux2i_1
+X$142 VDD synth_107 synth_90 synth_82 synth_135 synth_161 VDD synth_134 VNB|VSS
++ VNB|VSS sky130_fd_sc_hd__o2111ai_1
+X$143 VDD synth_82 synth_90 synth_235 synth_288 synth_219 VDD synth_263 VNB|VSS
++ VNB|VSS sky130_fd_sc_hd__o2111ai_1
+X$144 VDD synth_208 synth_218 synth_45 synth_220 synth_160 VDD synth_237
++ VNB|VSS VNB|VSS sky130_fd_sc_hd__o2111ai_1
+X$145 VDD synth_270 synth_243 synth_300 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__and2_1
+X$146 VDD synth_140 synth_141 synth_120 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__and2_1
+X$147 VDD synth_172 synth_141 synth_154 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__and2_1
+X$148 VDD synth_227 synth_94 synth_278 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__and2_1
+X$149 VDD synth_199 synth_141 synth_175 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__and2_1
+X$150 VDD synth_268 synth_243 synth_317 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__and2_1
+X$151 VDD synth_210 synth_141 synth_104 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__and2_1
+X$152 VDD synth_225 synth_141 synth_214 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__and2_1
+X$153 VDD synth_397 synth_396 synth_398 VNB|VSS VDD synth_405 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$154 VDD synth_234 synth_82 synth_219 VNB|VSS VDD synth_247 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$155 VDD synth_23 synth_180 synth_149 VNB|VSS VDD synth_151 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$156 VNB|VSS synth_169 synth_177 synth_96 synth_93 synth_136 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__or4_4
+X$157 VDD synth_83 synth_38 synth_261 VNB|VSS VDD synth_223 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$158 VDD synth_553 synth_396 synth_385 VNB|VSS VDD synth_563 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$159 VDD synth_644 synth_617 synth_597 VNB|VSS VDD synth_633 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$160 VDD synth_258 synth_38 synth_278 VNB|VSS VDD synth_281 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$161 VDD synth_509 synth_480 synth_497 VNB|VSS VDD synth_508 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$162 VDD synth_281 synth_258 synth_279 VNB|VSS VDD synth_299 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$163 VDD synth_446 synth_396 synth_423 VNB|VSS VDD synth_454 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$164 VDD synth_199 synth_140 synth_354 VNB|VSS VDD synth_507 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$165 VDD synth_302 synth_210 synth_292 VNB|VSS VDD synth_646 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$166 VDD synth_79 synth_616 synth_146 VNB|VSS VDD synth_608 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$167 VDD synth_568 synth_140 synth_389 VNB|VSS VDD synth_645 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$168 VDD synth_79 synth_517 synth_503 VNB|VSS VDD synth_528 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$169 VDD synth_83 synth_38 synth_277 VNB|VSS VDD synth_279 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$170 VDD synth_199 synth_140 synth_249 VNB|VSS VDD synth_284 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$171 VDD synth_591 synth_603 synth_594 VNB|VSS VDD synth_614 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$172 VDD synth_390 synth_401 synth_411 VNB|VSS VDD synth_430 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$173 VDD synth_232 synth_82 synth_233 VNB|VSS VDD synth_231 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$174 VDD synth_523 synth_396 synth_440 VNB|VSS VDD synth_530 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$175 VDD synth_471 synth_396 synth_242 VNB|VSS VDD synth_506 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$176 VDD synth_79 synth_505 synth_488 VNB|VSS VDD synth_492 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$177 VDD synth_61 VDD VNB|VSS VNB|VSS sky130_fd_sc_hd__inv_6
+X$178 VDD synth_152 VDD VNB|VSS VNB|VSS sky130_fd_sc_hd__inv_6
+X$179 VDD synth_4 VDD VNB|VSS VNB|VSS sky130_fd_sc_hd__inv_6
+X$180 VDD synth_198 VDD VNB|VSS VNB|VSS sky130_fd_sc_hd__inv_6
+X$181 VDD synth_467 VDD VNB|VSS VNB|VSS sky130_fd_sc_hd__inv_6
+X$182 VDD synth_485 synth_270 synth_564 synth_199 synth_480 VDD VNB|VSS
++ synth_550 VNB|VSS sky130_fd_sc_hd__a221oi_1
+X$183 VNB|VSS synth_501 VDD VDD VNB|VSS sky130_fd_sc_hd__inv_8
+X$184 VNB|VSS synth_162 VDD VDD VNB|VSS sky130_fd_sc_hd__inv_8
+X$185 VNB|VSS synth_294 VDD VDD VNB|VSS sky130_fd_sc_hd__inv_8
+X$186 VNB|VSS synth_254 VDD VDD VNB|VSS sky130_fd_sc_hd__inv_8
+X$187 VDD synth_417 synth_320 synth_414 synth_355 VDD VNB|VSS synth_418 VNB|VSS
++ sky130_fd_sc_hd__o31ai_1
+X$188 VDD synth_79 synth_132 synth_250 synth_263 VDD VNB|VSS synth_246 VNB|VSS
++ sky130_fd_sc_hd__o31ai_1
+X$189 VDD synth_79 synth_132 synth_133 synth_134 VDD VNB|VSS synth_97 VNB|VSS
++ sky130_fd_sc_hd__o31ai_1
+X$190 VDD synth_219 synth_160 synth_356 synth_304 VDD VNB|VSS synth_323 VNB|VSS
++ sky130_fd_sc_hd__o31ai_1
+X$191 VDD synth_349 synth_160 synth_379 synth_378 VDD VNB|VSS synth_384 VNB|VSS
++ sky130_fd_sc_hd__o31ai_1
+X$192 VDD synth_79 synth_132 synth_269 synth_113 VDD VNB|VSS synth_124 VNB|VSS
++ sky130_fd_sc_hd__o31ai_1
+X$193 VDD synth_114 synth_135 synth_144 synth_145 VDD synth_178 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a211o_1
+X$194 VDD synth_417 synth_355 synth_304 synth_388 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__or3_1
+X$195 VDD synth_221 synth_211 synth_237 synth_267 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__or3_1
+X$196 VDD synth_341 synth_320 synth_375 synth_369 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__or3_1
+X$197 VDD synth_369 synth_370 synth_538 synth_82 synth_79 VDD synth_335 VNB|VSS
++ VNB|VSS sky130_fd_sc_hd__a311oi_1
+X$198 VDD synth_207 synth_221 synth_211 synth_139 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__or3_1
+X$199 VDD synth_451 synth_462 synth_450 synth_376 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__or3_1
+X$200 VDD synth_580 synth_635 synth_600 synth_591 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__or3_1
+X$201 VDD synth_311 synth_312 synth_382 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nand2b_1
+X$202 VDD synth_45 synth_123 synth_126 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nand2b_1
+X$203 VNB|VSS synth_149 synth_190 synth_191 synth_35 synth_212 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__nor4_2
+X$204 VNB|VSS synth_99 synth_501 VDD VDD VNB|VSS sky130_fd_sc_hd__clkbuf_16
+X$205 VNB|VSS synth_99 synth_294 VDD VDD VNB|VSS sky130_fd_sc_hd__clkbuf_16
+X$206 VNB|VSS synth_99 synth_467 VDD VDD VNB|VSS sky130_fd_sc_hd__clkbuf_16
+X$207 VNB|VSS synth_99 synth_254 VDD VDD VNB|VSS sky130_fd_sc_hd__clkbuf_16
+X$208 VNB|VSS synth_99 synth_4 VDD VDD VNB|VSS sky130_fd_sc_hd__clkbuf_16
+X$209 VNB|VSS synth_99 synth_92 VDD VDD VNB|VSS sky130_fd_sc_hd__clkbuf_16
+X$210 VNB|VSS synth_326 synth_99 VDD VDD VNB|VSS sky130_fd_sc_hd__clkbuf_16
+X$211 VNB|VSS synth_99 synth_605 VDD VDD VNB|VSS sky130_fd_sc_hd__clkbuf_16
+X$212 VNB|VSS synth_99 synth_529 VDD VDD VNB|VSS sky130_fd_sc_hd__clkbuf_16
+X$213 VNB|VSS synth_99 synth_198 VDD VDD VNB|VSS sky130_fd_sc_hd__clkbuf_16
+X$214 VNB|VSS synth_99 synth_152 VDD VDD VNB|VSS sky130_fd_sc_hd__clkbuf_16
+X$215 VNB|VSS synth_99 synth_489 VDD VDD VNB|VSS sky130_fd_sc_hd__clkbuf_16
+X$216 VNB|VSS synth_99 synth_445 VDD VDD VNB|VSS sky130_fd_sc_hd__clkbuf_16
+X$217 VNB|VSS synth_99 synth_162 VDD VDD VNB|VSS sky130_fd_sc_hd__clkbuf_16
+X$218 VNB|VSS synth_99 synth_61 VDD VDD VNB|VSS sky130_fd_sc_hd__clkbuf_16
+X$219 VNB|VSS synth_99 synth_322 VDD VDD VNB|VSS sky130_fd_sc_hd__clkbuf_16
+X$220 VDD synth_321 synth_475 synth_474 synth_463 VNB|VSS synth_434 VDD VNB|VSS
++ sky130_fd_sc_hd__nor4b_1
+X$221 VDD synth_106 synth_83 synth_72 synth_58 VNB|VSS synth_116 VDD VNB|VSS
++ sky130_fd_sc_hd__nor4b_1
+X$222 VDD synth_476 synth_463 synth_220 synth_403 synth_488 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a31o_2
+X$223 VDD synth_105 synth_176 synth_153 synth_171 VNB|VSS VDD synth_174 VNB|VSS
++ sky130_fd_sc_hd__a31oi_1
+X$224 VDD synth_227 synth_105 synth_258 synth_313 VNB|VSS VDD synth_333 VNB|VSS
++ sky130_fd_sc_hd__a31oi_1
+X$225 VDD synth_47 synth_121 synth_73 synth_102 VNB|VSS VDD synth_103 VNB|VSS
++ sky130_fd_sc_hd__a31oi_1
+X$226 VDD synth_579 synth_82 synth_321 synth_578 VNB|VSS VDD synth_577 VNB|VSS
++ sky130_fd_sc_hd__a31oi_1
+X$227 VDD synth_105 synth_45 synth_329 synth_312 VNB|VSS VDD synth_380 VNB|VSS
++ sky130_fd_sc_hd__a31oi_1
+X$228 VDD synth_342 synth_377 synth_82 synth_337 VNB|VSS VDD synth_296 VNB|VSS
++ sky130_fd_sc_hd__a31oi_1
+X$229 VDD synth_118 synth_105 synth_38 synth_73 VNB|VSS VDD synth_102 VNB|VSS
++ sky130_fd_sc_hd__a31oi_1
+X$230 VDD synth_238 synth_47 synth_177 synth_239 VNB|VSS VDD synth_222 VNB|VSS
++ sky130_fd_sc_hd__a31oi_1
+X$231 VDD synth_193 synth_47 synth_153 synth_215 VNB|VSS VDD synth_194 VNB|VSS
++ sky130_fd_sc_hd__a31oi_1
+X$232 VDD synth_305 synth_82 synth_451 synth_527 VNB|VSS VDD synth_517 VNB|VSS
++ sky130_fd_sc_hd__a31oi_1
+X$233 VDD synth_323 synth_324 synth_82 synth_325 VNB|VSS VDD synth_309 VNB|VSS
++ sky130_fd_sc_hd__a31oi_1
+X$234 VDD synth_418 synth_420 synth_82 synth_561 VNB|VSS VDD synth_438 VNB|VSS
++ sky130_fd_sc_hd__a31oi_1
+X$235 VDD synth_384 synth_408 synth_82 synth_477 VNB|VSS VDD synth_437 VNB|VSS
++ sky130_fd_sc_hd__a31oi_1
+X$236 VDD synth_56 synth_96 synth_23 synth_93 VNB|VSS VDD synth_110 VNB|VSS
++ sky130_fd_sc_hd__a31oi_1
+X$237 VDD synth_94 synth_176 synth_38 synth_153 VNB|VSS VDD synth_215 VNB|VSS
++ sky130_fd_sc_hd__a31oi_1
+X$238 VDD synth_504 synth_403 synth_220 synth_466 VNB|VSS VDD synth_505 VNB|VSS
++ sky130_fd_sc_hd__a31oi_1
+X$239 VDD synth_403 synth_220 synth_463 synth_487 VNB|VSS VDD synth_486 VNB|VSS
++ sky130_fd_sc_hd__a31oi_1
+X$240 VDD synth_256 synth_105 synth_38 synth_177 VNB|VSS VDD synth_239 VNB|VSS
++ sky130_fd_sc_hd__a31oi_1
+X$241 VDD synth_266 synth_267 synth_82 synth_265 VNB|VSS VDD synth_253 VNB|VSS
++ sky130_fd_sc_hd__a31oi_1
+X$242 VDD synth_89 synth_272 synth_211 synth_297 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_2
+X$243 VDD synth_146 synth_486 synth_533 synth_608 synth_599 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__o31a_1
+X$244 VDD synth_69 synth_76 synth_31 synth_54 VDD synth_87 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a22oi_1
+X$245 VDD synth_636 synth_626 synth_647 synth_624 VDD synth_642 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a22oi_1
+X$246 VDD synth_199 synth_590 synth_140 synth_584 VDD synth_669 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a22oi_1
+X$247 VDD synth_647 synth_626 synth_656 synth_624 VDD synth_659 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a22oi_1
+X$248 VDD synth_656 synth_626 synth_652 synth_624 VDD synth_668 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a22oi_1
+X$249 VDD synth_514 synth_500 synth_140 synth_340 VDD synth_512 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a22oi_1
+X$250 VDD synth_147 synth_148 synth_90 synth_146 VDD synth_144 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a22oi_1
+X$251 VDD synth_652 synth_626 synth_655 synth_624 VDD synth_663 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a22oi_1
+X$252 VDD synth_625 synth_626 synth_627 synth_624 VDD synth_613 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a22oi_1
+X$253 VDD synth_480 synth_391 synth_199 synth_595 VDD synth_594 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a22oi_1
+X$254 VDD synth_475 synth_571 synth_480 synth_606 VDD synth_595 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o2bb2ai_1
+X$255 VDD synth_98 synth_485 synth_451 synth_514 VDD synth_535 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a22oi_1
+X$256 VDD synth_199 synth_472 synth_235 synth_485 VDD synth_510 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a22oi_1
+X$257 VDD synth_172 synth_478 synth_425 synth_225 VNB|VSS synth_520 VDD VNB|VSS
++ sky130_fd_sc_hd__nor4_1
+X$258 VDD synth_310 synth_206 synth_289 synth_436 VNB|VSS synth_407 VDD VNB|VSS
++ sky130_fd_sc_hd__nor4_1
+X$259 VDD synth_187 synth_159 synth_130 synth_126 VNB|VSS synth_78 VDD VNB|VSS
++ sky130_fd_sc_hd__nor4_1
+X$260 VDD synth_235 synth_98 synth_207 synth_221 VNB|VSS synth_148 VDD VNB|VSS
++ sky130_fd_sc_hd__nor4_1
+X$261 VDD synth_213 synth_188 synth_204 synth_191 VNB|VSS synth_118 VDD VNB|VSS
++ sky130_fd_sc_hd__nor4_1
+X$262 VDD synth_491 synth_452 synth_522 synth_502 VNB|VSS synth_353 VDD VNB|VSS
++ sky130_fd_sc_hd__nor4_1
+X$263 VDD synth_188 synth_169 synth_89 synth_189 VNB|VSS synth_168 VDD VNB|VSS
++ sky130_fd_sc_hd__nor4_1
+X$264 VDD synth_305 synth_525 synth_475 synth_473 VNB|VSS synth_579 VDD VNB|VSS
++ sky130_fd_sc_hd__nor4_1
+X$265 VDD synth_376 synth_355 synth_295 synth_304 VNB|VSS synth_359 VDD VNB|VSS
++ sky130_fd_sc_hd__nor4_1
+X$266 VDD synth_295 synth_388 synth_390 synth_219 synth_160 VNB|VSS synth_342
++ VDD VNB|VSS sky130_fd_sc_hd__o41ai_1
+X$267 VDD synth_191 synth_51 synth_112 synth_188 VNB|VSS synth_208 VDD VNB|VSS
++ sky130_fd_sc_hd__nor4_1
+X$268 VDD synth_305 synth_146 synth_496 synth_402 VNB|VSS synth_511 VDD VNB|VSS
++ sky130_fd_sc_hd__nor4_1
+X$269 VDD synth_329 synth_311 synth_312 VNB|VSS VDD synth_255 VNB|VSS
++ sky130_fd_sc_hd__and3_1
+X$270 VDD synth_255 synth_205 synth_275 VNB|VSS VDD synth_256 VNB|VSS
++ sky130_fd_sc_hd__and3_1
+X$271 VDD synth_140 synth_480 synth_571 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2b_1
+X$272 VDD synth_396 synth_585 synth_650 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2b_1
+X$273 VDD synth_580 synth_597 synth_593 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2b_1
+X$274 VDD synth_580 synth_667 synth_654 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2b_1
+X$275 VDD synth_580 synth_635 synth_624 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2b_1
+X$276 VDD synth_396 synth_555 synth_630 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2b_1
+X$277 VDD synth_140 synth_199 synth_514 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2b_1
+X$278 VDD synth_199 synth_140 synth_485 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2b_1
+X$279 VDD synth_41 synth_54 synth_52 synth_67 VNB|VSS synth_69 VDD VNB|VSS
++ sky130_fd_sc_hd__a22o_1
+X$280 VDD synth_293 synth_339 synth_210 synth_373 VNB|VSS synth_584 VDD VNB|VSS
++ sky130_fd_sc_hd__a22o_1
+X$281 VNB|VSS synth_203 synth_165 synth_216 VDD synth_184 VDD VNB|VSS
++ sky130_fd_sc_hd__ha_1
+X$282 VNB|VSS synth_422 synth_413 synth_412 VDD synth_400 VDD VNB|VSS
++ sky130_fd_sc_hd__ha_1
+X$283 VNB|VSS synth_411 synth_295 synth_355 synth_304 synth_413 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__nor4b_2
+X$284 VNB|VSS synth_617 synth_620 synth_629 VDD synth_634 VDD VNB|VSS
++ sky130_fd_sc_hd__ha_1
+X$285 VNB|VSS synth_674 synth_186 synth_185 VDD synth_184 VDD VNB|VSS
++ sky130_fd_sc_hd__ha_1
+X$286 VDD synth_125 synth_107 synth_165 synth_211 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__or3b_2
+X$287 VNB|VSS synth_676 synth_610 synth_592 VDD synth_609 VDD VNB|VSS
++ sky130_fd_sc_hd__ha_1
+X$288 VNB|VSS synth_539 synth_463 synth_496 VDD synth_537 VDD VNB|VSS
++ sky130_fd_sc_hd__ha_1
+X$289 VDD synth_321 synth_146 synth_402 synth_487 synth_536 VNB|VSS VDD
++ synth_534 VNB|VSS sky130_fd_sc_hd__a2111oi_0
+X$290 VNB|VSS synth_677 synth_621 synth_592 VDD synth_609 VDD VNB|VSS
++ sky130_fd_sc_hd__ha_1
+X$291 VNB|VSS synth_48 synth_85 synth_36 VDD synth_37 VDD VNB|VSS
++ sky130_fd_sc_hd__ha_1
+X$292 VDD synth_79 synth_66 synth_68 synth_62 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_1
+X$293 VDD synth_425 synth_424 synth_225 synth_423 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_1
+X$294 VDD synth_425 synth_424 synth_172 synth_398 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_1
+X$295 VDD synth_114 synth_109 synth_110 synth_100 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_1
+X$296 VDD synth_128 synth_130 synth_129 VNB|VSS VDD synth_109 VNB|VSS
++ sky130_fd_sc_hd__a21oi_1
+X$297 VDD synth_425 synth_424 synth_478 synth_385 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_1
+X$298 VDD synth_358 synth_378 synth_341 synth_401 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_1
+X$299 VDD synth_401 synth_411 synth_403 synth_402 VDD synth_377 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4b_1
+X$300 VDD synth_160 synth_159 synth_126 synth_158 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_1
+X$301 VDD synth_79 synth_45 synth_146 synth_83 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_1
+X$302 VDD synth_185 synth_107 synth_142 synth_183 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_1
+X$303 VDD synth_474 synth_475 synth_321 synth_526 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_1
+X$304 VDD synth_451 synth_462 synth_450 synth_416 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_1
+X$305 VDD synth_219 synth_220 synth_187 synth_127 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_1
+X$306 VDD synth_204 synth_191 synth_213 synth_227 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_1
+X$307 VDD synth_41 synth_52 synth_45 synth_53 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_1
+X$308 VDD synth_207 synth_98 synth_235 synth_251 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_1
+X$309 VDD synth_204 synth_190 synth_191 synth_230 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_1
+X$310 VDD synth_114 synth_137 synth_117 synth_155 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_1
+X$311 VDD synth_580 synth_635 synth_622 synth_626 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_1
+X$312 VDD synth_58 synth_23 synth_46 synth_47 VDD synth_129 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$313 VDD synth_401 synth_434 synth_416 synth_411 VDD synth_220 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$314 VDD synth_230 synth_167 synth_180 synth_297 VDD synth_320 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$315 VDD synth_47 synth_205 synth_255 synth_94 VDD synth_285 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$316 VDD synth_13 synth_16 synth_29 synth_34 VDD synth_35 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$317 VDD synth_82 synth_125 synth_90 synth_135 VDD synth_143 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$318 VDD synth_329 synth_311 synth_312 synth_275 VDD synth_191 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$319 VDD synth_82 synth_462 synth_90 synth_305 VDD synth_547 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$320 VDD synth_560 synth_547 synth_543 synth_305 synth_114 synth_545 VDD
++ VNB|VSS VNB|VSS sky130_fd_sc_hd__o311ai_1
+X$321 VDD synth_401 synth_434 synth_416 synth_411 VDD synth_159 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$322 VDD synth_58 synth_36 synth_37 synth_47 VDD synth_138 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$323 VDD synth_83 synth_75 synth_72 synth_58 VNB|VSS synth_19 VDD VNB|VSS
++ sky130_fd_sc_hd__nor4b_1
+X$324 VDD synth_180 synth_45 synth_167 synth_230 VDD synth_349 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$325 VDD synth_82 synth_90 synth_142 synth_135 VDD synth_164 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$326 VDD synth_115 synth_136 synth_22 synth_5 VDD synth_59 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$327 VDD synth_219 synth_311 synth_327 synth_348 VDD synth_366 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$328 VDD synth_403 synth_462 synth_519 synth_504 VDD synth_503 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$329 VDD synth_172 synth_478 synth_225 synth_199 VDD synth_481 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$330 VDD synth_297 synth_180 synth_149 synth_220 VDD synth_305 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$331 VDD synth_82 synth_90 synth_525 synth_305 VDD synth_557 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$332 VDD synth_227 synth_258 synth_257 synth_94 VDD synth_261 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$333 VDD synth_38 synth_258 synth_257 synth_278 VDD synth_260 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$334 VDD synth_615 synth_592 synth_609 synth_597 VDD synth_639 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$335 VDD synth_47 synth_73 synth_118 synth_94 VDD synth_95 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$336 VDD synth_34 synth_22 synth_46 synth_71 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$337 VDD synth_90 synth_555 synth_146 synth_560 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$338 VDD synth_412 synth_403 synth_430 synth_447 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$339 VDD synth_255 synth_105 synth_47 synth_264 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$340 VDD synth_199 synth_140 synth_399 synth_428 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$341 VDD synth_262 synth_178 synth_143 synth_122 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$342 VDD synth_186 synth_148 synth_217 synth_187 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$343 VDD synth_36 synth_6 synth_37 synth_64 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$344 VDD synth_526 synth_519 synth_536 synth_549 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$345 VDD synth_422 synth_403 synth_430 synth_449 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$346 VDD synth_90 synth_89 synth_82 synth_47 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$347 VDD synth_90 synth_483 synth_146 synth_532 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$348 VDD synth_258 synth_257 synth_224 synth_188 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$349 VDD synth_329 synth_47 synth_94 synth_348 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$350 VDD synth_551 synth_557 synth_532 synth_566 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$351 VDD synth_47 synth_94 synth_328 synth_362 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$352 VDD synth_329 synth_105 synth_336 VNB|VSS VDD synth_364 VNB|VSS
++ sky130_fd_sc_hd__a21o_1
+X$353 VDD synth_115 synth_167 synth_70 synth_156 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$354 VDD synth_23 synth_93 synth_96 synth_75 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$355 VNB|VSS synth_94 synth_35 synth_75 synth_59 synth_86 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__nor4_2
+X$356 VDD synth_22 synth_36 synth_37 synth_57 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$357 VDD synth_360 synth_359 synth_368 synth_379 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$358 VDD synth_434 synth_416 synth_411 synth_436 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$359 VDD synth_199 synth_140 synth_355 synth_393 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$360 VDD synth_352 synth_345 synth_353 synth_307 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$361 VDD synth_352 synth_353 synth_345 synth_243 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nand3b_1
+X$362 VDD synth_352 synth_353 synth_345 synth_396 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__and3b_1
+X$363 VDD synth_210 synth_199 synth_358 synth_374 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$364 VDD synth_90 synth_249 synth_146 synth_262 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$365 VDD synth_153 synth_170 synth_5 synth_212 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$366 VDD synth_199 synth_482 synth_481 synth_469 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$367 VDD synth_257 VDD VNB|VSS synth_313 VNB|VSS sky130_fd_sc_hd__inv_1
+X$368 VDD synth_165 VDD VNB|VSS synth_161 VNB|VSS sky130_fd_sc_hd__inv_1
+X$369 VDD synth_609 VDD VNB|VSS synth_634 VNB|VSS sky130_fd_sc_hd__inv_1
+X$370 VDD synth_431 VDD VNB|VSS synth_412 VNB|VSS sky130_fd_sc_hd__inv_1
+X$371 VDD synth_142 VDD VNB|VSS synth_184 VNB|VSS sky130_fd_sc_hd__inv_1
+X$372 VDD synth_45 VDD VNB|VSS synth_89 VNB|VSS sky130_fd_sc_hd__inv_1
+X$373 VDD synth_107 VDD VNB|VSS synth_181 VNB|VSS sky130_fd_sc_hd__inv_1
+X$374 VDD synth_399 VDD VNB|VSS synth_400 VNB|VSS sky130_fd_sc_hd__inv_1
+X$375 VDD synth_79 VDD VNB|VSS synth_367 VNB|VSS sky130_fd_sc_hd__inv_1
+X$376 VDD synth_525 VDD VNB|VSS synth_537 VNB|VSS sky130_fd_sc_hd__inv_1
+X$377 VDD synth_607 VDD VNB|VSS synth_616 VNB|VSS sky130_fd_sc_hd__inv_1
+X$378 VDD synth_67 VDD VNB|VSS synth_80 VNB|VSS sky130_fd_sc_hd__inv_1
+X$379 VDD synth_413 VDD VNB|VSS synth_417 VNB|VSS sky130_fd_sc_hd__inv_1
+X$380 VDD synth_475 VDD VNB|VSS synth_487 VNB|VSS sky130_fd_sc_hd__inv_1
+X$381 VDD synth_592 VDD VNB|VSS synth_629 VNB|VSS sky130_fd_sc_hd__inv_1
+X$382 VDD synth_185 VDD VNB|VSS synth_216 VNB|VSS sky130_fd_sc_hd__inv_1
+X$383 VDD synth_473 VDD VNB|VSS synth_496 VNB|VSS sky130_fd_sc_hd__inv_1
+X$384 VDD synth_170 VDD VNB|VSS synth_171 VNB|VSS sky130_fd_sc_hd__inv_1
+X$385 VDD synth_105 synth_176 synth_171 synth_153 VNB|VSS VDD synth_195 VNB|VSS
++ sky130_fd_sc_hd__and4_1
+X$386 VDD synth_174 synth_195 synth_38 VDD synth_196 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21ai_0
+X$387 VDD synth_450 VDD VNB|VSS synth_586 VNB|VSS sky130_fd_sc_hd__inv_1
+X$388 VDD synth_34 VDD VNB|VSS synth_112 VNB|VSS sky130_fd_sc_hd__inv_1
+X$389 VDD synth_593 VDD VNB|VSS synth_259 VNB|VSS sky130_fd_sc_hd__buf_4
+X$390 VDD synth_367 VDD VNB|VSS synth_90 VNB|VSS sky130_fd_sc_hd__buf_4
+X$391 VDD synth_210 VDD VNB|VSS synth_480 VNB|VSS sky130_fd_sc_hd__buf_4
+X$392 VDD synth_7 VDD VNB|VSS synth_91 VNB|VSS sky130_fd_sc_hd__buf_4
+X$393 VDD synth_298 VDD VNB|VSS synth_38 VNB|VSS sky130_fd_sc_hd__buf_4
+X$394 VDD synth_63 VDD VNB|VSS synth_105 VNB|VSS sky130_fd_sc_hd__buf_4
+X$395 VDD synth_7 VDD VNB|VSS synth_119 VNB|VSS sky130_fd_sc_hd__buf_4
+X$396 VDD synth_567 VDD VNB|VSS synth_140 VNB|VSS sky130_fd_sc_hd__buf_4
+X$397 VDD synth_582 VDD VNB|VSS synth_199 VNB|VSS sky130_fd_sc_hd__buf_4
+X$398 VDD synth_55 VDD VNB|VSS synth_82 VNB|VSS sky130_fd_sc_hd__buf_4
+X$399 VDD synth_105 synth_118 synth_101 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$400 VDD synth_366 synth_361 synth_383 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$401 VDD synth_179 synth_243 synth_441 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$402 VDD synth_38 synth_192 synth_193 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$403 VDD synth_6 synth_46 synth_86 VDD VNB|VSS VNB|VSS sky130_fd_sc_hd__nand2_1
+X$404 VDD synth_249 synth_243 synth_283 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$405 VDD synth_52 synth_426 synth_427 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$406 VDD synth_428 synth_427 synth_456 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$407 VDD synth_148 synth_147 synth_160 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$408 VDD synth_185 synth_144 synth_234 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$409 VDD synth_290 synth_243 synth_306 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$410 VDD synth_209 synth_243 synth_244 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$411 VDD synth_526 synth_536 synth_542 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$412 VDD synth_461 synth_444 synth_432 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$413 VDD synth_268 synth_339 synth_387 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$414 VDD synth_93 synth_96 synth_128 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$415 VDD synth_46 synth_47 synth_44 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$416 VDD synth_90 synth_209 synth_200 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$417 VDD synth_439 synth_146 synth_464 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$418 VDD synth_38 synth_101 synth_121 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$419 VDD synth_149 synth_168 synth_130 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$420 VDD synth_207 synth_248 synth_236 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$421 VDD synth_38 synth_245 synth_238 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$422 VDD synth_176 synth_94 synth_192 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$423 VDD synth_205 synth_177 synth_213 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$424 VDD synth_374 synth_387 synth_389 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$425 VDD synth_105 synth_256 synth_245 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$426 VDD synth_327 synth_219 synth_1 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$427 VDD synth_47 synth_94 synth_347 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$428 VDD synth_359 synth_368 synth_375 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$429 VDD synth_525 synth_571 synth_541 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$430 VDD synth_585 synth_146 synth_574 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$431 VDD synth_434 synth_416 synth_390 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$432 VDD synth_354 synth_243 synth_442 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$433 VDD synth_36 synth_37 synth_72 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$434 VDD synth_293 synth_243 synth_386 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$435 VDD synth_199 synth_569 synth_570 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$436 VDD synth_474 synth_82 synth_476 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$437 VDD synth_450 synth_571 synth_583 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$438 VDD synth_625 synth_624 synth_623 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$439 VDD synth_368 synth_357 synth_356 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$440 VDD synth_401 synth_411 synth_415 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$441 VDD synth_482 synth_481 synth_470 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$442 VDD synth_621 synth_597 synth_640 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$443 VDD synth_90 synth_82 synth_114 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$444 VDD synth_402 synth_415 synth_414 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$445 VDD synth_227 synth_94 synth_277 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$446 VDD synth_153 synth_170 synth_204 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$447 VDD synth_312 synth_329 synth_334 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$448 VNB|VSS synth_119 synth_666 synth_529 synth_657 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfstp_2
+X$449 VNB|VSS synth_119 synth_580 synth_529 synth_666 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfstp_2
+X$450 VDD synth_465 synth_344 VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__buf_1
+X$451 VDD synth_648 synth_670 VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__buf_1
+X$452 VDD rst_n synth_24 VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__buf_1
+X$453 VDD synth_45 running VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__buf_1
+X$454 VDD synth_654 synth_673 VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__buf_1
+X$455 VDD synth_649 synth_657 VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__buf_1
+X$456 VDD synth_407 synth_358 synth_419 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__xnor2_1
+X$457 VDD synth_131 synth_115 synth_166 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__xnor2_1
+X$458 VDD synth_70 synth_34 synth_81 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__xnor2_1
+X$459 VDD synth_19 synth_6 synth_15 VDD VNB|VSS VNB|VSS sky130_fd_sc_hd__xnor2_1
+X$460 VDD synth_45 synth_36 synth_40 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__xnor2_1
+X$461 VDD synth_56 synth_23 synth_27 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__xnor2_1
+X$462 VDD synth_597 synth_592 synth_604 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__xnor2_1
+X$463 VDD synth_43 synth_5 synth_8 VDD VNB|VSS VNB|VSS sky130_fd_sc_hd__xnor2_1
+X$464 VDD synth_183 synth_125 synth_145 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__xnor2_1
+X$465 VDD synth_95 synth_84 VDD synth_74 VNB|VSS VNB|VSS sky130_fd_sc_hd__xor2_1
+X$466 VDD synth_285 synth_275 VDD synth_276 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__xor2_1
+X$467 VDD synth_156 synth_136 VDD synth_150 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__xor2_1
+X$468 VDD synth_640 synth_615 VDD synth_641 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__xor2_1
+X$469 VDD synth_639 synth_611 VDD synth_638 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__xor2_1
+X$470 VDD synth_33 synth_29 VDD synth_32 VNB|VSS VNB|VSS sky130_fd_sc_hd__xor2_1
+X$471 VDD synth_13 synth_34 synth_70 synth_33 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand3_1
+X$472 VDD synth_347 synth_329 VDD synth_343 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__xor2_1
+X$473 VDD synth_264 synth_205 VDD synth_274 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__xor2_1
+X$474 VDD synth_44 synth_22 VDD synth_30 VNB|VSS VNB|VSS sky130_fd_sc_hd__xor2_1
+X$475 VDD synth_35 synth_83 synth_57 synth_43 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_1
+X$476 VNB|VSS synth_162 synth_7 synth_235 synth_246 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$477 VNB|VSS synth_61 synth_91 synth_66 synth_120 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$478 VNB|VSS synth_294 synth_119 synth_378 synth_437 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$479 VNB|VSS synth_605 synth_119 synth_655 synth_661 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$480 VNB|VSS synth_198 synth_91 synth_316 synth_315 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$481 VNB|VSS synth_61 synth_91 synth_125 synth_122 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$482 VNB|VSS synth_11 synth_7 synth_22 synth_28 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$483 VNB|VSS synth_152 synth_119 synth_177 synth_222 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$484 VNB|VSS synth_605 synth_119 synth_625 synth_632 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$485 VNB|VSS synth_11 synth_7 synth_41 synth_50 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$486 VNB|VSS synth_294 synth_7 synth_304 synth_309 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$487 VNB|VSS synth_92 synth_7 synth_207 synth_231 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$488 VNB|VSS synth_605 synth_119 synth_627 synth_619 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$489 VNB|VSS synth_162 synth_91 synth_270 synth_300 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$490 VNB|VSS synth_92 synth_7 synth_98 synth_124 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$491 VNB|VSS synth_198 synth_91 synth_210 synth_280 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$492 VNB|VSS synth_11 synth_7 synth_13 synth_18 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$493 VNB|VSS synth_254 synth_119 synth_312 synth_404 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$494 VNB|VSS synth_162 synth_7 synth_410 synth_409 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$495 VNB|VSS synth_152 synth_119 synth_96 synth_155 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$496 VNB|VSS synth_4 synth_7 synth_37 synth_39 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$497 VNB|VSS synth_198 synth_91 synth_225 synth_240 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$498 VNB|VSS synth_322 synth_7 synth_354 synth_421 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$499 VNB|VSS synth_198 synth_91 synth_268 synth_317 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$500 VNB|VSS synth_501 synth_119 synth_450 synth_588 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$501 VNB|VSS synth_445 synth_7 synth_483 synth_506 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$502 VNB|VSS synth_4 synth_7 synth_6 synth_2 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$503 VNB|VSS synth_61 synth_91 synth_79 synth_214 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$504 VNB|VSS synth_4 synth_7 synth_36 synth_14 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$505 VNB|VSS synth_162 synth_91 synth_142 synth_163 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$506 VNB|VSS synth_294 synth_119 synth_355 synth_438 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$507 VNB|VSS synth_254 synth_119 synth_358 synth_406 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$508 VNB|VSS synth_467 synth_7 synth_513 synth_530 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$509 VNB|VSS synth_322 synth_91 synth_352 synth_381 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$510 VNB|VSS synth_529 synth_91 synth_522 synth_544 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$511 VNB|VSS synth_322 synth_91 synth_308 synth_346 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$512 VNB|VSS synth_322 synth_91 synth_293 synth_365 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$513 VNB|VSS synth_4 synth_7 synth_5 synth_3 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$514 VNB|VSS synth_445 synth_91 synth_502 synth_498 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$515 VNB|VSS synth_529 synth_91 synth_592 synth_596 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$516 VNB|VSS synth_445 synth_91 synth_425 synth_546 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$517 VNB|VSS synth_467 synth_119 synth_473 synth_515 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$518 VNB|VSS synth_529 synth_119 synth_611 synth_658 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$519 VNB|VSS synth_467 synth_119 synth_499 synth_601 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$520 VNB|VSS synth_529 synth_91 synth_615 synth_631 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$521 VNB|VSS synth_322 synth_91 synth_371 synth_395 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$522 VNB|VSS synth_152 synth_119 synth_153 synth_194 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$523 VNB|VSS synth_11 synth_119 synth_93 synth_100 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$524 VNB|VSS synth_605 synth_119 synth_607 synth_618 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$525 VNB|VSS synth_529 synth_119 synth_664 synth_672 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$526 VNB|VSS synth_605 synth_119 synth_572 synth_589 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$527 VNB|VSS synth_501 synth_119 synth_475 synth_599 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$528 VNB|VSS synth_445 synth_91 synth_452 synth_458 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$529 VNB|VSS synth_467 synth_119 synth_525 synth_566 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$530 VNB|VSS synth_254 synth_119 synth_329 synth_363 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$531 VNB|VSS synth_322 synth_91 synth_424 synth_453 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$532 VNB|VSS synth_445 synth_91 synth_524 synth_548 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$533 VNB|VSS synth_529 synth_119 synth_672 synth_670 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$534 VNB|VSS synth_92 synth_7 synth_45 synth_111 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$535 VNB|VSS synth_99 synth_11 VDD VDD VNB|VSS sky130_fd_sc_hd__clkbuf_16
+X$536 VNB|VSS synth_92 VDD VDD VNB|VSS sky130_fd_sc_hd__inv_8
+X$537 VDD synth_11 VDD VNB|VSS VNB|VSS sky130_fd_sc_hd__inv_6
+X$538 VNB|VSS synth_489 synth_119 synth_474 synth_492 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$539 VNB|VSS synth_489 VDD VDD VNB|VSS sky130_fd_sc_hd__clkinv_8
+X$540 VNB|VSS synth_445 synth_91 synth_460 synth_493 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$541 VNB|VSS synth_501 synth_119 synth_585 synth_650 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$542 VNB|VSS synth_61 synth_91 synth_67 synth_154 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$543 VNB|VSS synth_61 synth_91 synth_123 synth_175 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$544 VNB|VSS synth_61 synth_7 synth_52 synth_62 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$545 VDD synth_45 synth_123 synth_52 synth_80 VDD synth_68 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a22oi_1
+X$546 VNB|VSS synth_4 synth_119 synth_73 synth_103 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$547 VNB|VSS synth_162 synth_91 synth_209 synth_226 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$548 VNB|VSS synth_322 synth_91 synth_345 synth_351 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$549 VNB|VSS synth_501 synth_119 synth_555 synth_630 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$550 VNB|VSS synth_605 synth_119 synth_636 synth_628 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$551 VNB|VSS synth_152 synth_119 synth_170 synth_173 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$552 VNB|VSS synth_294 synth_7 synth_341 synth_335 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$553 VNB|VSS synth_445 synth_91 synth_478 synth_518 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$554 VNB|VSS synth_467 synth_119 synth_431 synth_457 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$555 VNB|VSS synth_152 synth_119 synth_224 synth_241 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$556 VNB|VSS synth_11 synth_7 synth_29 synth_42 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$557 VNB|VSS synth_4 synth_7 synth_23 synth_26 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$558 VNB|VSS synth_445 synth_91 synth_490 synth_552 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$559 VNB|VSS synth_529 synth_91 synth_609 synth_637 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$560 VNB|VSS synth_11 synth_7 synth_34 synth_65 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$561 VNB|VSS synth_198 synth_91 synth_315 synth_344 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$562 VNB|VSS synth_489 synth_119 synth_462 synth_545 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$563 VNB|VSS synth_92 synth_7 synth_136 synth_182 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$564 VNB|VSS synth_322 synth_91 synth_372 synth_405 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$565 VNB|VSS synth_445 synth_91 synth_439 synth_454 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$566 VNB|VSS synth_92 synth_7 synth_115 synth_157 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$567 VNB|VSS synth_198 synth_91 synth_172 synth_197 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$568 VNB|VSS synth_197 synth_172 synth_199 synth_259 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__mux2_2
+X$569 VNB|VSS synth_61 synth_91 synth_107 synth_97 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$570 VNB|VSS synth_92 synth_7 synth_185 synth_228 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$571 VNB|VSS synth_529 synth_119 synth_665 synth_664 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$572 VNB|VSS synth_61 synth_91 synth_54 synth_104 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$573 VNB|VSS synth_322 synth_91 synth_394 synth_435 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$574 VNB|VSS synth_254 synth_119 synth_311 synth_383 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$575 VNB|VSS synth_162 synth_7 synth_399 synth_443 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$576 VNB|VSS synth_443 synth_429 synth_327 synth_444 synth_449 synth_410 VDD
++ VDD VNB|VSS sky130_fd_sc_hd__a32o_1
+X$577 VNB|VSS synth_322 synth_91 synth_318 synth_331 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$578 VNB|VSS synth_254 synth_119 synth_205 synth_287 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$579 VNB|VSS synth_254 synth_119 synth_257 synth_330 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$580 VNB|VSS synth_467 synth_119 synth_554 synth_563 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$581 VNB|VSS synth_152 synth_119 synth_258 synth_299 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$582 VNB|VSS synth_529 synth_91 synth_567 synth_581 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$583 VNB|VSS synth_152 synth_119 synth_275 synth_301 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$584 VNB|VSS synth_4 synth_7 synth_84 synth_60 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$585 VNB|VSS synth_529 synth_91 synth_573 synth_587 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$586 VNB|VSS synth_605 synth_119 synth_652 synth_662 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$587 VNB|VSS synth_445 synth_7 synth_179 synth_455 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$588 VNB|VSS synth_198 synth_91 synth_249 synth_282 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$589 VNB|VSS synth_529 synth_119 synth_667 synth_660 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$590 VNB|VSS synth_294 synth_7 synth_295 synth_296 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$591 VNB|VSS synth_294 synth_7 synth_221 synth_253 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$592 VNB|VSS synth_489 synth_119 synth_451 synth_528 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$593 VNB|VSS synth_529 synth_119 synth_612 synth_651 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$594 VNB|VSS synth_605 synth_119 synth_647 synth_653 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$595 VNB|VSS synth_529 synth_91 synth_582 synth_598 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$596 VNB|VSS synth_198 synth_91 synth_290 synth_291 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$597 VNB|VSS synth_467 synth_7 synth_461 synth_562 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$598 VNB|VSS synth_605 synth_119 synth_656 synth_671 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$599 VNB|VSS synth_501 synth_119 synth_321 synth_577 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$600 VDD synth_524 synth_82 synth_538 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$601 VDD synth_207 synth_98 synth_286 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$602 VDD synth_286 synth_183 synth_125 synth_221 synth_271 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor4bb_1
+X$603 VDD synth_51 synth_20 synth_131 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$604 VDD synth_140 synth_470 synth_242 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$605 VDD synth_1 synth_150 synth_182 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$606 VDD synth_433 synth_376 synth_402 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$607 VDD synth_554 synth_396 synth_553 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$608 VDD synth_1 synth_166 synth_157 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$609 VDD synth_79 synth_146 synth_327 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$610 VDD synth_475 synth_321 synth_479 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$611 VDD synth_107 synth_125 synth_217 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$612 VDD synth_1 synth_32 synth_42 VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__nor2_1
+X$613 VDD synth_372 synth_396 synth_397 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$614 VDD synth_499 synth_82 synth_468 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$615 VDD synth_293 synth_82 synth_273 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$616 VDD synth_1 synth_274 synth_287 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$617 VDD synth_199 synth_140 synth_426 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$618 VDD synth_210 synth_470 synth_440 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$619 VDD synth_439 synth_396 synth_446 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$620 VDD synth_79 synth_66 synth_76 VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__nor2_1
+X$621 VDD synth_634 synth_597 synth_644 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$622 VDD synth_160 synth_220 synth_229 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$623 VDD synth_580 synth_633 synth_637 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$624 VDD synth_21 synth_20 synth_17 VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__nor2_1
+X$625 VDD synth_289 synth_206 synth_336 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$626 VDD synth_525 synth_473 synth_536 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$627 VDD synth_580 synth_643 synth_651 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$628 VDD synth_1 synth_276 synth_301 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$629 VDD synth_1 synth_81 synth_65 VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__nor2_1
+X$630 VDD synth_1 synth_343 synth_363 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$631 VDD synth_210 synth_199 synth_339 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$632 VDD synth_35 synth_59 synth_58 VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__nor2_1
+X$633 VDD synth_1 synth_27 synth_26 VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__nor2_1
+X$634 VDD synth_1 synth_40 synth_14 VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__nor2_1
+X$635 VDD synth_191 synth_213 synth_176 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$636 VDD synth_1 synth_74 synth_60 VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__nor2_1
+X$637 VDD synth_358 synth_341 synth_360 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$638 VDD synth_341 synth_358 synth_378 VDD VNB|VSS synth_338 VNB|VSS
++ sky130_fd_sc_hd__o21bai_1
+X$639 VDD synth_355 synth_376 synth_357 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$640 VDD synth_513 synth_396 synth_523 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$641 VDD synth_483 synth_396 synth_471 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$642 VDD synth_425 synth_424 synth_482 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$643 VDD synth_586 synth_556 synth_575 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$644 VDD synth_462 synth_434 synth_494 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$645 VDD synth_146 synth_433 synth_504 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$646 VDD synth_1 synth_15 synth_2 VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__nor2_1
+X$647 VDD synth_221 synth_211 synth_303 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$648 VDD synth_321 synth_146 synth_558 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$649 VDD synth_96 synth_116 synth_117 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$650 VDD synth_207 synth_248 synth_252 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$651 VDD synth_79 synth_273 synth_82 synth_160 synth_252 synth_232 VNB|VSS VDD
++ VNB|VSS sky130_fd_sc_hd__a311o_1
+X$652 VDD synth_112 synth_51 synth_167 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$653 VDD synth_311 synth_334 synth_328 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$654 VDD synth_580 synth_638 synth_658 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$655 VDD synth_1 synth_30 synth_28 VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__nor2_1
+X$656 VDD synth_79 synth_82 synth_444 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$657 VDD synth_580 synth_641 synth_631 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$658 VDD synth_611 synth_621 synth_615 synth_597 synth_612 VDD synth_643
++ VNB|VSS VNB|VSS sky130_fd_sc_hd__a41oi_1
+X$659 VDD synth_1 synth_12 synth_18 VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__nor2_1
+X$660 VDD synth_580 synth_604 synth_596 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$661 VDD synth_1 synth_8 synth_3 VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__nor2_1
+X$662 VDD synth_451 synth_450 synth_519 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2_1
+X$1139 VDD synth_88 synth_78 synth_158 synth_76 synth_50 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__o31a_1
+X$1148 VDD synth_23 synth_96 synth_106 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nand2b_1
+X$1153 VDD synth_20 synth_13 VDD synth_12 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__xor2_1
+X$1154 VDD synth_17 synth_16 synth_9 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__xnor2_1
+X$1164 VDD synth_82 synth_90 synth_98 synth_135 synth_139 VDD synth_113 VNB|VSS
++ VNB|VSS sky130_fd_sc_hd__o2111ai_1
+X$1212 VNB|VSS synth_208 synth_218 synth_45 synth_219 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__nand3_4
+X$1267 VDD synth_614 synth_627 synth_626 synth_636 synth_624 synth_628 VDD
++ VNB|VSS VNB|VSS sky130_fd_sc_hd__a221o_1
+X$1270 VDD synth_64 synth_75 synth_35 synth_59 VNB|VSS synth_63 VDD VNB|VSS
++ sky130_fd_sc_hd__nor4_1
+X$1278 VDD synth_322 VDD VNB|VSS VNB|VSS sky130_fd_sc_hd__clkinvlp_4
+X$1502 VNB|VSS synth_125 synth_140 synth_31 synth_292 synth_199 synth_304
++ synth_321 VDD VDD VNB|VSS sky130_fd_sc_hd__mux4_2
+X$1595 VDD synth_76 synth_53 synth_54 synth_49 synth_77 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__o22ai_1
+X$1596 VDD synth_31 synth_41 synth_54 VNB|VSS synth_55 VDD VNB|VSS
++ sky130_fd_sc_hd__o21ai_2
+X$1597 VDD synth_54 synth_41 synth_88 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor2b_1
+X$1927 VNB|VSS synth_218 synth_169 synth_189 synth_204 synth_190 VDD VDD
++ VNB|VSS sky130_fd_sc_hd__nor4_4
+X$1928 VDD synth_190 synth_191 synth_35 synth_212 synth_206 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__or4_1
+X$2000 VDD synth_41 synth_25 VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__buf_1
+X$2001 VNB|VSS synth_7 synth_31 synth_11 synth_77 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfstp_2
+X$2020 VDD synth_82 synth_135 synth_132 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__and2_1
+X$2022 VDD synth_82 synth_200 synth_202 synth_164 synth_163 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o211ai_1
+X$2026 VDD synth_138 synth_130 synth_116 synth_151 VNB|VSS synth_137 VDD
++ VNB|VSS sky130_fd_sc_hd__a211oi_1
+X$2071 VDD synth_114 synth_432 synth_419 VDD VNB|VSS synth_406 VNB|VSS
++ sky130_fd_sc_hd__o21ai_1
+X$2084 VDD synth_47 synth_46 synth_58 VNB|VSS VDD synth_56 VNB|VSS
++ sky130_fd_sc_hd__and3_1
+X$2103 VDD synth_54 synth_41 synth_31 VDD synth_146 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__o21a_1
+X$2108 VDD synth_205 synth_22 synth_115 synth_6 VDD VNB|VSS synth_190 VNB|VSS
++ sky130_fd_sc_hd__nand4bb_1
+X$2137 VDD synth_29 synth_13 synth_21 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand2_1
+X$2232 VDD synth_31 VDD VNB|VSS synth_49 VNB|VSS sky130_fd_sc_hd__inv_1
+X$2297 VDD synth_24 VDD VNB|VSS synth_7 VNB|VSS sky130_fd_sc_hd__buf_4
+X$2359 VDD synth_179 synth_146 synth_144 synth_181 synth_165 synth_133 VNB|VSS
++ VDD VNB|VSS sky130_fd_sc_hd__a32oi_1
+X$2394 VDD synth_41 synth_107 synth_140 synth_392 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__mux2i_1
+X$2395 VDD synth_125 synth_107 synth_165 synth_147 VNB|VSS VDD VNB|VSS
++ sky130_fd_sc_hd__nor3b_1
+X$2880 VDD synth_37 synth_83 synth_48 synth_38 VNB|VSS synth_39 VDD VNB|VSS
++ sky130_fd_sc_hd__a22o_1
+X$2934 VDD synth_1 synth_9 synth_10 VNB|VSS VDD VNB|VSS sky130_fd_sc_hd__nor2_1
+X$2935 VNB|VSS synth_11 synth_7 synth_16 synth_10 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__dfrtp_1
+X$3043 VDD synth_13 synth_16 synth_29 synth_5 VDD synth_51 VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__nand4_1
+X$3160 VNB|VSS synth_368 synth_431 synth_433 synth_399 synth_401 synth_411 VDD
++ VDD VNB|VSS sky130_fd_sc_hd__a2111oi_2
+X$3162 VNB|VSS synth_189 synth_169 synth_180 synth_188 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__nor3_4
+X$3163 VDD synth_189 synth_169 synth_188 VDD VNB|VSS synth_289 VNB|VSS
++ sky130_fd_sc_hd__or3_2
+X$3168 VDD synth_79 synth_66 synth_126 synth_108 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__or3_1
+X$3169 VDD synth_229 synth_108 synth_127 synth_87 VDD VNB|VSS synth_111 VNB|VSS
++ sky130_fd_sc_hd__o31ai_1
+X$3305 VNB|VSS synth_85 synth_23 synth_73 synth_189 synth_84 VDD VDD VNB|VSS
++ sky130_fd_sc_hd__nand4bb_4
+X$3345 VDD synth_71 synth_90 synth_89 synth_82 synth_20 VDD VNB|VSS VNB|VSS
++ sky130_fd_sc_hd__a31o_2
+X$3384 VDD synth_82 synth_89 synth_90 synth_57 VNB|VSS VDD synth_70 VNB|VSS
++ sky130_fd_sc_hd__a31oi_1
+X$3391 VNB|VSS synth_675 synth_46 synth_36 VDD synth_37 VDD VNB|VSS
++ sky130_fd_sc_hd__ha_1
+.ENDS spi_timer_top
+
+.SUBCKT sky130_fd_sc_hd__nor4_4 VGND Y A B C D VPWR VPB VNB
+M$1 synth_2 C synth_3 VPB pfet_01v8_hvt L=150000U W=4000000U AS=665000000000P
++ AD=540000000000P PS=6330000U PD=5080000U
+M$5 Y D synth_3 VPB pfet_01v8_hvt L=150000U W=4000000U AS=540000000000P
++ AD=665000000000P PS=5080000U PD=6330000U
+M$9 VPWR A synth_1 VPB pfet_01v8_hvt L=150000U W=4000000U AS=685000000000P
++ AD=540000000000P PS=6370000U PD=5080000U
+M$13 synth_2 B synth_1 VPB pfet_01v8_hvt L=150000U W=4000000U AS=540000000000P
++ AD=665000000000P PS=5080000U PD=6330000U
+M$17 Y A VGND VNB nfet_01v8 L=150000U W=2600000U AS=445250000000P
++ AD=351000000000P PS=4620000U PD=3680000U
+M$21 Y B VGND VNB nfet_01v8 L=150000U W=2600000U AS=351000000000P
++ AD=520000000000P PS=3680000U PD=4200000U
+M$25 Y C VGND VNB nfet_01v8 L=150000U W=2600000U AS=520000000000P
++ AD=351000000000P PS=4200000U PD=3680000U
+M$29 Y D VGND VNB nfet_01v8 L=150000U W=2600000U AS=351000000000P
++ AD=432250000000P PS=3680000U PD=4580000U
+.ENDS sky130_fd_sc_hd__nor4_4
+
+.SUBCKT sky130_fd_sc_hd__or4_4 VGND X D C B A VPWR VPB VNB
+M$1 synth_2 D synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=190000000000P PS=2520000U PD=1380000U
+M$2 synth_4 C synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=190000000000P
++ AD=135000000000P PS=1380000U PD=1270000U
+M$3 synth_3 B synth_4 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=135000000000P PS=1270000U PD=1270000U
+M$4 VPWR A synth_3 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=190000000000P PS=1270000U PD=1380000U
+M$5 X synth_1 VPWR VPB pfet_01v8_hvt L=150000U W=4000000U AS=595000000000P
++ AD=675000000000P PS=5190000U PD=6350000U
+M$9 synth_1 D VGND VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=123500000000P PS=1820000U PD=1030000U
+M$10 VGND C synth_1 VNB nfet_01v8 L=150000U W=650000U AS=123500000000P
++ AD=87750000000P PS=1030000U PD=920000U
+M$11 synth_1 B VGND VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=87750000000P PS=920000U PD=920000U
+M$12 VGND A synth_1 VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=123500000000P PS=920000U PD=1030000U
+M$13 X synth_1 VGND VNB nfet_01v8 L=150000U W=2600000U AS=386750000000P
++ AD=442000000000P PS=3790000U PD=4610000U
+.ENDS sky130_fd_sc_hd__or4_4
+
+.SUBCKT sky130_fd_sc_hd__o21a_1 VPB B1 A2 A1 VPWR X VGND VNB
+M$1 VPWR synth_2 X VPB pfet_01v8_hvt L=150000U W=1000000U AS=280000000000P
++ AD=327500000000P PS=2560000U PD=1655000U
+M$2 synth_2 B1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=327500000000P
++ AD=195000000000P PS=1655000U PD=1390000U
+M$3 synth_3 A2 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=195000000000P
++ AD=152500000000P PS=1390000U PD=1305000U
+M$4 VPWR A1 synth_3 VPB pfet_01v8_hvt L=150000U W=1000000U AS=152500000000P
++ AD=260000000000P PS=1305000U PD=2520000U
+M$5 synth_1 B1 synth_2 VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=100750000000P PS=1820000U PD=960000U
+M$6 VGND A2 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=100750000000P
++ AD=87750000000P PS=960000U PD=920000U
+M$7 synth_1 A1 VGND VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=169000000000P PS=920000U PD=1820000U
+M$8 VGND synth_2 X VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=169000000000P PS=1820000U PD=1820000U
+.ENDS sky130_fd_sc_hd__o21a_1
+
+.SUBCKT sky130_fd_sc_hd__a311o_1 VPB C1 B1 A1 A2 A3 X VGND VPWR VNB
+M$1 VPWR synth_2 X VPB pfet_01v8_hvt L=150000U W=1000000U AS=285000000000P
++ AD=142500000000P PS=2570000U PD=1285000U
+M$2 synth_1 A3 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=142500000000P
++ AD=165000000000P PS=1285000U PD=1330000U
+M$3 VPWR A2 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=165000000000P
++ AD=305000000000P PS=1330000U PD=1610000U
+M$4 synth_1 A1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=305000000000P
++ AD=162500000000P PS=1610000U PD=1325000U
+M$5 synth_3 B1 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=162500000000P
++ AD=207500000000P PS=1325000U PD=1415000U
+M$6 synth_2 C1 synth_3 VPB pfet_01v8_hvt L=150000U W=1000000U AS=207500000000P
++ AD=260000000000P PS=1415000U PD=2520000U
+M$7 VGND synth_2 X VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=112125000000P PS=1820000U PD=995000U
+M$8 synth_5 A3 VGND VNB nfet_01v8 L=150000U W=650000U AS=112125000000P
++ AD=125125000000P PS=995000U PD=1035000U
+M$9 synth_4 A2 synth_5 VNB nfet_01v8 L=150000U W=650000U AS=125125000000P
++ AD=169000000000P PS=1035000U PD=1170000U
+M$10 synth_2 A1 synth_4 VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=105625000000P PS=1170000U PD=975000U
+M$11 VGND B1 synth_2 VNB nfet_01v8 L=150000U W=650000U AS=105625000000P
++ AD=134875000000P PS=975000U PD=1065000U
+M$12 synth_2 C1 VGND VNB nfet_01v8 L=150000U W=650000U AS=134875000000P
++ AD=169000000000P PS=1065000U PD=1820000U
+.ENDS sky130_fd_sc_hd__a311o_1
+
+.SUBCKT sky130_fd_sc_hd__nor3_4 VGND B A Y C VPWR VPB VNB
+M$1 VPWR A synth_1 VPB pfet_01v8_hvt L=150000U W=4000000U AS=685000000000P
++ AD=540000000000P PS=6370000U PD=5080000U
+M$5 synth_2 B synth_1 VPB pfet_01v8_hvt L=150000U W=4000000U AS=540000000000P
++ AD=665000000000P PS=5080000U PD=6330000U
+M$8 Y C synth_2 VPB pfet_01v8_hvt L=150000U W=4000000U AS=540000000000P
++ AD=540000000000P PS=5080000U PD=5080000U
+M$13 Y A VGND VNB nfet_01v8 L=150000U W=2600000U AS=445250000000P
++ AD=351000000000P PS=4620000U PD=3680000U
+M$17 Y B VGND VNB nfet_01v8 L=150000U W=2600000U AS=351000000000P
++ AD=432250000000P PS=3680000U PD=4580000U
+M$20 VGND C Y VNB nfet_01v8 L=150000U W=2600000U AS=351000000000P
++ AD=351000000000P PS=3680000U PD=3680000U
+.ENDS sky130_fd_sc_hd__nor3_4
+
+.SUBCKT sky130_fd_sc_hd__or3_2 VPB B A C VPWR VGND X VNB
+M$1 synth_3 C synth_1 VPB pfet_01v8_hvt L=150000U W=420000U AS=109200000000P
++ AD=44100000000P PS=1360000U PD=630000U
+M$2 synth_2 B synth_3 VPB pfet_01v8_hvt L=150000U W=420000U AS=44100000000P
++ AD=69300000000P PS=630000U PD=750000U
+M$3 VPWR A synth_2 VPB pfet_01v8_hvt L=150000U W=420000U AS=69300000000P
++ AD=148250000000P PS=750000U PD=1340000U
+M$4 X synth_1 VPWR VPB pfet_01v8_hvt L=150000U W=2000000U AS=283250000000P
++ AD=450000000000P PS=2610000U PD=3900000U
+M$6 VGND C synth_1 VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=56700000000P PS=1360000U PD=690000U
+M$7 synth_1 B VGND VNB nfet_01v8 L=150000U W=420000U AS=56700000000P
++ AD=56700000000P PS=690000U PD=690000U
+M$8 synth_1 A VGND VNB nfet_01v8 L=150000U W=420000U AS=101875000000P
++ AD=56700000000P PS=990000U PD=690000U
+M$9 X synth_1 VGND VNB nfet_01v8 L=150000U W=1300000U AS=189625000000P
++ AD=273000000000P PS=1910000U PD=2790000U
+.ENDS sky130_fd_sc_hd__or3_2
+
+.SUBCKT sky130_fd_sc_hd__nand3_4 VGND C B A Y VPWR VPB VNB
+M$1 Y A VPWR VPB pfet_01v8_hvt L=150000U W=4000000U AS=665000000000P
++ AD=675000000000P PS=6330000U PD=6350000U
+M$5 Y C VPWR VPB pfet_01v8_hvt L=150000U W=4000000U AS=665000000000P
++ AD=540000000000P PS=6330000U PD=5080000U
+M$9 Y B VPWR VPB pfet_01v8_hvt L=150000U W=4000000U AS=540000000000P
++ AD=665000000000P PS=5080000U PD=6330000U
+M$13 VGND C synth_1 VNB nfet_01v8 L=150000U W=2600000U AS=432250000000P
++ AD=351000000000P PS=4580000U PD=3680000U
+M$17 synth_2 B synth_1 VNB nfet_01v8 L=150000U W=2600000U AS=351000000000P
++ AD=432250000000P PS=3680000U PD=4580000U
+M$21 Y A synth_2 VNB nfet_01v8 L=150000U W=2600000U AS=432250000000P
++ AD=438750000000P PS=4580000U PD=4600000U
+.ENDS sky130_fd_sc_hd__nand3_4
+
+.SUBCKT sky130_fd_sc_hd__nor3_2 VPB A B C Y VGND VPWR VNB
+M$1 Y C synth_2 VPB pfet_01v8_hvt L=150000U W=2000000U AS=395000000000P
++ AD=395000000000P PS=3790000U PD=3790000U
+M$3 VPWR A synth_1 VPB pfet_01v8_hvt L=150000U W=2000000U AS=415000000000P
++ AD=270000000000P PS=3830000U PD=2540000U
+M$5 synth_2 B synth_1 VPB pfet_01v8_hvt L=150000U W=2000000U AS=270000000000P
++ AD=415000000000P PS=2540000U PD=3830000U
+M$7 Y C VGND VNB nfet_01v8 L=150000U W=1300000U AS=256750000000P
++ AD=256750000000P PS=2740000U PD=2740000U
+M$9 Y A VGND VNB nfet_01v8 L=150000U W=1300000U AS=266500000000P
++ AD=175500000000P PS=2770000U PD=1840000U
+M$11 Y B VGND VNB nfet_01v8 L=150000U W=1300000U AS=175500000000P
++ AD=256750000000P PS=1840000U PD=2740000U
+.ENDS sky130_fd_sc_hd__nor3_2
+
+.SUBCKT sky130_fd_sc_hd__and3_1 VPB C A B VGND VPWR X VNB
+M$1 VPWR A synth_1 VPB pfet_01v8_hvt L=150000U W=420000U AS=109200000000P
++ AD=56700000000P PS=1360000U PD=690000U
+M$2 synth_1 B VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=56700000000P
++ AD=66150000000P PS=690000U PD=735000U
+M$3 synth_1 C VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=142225000000P
++ AD=66150000000P PS=1335000U PD=735000U
+M$4 X synth_1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=142225000000P
++ AD=260000000000P PS=1335000U PD=2520000U
+M$5 synth_3 A synth_1 VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=44100000000P PS=1360000U PD=630000U
+M$6 synth_2 B synth_3 VNB nfet_01v8 L=150000U W=420000U AS=44100000000P
++ AD=44100000000P PS=630000U PD=630000U
+M$7 VGND C synth_2 VNB nfet_01v8 L=150000U W=420000U AS=44100000000P
++ AD=131650000000P PS=630000U PD=1140000U
+M$8 X synth_1 VGND VNB nfet_01v8 L=150000U W=650000U AS=131650000000P
++ AD=169000000000P PS=1140000U PD=1820000U
+.ENDS sky130_fd_sc_hd__and3_1
+
+.SUBCKT sky130_fd_sc_hd__nor4_2 VGND Y A B C D VPWR VPB VNB
+M$1 synth_2 C synth_3 VPB pfet_01v8_hvt L=150000U W=2000000U AS=415000000000P
++ AD=270000000000P PS=3830000U PD=2540000U
+M$3 Y D synth_3 VPB pfet_01v8_hvt L=150000U W=2000000U AS=270000000000P
++ AD=395000000000P PS=2540000U PD=3790000U
+M$5 VPWR A synth_1 VPB pfet_01v8_hvt L=150000U W=2000000U AS=415000000000P
++ AD=270000000000P PS=3830000U PD=2540000U
+M$7 synth_2 B synth_1 VPB pfet_01v8_hvt L=150000U W=2000000U AS=270000000000P
++ AD=415000000000P PS=2540000U PD=3830000U
+M$9 Y C VGND VNB nfet_01v8 L=150000U W=1300000U AS=269750000000P
++ AD=175500000000P PS=2780000U PD=1840000U
+M$11 Y D VGND VNB nfet_01v8 L=150000U W=1300000U AS=175500000000P
++ AD=256750000000P PS=1840000U PD=2740000U
+M$13 Y A VGND VNB nfet_01v8 L=150000U W=1300000U AS=269750000000P
++ AD=175500000000P PS=2780000U PD=1840000U
+M$15 Y B VGND VNB nfet_01v8 L=150000U W=1300000U AS=175500000000P
++ AD=269750000000P PS=1840000U PD=2780000U
+.ENDS sky130_fd_sc_hd__nor4_2
+
+.SUBCKT sky130_fd_sc_hd__nand4bb_4 VGND D A_N B_N Y C VPWR VPB VNB
+M$1 Y synth_1 VPWR VPB pfet_01v8_hvt L=150000U W=4000000U AS=665000000000P
++ AD=540000000000P PS=6330000U PD=5080000U
+M$5 Y synth_2 VPWR VPB pfet_01v8_hvt L=150000U W=4000000U AS=540000000000P
++ AD=960000000000P PS=5080000U PD=5920000U
+M$9 Y C VPWR VPB pfet_01v8_hvt L=150000U W=4000000U AS=960000000000P
++ AD=540000000000P PS=5920000U PD=5080000U
+M$13 Y D VPWR VPB pfet_01v8_hvt L=150000U W=4000000U AS=540000000000P
++ AD=680000000000P PS=5080000U PD=6360000U
+M$17 VPWR A_N synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=135000000000P PS=2520000U PD=1270000U
+M$18 synth_2 B_N VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=495000000000P PS=1270000U PD=2990000U
+M$19 synth_4 C synth_5 VNB nfet_01v8 L=150000U W=2600000U AS=451750000000P
++ AD=351000000000P PS=4640000U PD=3680000U
+M$23 VGND D synth_5 VNB nfet_01v8 L=150000U W=2600000U AS=351000000000P
++ AD=442000000000P PS=3680000U PD=4610000U
+M$27 VGND A_N synth_1 VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=87750000000P PS=1820000U PD=920000U
+M$28 synth_2 B_N VGND VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=321750000000P PS=920000U PD=2290000U
+M$29 Y synth_1 synth_3 VNB nfet_01v8 L=150000U W=2600000U AS=432250000000P
++ AD=351000000000P PS=4580000U PD=3680000U
+M$33 synth_4 synth_2 synth_3 VNB nfet_01v8 L=150000U W=2600000U
++ AS=351000000000P AD=432250000000P PS=3680000U PD=4580000U
+.ENDS sky130_fd_sc_hd__nand4bb_4
+
+.SUBCKT sky130_fd_sc_hd__o22ai_1 VPB B1 B2 A2 A1 Y VGND VPWR VNB
+M$1 synth_3 B1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=112500000000P PS=2520000U PD=1225000U
+M$2 Y B2 synth_3 VPB pfet_01v8_hvt L=150000U W=1000000U AS=112500000000P
++ AD=232500000000P PS=1225000U PD=1465000U
+M$3 synth_2 A2 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=232500000000P
++ AD=105000000000P PS=1465000U PD=1210000U
+M$4 VPWR A1 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=105000000000P
++ AD=270000000000P PS=1210000U PD=2540000U
+M$5 Y B1 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=92625000000P PS=1820000U PD=935000U
+M$6 synth_1 B2 Y VNB nfet_01v8 L=150000U W=650000U AS=92625000000P
++ AD=115375000000P PS=935000U PD=1005000U
+M$7 VGND A2 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=115375000000P
++ AD=87750000000P PS=1005000U PD=920000U
+M$8 synth_1 A1 VGND VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=169000000000P PS=920000U PD=1820000U
+.ENDS sky130_fd_sc_hd__o22ai_1
+
+.SUBCKT sky130_fd_sc_hd__or3b_2 VPB B A C_N X VGND VPWR VNB
+M$1 synth_4 A VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=148250000000P
++ AD=56700000000P PS=1340000U PD=690000U
+M$2 synth_3 B synth_4 VPB pfet_01v8_hvt L=150000U W=420000U AS=56700000000P
++ AD=56700000000P PS=690000U PD=690000U
+M$3 synth_2 synth_1 synth_3 VPB pfet_01v8_hvt L=150000U W=420000U
++ AS=56700000000P AD=109200000000P PS=690000U PD=1360000U
+M$4 synth_1 C_N VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=145750000000P
++ AD=109200000000P PS=1335000U PD=1360000U
+M$5 X synth_2 VPWR VPB pfet_01v8_hvt L=150000U W=2000000U AS=280750000000P
++ AD=283250000000P PS=2605000U PD=2610000U
+M$7 VGND C_N synth_1 VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=100250000000P PS=1360000U PD=985000U
+M$8 synth_2 A VGND VNB nfet_01v8 L=150000U W=420000U AS=101875000000P
++ AD=56700000000P PS=990000U PD=690000U
+M$9 VGND B synth_2 VNB nfet_01v8 L=150000U W=420000U AS=56700000000P
++ AD=56700000000P PS=690000U PD=690000U
+M$10 synth_2 synth_1 VGND VNB nfet_01v8 L=150000U W=420000U AS=56700000000P
++ AD=109200000000P PS=690000U PD=1360000U
+M$11 X synth_2 VGND VNB nfet_01v8 L=150000U W=1300000U AS=188000000000P
++ AD=189625000000P PS=1905000U PD=1910000U
+.ENDS sky130_fd_sc_hd__or3b_2
+
+.SUBCKT sky130_fd_sc_hd__o211ai_1 VPB A1 A2 B1 C1 Y VPWR VGND VNB
+M$1 synth_2 A1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=265000000000P
++ AD=105000000000P PS=2530000U PD=1210000U
+M$2 Y A2 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=105000000000P
++ AD=195000000000P PS=1210000U PD=1390000U
+M$3 VPWR B1 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=195000000000P
++ AD=195000000000P PS=1390000U PD=1390000U
+M$4 Y C1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=195000000000P
++ AD=635000000000P PS=1390000U PD=3270000U
+M$5 VGND A1 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=172250000000P
++ AD=126750000000P PS=1830000U PD=1040000U
+M$6 synth_1 A2 VGND VNB nfet_01v8 L=150000U W=650000U AS=126750000000P
++ AD=126750000000P PS=1040000U PD=1040000U
+M$7 synth_3 B1 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=126750000000P
++ AD=68250000000P PS=1040000U PD=860000U
+M$8 Y C1 synth_3 VNB nfet_01v8 L=150000U W=650000U AS=68250000000P
++ AD=393250000000P PS=860000U PD=2510000U
+.ENDS sky130_fd_sc_hd__o211ai_1
+
+.SUBCKT sky130_fd_sc_hd__a32oi_1 VPB B2 B1 A3 A2 A1 Y VGND VPWR VNB
+M$1 Y B2 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=135000000000P PS=2520000U PD=1270000U
+M$2 synth_1 B1 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=215000000000P PS=1270000U PD=1430000U
+M$3 VPWR A1 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=215000000000P
++ AD=135000000000P PS=1430000U PD=1270000U
+M$4 synth_1 A2 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=140000000000P PS=1270000U PD=1280000U
+M$5 VPWR A3 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=140000000000P
++ AD=260000000000P PS=1280000U PD=2520000U
+M$6 synth_4 B2 VGND VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=74750000000P PS=1820000U PD=880000U
+M$7 Y B1 synth_4 VNB nfet_01v8 L=150000U W=650000U AS=74750000000P
++ AD=152750000000P PS=880000U PD=1120000U
+M$8 synth_2 A1 Y VNB nfet_01v8 L=150000U W=650000U AS=152750000000P
++ AD=71500000000P PS=1120000U PD=870000U
+M$9 synth_3 A2 synth_2 VNB nfet_01v8 L=150000U W=650000U AS=71500000000P
++ AD=107250000000P PS=870000U PD=980000U
+M$10 VGND A3 synth_3 VNB nfet_01v8 L=150000U W=650000U AS=107250000000P
++ AD=169000000000P PS=980000U PD=1820000U
+.ENDS sky130_fd_sc_hd__a32oi_1
+
+.SUBCKT sky130_fd_sc_hd__o2111ai_1 VPB D1 C1 B1 A2 A1 VPWR Y VGND VNB
+M$1 Y D1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=265000000000P
++ AD=140000000000P PS=2530000U PD=1280000U
+M$2 VPWR C1 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=140000000000P
++ AD=195000000000P PS=1280000U PD=1390000U
+M$3 Y B1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=195000000000P
++ AD=202500000000P PS=1390000U PD=1405000U
+M$4 synth_2 A2 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=202500000000P
++ AD=195000000000P PS=1405000U PD=1390000U
+M$5 VPWR A1 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=195000000000P
++ AD=265000000000P PS=1390000U PD=2530000U
+M$6 synth_4 D1 Y VNB nfet_01v8 L=150000U W=650000U AS=172250000000P
++ AD=68250000000P PS=1830000U PD=860000U
+M$7 synth_3 C1 synth_4 VNB nfet_01v8 L=150000U W=650000U AS=68250000000P
++ AD=126750000000P PS=860000U PD=1040000U
+M$8 synth_1 B1 synth_3 VNB nfet_01v8 L=150000U W=650000U AS=126750000000P
++ AD=131625000000P PS=1040000U PD=1055000U
+M$9 VGND A2 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=131625000000P
++ AD=126750000000P PS=1055000U PD=1040000U
+M$10 synth_1 A1 VGND VNB nfet_01v8 L=150000U W=650000U AS=126750000000P
++ AD=172250000000P PS=1040000U PD=1830000U
+.ENDS sky130_fd_sc_hd__o2111ai_1
+
+.SUBCKT sky130_fd_sc_hd__and2_1 VPB A B X VPWR VGND VNB
+M$1 synth_1 A VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=117600000000P
++ AD=56700000000P PS=1400000U PD=690000U
+M$2 synth_1 B VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=166550000000P
++ AD=56700000000P PS=1390000U PD=690000U
+M$3 X synth_1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=166550000000P
++ AD=475000000000P PS=1390000U PD=2950000U
+M$4 synth_2 A synth_1 VNB nfet_01v8 L=150000U W=420000U AS=117600000000P
++ AD=56700000000P PS=1400000U PD=690000U
+M$5 synth_2 B VGND VNB nfet_01v8 L=150000U W=420000U AS=111800000000P
++ AD=56700000000P PS=1040000U PD=690000U
+M$6 X synth_1 VGND VNB nfet_01v8 L=150000U W=650000U AS=111800000000P
++ AD=182000000000P PS=1040000U PD=1860000U
+.ENDS sky130_fd_sc_hd__and2_1
+
+.SUBCKT sky130_fd_sc_hd__nor4b_2 VGND Y A B C D_N VPWR VPB VNB
+M$1 VPWR D_N synth_1 VPB pfet_01v8_hvt L=150000U W=420000U AS=109200000000P
++ AD=109200000000P PS=1360000U PD=1360000U
+M$2 synth_4 C synth_3 VPB pfet_01v8_hvt L=150000U W=2000000U AS=395000000000P
++ AD=270000000000P PS=3790000U PD=2540000U
+M$4 Y synth_1 synth_3 VPB pfet_01v8_hvt L=150000U W=2000000U AS=270000000000P
++ AD=395000000000P PS=2540000U PD=3790000U
+M$6 VPWR A synth_2 VPB pfet_01v8_hvt L=150000U W=2000000U AS=395000000000P
++ AD=270000000000P PS=3790000U PD=2540000U
+M$8 synth_4 B synth_2 VPB pfet_01v8_hvt L=150000U W=2000000U AS=270000000000P
++ AD=395000000000P PS=2540000U PD=3790000U
+M$10 VGND D_N synth_1 VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=109200000000P PS=1360000U PD=1360000U
+M$11 Y C VGND VNB nfet_01v8 L=150000U W=1300000U AS=256750000000P
++ AD=175500000000P PS=2740000U PD=1840000U
+M$13 Y synth_1 VGND VNB nfet_01v8 L=150000U W=1300000U AS=175500000000P
++ AD=256750000000P PS=1840000U PD=2740000U
+M$15 Y A VGND VNB nfet_01v8 L=150000U W=1300000U AS=256750000000P
++ AD=175500000000P PS=2740000U PD=1840000U
+M$17 Y B VGND VNB nfet_01v8 L=150000U W=1300000U AS=175500000000P
++ AD=256750000000P PS=1840000U PD=2740000U
+.ENDS sky130_fd_sc_hd__nor4b_2
+
+.SUBCKT sky130_fd_sc_hd__a32o_1 VGND X A2 A1 B1 A3 B2 VPWR VPB VNB
+M$1 VPWR synth_1 X VPB pfet_01v8_hvt L=150000U W=1000000U AS=330000000000P
++ AD=242500000000P PS=2660000U PD=1485000U
+M$2 synth_5 A3 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=242500000000P
++ AD=165000000000P PS=1485000U PD=1330000U
+M$3 VPWR A2 synth_5 VPB pfet_01v8_hvt L=150000U W=1000000U AS=165000000000P
++ AD=225000000000P PS=1330000U PD=1450000U
+M$4 synth_5 A1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=225000000000P
++ AD=185000000000P PS=1450000U PD=1370000U
+M$5 synth_1 B1 synth_5 VPB pfet_01v8_hvt L=150000U W=1000000U AS=185000000000P
++ AD=140000000000P PS=1370000U PD=1280000U
+M$6 synth_5 B2 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=140000000000P
++ AD=265000000000P PS=1280000U PD=2530000U
+M$7 VGND synth_1 X VNB nfet_01v8 L=150000U W=650000U AS=214500000000P
++ AD=167375000000P PS=1960000U PD=1165000U
+M$8 synth_2 A3 VGND VNB nfet_01v8 L=150000U W=650000U AS=167375000000P
++ AD=97500000000P PS=1165000U PD=950000U
+M$9 synth_4 A2 synth_2 VNB nfet_01v8 L=150000U W=650000U AS=97500000000P
++ AD=146250000000P PS=950000U PD=1100000U
+M$10 synth_1 A1 synth_4 VNB nfet_01v8 L=150000U W=650000U AS=146250000000P
++ AD=143000000000P PS=1100000U PD=1090000U
+M$11 synth_3 B1 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=143000000000P
++ AD=68250000000P PS=1090000U PD=860000U
+M$12 VGND B2 synth_3 VNB nfet_01v8 L=150000U W=650000U AS=68250000000P
++ AD=172250000000P PS=860000U PD=1830000U
+.ENDS sky130_fd_sc_hd__a32o_1
+
+.SUBCKT sky130_fd_sc_hd__a22o_1 VPB B2 B1 A1 A2 VGND X VPWR VNB
+M$1 synth_1 A1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=252900000000P
++ AD=160000000000P PS=2520000U PD=1320000U
+M$2 VPWR A2 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=160000000000P
++ AD=155000000000P PS=1320000U PD=1310000U
+M$3 X synth_2 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=155000000000P
++ AD=260000000000P PS=1310000U PD=2520000U
+M$4 synth_1 B2 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=135000000000P PS=2520000U PD=1270000U
+M$5 synth_2 B1 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=252850000000P PS=1270000U PD=2520000U
+M$6 synth_3 A1 synth_2 VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=113750000000P PS=1820000U PD=1000000U
+M$7 VGND A2 synth_3 VNB nfet_01v8 L=150000U W=650000U AS=113750000000P
++ AD=100750000000P PS=1000000U PD=960000U
+M$8 X synth_2 VGND VNB nfet_01v8 L=150000U W=650000U AS=100750000000P
++ AD=169000000000P PS=960000U PD=1820000U
+M$9 synth_4 B2 VGND VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=74750000000P PS=1820000U PD=880000U
+M$10 synth_2 B1 synth_4 VNB nfet_01v8 L=150000U W=650000U AS=74750000000P
++ AD=169000000000P PS=880000U PD=1820000U
+.ENDS sky130_fd_sc_hd__a22o_1
+
+.SUBCKT sky130_fd_sc_hd__a221oi_1 VPB A2 A1 B1 B2 C1 VPWR VGND Y VNB
+M$1 synth_2 A1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=152500000000P PS=2520000U PD=1305000U
+M$2 VPWR A2 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=152500000000P
++ AD=305000000000P PS=1305000U PD=2610000U
+M$3 synth_1 C1 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=135000000000P PS=2520000U PD=1270000U
+M$4 synth_2 B2 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=135000000000P PS=1270000U PD=1270000U
+M$5 synth_1 B1 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=260000000000P PS=1270000U PD=2520000U
+M$6 synth_3 A1 Y VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=99125000000P PS=1820000U PD=955000U
+M$7 VGND A2 synth_3 VNB nfet_01v8 L=150000U W=650000U AS=99125000000P
++ AD=198250000000P PS=955000U PD=1910000U
+M$8 VGND C1 Y VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=105625000000P PS=1820000U PD=975000U
+M$9 synth_4 B2 VGND VNB nfet_01v8 L=150000U W=650000U AS=105625000000P
++ AD=69875000000P PS=975000U PD=865000U
+M$10 Y B1 synth_4 VNB nfet_01v8 L=150000U W=650000U AS=69875000000P
++ AD=169000000000P PS=865000U PD=1820000U
+.ENDS sky130_fd_sc_hd__a221oi_1
+
+.SUBCKT sky130_fd_sc_hd__a222oi_1 VPB C1 C2 B2 B1 A1 A2 Y VGND VPWR VNB
+M$1 synth_1 B2 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=135000000000P PS=2520000U PD=1270000U
+M$2 synth_2 B1 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=135000000000P PS=1270000U PD=1270000U
+M$3 VPWR A1 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=165000000000P PS=1270000U PD=1330000U
+M$4 synth_2 A2 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=165000000000P
++ AD=260000000000P PS=1330000U PD=2520000U
+M$5 synth_1 C1 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=135000000000P PS=2520000U PD=1270000U
+M$6 Y C2 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=260000000000P PS=1270000U PD=2520000U
+M$7 synth_5 C1 Y VNB nfet_01v8 L=150000U W=640000U AS=166400000000P
++ AD=67200000000P PS=1800000U PD=850000U
+M$8 VGND C2 synth_5 VNB nfet_01v8 L=150000U W=640000U AS=67200000000P
++ AD=291200000000P PS=850000U PD=1550000U
+M$9 synth_4 B2 VGND VNB nfet_01v8 L=150000U W=640000U AS=291200000000P
++ AD=67200000000P PS=1550000U PD=850000U
+M$10 Y B1 synth_4 VNB nfet_01v8 L=150000U W=640000U AS=67200000000P
++ AD=105600000000P PS=850000U PD=970000U
+M$11 synth_3 A1 Y VNB nfet_01v8 L=150000U W=640000U AS=105600000000P
++ AD=105600000000P PS=970000U PD=970000U
+M$12 VGND A2 synth_3 VNB nfet_01v8 L=150000U W=640000U AS=105600000000P
++ AD=166400000000P PS=970000U PD=1800000U
+.ENDS sky130_fd_sc_hd__a222oi_1
+
+.SUBCKT sky130_fd_sc_hd__nand3b_1 VPB A_N C B Y VGND VPWR VNB
+M$1 VPWR A_N synth_1 VPB pfet_01v8_hvt L=150000U W=420000U AS=109200000000P
++ AD=145750000000P PS=1360000U PD=1335000U
+M$2 Y C VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=145750000000P
++ AD=135000000000P PS=1335000U PD=1270000U
+M$3 VPWR B Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=192500000000P PS=1270000U PD=1385000U
+M$4 Y synth_1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=192500000000P
++ AD=280000000000P PS=1385000U PD=2560000U
+M$5 synth_1 A_N VGND VNB nfet_01v8 L=150000U W=420000U AS=100250000000P
++ AD=109200000000P PS=985000U PD=1360000U
+M$6 synth_3 C VGND VNB nfet_01v8 L=150000U W=650000U AS=100250000000P
++ AD=87750000000P PS=985000U PD=920000U
+M$7 synth_2 B synth_3 VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=125125000000P PS=920000U PD=1035000U
+M$8 Y synth_1 synth_2 VNB nfet_01v8 L=150000U W=650000U AS=125125000000P
++ AD=182000000000P PS=1035000U PD=1860000U
+.ENDS sky130_fd_sc_hd__nand3b_1
+
+.SUBCKT sky130_fd_sc_hd__and3b_1 VPB C B A_N X VGND VPWR VNB
+M$1 VPWR C synth_2 VPB pfet_01v8_hvt L=150000U W=420000U AS=74375000000P
++ AD=142225000000P PS=815000U PD=1335000U
+M$2 VPWR synth_1 synth_2 VPB pfet_01v8_hvt L=150000U W=420000U AS=108500000000P
++ AD=56700000000P PS=1360000U PD=690000U
+M$3 VPWR B synth_2 VPB pfet_01v8_hvt L=150000U W=420000U AS=74375000000P
++ AD=56700000000P PS=815000U PD=690000U
+M$4 X synth_2 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=142225000000P
++ AD=260000000000P PS=1335000U PD=2520000U
+M$5 synth_1 A_N VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=109200000000P
++ AD=108700000000P PS=1360000U PD=1360000U
+M$6 synth_4 synth_1 synth_2 VNB nfet_01v8 L=150000U W=420000U AS=107825000000P
++ AD=44100000000P PS=1360000U PD=630000U
+M$7 synth_3 B synth_4 VNB nfet_01v8 L=150000U W=420000U AS=44100000000P
++ AD=53550000000P PS=630000U PD=675000U
+M$8 synth_3 C VGND VNB nfet_01v8 L=150000U W=420000U AS=122275000000P
++ AD=53550000000P PS=1080000U PD=675000U
+M$9 X synth_2 VGND VNB nfet_01v8 L=150000U W=650000U AS=122275000000P
++ AD=169000000000P PS=1080000U PD=1820000U
+M$10 synth_1 A_N VGND VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=107850000000P PS=1360000U PD=1360000U
+.ENDS sky130_fd_sc_hd__and3b_1
+
+.SUBCKT sky130_fd_sc_hd__o311ai_0 VPB C1 B1 A3 A2 A1 VPWR Y VGND VNB
+M$1 synth_3 A1 VPWR VPB pfet_01v8_hvt L=150000U W=640000U AS=179200000000P
++ AD=86400000000P PS=1840000U PD=910000U
+M$2 synth_2 A2 synth_3 VPB pfet_01v8_hvt L=150000U W=640000U AS=86400000000P
++ AD=86400000000P PS=910000U PD=910000U
+M$3 Y A3 synth_2 VPB pfet_01v8_hvt L=150000U W=640000U AS=86400000000P
++ AD=144000000000P PS=910000U PD=1090000U
+M$4 VPWR B1 Y VPB pfet_01v8_hvt L=150000U W=640000U AS=144000000000P
++ AD=118400000000P PS=1090000U PD=1010000U
+M$5 Y C1 VPWR VPB pfet_01v8_hvt L=150000U W=640000U AS=118400000000P
++ AD=198400000000P PS=1010000U PD=1900000U
+M$6 synth_1 A1 VGND VNB nfet_01v8 L=150000U W=420000U AS=117600000000P
++ AD=56700000000P PS=1400000U PD=690000U
+M$7 VGND A2 synth_1 VNB nfet_01v8 L=150000U W=420000U AS=56700000000P
++ AD=56700000000P PS=690000U PD=690000U
+M$8 synth_1 A3 VGND VNB nfet_01v8 L=150000U W=420000U AS=56700000000P
++ AD=128100000000P PS=690000U PD=1030000U
+M$9 synth_4 B1 synth_1 VNB nfet_01v8 L=150000U W=420000U AS=128100000000P
++ AD=44100000000P PS=1030000U PD=630000U
+M$10 Y C1 synth_4 VNB nfet_01v8 L=150000U W=420000U AS=44100000000P
++ AD=117600000000P PS=630000U PD=1400000U
+.ENDS sky130_fd_sc_hd__o311ai_0
+
+.SUBCKT sky130_fd_sc_hd__nor4bb_1 VPB C_N D_N B A Y VGND VPWR VNB
+M$1 synth_5 synth_2 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=255900000000P
++ AD=135000000000P PS=2520000U PD=1270000U
+M$2 synth_4 synth_1 synth_5 VPB pfet_01v8_hvt L=150000U W=1000000U
++ AS=135000000000P AD=165000000000P PS=1270000U PD=1330000U
+M$3 synth_3 B synth_4 VPB pfet_01v8_hvt L=150000U W=1000000U AS=165000000000P
++ AD=135000000000P PS=1330000U PD=1270000U
+M$4 VPWR A synth_3 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=260000000000P PS=1270000U PD=2520000U
+M$5 synth_2 D_N VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=122612500000P
++ AD=108500000000P PS=1320000U PD=1360000U
+M$6 synth_1 C_N VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=122612500000P
++ AD=109200000000P PS=1320000U PD=1360000U
+M$7 Y synth_2 VGND VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=87750000000P PS=1820000U PD=920000U
+M$8 VGND synth_1 Y VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=107250000000P PS=920000U PD=980000U
+M$9 Y B VGND VNB nfet_01v8 L=150000U W=650000U AS=107250000000P AD=87750000000P
++ PS=980000U PD=920000U
+M$10 VGND A Y VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=169000000000P PS=920000U PD=1820000U
+M$11 VGND C_N synth_1 VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=60900000000P PS=1360000U PD=710000U
+M$12 synth_2 D_N VGND VNB nfet_01v8 L=150000U W=420000U AS=60900000000P
++ AD=109200000000P PS=710000U PD=1360000U
+.ENDS sky130_fd_sc_hd__nor4bb_1
+
+.SUBCKT sky130_fd_sc_hd__a41oi_1 VPB A1 A2 A3 A4 B1 VPWR Y VGND VNB
+M$1 synth_1 B1 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=212500000000P PS=2520000U PD=1425000U
+M$2 VPWR A4 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=212500000000P
++ AD=205000000000P PS=1425000U PD=1410000U
+M$3 synth_1 A3 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=205000000000P
++ AD=155000000000P PS=1410000U PD=1310000U
+M$4 VPWR A2 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=155000000000P
++ AD=212500000000P PS=1310000U PD=1425000U
+M$5 synth_1 A1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=212500000000P
++ AD=370000000000P PS=1425000U PD=2740000U
+M$6 Y B1 VGND VNB nfet_01v8 L=150000U W=650000U AS=163425000000P
++ AD=169000000000P PS=1175000U PD=1820000U
+M$7 synth_4 A4 VGND VNB nfet_01v8 L=150000U W=650000U AS=163425000000P
++ AD=113750000000P PS=1175000U PD=1000000U
+M$8 synth_3 A3 synth_4 VNB nfet_01v8 L=150000U W=650000U AS=113750000000P
++ AD=100750000000P PS=1000000U PD=960000U
+M$9 synth_2 A2 synth_3 VNB nfet_01v8 L=150000U W=650000U AS=100750000000P
++ AD=138125000000P PS=960000U PD=1075000U
+M$10 Y A1 synth_2 VNB nfet_01v8 L=150000U W=650000U AS=138125000000P
++ AD=240500000000P PS=1075000U PD=2040000U
+.ENDS sky130_fd_sc_hd__a41oi_1
+
+.SUBCKT sky130_fd_sc_hd__nand4bb_1 VPB A_N D B_N C VPWR VGND Y VNB
+M$1 synth_2 A_N VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=109200000000P
++ AD=182700000000P PS=1360000U PD=1710000U
+M$2 synth_1 B_N VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=175750000000P
++ AD=109200000000P PS=1395000U PD=1360000U
+M$3 Y D VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=175750000000P
++ AD=195000000000P PS=1395000U PD=1390000U
+M$4 VPWR C Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=195000000000P
++ AD=175000000000P PS=1390000U PD=1350000U
+M$5 Y synth_1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=175000000000P
++ AD=175000000000P PS=1350000U PD=1350000U
+M$6 VPWR synth_2 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=175000000000P
++ AD=260000000000P PS=1350000U PD=2520000U
+M$7 synth_1 B_N VGND VNB nfet_01v8 L=150000U W=420000U AS=119750000000P
++ AD=109200000000P PS=1045000U PD=1360000U
+M$8 synth_5 D VGND VNB nfet_01v8 L=150000U W=650000U AS=119750000000P
++ AD=126750000000P PS=1045000U PD=1040000U
+M$9 synth_4 C synth_5 VNB nfet_01v8 L=150000U W=650000U AS=126750000000P
++ AD=113750000000P PS=1040000U PD=1000000U
+M$10 synth_3 synth_1 synth_4 VNB nfet_01v8 L=150000U W=650000U AS=113750000000P
++ AD=113750000000P PS=1000000U PD=1000000U
+M$11 Y synth_2 synth_3 VNB nfet_01v8 L=150000U W=650000U AS=113750000000P
++ AD=169000000000P PS=1000000U PD=1820000U
+M$12 synth_2 A_N VGND VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=182700000000P PS=1360000U PD=1710000U
+.ENDS sky130_fd_sc_hd__nand4bb_1
+
+.SUBCKT sky130_fd_sc_hd__nor3b_1 VPB B A C_N Y VGND VPWR VNB
+M$1 synth_1 C_N VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=145750000000P
++ AD=109200000000P PS=1335000U PD=1360000U
+M$2 synth_3 synth_1 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=320000000000P
++ AD=135000000000P PS=2640000U PD=1270000U
+M$3 synth_2 B synth_3 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=135000000000P PS=1270000U PD=1270000U
+M$4 VPWR A synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=145750000000P PS=1270000U PD=1335000U
+M$5 VGND synth_1 Y VNB nfet_01v8 L=150000U W=650000U AS=221000000000P
++ AD=87750000000P PS=1980000U PD=920000U
+M$6 Y B VGND VNB nfet_01v8 L=150000U W=650000U AS=87750000000P AD=87750000000P
++ PS=920000U PD=920000U
+M$7 VGND A Y VNB nfet_01v8 L=150000U W=650000U AS=87750000000P AD=100250000000P
++ PS=920000U PD=985000U
+M$8 synth_1 C_N VGND VNB nfet_01v8 L=150000U W=420000U AS=100250000000P
++ AD=109200000000P PS=985000U PD=1360000U
+.ENDS sky130_fd_sc_hd__nor3b_1
+
+.SUBCKT sky130_fd_sc_hd__o2bb2ai_1 VPB A1_N A2_N B2 B1 VPWR Y VGND VNB
+M$1 synth_1 A1_N VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=275000000000P
++ AD=135000000000P PS=2550000U PD=1270000U
+M$2 VPWR A2_N synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=420000000000P PS=1270000U PD=1840000U
+M$3 Y synth_1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=420000000000P
++ AD=135000000000P PS=1840000U PD=1270000U
+M$4 synth_3 B2 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=135000000000P PS=1270000U PD=1270000U
+M$5 VPWR B1 synth_3 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=275000000000P PS=1270000U PD=2550000U
+M$6 synth_2 synth_1 Y VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=87750000000P PS=1820000U PD=920000U
+M$7 VGND B2 synth_2 VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=87750000000P PS=920000U PD=920000U
+M$8 synth_2 B1 VGND VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=169000000000P PS=920000U PD=1820000U
+M$9 synth_4 A1_N VGND VNB nfet_01v8 L=150000U W=650000U AS=178750000000P
++ AD=68250000000P PS=1850000U PD=860000U
+M$10 synth_1 A2_N synth_4 VNB nfet_01v8 L=150000U W=650000U AS=68250000000P
++ AD=240500000000P PS=860000U PD=2040000U
+.ENDS sky130_fd_sc_hd__o2bb2ai_1
+
+.SUBCKT sky130_fd_sc_hd__a211oi_1 VPB A2 A1 C1 B1 VGND Y VPWR VNB
+M$1 VPWR A2 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=265000000000P
++ AD=140000000000P PS=2530000U PD=1280000U
+M$2 synth_1 A1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=140000000000P
++ AD=140000000000P PS=1280000U PD=1280000U
+M$3 synth_2 B1 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=140000000000P
++ AD=155000000000P PS=1280000U PD=1310000U
+M$4 Y C1 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=155000000000P
++ AD=265000000000P PS=1310000U PD=2530000U
+M$5 synth_3 A2 VGND VNB nfet_01v8 L=150000U W=650000U AS=266500000000P
++ AD=91000000000P PS=2120000U PD=930000U
+M$6 Y A1 synth_3 VNB nfet_01v8 L=150000U W=650000U AS=91000000000P
++ AD=91000000000P PS=930000U PD=930000U
+M$7 VGND B1 Y VNB nfet_01v8 L=150000U W=650000U AS=91000000000P
++ AD=100750000000P PS=930000U PD=960000U
+M$8 Y C1 VGND VNB nfet_01v8 L=150000U W=650000U AS=100750000000P
++ AD=172250000000P PS=960000U PD=1830000U
+.ENDS sky130_fd_sc_hd__a211oi_1
+
+.SUBCKT sky130_fd_sc_hd__clkinv_4 VPB A VGND VPWR VNB
+M$1 Y A VPWR VPB pfet_01v8_hvt L=150000U W=6000000U AS=1.005e+12P AD=1.045e+12P
++ PS=9010000U PD=9090000U
+M$7 Y A VGND VNB nfet_01v8 L=150000U W=1680000U AS=315000000000P
++ AD=342300000000P PS=3600000U PD=3730000U
+.ENDS sky130_fd_sc_hd__clkinv_4
+
+.SUBCKT sky130_fd_sc_hd__a221o_1 VPB C1 B2 B1 A1 A2 X VPWR VGND VNB
+M$1 synth_1 A1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=165000000000P PS=2520000U PD=1330000U
+M$2 VPWR A2 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=165000000000P
++ AD=157500000000P PS=1330000U PD=1315000U
+M$3 X synth_2 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=157500000000P
++ AD=260000000000P PS=1315000U PD=2520000U
+M$4 synth_3 C1 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=135000000000P PS=2520000U PD=1270000U
+M$5 synth_1 B2 synth_3 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=135000000000P PS=1270000U PD=1270000U
+M$6 synth_3 B1 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=260000000000P PS=1270000U PD=2520000U
+M$7 synth_4 A1 synth_2 VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=107250000000P PS=1820000U PD=980000U
+M$8 VGND A2 synth_4 VNB nfet_01v8 L=150000U W=650000U AS=107250000000P
++ AD=102375000000P PS=980000U PD=965000U
+M$9 X synth_2 VGND VNB nfet_01v8 L=150000U W=650000U AS=102375000000P
++ AD=169000000000P PS=965000U PD=1820000U
+M$10 VGND C1 synth_2 VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=107250000000P PS=1820000U PD=980000U
+M$11 synth_5 B2 VGND VNB nfet_01v8 L=150000U W=650000U AS=107250000000P
++ AD=68250000000P PS=980000U PD=860000U
+M$12 synth_2 B1 synth_5 VNB nfet_01v8 L=150000U W=650000U AS=68250000000P
++ AD=169000000000P PS=860000U PD=1820000U
+.ENDS sky130_fd_sc_hd__a221o_1
+
+.SUBCKT sky130_fd_sc_hd__nand2b_1 VPB B A_N Y VGND VPWR VNB
+M$1 VPWR A_N synth_1 VPB pfet_01v8_hvt L=150000U W=420000U AS=109200000000P
++ AD=145750000000P PS=1360000U PD=1335000U
+M$2 Y B VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=145750000000P
++ AD=135000000000P PS=1335000U PD=1270000U
+M$3 VPWR synth_1 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=265000000000P PS=1270000U PD=2530000U
+M$4 synth_1 A_N VGND VNB nfet_01v8 L=150000U W=420000U AS=100250000000P
++ AD=109200000000P PS=985000U PD=1360000U
+M$5 synth_2 B VGND VNB nfet_01v8 L=150000U W=650000U AS=100250000000P
++ AD=87750000000P PS=985000U PD=920000U
+M$6 Y synth_1 synth_2 VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=169000000000P PS=920000U PD=1820000U
+.ENDS sky130_fd_sc_hd__nand2b_1
+
+.SUBCKT sky130_fd_sc_hd__xnor2_1 VPB B A Y VPWR VGND VNB
+M$1 synth_2 B VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=300000000000P
++ AD=135000000000P PS=2600000U PD=1270000U
+M$2 VPWR A synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=365000000000P PS=1270000U PD=1730000U
+M$3 synth_3 A VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=365000000000P
++ AD=105000000000P PS=1730000U PD=1210000U
+M$4 Y B synth_3 VPB pfet_01v8_hvt L=150000U W=1000000U AS=105000000000P
++ AD=165000000000P PS=1210000U PD=1330000U
+M$5 VPWR synth_2 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=165000000000P
++ AD=360000000000P PS=1330000U PD=2720000U
+M$6 synth_1 B VGND VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=87750000000P PS=1820000U PD=920000U
+M$7 Y synth_2 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=195000000000P PS=920000U PD=1900000U
+M$8 synth_4 B synth_2 VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=68250000000P PS=1820000U PD=860000U
+M$9 VGND A synth_4 VNB nfet_01v8 L=150000U W=650000U AS=68250000000P
++ AD=87750000000P PS=860000U PD=920000U
+M$10 synth_1 A VGND VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=169000000000P PS=920000U PD=1820000U
+.ENDS sky130_fd_sc_hd__xnor2_1
+
+.SUBCKT sky130_fd_sc_hd__o21ai_1 VPB A1 B1 A2 VPWR VGND Y VNB
+M$1 synth_2 A1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=105000000000P PS=2520000U PD=1210000U
+M$2 Y A2 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=105000000000P
++ AD=174000000000P PS=1210000U PD=1390000U
+M$3 VPWR B1 Y VPB pfet_01v8_hvt L=150000U W=700000U AS=174000000000P
++ AD=182000000000P PS=1390000U PD=1920000U
+M$4 VGND A1 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=107250000000P PS=1820000U PD=980000U
+M$5 synth_1 A2 VGND VNB nfet_01v8 L=150000U W=650000U AS=107250000000P
++ AD=87750000000P PS=980000U PD=920000U
+M$6 Y B1 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=169000000000P PS=920000U PD=1820000U
+.ENDS sky130_fd_sc_hd__o21ai_1
+
+.SUBCKT sky130_fd_sc_hd__o41ai_1 VPB B1 A4 A3 A1 A2 VGND Y VPWR VNB
+M$1 Y B1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=135000000000P PS=2520000U PD=1270000U
+M$2 synth_4 A4 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=312500000000P PS=1270000U PD=1625000U
+M$3 synth_3 A3 synth_4 VPB pfet_01v8_hvt L=150000U W=1000000U AS=312500000000P
++ AD=135000000000P PS=1625000U PD=1270000U
+M$4 synth_2 A2 synth_3 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=175000000000P PS=1270000U PD=1350000U
+M$5 VPWR A1 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=175000000000P
++ AD=280000000000P PS=1350000U PD=2560000U
+M$6 synth_1 B1 Y VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=203125000000P PS=1820000U PD=1275000U
+M$7 VGND A4 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=203125000000P
++ AD=87750000000P PS=1275000U PD=920000U
+M$8 synth_1 A3 VGND VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=87750000000P PS=920000U PD=920000U
+M$9 VGND A2 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=113750000000P PS=920000U PD=1000000U
+M$10 synth_1 A1 VGND VNB nfet_01v8 L=150000U W=650000U AS=113750000000P
++ AD=182000000000P PS=1000000U PD=1860000U
+.ENDS sky130_fd_sc_hd__o41ai_1
+
+.SUBCKT sky130_fd_sc_hd__nand4b_1 VPB A_N B C D VPWR Y VGND VNB
+M$1 VPWR A_N synth_1 VPB pfet_01v8_hvt L=150000U W=420000U AS=109200000000P
++ AD=145750000000P PS=1360000U PD=1335000U
+M$2 Y D VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=145750000000P
++ AD=135000000000P PS=1335000U PD=1270000U
+M$3 VPWR C Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=192500000000P PS=1270000U PD=1385000U
+M$4 Y B VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=192500000000P
++ AD=195000000000P PS=1385000U PD=1390000U
+M$5 VPWR synth_1 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=195000000000P
++ AD=280000000000P PS=1390000U PD=2560000U
+M$6 synth_1 A_N VGND VNB nfet_01v8 L=150000U W=420000U AS=118125000000P
++ AD=111300000000P PS=1040000U PD=1370000U
+M$7 synth_2 D VGND VNB nfet_01v8 L=150000U W=650000U AS=118125000000P
++ AD=87750000000P PS=1040000U PD=920000U
+M$8 synth_4 C synth_2 VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=125125000000P PS=920000U PD=1035000U
+M$9 synth_3 B synth_4 VNB nfet_01v8 L=150000U W=650000U AS=125125000000P
++ AD=126750000000P PS=1035000U PD=1040000U
+M$10 Y synth_1 synth_3 VNB nfet_01v8 L=150000U W=650000U AS=126750000000P
++ AD=227500000000P PS=1040000U PD=2000000U
+.ENDS sky130_fd_sc_hd__nand4b_1
+
+.SUBCKT sky130_fd_sc_hd__o21bai_1 VPB B1_N A1 A2 VPWR VGND Y VNB
+M$1 synth_1 B1_N VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=178250000000P
++ AD=109200000000P PS=1400000U PD=1360000U
+M$2 Y synth_1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=178250000000P
++ AD=152500000000P PS=1400000U PD=1305000U
+M$3 synth_3 A2 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=152500000000P
++ AD=127500000000P PS=1305000U PD=1255000U
+M$4 VPWR A1 synth_3 VPB pfet_01v8_hvt L=150000U W=1000000U AS=127500000000P
++ AD=280000000000P PS=1255000U PD=2560000U
+M$5 synth_2 synth_1 Y VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=100750000000P PS=1820000U PD=960000U
+M$6 VGND A2 synth_2 VNB nfet_01v8 L=150000U W=650000U AS=100750000000P
++ AD=87750000000P PS=960000U PD=920000U
+M$7 synth_2 A1 VGND VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=169000000000P PS=920000U PD=1820000U
+M$8 synth_1 B1_N VGND VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=109200000000P PS=1360000U PD=1360000U
+.ENDS sky130_fd_sc_hd__o21bai_1
+
+.SUBCKT sky130_fd_sc_hd__inv_8 VGND A VPWR VPB VNB
+M$1 Y A VPWR VPB pfet_01v8_hvt L=150000U W=8000000U AS=1.205e+12P AD=1.205e+12P
++ PS=11410000U PD=11410000U
+M$9 Y A VGND VNB nfet_01v8 L=150000U W=5200000U AS=783250000000P
++ AD=783250000000P PS=8260000U PD=8260000U
+.ENDS sky130_fd_sc_hd__inv_8
+
+.SUBCKT sky130_fd_sc_hd__a2111oi_0 VPB D1 C1 B1 A1 A2 VGND VPWR Y VNB
+M$1 synth_3 D1 Y VPB pfet_01v8_hvt L=150000U W=640000U AS=188800000000P
++ AD=67200000000P PS=1870000U PD=850000U
+M$2 synth_2 C1 synth_3 VPB pfet_01v8_hvt L=150000U W=640000U AS=67200000000P
++ AD=67200000000P PS=850000U PD=850000U
+M$3 synth_1 B1 synth_2 VPB pfet_01v8_hvt L=150000U W=640000U AS=67200000000P
++ AD=89600000000P PS=850000U PD=920000U
+M$4 VPWR A1 synth_1 VPB pfet_01v8_hvt L=150000U W=640000U AS=89600000000P
++ AD=121600000000P PS=920000U PD=1020000U
+M$5 synth_1 A2 VPWR VPB pfet_01v8_hvt L=150000U W=640000U AS=121600000000P
++ AD=195200000000P PS=1020000U PD=1890000U
+M$6 Y D1 VGND VNB nfet_01v8 L=150000U W=420000U AS=126000000000P
++ AD=58800000000P PS=1440000U PD=700000U
+M$7 VGND C1 Y VNB nfet_01v8 L=150000U W=420000U AS=58800000000P AD=73500000000P
++ PS=700000U PD=770000U
+M$8 Y B1 VGND VNB nfet_01v8 L=150000U W=420000U AS=73500000000P AD=58800000000P
++ PS=770000U PD=700000U
+M$9 synth_4 A1 Y VNB nfet_01v8 L=150000U W=420000U AS=58800000000P
++ AD=44100000000P PS=700000U PD=630000U
+M$10 VGND A2 synth_4 VNB nfet_01v8 L=150000U W=420000U AS=44100000000P
++ AD=119700000000P PS=630000U PD=1410000U
+.ENDS sky130_fd_sc_hd__a2111oi_0
+
+.SUBCKT sky130_fd_sc_hd__o221ai_1 VPB C1 B1 A2 A1 B2 Y VPWR VGND VNB
+M$1 VPWR C1 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=280000000000P
++ AD=380000000000P PS=2560000U PD=1760000U
+M$2 synth_4 B1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=380000000000P
++ AD=120000000000P PS=1760000U PD=1240000U
+M$3 Y B2 synth_4 VPB pfet_01v8_hvt L=150000U W=1000000U AS=120000000000P
++ AD=225000000000P PS=1240000U PD=1450000U
+M$4 synth_3 A2 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=225000000000P
++ AD=105000000000P PS=1450000U PD=1210000U
+M$5 VPWR A1 synth_3 VPB pfet_01v8_hvt L=150000U W=1000000U AS=105000000000P
++ AD=260000000000P PS=1210000U PD=2520000U
+M$6 synth_2 B1 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=165200000000P
++ AD=87750000000P PS=1820000U PD=920000U
+M$7 synth_1 B2 synth_2 VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=117000000000P PS=920000U PD=1010000U
+M$8 VGND A2 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=117000000000P
++ AD=87750000000P PS=1010000U PD=920000U
+M$9 synth_1 A1 VGND VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=169000000000P PS=920000U PD=1820000U
+M$10 synth_2 C1 Y VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=165400000000P PS=1820000U PD=1820000U
+.ENDS sky130_fd_sc_hd__o221ai_1
+
+.SUBCKT sky130_fd_sc_hd__or4b_1 VPB D_N A B C VPWR VGND X VNB
+M$1 synth_3 synth_1 synth_2 VPB pfet_01v8_hvt L=150000U W=420000U
++ AS=109200000000P AD=68250000000P PS=1360000U PD=745000U
+M$2 synth_5 C synth_3 VPB pfet_01v8_hvt L=150000U W=420000U AS=68250000000P
++ AD=45150000000P PS=745000U PD=635000U
+M$3 synth_4 B synth_5 VPB pfet_01v8_hvt L=150000U W=420000U AS=45150000000P
++ AD=64050000000P PS=635000U PD=725000U
+M$4 VPWR A synth_4 VPB pfet_01v8_hvt L=150000U W=420000U AS=64050000000P
++ AD=148250000000P PS=725000U PD=1340000U
+M$5 X synth_2 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=148250000000P
++ AD=275000000000P PS=1340000U PD=2550000U
+M$6 synth_1 D_N VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=109200000000P
++ AD=109200000000P PS=1360000U PD=1360000U
+M$7 synth_2 synth_1 VGND VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=64050000000P PS=1360000U PD=725000U
+M$8 VGND C synth_2 VNB nfet_01v8 L=150000U W=420000U AS=64050000000P
++ AD=56700000000P PS=725000U PD=690000U
+M$9 synth_2 B VGND VNB nfet_01v8 L=150000U W=420000U AS=56700000000P
++ AD=56700000000P PS=690000U PD=690000U
+M$10 synth_2 A VGND VNB nfet_01v8 L=150000U W=420000U AS=101875000000P
++ AD=56700000000P PS=990000U PD=690000U
+M$11 X synth_2 VGND VNB nfet_01v8 L=150000U W=650000U AS=101875000000P
++ AD=178750000000P PS=990000U PD=1850000U
+M$12 synth_1 D_N VGND VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=109200000000P PS=1360000U PD=1360000U
+.ENDS sky130_fd_sc_hd__or4b_1
+
+.SUBCKT sky130_fd_sc_hd__a31o_2 VPB B1 A1 A2 A3 X VPWR VGND VNB
+M$1 X synth_2 VPWR VPB pfet_01v8_hvt L=150000U W=2000000U AS=395000000000P
++ AD=270000000000P PS=3790000U PD=2540000U
+M$3 synth_1 A3 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=135000000000P PS=1270000U PD=1270000U
+M$4 VPWR A2 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=165000000000P PS=1270000U PD=1330000U
+M$5 synth_1 A1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=165000000000P
++ AD=165000000000P PS=1330000U PD=1330000U
+M$6 synth_2 B1 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=165000000000P
++ AD=320000000000P PS=1330000U PD=2640000U
+M$7 X synth_2 VGND VNB nfet_01v8 L=150000U W=1300000U AS=256750000000P
++ AD=175500000000P PS=2740000U PD=1840000U
+M$9 synth_4 A3 VGND VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=87750000000P PS=920000U PD=920000U
+M$10 synth_3 A2 synth_4 VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=107250000000P PS=920000U PD=980000U
+M$11 synth_2 A1 synth_3 VNB nfet_01v8 L=150000U W=650000U AS=107250000000P
++ AD=126750000000P PS=980000U PD=1040000U
+M$12 VGND B1 synth_2 VNB nfet_01v8 L=150000U W=650000U AS=126750000000P
++ AD=169000000000P PS=1040000U PD=1820000U
+.ENDS sky130_fd_sc_hd__a31o_2
+
+.SUBCKT sky130_fd_sc_hd__nor3_1 VPB A B C Y VGND VPWR VNB
+M$1 synth_2 C Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=135000000000P PS=2520000U PD=1270000U
+M$2 synth_1 B synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=135000000000P PS=1270000U PD=1270000U
+M$3 VPWR A synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=260000000000P PS=1270000U PD=2520000U
+M$4 VGND C Y VNB nfet_01v8 L=150000U W=650000U AS=169000000000P AD=87750000000P
++ PS=1820000U PD=920000U
+M$5 Y B VGND VNB nfet_01v8 L=150000U W=650000U AS=87750000000P AD=87750000000P
++ PS=920000U PD=920000U
+M$6 VGND A Y VNB nfet_01v8 L=150000U W=650000U AS=87750000000P AD=169000000000P
++ PS=920000U PD=1820000U
+.ENDS sky130_fd_sc_hd__nor3_1
+
+.SUBCKT sky130_fd_sc_hd__o311ai_1 VPB C1 B1 A3 A2 A1 Y VPWR VGND VNB
+M$1 synth_3 A1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=280000000000P
++ AD=135000000000P PS=2560000U PD=1270000U
+M$2 synth_2 A2 synth_3 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=135000000000P PS=1270000U PD=1270000U
+M$3 Y A3 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=225000000000P PS=1270000U PD=1450000U
+M$4 VPWR B1 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=225000000000P
++ AD=185000000000P PS=1450000U PD=1370000U
+M$5 Y C1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=185000000000P
++ AD=310000000000P PS=1370000U PD=2620000U
+M$6 synth_1 A1 VGND VNB nfet_01v8 L=150000U W=650000U AS=182000000000P
++ AD=87750000000P PS=1860000U PD=920000U
+M$7 VGND A2 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=87750000000P PS=920000U PD=920000U
+M$8 synth_1 A3 VGND VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=198250000000P PS=920000U PD=1260000U
+M$9 synth_4 B1 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=198250000000P
++ AD=68250000000P PS=1260000U PD=860000U
+M$10 Y C1 synth_4 VNB nfet_01v8 L=150000U W=650000U AS=68250000000P
++ AD=182000000000P PS=860000U PD=1860000U
+.ENDS sky130_fd_sc_hd__o311ai_1
+
+.SUBCKT sky130_fd_sc_hd__nor4b_1 VPB C B A D_N VGND Y VPWR VNB
+M$1 synth_1 D_N VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=145750000000P
++ AD=109200000000P PS=1335000U PD=1360000U
+M$2 synth_4 synth_1 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=520000000000P
++ AD=135000000000P PS=3040000U PD=1270000U
+M$3 synth_3 C synth_4 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=165000000000P PS=1270000U PD=1330000U
+M$4 synth_2 B synth_3 VPB pfet_01v8_hvt L=150000U W=1000000U AS=165000000000P
++ AD=135000000000P PS=1330000U PD=1270000U
+M$5 VPWR A synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=145750000000P PS=1270000U PD=1335000U
+M$6 Y synth_1 VGND VNB nfet_01v8 L=150000U W=650000U AS=182000000000P
++ AD=87750000000P PS=1860000U PD=920000U
+M$7 VGND C Y VNB nfet_01v8 L=150000U W=650000U AS=87750000000P AD=107250000000P
++ PS=920000U PD=980000U
+M$8 Y B VGND VNB nfet_01v8 L=150000U W=650000U AS=107250000000P AD=87750000000P
++ PS=980000U PD=920000U
+M$9 VGND A Y VNB nfet_01v8 L=150000U W=650000U AS=87750000000P AD=100250000000P
++ PS=920000U PD=985000U
+M$10 synth_1 D_N VGND VNB nfet_01v8 L=150000U W=420000U AS=100250000000P
++ AD=109200000000P PS=985000U PD=1360000U
+.ENDS sky130_fd_sc_hd__nor4b_1
+
+.SUBCKT sky130_fd_sc_hd__o31a_1 VPB A1 A2 A3 B1 X VGND VPWR VNB
+M$1 VPWR synth_2 X VPB pfet_01v8_hvt L=150000U W=1000000U AS=360000000000P
++ AD=195000000000P PS=2720000U PD=1390000U
+M$2 synth_4 A1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=195000000000P
++ AD=135000000000P PS=1390000U PD=1270000U
+M$3 synth_3 A2 synth_4 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=165000000000P PS=1270000U PD=1330000U
+M$4 synth_2 A3 synth_3 VPB pfet_01v8_hvt L=150000U W=1000000U AS=165000000000P
++ AD=212500000000P PS=1330000U PD=1425000U
+M$5 VPWR B1 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=212500000000P
++ AD=345000000000P PS=1425000U PD=2690000U
+M$6 VGND synth_2 X VNB nfet_01v8 L=150000U W=650000U AS=234000000000P
++ AD=126750000000P PS=2020000U PD=1040000U
+M$7 synth_1 A1 VGND VNB nfet_01v8 L=150000U W=650000U AS=126750000000P
++ AD=87750000000P PS=1040000U PD=920000U
+M$8 VGND A2 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=107250000000P PS=920000U PD=980000U
+M$9 synth_1 A3 VGND VNB nfet_01v8 L=150000U W=650000U AS=107250000000P
++ AD=107250000000P PS=980000U PD=980000U
+M$10 synth_2 B1 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=107250000000P
++ AD=201500000000P PS=980000U PD=1920000U
+.ENDS sky130_fd_sc_hd__o31a_1
+
+.SUBCKT sky130_fd_sc_hd__nor2b_1 VPB A B_N Y VGND VPWR VNB
+M$1 VPWR B_N synth_1 VPB pfet_01v8_hvt L=150000U W=420000U AS=109200000000P
++ AD=157300000000P PS=1360000U PD=1390000U
+M$2 synth_2 A VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=157300000000P
++ AD=105000000000P PS=1390000U PD=1210000U
+M$3 Y synth_1 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=105000000000P
++ AD=260000000000P PS=1210000U PD=2520000U
+M$4 VGND B_N synth_1 VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=100250000000P PS=1360000U PD=985000U
+M$5 Y A VGND VNB nfet_01v8 L=150000U W=650000U AS=100250000000P AD=87750000000P
++ PS=985000U PD=920000U
+M$6 VGND synth_1 Y VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=169000000000P PS=920000U PD=1820000U
+.ENDS sky130_fd_sc_hd__nor2b_1
+
+.SUBCKT sky130_fd_sc_hd__a21oi_1 VPB B1 A1 A2 VGND VPWR Y VNB
+M$1 synth_1 B1 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=265000000000P
++ AD=140000000000P PS=2530000U PD=1280000U
+M$2 VPWR A1 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=140000000000P
++ AD=147500000000P PS=1280000U PD=1295000U
+M$3 synth_1 A2 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=147500000000P
++ AD=265000000000P PS=1295000U PD=2530000U
+M$4 Y B1 VGND VNB nfet_01v8 L=150000U W=650000U AS=172250000000P
++ AD=91000000000P PS=1830000U PD=930000U
+M$5 synth_2 A1 Y VNB nfet_01v8 L=150000U W=650000U AS=91000000000P
++ AD=95875000000P PS=930000U PD=945000U
+M$6 VGND A2 synth_2 VNB nfet_01v8 L=150000U W=650000U AS=95875000000P
++ AD=172250000000P PS=945000U PD=1830000U
+.ENDS sky130_fd_sc_hd__a21oi_1
+
+.SUBCKT sky130_fd_sc_hd__clkinv_8 VGND A VPWR VPB VNB
+M$1 Y A VPWR VPB pfet_01v8_hvt L=150000U W=12000000U AS=1.7475e+12P
++ AD=1.7475e+12P PS=16495000U PD=16495000U
+M$13 Y A VGND VNB nfet_01v8 L=150000U W=3360000U AS=522900000000P
++ AD=522900000000P PS=6270000U PD=6270000U
+.ENDS sky130_fd_sc_hd__clkinv_8
+
+.SUBCKT sky130_fd_sc_hd__dfstp_2 VGND SET_B Q CLK D VPWR VPB VNB
+M$1 VPWR synth_6 synth_7 VPB pfet_01v8_hvt L=150000U W=1000000U
++ AS=260000000000P AD=135000000000P PS=2520000U PD=1270000U
+M$2 Q synth_7 VPWR VPB pfet_01v8_hvt L=150000U W=2000000U AS=270000000000P
++ AD=395000000000P PS=2540000U PD=3790000U
+M$4 synth_6 SET_B VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=120750000000P
++ AD=109200000000P PS=1165000U PD=1360000U
+M$5 synth_13 synth_6 VPWR VPB pfet_01v8_hvt L=150000U W=840000U
++ AS=120750000000P AD=222600000000P PS=1165000U PD=2210000U
+M$6 VPWR CLK synth_1 VPB pfet_01v8_hvt L=150000U W=640000U AS=166400000000P
++ AD=86400000000P PS=1800000U PD=910000U
+M$7 synth_2 synth_1 VPWR VPB pfet_01v8_hvt L=150000U W=640000U AS=86400000000P
++ AD=166400000000P PS=910000U PD=1800000U
+M$8 synth_3 D VPWR VPB pfet_01v8_hvt L=150000U W=840000U AS=218400000000P
++ AD=124950000000P PS=2200000U PD=1175000U
+M$9 synth_4 synth_2 synth_3 VPB pfet_01v8_hvt L=150000U W=420000U
++ AS=124950000000P AD=56700000000P PS=1175000U PD=690000U
+M$10 synth_14 synth_1 synth_4 VPB pfet_01v8_hvt L=150000U W=420000U
++ AS=56700000000P AD=94500000000P PS=690000U PD=870000U
+M$11 VPWR synth_5 synth_14 VPB pfet_01v8_hvt L=150000U W=420000U
++ AS=94500000000P AD=79800000000P PS=870000U PD=800000U
+M$12 synth_5 SET_B VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=79800000000P
++ AD=56700000000P PS=800000U PD=690000U
+M$13 VPWR synth_4 synth_5 VPB pfet_01v8_hvt L=150000U W=420000U AS=56700000000P
++ AD=56700000000P PS=690000U PD=690000U
+M$14 synth_15 synth_4 VPWR VPB pfet_01v8_hvt L=150000U W=420000U
++ AS=56700000000P AD=44100000000P PS=690000U PD=630000U
+M$15 synth_6 synth_1 synth_15 VPB pfet_01v8_hvt L=150000U W=420000U
++ AS=44100000000P AD=81900000000P PS=630000U PD=810000U
+M$16 synth_16 synth_2 synth_6 VPB pfet_01v8_hvt L=150000U W=420000U
++ AS=81900000000P AD=44100000000P PS=810000U PD=630000U
+M$17 VPWR synth_13 synth_16 VPB pfet_01v8_hvt L=150000U W=420000U
++ AS=44100000000P AD=109200000000P PS=630000U PD=1360000U
+M$18 VGND synth_6 synth_7 VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=87750000000P PS=1820000U PD=920000U
+M$19 Q synth_7 VGND VNB nfet_01v8 L=150000U W=1300000U AS=175500000000P
++ AD=256750000000P PS=1840000U PD=2740000U
+M$21 synth_4 synth_1 synth_3 VNB nfet_01v8 L=150000U W=360000U AS=93500000000P
++ AD=72000000000P PS=965000U PD=760000U
+M$22 synth_8 synth_2 synth_4 VNB nfet_01v8 L=150000U W=360000U AS=72000000000P
++ AD=67050000000P PS=760000U PD=750000U
+M$23 VGND synth_5 synth_8 VNB nfet_01v8 L=150000U W=420000U AS=67050000000P
++ AD=88200000000P PS=750000U PD=840000U
+M$24 synth_12 SET_B VGND VNB nfet_01v8 L=150000U W=420000U AS=88200000000P
++ AD=44100000000P PS=840000U PD=630000U
+M$25 synth_5 synth_4 synth_12 VNB nfet_01v8 L=150000U W=420000U AS=44100000000P
++ AD=109200000000P PS=630000U PD=1360000U
+M$26 synth_3 D VGND VNB nfet_01v8 L=150000U W=640000U AS=166400000000P
++ AD=93500000000P PS=1800000U PD=965000U
+M$27 VGND CLK synth_1 VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=56700000000P PS=1360000U PD=690000U
+M$28 synth_2 synth_1 VGND VNB nfet_01v8 L=150000U W=420000U AS=56700000000P
++ AD=109200000000P PS=690000U PD=1360000U
+M$29 synth_11 synth_4 VGND VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=44100000000P PS=1360000U PD=630000U
+M$30 synth_6 synth_2 synth_11 VNB nfet_01v8 L=150000U W=420000U AS=44100000000P
++ AD=73500000000P PS=630000U PD=770000U
+M$31 synth_9 synth_1 synth_6 VNB nfet_01v8 L=150000U W=420000U AS=73500000000P
++ AD=44100000000P PS=770000U PD=630000U
+M$32 synth_10 synth_13 synth_9 VNB nfet_01v8 L=150000U W=420000U
++ AS=44100000000P AD=44100000000P PS=630000U PD=630000U
+M$33 VGND SET_B synth_10 VNB nfet_01v8 L=150000U W=420000U AS=44100000000P
++ AD=113700000000P PS=630000U PD=1010000U
+M$34 synth_13 synth_6 VGND VNB nfet_01v8 L=150000U W=540000U AS=113700000000P
++ AD=140400000000P PS=1010000U PD=1600000U
+.ENDS sky130_fd_sc_hd__dfstp_2
+
+.SUBCKT sky130_fd_sc_hd__dfrtp_1 VGND CLK RESET_B Q D VPWR VPB VNB
+M$1 Q synth_5 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=301200000000P
++ AD=260000000000P PS=2660000U PD=2520000U
+M$2 synth_11 synth_3 VPWR VPB pfet_01v8_hvt L=150000U W=840000U
++ AS=218400000000P AD=129150000000P PS=2200000U PD=1185000U
+M$3 synth_4 synth_1 synth_11 VPB pfet_01v8_hvt L=150000U W=420000U
++ AS=129150000000P AD=58800000000P PS=1185000U PD=700000U
+M$4 synth_13 synth_10 synth_4 VPB pfet_01v8_hvt L=150000U W=420000U
++ AS=58800000000P AD=56700000000P PS=700000U PD=690000U
+M$5 VPWR synth_5 synth_13 VPB pfet_01v8_hvt L=150000U W=420000U AS=56700000000P
++ AD=81900000000P PS=690000U PD=810000U
+M$6 synth_5 RESET_B VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=81900000000P
++ AD=56700000000P PS=810000U PD=690000U
+M$7 VPWR synth_4 synth_5 VPB pfet_01v8_hvt L=150000U W=420000U AS=56700000000P
++ AD=113400000000P PS=690000U PD=1380000U
+M$8 synth_2 D VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=109200000000P
++ AD=65100000000P PS=1360000U PD=730000U
+M$9 synth_3 synth_10 synth_2 VPB pfet_01v8_hvt L=150000U W=420000U
++ AS=65100000000P AD=72450000000P PS=730000U PD=765000U
+M$10 synth_12 synth_1 synth_3 VPB pfet_01v8_hvt L=150000U W=420000U
++ AS=72450000000P AD=115500000000P PS=765000U PD=970000U
+M$11 VPWR synth_11 synth_12 VPB pfet_01v8_hvt L=150000U W=420000U
++ AS=115500000000P AD=70350000000P PS=970000U PD=755000U
+M$12 synth_12 RESET_B VPWR VPB pfet_01v8_hvt L=150000U W=420000U
++ AS=70350000000P AD=109200000000P PS=755000U PD=1360000U
+M$13 VPWR CLK synth_1 VPB pfet_01v8_hvt L=150000U W=640000U AS=166400000000P
++ AD=86400000000P PS=1800000U PD=910000U
+M$14 synth_10 synth_1 VPWR VPB pfet_01v8_hvt L=150000U W=640000U
++ AS=86400000000P AD=166400000000P PS=910000U PD=1800000U
+M$15 Q synth_5 VGND VNB nfet_01v8 L=150000U W=650000U AS=208700000000P
++ AD=169000000000P PS=2020000U PD=1820000U
+M$16 VGND CLK synth_1 VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=56700000000P PS=1360000U PD=690000U
+M$17 synth_10 synth_1 VGND VNB nfet_01v8 L=150000U W=420000U AS=56700000000P
++ AD=109200000000P PS=690000U PD=1360000U
+M$18 synth_3 synth_1 synth_2 VNB nfet_01v8 L=150000U W=360000U AS=66000000000P
++ AD=59400000000P PS=745000U PD=690000U
+M$19 synth_7 synth_10 synth_3 VNB nfet_01v8 L=150000U W=360000U AS=59400000000P
++ AD=140100000000P PS=690000U PD=1100000U
+M$20 synth_4 synth_10 synth_11 VNB nfet_01v8 L=150000U W=360000U
++ AS=99900000000P AD=71100000000P PS=985000U PD=755000U
+M$21 synth_8 synth_1 synth_4 VNB nfet_01v8 L=150000U W=360000U AS=71100000000P
++ AD=66900000000P PS=755000U PD=750000U
+M$22 synth_2 D VGND VNB nfet_01v8 L=150000U W=420000U AS=220500000000P
++ AD=66000000000P PS=1890000U PD=745000U
+M$23 synth_9 synth_11 synth_7 VNB nfet_01v8 L=150000U W=420000U
++ AS=140100000000P AD=44100000000P PS=1100000U PD=630000U
+M$24 VGND RESET_B synth_9 VNB nfet_01v8 L=150000U W=420000U AS=44100000000P
++ AD=134600000000P PS=630000U PD=1150000U
+M$25 VGND synth_5 synth_8 VNB nfet_01v8 L=150000U W=420000U AS=66900000000P
++ AD=124950000000P PS=750000U PD=1015000U
+M$26 synth_6 RESET_B VGND VNB nfet_01v8 L=150000U W=420000U AS=124950000000P
++ AD=64050000000P PS=1015000U PD=725000U
+M$27 synth_5 synth_4 synth_6 VNB nfet_01v8 L=150000U W=420000U AS=64050000000P
++ AD=109200000000P PS=725000U PD=1360000U
+M$28 synth_11 synth_3 VGND VNB nfet_01v8 L=150000U W=640000U AS=134600000000P
++ AD=99900000000P PS=1150000U PD=985000U
+.ENDS sky130_fd_sc_hd__dfrtp_1
+
+.SUBCKT sky130_fd_sc_hd__buf_4 VPB A VPWR VGND X VNB
+M$1 VPWR A synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=135000000000P PS=2520000U PD=1270000U
+M$2 X synth_1 VPWR VPB pfet_01v8_hvt L=150000U W=4000000U AS=540000000000P
++ AD=665000000000P PS=5080000U PD=6330000U
+M$6 VGND A synth_1 VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=87750000000P PS=1820000U PD=920000U
+M$7 X synth_1 VGND VNB nfet_01v8 L=150000U W=2600000U AS=351000000000P
++ AD=432250000000P PS=3680000U PD=4580000U
+.ENDS sky130_fd_sc_hd__buf_4
+
+.SUBCKT sky130_fd_sc_hd__buf_1 VPB A X VGND VPWR VNB
+M$1 VPWR A synth_1 VPB pfet_01v8_hvt L=150000U W=790000U AS=205400000000P
++ AD=114550000000P PS=2100000U PD=1080000U
+M$2 X synth_1 VPWR VPB pfet_01v8_hvt L=150000U W=790000U AS=114550000000P
++ AD=205400000000P PS=1080000U PD=2100000U
+M$3 VGND A synth_1 VNB nfet_01v8 L=150000U W=520000U AS=135200000000P
++ AD=75400000000P PS=1560000U PD=810000U
+M$4 X synth_1 VGND VNB nfet_01v8 L=150000U W=520000U AS=75400000000P
++ AD=135200000000P PS=810000U PD=1560000U
+.ENDS sky130_fd_sc_hd__buf_1
+
+.SUBCKT sky130_fd_sc_hd__clkinvlp_4 VPB A VPWR VGND VNB
+M$1 Y A VPWR VPB pfet_01v8_hvt L=250000U W=4000000U AS=685000000000P
++ AD=685000000000P PS=6370000U PD=6370000U
+M$5 synth_1 A VGND VNB nfet_01v8 L=150000U W=1100000U AS=203500000000P
++ AD=203500000000P PS=2390000U PD=2390000U
+M$6 Y A synth_1 VNB nfet_01v8 L=150000U W=1100000U AS=134750000000P
++ AD=134750000000P PS=1590000U PD=1590000U
+.ENDS sky130_fd_sc_hd__clkinvlp_4
+
+.SUBCKT sky130_fd_sc_hd__inv_6 VPB A VPWR VGND VNB
+M$1 Y A VPWR VPB pfet_01v8_hvt L=150000U W=6000000U AS=1.105e+12P
++ AD=945000000000P PS=9210000U PD=8890000U
+M$7 Y A VGND VNB nfet_01v8 L=150000U W=3900000U AS=685750000000P
++ AD=614250000000P PS=6660000U PD=6440000U
+.ENDS sky130_fd_sc_hd__inv_6
+
+.SUBCKT sky130_fd_sc_hd__clkbuf_16 VGND A X VPWR VPB VNB
+M$1 synth_1 A VPWR VPB pfet_01v8_hvt L=150000U W=4000000U AS=685000000000P
++ AD=560000000000P PS=6370000U PD=5120000U
+M$5 X synth_1 VPWR VPB pfet_01v8_hvt L=150000U W=16000000U AS=2.2375e+12P
++ AD=2.3625e+12P PS=20475000U PD=21725000U
+M$21 synth_1 A VGND VNB nfet_01v8 L=150000U W=1680000U AS=287700000000P
++ AD=235200000000P PS=3470000U PD=2800000U
+M$25 X synth_1 VGND VNB nfet_01v8 L=150000U W=6720000U AS=939750000000P
++ AD=992250000000P PS=11195000U PD=11865000U
+.ENDS sky130_fd_sc_hd__clkbuf_16
+
+.SUBCKT sky130_fd_sc_hd__ha_1 VGND SUM COUT A VPWR B VPB VNB
+M$1 VPWR synth_1 SUM VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=236050000000P PS=2520000U PD=1765000U
+M$2 synth_1 synth_3 VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=236050000000P
++ AD=56700000000P PS=1765000U PD=690000U
+M$3 synth_5 B synth_1 VPB pfet_01v8_hvt L=150000U W=420000U AS=56700000000P
++ AD=84000000000P PS=690000U PD=820000U
+M$4 VPWR A synth_5 VPB pfet_01v8_hvt L=150000U W=420000U AS=84000000000P
++ AD=149100000000P PS=820000U PD=1130000U
+M$5 synth_3 B VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=149100000000P
++ AD=60900000000P PS=1130000U PD=710000U
+M$6 synth_3 A VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=140750000000P
++ AD=60900000000P PS=1325000U PD=710000U
+M$7 COUT synth_3 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=140750000000P
++ AD=260000000000P PS=1325000U PD=2520000U
+M$8 synth_4 B synth_3 VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=44100000000P PS=1360000U PD=630000U
+M$9 VGND A synth_4 VNB nfet_01v8 L=150000U W=420000U AS=44100000000P
++ AD=97000000000P PS=630000U PD=975000U
+M$10 COUT synth_3 VGND VNB nfet_01v8 L=150000U W=650000U AS=97000000000P
++ AD=169000000000P PS=975000U PD=1820000U
+M$11 synth_2 synth_3 synth_1 VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=56700000000P PS=1360000U PD=690000U
+M$12 VGND B synth_2 VNB nfet_01v8 L=150000U W=420000U AS=56700000000P
++ AD=56700000000P PS=690000U PD=690000U
+M$13 synth_2 A VGND VNB nfet_01v8 L=150000U W=420000U AS=56700000000P
++ AD=109200000000P PS=690000U PD=1360000U
+M$14 VGND synth_1 SUM VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=169000000000P PS=1820000U PD=1820000U
+.ENDS sky130_fd_sc_hd__ha_1
+
+.SUBCKT sky130_fd_sc_hd__mux4_2 VGND A2 S1 A0 X S0 A3 A1 VPWR VPB VNB
+M$1 synth_12 A1 VPWR VPB pfet_01v8_hvt L=150000U W=640000U AS=166400000000P
++ AD=137750000000P PS=1800000U PD=1165000U
+M$2 synth_5 synth_1 synth_12 VPB pfet_01v8_hvt L=150000U W=420000U
++ AS=137750000000P AD=56700000000P PS=1165000U PD=690000U
+M$3 synth_5 S0 synth_13 VPB pfet_01v8_hvt L=150000U W=420000U AS=105350000000P
++ AD=56700000000P PS=995000U PD=690000U
+M$4 synth_13 A0 VPWR VPB pfet_01v8_hvt L=150000U W=640000U AS=154000000000P
++ AD=105350000000P PS=1335000U PD=995000U
+M$5 X synth_4 VPWR VPB pfet_01v8_hvt L=150000U W=2000000U AS=289000000000P
++ AD=475000000000P PS=2605000U PD=3950000U
+M$7 synth_4 synth_3 synth_2 VPB pfet_01v8_hvt L=150000U W=540000U
++ AS=140400000000P AD=72900000000P PS=1600000U PD=810000U
+M$8 synth_5 S1 synth_4 VPB pfet_01v8_hvt L=150000U W=540000U AS=72900000000P
++ AD=140400000000P PS=810000U PD=1600000U
+M$9 VPWR A3 synth_11 VPB pfet_01v8_hvt L=150000U W=640000U AS=164500000000P
++ AD=86400000000P PS=1330000U PD=910000U
+M$10 synth_3 S1 VPWR VPB pfet_01v8_hvt L=150000U W=640000U AS=86400000000P
++ AD=166400000000P PS=910000U PD=1800000U
+M$11 VPWR S0 synth_1 VPB pfet_01v8_hvt L=150000U W=640000U AS=166400000000P
++ AD=86400000000P PS=1800000U PD=910000U
+M$12 synth_10 A2 VPWR VPB pfet_01v8_hvt L=150000U W=640000U AS=86400000000P
++ AD=95750000000P PS=910000U PD=965000U
+M$13 synth_2 S0 synth_10 VPB pfet_01v8_hvt L=150000U W=420000U AS=95750000000P
++ AD=56700000000P PS=965000U PD=690000U
+M$14 synth_2 synth_1 synth_11 VPB pfet_01v8_hvt L=150000U W=420000U
++ AS=164500000000P AD=56700000000P PS=1330000U PD=690000U
+M$15 synth_5 S0 synth_8 VNB nfet_01v8 L=150000U W=360000U AS=78600000000P
++ AD=72000000000P PS=805000U PD=760000U
+M$16 synth_7 synth_1 synth_5 VNB nfet_01v8 L=150000U W=360000U AS=72000000000P
++ AD=66000000000P PS=760000U PD=745000U
+M$17 synth_8 A1 VGND VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=78600000000P PS=1360000U PD=805000U
+M$18 VGND A0 synth_7 VNB nfet_01v8 L=150000U W=420000U AS=66000000000P
++ AD=106750000000P PS=745000U PD=1005000U
+M$19 X synth_4 VGND VNB nfet_01v8 L=150000U W=1300000U AS=194500000000P
++ AD=308750000000P PS=1925000U PD=2900000U
+M$21 synth_2 synth_1 synth_6 VNB nfet_01v8 L=150000U W=360000U AS=66000000000P
++ AD=71100000000P PS=745000U PD=755000U
+M$22 synth_9 S0 synth_2 VNB nfet_01v8 L=150000U W=360000U AS=71100000000P
++ AD=67050000000P PS=755000U PD=750000U
+M$23 VGND S0 synth_1 VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=56700000000P PS=1360000U PD=690000U
+M$24 synth_6 A2 VGND VNB nfet_01v8 L=150000U W=420000U AS=56700000000P
++ AD=66000000000P PS=690000U PD=745000U
+M$25 VGND A3 synth_9 VNB nfet_01v8 L=150000U W=420000U AS=67050000000P
++ AD=81900000000P PS=750000U PD=810000U
+M$26 synth_3 S1 VGND VNB nfet_01v8 L=150000U W=420000U AS=81900000000P
++ AD=113400000000P PS=810000U PD=1380000U
+M$27 synth_4 S1 synth_2 VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=57750000000P PS=1360000U PD=695000U
+M$28 synth_5 synth_3 synth_4 VNB nfet_01v8 L=150000U W=420000U AS=57750000000P
++ AD=109200000000P PS=695000U PD=1360000U
+.ENDS sky130_fd_sc_hd__mux4_2
+
+.SUBCKT sky130_fd_sc_hd__a22oi_1 VPB B2 B1 A1 A2 VPWR Y VGND VNB
+M$1 synth_1 A1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=135000000000P PS=2520000U PD=1270000U
+M$2 VPWR A2 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=300000000000P PS=1270000U PD=2600000U
+M$3 synth_1 B2 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=135000000000P PS=2520000U PD=1270000U
+M$4 Y B1 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=260000000000P PS=1270000U PD=2520000U
+M$5 synth_2 A1 Y VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=68250000000P PS=1820000U PD=860000U
+M$6 VGND A2 synth_2 VNB nfet_01v8 L=150000U W=650000U AS=68250000000P
++ AD=234000000000P PS=860000U PD=2020000U
+M$7 synth_3 B2 VGND VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=74750000000P PS=1820000U PD=880000U
+M$8 Y B1 synth_3 VNB nfet_01v8 L=150000U W=650000U AS=74750000000P
++ AD=169000000000P PS=880000U PD=1820000U
+.ENDS sky130_fd_sc_hd__a22oi_1
+
+.SUBCKT sky130_fd_sc_hd__o31ai_1 VPB A1 A2 A3 B1 VPWR VGND Y VNB
+M$1 synth_3 A1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=135000000000P PS=2520000U PD=1270000U
+M$2 synth_2 A2 synth_3 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=135000000000P PS=1270000U PD=1270000U
+M$3 Y A3 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=392500000000P PS=1270000U PD=1785000U
+M$4 VPWR B1 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=392500000000P
++ AD=300000000000P PS=1785000U PD=2600000U
+M$5 synth_1 A1 VGND VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=87750000000P PS=1820000U PD=920000U
+M$6 VGND A2 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=87750000000P PS=920000U PD=920000U
+M$7 synth_1 A3 VGND VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=198250000000P PS=920000U PD=1260000U
+M$8 Y B1 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=198250000000P
++ AD=221000000000P PS=1260000U PD=1980000U
+.ENDS sky130_fd_sc_hd__o31ai_1
+
+.SUBCKT sky130_fd_sc_hd__a2111oi_2 VGND Y C1 D1 B1 A1 A2 VPWR VPB VNB
+M$1 VPWR A1 synth_2 VPB pfet_01v8_hvt L=150000U W=2000000U AS=420000000000P
++ AD=475000000000P PS=3840000U PD=3950000U
+M$2 synth_2 A2 VPWR VPB pfet_01v8_hvt L=150000U W=2000000U AS=280000000000P
++ AD=300000000000P PS=2560000U PD=2600000U
+M$5 synth_4 C1 synth_3 VPB pfet_01v8_hvt L=150000U W=2000000U AS=425000000000P
++ AD=300000000000P PS=3850000U PD=2600000U
+M$6 Y D1 synth_4 VPB pfet_01v8_hvt L=150000U W=2000000U AS=280000000000P
++ AD=280000000000P PS=2560000U PD=2560000U
+M$9 synth_2 B1 synth_3 VPB pfet_01v8_hvt L=150000U W=2000000U AS=300000000000P
++ AD=400000000000P PS=2600000U PD=3800000U
+M$11 VGND C1 Y VNB nfet_01v8 L=150000U W=1300000U AS=312000000000P
++ AD=196625000000P PS=2910000U PD=1905000U
+M$12 Y D1 VGND VNB nfet_01v8 L=150000U W=1300000U AS=182000000000P
++ AD=217750000000P PS=1860000U PD=1970000U
+M$15 VGND B1 Y VNB nfet_01v8 L=150000U W=1300000U AS=232375000000P
++ AD=217750000000P PS=2015000U PD=1970000U
+M$17 synth_1 A1 Y VNB nfet_01v8 L=150000U W=1300000U AS=182000000000P
++ AD=351000000000P PS=1860000U PD=3030000U
+M$18 VGND A2 synth_1 VNB nfet_01v8 L=150000U W=1300000U AS=290875000000P
++ AD=203125000000P PS=2195000U PD=1925000U
+.ENDS sky130_fd_sc_hd__a2111oi_2
+
+.SUBCKT sky130_fd_sc_hd__or3_1 VPB A B C X VPWR VGND VNB
+M$1 synth_3 C synth_1 VPB pfet_01v8_hvt L=150000U W=420000U AS=109200000000P
++ AD=44100000000P PS=1360000U PD=630000U
+M$2 synth_2 B synth_3 VPB pfet_01v8_hvt L=150000U W=420000U AS=44100000000P
++ AD=69300000000P PS=630000U PD=750000U
+M$3 VPWR A synth_2 VPB pfet_01v8_hvt L=150000U W=420000U AS=69300000000P
++ AD=148250000000P PS=750000U PD=1340000U
+M$4 X synth_1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=148250000000P
++ AD=280000000000P PS=1340000U PD=2560000U
+M$5 VGND C synth_1 VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=56700000000P PS=1360000U PD=690000U
+M$6 synth_1 B VGND VNB nfet_01v8 L=150000U W=420000U AS=56700000000P
++ AD=56700000000P PS=690000U PD=690000U
+M$7 synth_1 A VGND VNB nfet_01v8 L=150000U W=420000U AS=101875000000P
++ AD=56700000000P PS=990000U PD=690000U
+M$8 X synth_1 VGND VNB nfet_01v8 L=150000U W=650000U AS=101875000000P
++ AD=182000000000P PS=990000U PD=1860000U
+.ENDS sky130_fd_sc_hd__or3_1
+
+.SUBCKT sky130_fd_sc_hd__mux2_2 VGND X A0 A1 S VPWR VPB VNB
+M$1 X synth_1 VPWR VPB pfet_01v8_hvt L=150000U W=2000000U AS=395000000000P
++ AD=312800000000P PS=3790000U PD=2685000U
+M$3 synth_5 synth_4 VPWR VPB pfet_01v8_hvt L=150000U W=640000U AS=177800000000P
++ AD=228800000000P PS=1415000U PD=1355000U
+M$4 synth_1 A1 synth_5 VPB pfet_01v8_hvt L=150000U W=640000U AS=228800000000P
++ AD=131200000000P PS=1355000U PD=1050000U
+M$5 synth_6 A0 synth_1 VPB pfet_01v8_hvt L=150000U W=640000U AS=131200000000P
++ AD=67200000000P PS=1050000U PD=850000U
+M$6 VPWR S synth_6 VPB pfet_01v8_hvt L=150000U W=640000U AS=67200000000P
++ AD=86400000000P PS=850000U PD=910000U
+M$7 synth_4 S VPWR VPB pfet_01v8_hvt L=150000U W=640000U AS=86400000000P
++ AD=172800000000P PS=910000U PD=1820000U
+M$8 synth_2 synth_4 VGND VNB nfet_01v8 L=150000U W=420000U AS=97000000000P
++ AD=68250000000P PS=975000U PD=745000U
+M$9 synth_1 A0 synth_2 VNB nfet_01v8 L=150000U W=420000U AS=68250000000P
++ AD=173250000000P PS=745000U PD=1245000U
+M$10 synth_3 A1 synth_1 VNB nfet_01v8 L=150000U W=420000U AS=173250000000P
++ AD=57750000000P PS=1245000U PD=695000U
+M$11 VGND S synth_3 VNB nfet_01v8 L=150000U W=420000U AS=57750000000P
++ AD=56700000000P PS=695000U PD=690000U
+M$12 synth_4 S VGND VNB nfet_01v8 L=150000U W=420000U AS=56700000000P
++ AD=113400000000P PS=690000U PD=1380000U
+M$13 X synth_1 VGND VNB nfet_01v8 L=150000U W=1300000U AS=256750000000P
++ AD=184750000000P PS=2740000U PD=1895000U
+.ENDS sky130_fd_sc_hd__mux2_2
+
+.SUBCKT sky130_fd_sc_hd__a311oi_1 VPB A3 A2 B1 A1 C1 VPWR Y VGND VNB
+M$1 synth_1 A3 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=137500000000P PS=2520000U PD=1275000U
+M$2 VPWR A2 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=137500000000P
++ AD=140000000000P PS=1275000U PD=1280000U
+M$3 synth_1 A1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=140000000000P
++ AD=165000000000P PS=1280000U PD=1330000U
+M$4 synth_2 B1 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=165000000000P
++ AD=172500000000P PS=1330000U PD=1345000U
+M$5 Y C1 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=172500000000P
++ AD=260000000000P PS=1345000U PD=2520000U
+M$6 synth_4 A3 VGND VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=89375000000P PS=1820000U PD=925000U
+M$7 synth_3 A2 synth_4 VNB nfet_01v8 L=150000U W=650000U AS=89375000000P
++ AD=91000000000P PS=925000U PD=930000U
+M$8 Y A1 synth_3 VNB nfet_01v8 L=150000U W=650000U AS=91000000000P
++ AD=115375000000P PS=930000U PD=1005000U
+M$9 VGND B1 Y VNB nfet_01v8 L=150000U W=650000U AS=115375000000P
++ AD=112125000000P PS=1005000U PD=995000U
+M$10 Y C1 VGND VNB nfet_01v8 L=150000U W=650000U AS=112125000000P
++ AD=169000000000P PS=995000U PD=1820000U
+.ENDS sky130_fd_sc_hd__a311oi_1
+
+.SUBCKT sky130_fd_sc_hd__a21o_1 VPB A1 A2 B1 VGND VPWR X VNB
+M$1 synth_1 B1 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=137500000000P PS=2520000U PD=1275000U
+M$2 VPWR A1 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=137500000000P
++ AD=140000000000P PS=1275000U PD=1280000U
+M$3 synth_1 A2 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=140000000000P
++ AD=265000000000P PS=1280000U PD=2530000U
+M$4 VPWR synth_2 X VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=260000000000P PS=2520000U PD=2520000U
+M$5 VGND synth_2 X VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=256750000000P PS=1820000U PD=1440000U
+M$6 synth_2 B1 VGND VNB nfet_01v8 L=150000U W=650000U AS=256750000000P
++ AD=89375000000P PS=1440000U PD=925000U
+M$7 synth_3 A1 synth_2 VNB nfet_01v8 L=150000U W=650000U AS=89375000000P
++ AD=91000000000P PS=925000U PD=930000U
+M$8 VGND A2 synth_3 VNB nfet_01v8 L=150000U W=650000U AS=91000000000P
++ AD=172250000000P PS=930000U PD=1830000U
+.ENDS sky130_fd_sc_hd__a21o_1
+
+.SUBCKT sky130_fd_sc_hd__a211o_1 VPB B1 C1 A1 A2 VPWR X VGND VNB
+M$1 VPWR A2 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=265000000000P
++ AD=140000000000P PS=2530000U PD=1280000U
+M$2 synth_2 A1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=140000000000P
++ AD=140000000000P PS=1280000U PD=1280000U
+M$3 synth_3 B1 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=140000000000P
++ AD=155000000000P PS=1280000U PD=1310000U
+M$4 synth_1 C1 synth_3 VPB pfet_01v8_hvt L=150000U W=1000000U AS=155000000000P
++ AD=265000000000P PS=1310000U PD=2530000U
+M$5 VPWR synth_1 X VPB pfet_01v8_hvt L=150000U W=1000000U AS=265000000000P
++ AD=265000000000P PS=2530000U PD=2530000U
+M$6 VGND synth_1 X VNB nfet_01v8 L=150000U W=650000U AS=172250000000P
++ AD=260000000000P PS=1830000U PD=1450000U
+M$7 synth_4 A2 VGND VNB nfet_01v8 L=150000U W=650000U AS=260000000000P
++ AD=91000000000P PS=1450000U PD=930000U
+M$8 synth_1 A1 synth_4 VNB nfet_01v8 L=150000U W=650000U AS=91000000000P
++ AD=91000000000P PS=930000U PD=930000U
+M$9 VGND B1 synth_1 VNB nfet_01v8 L=150000U W=650000U AS=91000000000P
++ AD=100750000000P PS=930000U PD=960000U
+M$10 synth_1 C1 VGND VNB nfet_01v8 L=150000U W=650000U AS=100750000000P
++ AD=172250000000P PS=960000U PD=1830000U
+.ENDS sky130_fd_sc_hd__a211o_1
+
+.SUBCKT sky130_fd_sc_hd__or4_1 VPB A B C D X VPWR VGND VNB
+M$1 synth_4 D synth_1 VPB pfet_01v8_hvt L=150000U W=420000U AS=109200000000P
++ AD=69300000000P PS=1360000U PD=750000U
+M$2 synth_3 C synth_4 VPB pfet_01v8_hvt L=150000U W=420000U AS=69300000000P
++ AD=44100000000P PS=750000U PD=630000U
+M$3 synth_2 B synth_3 VPB pfet_01v8_hvt L=150000U W=420000U AS=44100000000P
++ AD=69300000000P PS=630000U PD=750000U
+M$4 VPWR A synth_2 VPB pfet_01v8_hvt L=150000U W=420000U AS=69300000000P
++ AD=148250000000P PS=750000U PD=1340000U
+M$5 X synth_1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=148250000000P
++ AD=270000000000P PS=1340000U PD=2540000U
+M$6 synth_1 D VGND VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=69300000000P PS=1360000U PD=750000U
+M$7 VGND C synth_1 VNB nfet_01v8 L=150000U W=420000U AS=69300000000P
++ AD=56700000000P PS=750000U PD=690000U
+M$8 synth_1 B VGND VNB nfet_01v8 L=150000U W=420000U AS=56700000000P
++ AD=56700000000P PS=690000U PD=690000U
+M$9 synth_1 A VGND VNB nfet_01v8 L=150000U W=420000U AS=101875000000P
++ AD=56700000000P PS=990000U PD=690000U
+M$10 X synth_1 VGND VNB nfet_01v8 L=150000U W=650000U AS=101875000000P
++ AD=175500000000P PS=990000U PD=1840000U
+.ENDS sky130_fd_sc_hd__or4_1
+
+.SUBCKT sky130_fd_sc_hd__xor2_1 VPB B A VPWR X VGND VNB
+M$1 X synth_1 synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=300000000000P PS=2520000U PD=2600000U
+M$2 synth_3 B synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=135000000000P PS=2520000U PD=1270000U
+M$3 VPWR A synth_3 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=135000000000P PS=1270000U PD=1270000U
+M$4 synth_2 A VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=135000000000P PS=1270000U PD=1270000U
+M$5 VPWR B synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=260000000000P PS=1270000U PD=2520000U
+M$6 synth_1 B VGND VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=87750000000P PS=1820000U PD=920000U
+M$7 VGND A synth_1 VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=87750000000P PS=920000U PD=920000U
+M$8 synth_4 A VGND VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=87750000000P PS=920000U PD=920000U
+M$9 X B synth_4 VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=250250000000P PS=920000U PD=1420000U
+M$10 VGND synth_1 X VNB nfet_01v8 L=150000U W=650000U AS=250250000000P
++ AD=208000000000P PS=1420000U PD=1940000U
+.ENDS sky130_fd_sc_hd__xor2_1
+
+.SUBCKT sky130_fd_sc_hd__nor2_1 VPB A B Y VGND VPWR VNB
+M$1 synth_1 B Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=105000000000P PS=2520000U PD=1210000U
+M$2 VPWR A synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=105000000000P
++ AD=260000000000P PS=1210000U PD=2520000U
+M$3 Y B VGND VNB nfet_01v8 L=150000U W=650000U AS=169000000000P AD=87750000000P
++ PS=1820000U PD=920000U
+M$4 VGND A Y VNB nfet_01v8 L=150000U W=650000U AS=87750000000P AD=169000000000P
++ PS=920000U PD=1820000U
+.ENDS sky130_fd_sc_hd__nor2_1
+
+.SUBCKT sky130_fd_sc_hd__o21ai_0 VPB A1 A2 B1 VPWR Y VGND VNB
+M$1 synth_2 A1 VPWR VPB pfet_01v8_hvt L=150000U W=640000U AS=169600000000P
++ AD=76800000000P PS=1810000U PD=880000U
+M$2 Y A2 synth_2 VPB pfet_01v8_hvt L=150000U W=640000U AS=76800000000P
++ AD=89600000000P PS=880000U PD=920000U
+M$3 VPWR B1 Y VPB pfet_01v8_hvt L=150000U W=640000U AS=89600000000P
++ AD=182400000000P PS=920000U PD=1850000U
+M$4 VGND A1 synth_1 VNB nfet_01v8 L=150000U W=420000U AS=111300000000P
++ AD=58800000000P PS=1370000U PD=700000U
+M$5 synth_1 A2 VGND VNB nfet_01v8 L=150000U W=420000U AS=58800000000P
++ AD=58800000000P PS=700000U PD=700000U
+M$6 Y B1 synth_1 VNB nfet_01v8 L=150000U W=420000U AS=58800000000P
++ AD=111300000000P PS=700000U PD=1370000U
+.ENDS sky130_fd_sc_hd__o21ai_0
+
+.SUBCKT sky130_fd_sc_hd__and4_1 VPB D C B A VGND VPWR X VNB
+M$1 synth_1 A VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=109200000000P
++ AD=73500000000P PS=1360000U PD=770000U
+M$2 VPWR B synth_1 VPB pfet_01v8_hvt L=150000U W=420000U AS=73500000000P
++ AD=77700000000P PS=770000U PD=790000U
+M$3 synth_1 C VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=77700000000P
++ AD=58800000000P PS=790000U PD=700000U
+M$4 synth_1 D VPWR VPB pfet_01v8_hvt L=150000U W=420000U AS=312450000000P
++ AD=58800000000P PS=1680000U PD=700000U
+M$5 X synth_1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=312450000000P
++ AD=260000000000P PS=1680000U PD=2520000U
+M$6 synth_4 A synth_1 VNB nfet_01v8 L=150000U W=420000U AS=109200000000P
++ AD=60900000000P PS=1360000U PD=710000U
+M$7 synth_2 B synth_4 VNB nfet_01v8 L=150000U W=420000U AS=60900000000P
++ AD=79800000000P PS=710000U PD=800000U
+M$8 synth_3 C synth_2 VNB nfet_01v8 L=150000U W=420000U AS=79800000000P
++ AD=69300000000P PS=800000U PD=750000U
+M$9 VGND D synth_3 VNB nfet_01v8 L=150000U W=420000U AS=69300000000P
++ AD=196275000000P PS=750000U PD=1330000U
+M$10 X synth_1 VGND VNB nfet_01v8 L=150000U W=650000U AS=196275000000P
++ AD=169000000000P PS=1330000U PD=1820000U
+.ENDS sky130_fd_sc_hd__and4_1
+
+.SUBCKT sky130_fd_sc_hd__mux2i_1 VPB A0 A1 S Y VPWR VGND VNB
+M$1 VPWR S synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=290000000000P
++ AD=260000000000P PS=2580000U PD=2520000U
+M$2 Y A0 synth_3 VPB pfet_01v8_hvt L=150000U W=1000000U AS=280000000000P
++ AD=152500000000P PS=2560000U PD=1305000U
+M$3 synth_5 A1 Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=152500000000P
++ AD=197500000000P PS=1305000U PD=1395000U
+M$4 VPWR synth_1 synth_5 VPB pfet_01v8_hvt L=150000U W=1000000U
++ AS=197500000000P AD=300000000000P PS=1395000U PD=1600000U
+M$5 synth_3 S VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=300000000000P
++ AD=260000000000P PS=1600000U PD=2520000U
+M$6 VGND S synth_1 VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=169000000000P PS=1820000U PD=1820000U
+M$7 VGND synth_1 synth_2 VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=87750000000P PS=1820000U PD=920000U
+M$8 synth_4 S VGND VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=169000000000P PS=920000U PD=1820000U
+M$9 Y A0 synth_2 VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=87750000000P PS=1820000U PD=920000U
+M$10 synth_4 A1 Y VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=182000000000P PS=920000U PD=1860000U
+.ENDS sky130_fd_sc_hd__mux2i_1
+
+.SUBCKT sky130_fd_sc_hd__a31oi_1 VPB A3 A2 A1 B1 VGND VPWR Y VNB
+M$1 synth_1 A3 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=135000000000P PS=2520000U PD=1270000U
+M$2 VPWR A2 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=152500000000P PS=1270000U PD=1305000U
+M$3 synth_1 A1 VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=152500000000P
++ AD=162500000000P PS=1305000U PD=1325000U
+M$4 Y B1 synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=162500000000P
++ AD=270000000000P PS=1325000U PD=2540000U
+M$5 synth_3 A3 VGND VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=68250000000P PS=1820000U PD=860000U
+M$6 synth_2 A2 synth_3 VNB nfet_01v8 L=150000U W=650000U AS=68250000000P
++ AD=118625000000P PS=860000U PD=1015000U
+M$7 Y A1 synth_2 VNB nfet_01v8 L=150000U W=650000U AS=118625000000P
++ AD=105625000000P PS=1015000U PD=975000U
+M$8 VGND B1 Y VNB nfet_01v8 L=150000U W=650000U AS=105625000000P
++ AD=175500000000P PS=975000U PD=1840000U
+.ENDS sky130_fd_sc_hd__a31oi_1
+
+.SUBCKT sky130_fd_sc_hd__nor4_1 VPB D B A C VGND Y VPWR VNB
+M$1 synth_2 D Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=130000000000P PS=2520000U PD=1260000U
+M$2 synth_1 C synth_2 VPB pfet_01v8_hvt L=150000U W=1000000U AS=130000000000P
++ AD=190000000000P PS=1260000U PD=1380000U
+M$3 synth_3 B synth_1 VPB pfet_01v8_hvt L=150000U W=1000000U AS=190000000000P
++ AD=135000000000P PS=1380000U PD=1270000U
+M$4 VPWR A synth_3 VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=260000000000P PS=1270000U PD=2520000U
+M$5 Y D VGND VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=118625000000P PS=1820000U PD=1015000U
+M$6 VGND C Y VNB nfet_01v8 L=150000U W=650000U AS=118625000000P AD=89375000000P
++ PS=1015000U PD=925000U
+M$7 Y B VGND VNB nfet_01v8 L=150000U W=650000U AS=89375000000P AD=87750000000P
++ PS=925000U PD=920000U
+M$8 VGND A Y VNB nfet_01v8 L=150000U W=650000U AS=87750000000P AD=169000000000P
++ PS=920000U PD=1820000U
+.ENDS sky130_fd_sc_hd__nor4_1
+
+.SUBCKT sky130_fd_sc_hd__nand2_1 VPB A B Y VPWR VGND VNB
+M$1 Y B VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=135000000000P PS=2520000U PD=1270000U
+M$2 VPWR A Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=260000000000P PS=1270000U PD=2520000U
+M$3 synth_1 B VGND VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=87750000000P PS=1820000U PD=920000U
+M$4 Y A synth_1 VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=169000000000P PS=920000U PD=1820000U
+.ENDS sky130_fd_sc_hd__nand2_1
+
+.SUBCKT sky130_fd_sc_hd__o21ai_2 VPB A1 A2 B1 VGND Y VPWR VNB
+M$1 synth_2 A1 VPWR VPB pfet_01v8_hvt L=150000U W=2000000U AS=440000000000P
++ AD=300000000000P PS=3880000U PD=2600000U
+M$2 Y A2 synth_2 VPB pfet_01v8_hvt L=150000U W=2000000U AS=280000000000P
++ AD=315000000000P PS=2560000U PD=2630000U
+M$5 Y B1 VPWR VPB pfet_01v8_hvt L=150000U W=2000000U AS=300000000000P
++ AD=405000000000P PS=2600000U PD=3810000U
+M$7 VGND A1 synth_1 VNB nfet_01v8 L=150000U W=1300000U AS=299000000000P
++ AD=182000000000P PS=2870000U PD=1860000U
+M$8 synth_1 A2 VGND VNB nfet_01v8 L=150000U W=1300000U AS=182000000000P
++ AD=217750000000P PS=1860000U PD=1970000U
+M$11 Y B1 synth_1 VNB nfet_01v8 L=150000U W=1300000U AS=182000000000P
++ AD=263250000000P PS=1860000U PD=2760000U
+.ENDS sky130_fd_sc_hd__o21ai_2
+
+.SUBCKT sky130_fd_sc_hd__nand4_1 VPB C A B D VPWR Y VGND VNB
+M$1 Y D VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=135000000000P PS=2520000U PD=1270000U
+M$2 VPWR C Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=135000000000P PS=1270000U PD=1270000U
+M$3 Y B VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=165000000000P PS=1270000U PD=1330000U
+M$4 VPWR A Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=165000000000P
++ AD=300000000000P PS=1330000U PD=2600000U
+M$5 synth_3 D VGND VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=87750000000P PS=1820000U PD=920000U
+M$6 synth_2 C synth_3 VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=87750000000P PS=920000U PD=920000U
+M$7 synth_1 B synth_2 VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=107250000000P PS=920000U PD=980000U
+M$8 Y A synth_1 VNB nfet_01v8 L=150000U W=650000U AS=107250000000P
++ AD=195000000000P PS=980000U PD=1900000U
+.ENDS sky130_fd_sc_hd__nand4_1
+
+.SUBCKT sky130_fd_sc_hd__nand3_1 VPB A B C Y VPWR VGND VNB
+M$1 Y C VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=135000000000P PS=2520000U PD=1270000U
+M$2 VPWR B Y VPB pfet_01v8_hvt L=150000U W=1000000U AS=135000000000P
++ AD=165000000000P PS=1270000U PD=1330000U
+M$3 Y A VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=165000000000P
++ AD=260000000000P PS=1330000U PD=2520000U
+M$4 synth_2 C VGND VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=87750000000P PS=1820000U PD=920000U
+M$5 synth_1 B synth_2 VNB nfet_01v8 L=150000U W=650000U AS=87750000000P
++ AD=107250000000P PS=920000U PD=980000U
+M$6 Y A synth_1 VNB nfet_01v8 L=150000U W=650000U AS=107250000000P
++ AD=169000000000P PS=980000U PD=1820000U
+.ENDS sky130_fd_sc_hd__nand3_1
+
+.SUBCKT sky130_fd_sc_hd__inv_1 VPB A VPWR VGND Y VNB
+M$1 Y A VPWR VPB pfet_01v8_hvt L=150000U W=1000000U AS=260000000000P
++ AD=260000000000P PS=2520000U PD=2520000U
+M$2 Y A VGND VNB nfet_01v8 L=150000U W=650000U AS=169000000000P
++ AD=169000000000P PS=1820000U PD=1820000U
+.ENDS sky130_fd_sc_hd__inv_1
