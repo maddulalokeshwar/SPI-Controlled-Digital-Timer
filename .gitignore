@@ -5,3 +5,9 @@ build/
 *.str
 vivado_proj/
 .cache/
+
+# Keep SPI timer verification evidence
+!Results/simulation/simulation.log
+!Results/waveforms/spi_timer.vcd
+!Results/simulation/extended_simulation.log
+!Results/waveforms/spi_timer_extended.vcd

@@ -1,0 +1,21 @@
+VCD info: dumpfile spi_timer_extended.vcd opened for output.
+PASS: Reset status IDLE got=08
+PASS: Seconds register readback got=14
+PASS: Invalid register returns zero got=00
+PASS: Start enters RUNNING got=01
+PASS: Countdown decreases seconds got=04
+PASS: Pause enters PAUSED got=02
+PASS: Counter holds while paused got=04
+PASS: Resume enters RUNNING got=01
+PASS: Stop returns to IDLE got=08
+PASS: Reset while running returns IDLE got=08
+PASS: Reset clears seconds counter got=00
+PASS: Minute rollover minutes got=00
+PASS: Minute rollover seconds got=3b
+PASS: Hour rollover hours got=00
+PASS: Hour rollover minutes got=3b
+PASS: Hour rollover seconds got=3b
+----------------------------------------
+EXTENDED TESTS PASSED = 16 FAILED = 0
+EXTENDED TESTBENCH PASSED
+SPI_Timer/testbench/tb_spi_timer_extended.v:217: $finish called at 138100000 (1ps)

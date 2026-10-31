@@ -1,0 +1,13 @@
+VCD info: dumpfile spi_timer.vcd opened for output.
+PASS: reset status is IDLE got=08
+PASS: seconds load clamps to 59 got=3b
+PASS: minutes load readback got=0a
+PASS: hours load readback got=01
+PASS: status is RUNNING got=01
+PASS: status is PAUSED got=02
+PASS: timer expired output asserted
+PASS: status is EXPIRED got=04
+--------------------------------
+BASIC TESTS PASSED = 8 FAILED = 0
+BASIC TESTBENCH PASSED
+SPI_Timer/testbench/tb_spi_timer.v:141: $finish called at 84500000 (1ps)
