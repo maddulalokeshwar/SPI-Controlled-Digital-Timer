@@ -61,6 +61,8 @@ jobs:
             oc="${oc%.lib}"
 
             cat > "Results/sta/mcsta/${corner}.tcl" <<EOF
+          read_lef /OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef
+          read_lef /OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef
           read_liberty /work/Results/Liberty/${lib}
           set_operating_conditions -analysis_type single -library sky130_fd_sc_hd__${oc} ${oc}
           read_verilog /work/Results/synthesis/sky130/spi_timer_top_sky130.v
