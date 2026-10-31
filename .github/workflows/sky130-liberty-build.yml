@@ -34,7 +34,7 @@ jobs:
         run: |
           mkdir -p Results/Liberty
 
-          python -c 'import sys; from skywater_pdk.liberty import main; sys.argv = sys.argv[1:]; raise SystemExit(main())' \
+          python -c 'from skywater_pdk.liberty import main; raise SystemExit(main())' \
             /tmp/skywater-pdk/libraries/sky130_fd_sc_hd/latest \
             ss_100C_1v60 \
             tt_025C_1v80 \
