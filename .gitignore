@@ -14,3 +14,12 @@ vivado_proj/
 
 # Keep Yosys synthesis evidence
 !Results/synthesis/yosys_synthesis.log
+physical_design/output/
+Results/sta/postroute_mcsta/downloaded/
+Results/sta/mcsta_run2/
+physical_design/output/
+Results/sta/postroute_mcsta/downloaded/
+Results/sta/mcsta_run2/
+physical_design/onehot_results/results/*.odb
+physical_design/onehot_results/results/1_1_yosys_canonicalize.rtlil
+physical_design/onehot_results/results/6_1_merged.gds

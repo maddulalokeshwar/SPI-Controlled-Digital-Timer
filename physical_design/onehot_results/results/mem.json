@@ -1,0 +1,5593 @@
+{
+  "creator": "Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/local/bin/wrapped-cc/g++ 15.2.0)",
+  "modules": {
+    "spi_timer_top": {
+      "attributes": {
+        "hdlname": "spi_timer_top",
+        "top": "00000000000000000000000000000001",
+        "src": "/work/SPI_Timer/rtl/spi_timer_top.v:2.1-62.10"
+      },
+      "parameter_default_values": {
+        "TICKS_PER_SEC": "00000101111101011110000100000000"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "rst_n": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "sclk": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "cs_n": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "mosi": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "miso": {
+          "direction": "output",
+          "bits": [ 7 ]
+        },
+        "expired": {
+          "direction": "output",
+          "bits": [ 8 ]
+        },
+        "running": {
+          "direction": "output",
+          "bits": [ 9 ]
+        }
+      },
+      "cells": {
+        "$auto$alumacc.cc:110:get_cf$6076": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:19.32-19.47"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "Y": [ 11 ]
+          }
+        },
+        "$auto$alumacc.cc:110:get_cf$6087": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:61.35-61.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "Y": [ 13 ]
+          }
+        },
+        "$auto$alumacc.cc:110:get_cf$6098": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:51.35-51.50"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "Y": [ 15 ]
+          }
+        },
+        "$auto$alumacc.cc:548:replace_alu$6073": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000110",
+            "Y_WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:19.32-19.47"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16, 17, 18, 19, 20, 21, 22, 23 ],
+            "B": [ "1", "1", "0", "1", "1", "1" ],
+            "BI": [ "1" ],
+            "CI": [ "1" ],
+            "CO": [ 24, 25, 26, 27, 28, 29, 30, 10 ],
+            "X": [ 31, 32, 33, 34, 35, 36, 37, 38 ],
+            "Y": [ 39, 40, 41, 42, 43, 44, 45, 46 ]
+          }
+        },
+        "$auto$alumacc.cc:548:replace_alu$6084": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:61.35-61.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 47, 48, 49, 50, 51 ],
+            "B": [ "0", "0", "0", "1" ],
+            "BI": [ "1" ],
+            "CI": [ "1" ],
+            "CO": [ 52, 53, 54, 55, 12 ],
+            "X": [ 56, 57, 58, 59, 60 ],
+            "Y": [ 61, 62, 63, 64, 65 ]
+          }
+        },
+        "$auto$alumacc.cc:548:replace_alu$6095": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:51.35-51.50"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 47, 48, 49, 50, 51 ],
+            "B": [ "0", "0", "0", "0", "1" ],
+            "BI": [ "1" ],
+            "CI": [ "1" ],
+            "CO": [ 66, 67, 68, 69, 14 ],
+            "X": [ 70, 71, 72, 73, 74 ],
+            "Y": [ 75, 76, 77, 78, 79 ]
+          }
+        },
+        "$auto$alumacc.cc:548:replace_alu$6100": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:28.23-28.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 80, 81, 82, 83, 84, 85, 86, 87 ],
+            "B": [ "1" ],
+            "BI": [ "1" ],
+            "CI": [ "1" ],
+            "CO": [ 88, 89, 90, 91, 92, 93, 94, 95 ],
+            "X": [ 96, 97, 98, 99, 100, 101, 102, 103 ],
+            "Y": [ 104, 105, 106, 107, 108, 109, 110, 111 ]
+          }
+        },
+        "$auto$alumacc.cc:548:replace_alu$6103": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:25.24-25.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 112, 113, 114, 115, 116, 117, 118, 119 ],
+            "B": [ "1" ],
+            "BI": [ "1" ],
+            "CI": [ "1" ],
+            "CO": [ 120, 121, 122, 123, 124, 125, 126, 127 ],
+            "X": [ 128, 129, 130, 131, 132, 133, 134, 135 ],
+            "Y": [ 136, 137, 138, 139, 140, 141, 142, 143 ]
+          }
+        },
+        "$auto$alumacc.cc:548:replace_alu$6106": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:23.24-23.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 144, 145, 146, 147, 148, 149, 150, 151 ],
+            "B": [ "1" ],
+            "BI": [ "1" ],
+            "CI": [ "1" ],
+            "CO": [ 152, 153, 154, 155, 156, 157, 158, 159 ],
+            "X": [ 160, 161, 162, 163, 164, 165, 166, 167 ],
+            "Y": [ 168, 169, 170, 171, 172, 173, 174, 175 ]
+          }
+        },
+        "$auto$alumacc.cc:548:replace_alu$6111": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:53.32-53.46"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1" ],
+            "B": [ 47, 48, 49, 50, 51 ],
+            "BI": [ "0" ],
+            "CI": [ "0" ],
+            "CO": [ 176, 177, 178, 179, 180 ],
+            "X": [ 181, 182, 183, 184, 185 ],
+            "Y": [ 186, 187, 188, 189, 190 ]
+          }
+        },
+        "$auto$alumacc.cc:548:replace_alu$6114": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000011011",
+            "Y_WIDTH": "00000000000000000000000000011011"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/tick_gen.v:31.24-31.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1" ],
+            "B": [ 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217 ],
+            "BI": [ "0" ],
+            "CI": [ "0" ],
+            "CO": [ 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244 ],
+            "X": [ 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271 ],
+            "Y": [ 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298 ]
+          }
+        },
+        "$auto$alumacc.cc:86:get_gt$6080": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 299 ],
+            "Y": [ 300 ]
+          }
+        },
+        "$auto$alumacc.cc:86:get_gt$6091": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "B": [ 301 ],
+            "Y": [ 302 ]
+          }
+        },
+        "$auto$alumacc.cc:87:get_gt$6093": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:61.35-61.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 302 ],
+            "Y": [ 303 ]
+          }
+        },
+        "$auto$alumacc.cc:96:get_eq$6078": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:19.32-19.47"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 31, 32, 33, 34, 35, 36, 37, 38 ],
+            "Y": [ 299 ]
+          }
+        },
+        "$auto$alumacc.cc:96:get_eq$6089": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:61.35-61.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 56, 57, 58, 59, 60 ],
+            "Y": [ 301 ]
+          }
+        },
+        "$auto$alumacc.cc:96:get_eq$6109": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:23.24-23.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 160, 161, 162, 163, 164, 165, 166, 167 ],
+            "Y": [ 304 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$6001": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:37.5-68.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 305 ],
+            "EN": [ 306 ],
+            "Q": [ 307 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$6008": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "00000000",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:37.5-68.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 308, 309, 310, 311, 312, 313, 314, 315 ],
+            "EN": [ 306 ],
+            "Q": [ 316, 317, 318, 319, 320, 321, 322, 323 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$6015": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0000000000000000",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000010000"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:37.5-68.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 324, 16, 17, 18, 19, 20, 21, 22, 23, 325, 326, 327, 328, 329, 330, 331 ],
+            "EN": [ 332 ],
+            "Q": [ 16, 17, 18, 19, 20, 21, 22, 23, 325, 326, 327, 328, 329, 330, 331, 333 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$6020": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "00000",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:37.5-68.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 334, 335, 336, 337, 338 ],
+            "EN": [ 339 ],
+            "Q": [ 47, 48, 49, 50, 51 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$6023": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "00000000",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:21.5-45.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 16, 17, 18, 19, 20, 21, 22, 23 ],
+            "EN": [ 340 ],
+            "Q": [ 341, 342, 343, 344, 345, 346, 347, 348 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$6026": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "00000000",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:21.5-45.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 349, 350, 351, 352, 353, 354, 355, 356 ],
+            "EN": [ 357 ],
+            "Q": [ 358, 359, 360, 361, 362, 363, 364, 365 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$6029": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "00000000",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:21.5-45.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 349, 350, 351, 352, 353, 354, 355, 356 ],
+            "EN": [ 366 ],
+            "Q": [ 367, 368, 369, 370, 371, 372, 373, 374 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$6032": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "00000000",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:12.5-33.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 375, 376, 377, 378, 379, 380, 381, 382 ],
+            "EN": [ 383 ],
+            "Q": [ 112, 113, 114, 115, 116, 117, 118, 119 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$6041": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "00000000",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:12.5-33.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 384, 385, 386, 387, 388, 389, 390, 391 ],
+            "EN": [ 392 ],
+            "Q": [ 80, 81, 82, 83, 84, 85, 86, 87 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$6052": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0001",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:16.5-21.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 393, 394, 395, 396 ],
+            "EN": [ 397 ],
+            "Q": [ 398, 9, 399, 8 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$6059": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "00000000",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:12.5-33.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 400, 401, 402, 403, 404, 405, 406, 407 ],
+            "EN": [ 408 ],
+            "Q": [ 144, 145, 146, 147, 148, 149, 150, 151 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$6066": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "000000000000000000000000000",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000011011"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/tick_gen.v:22.5-33.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435 ],
+            "EN": [ 436 ],
+            "Q": [ 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217 ]
+          }
+        },
+        "$auto$opt_dff.cc:166:create_not$6016": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 437 ],
+            "Y": [ 438 ]
+          }
+        },
+        "$auto$opt_dff.cc:320:make_patterns_logic$6010": {
+          "hide_name": 1,
+          "type": "$reduce_bool",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 439, 301, 437 ],
+            "Y": [ 440 ]
+          }
+        },
+        "$auto$opt_dff.cc:320:make_patterns_logic$6012": {
+          "hide_name": 1,
+          "type": "$reduce_bool",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 441, 437 ],
+            "Y": [ 442 ]
+          }
+        },
+        "$auto$opt_dff.cc:320:make_patterns_logic$6022": {
+          "hide_name": 1,
+          "type": "$reduce_bool",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 443, 437 ],
+            "Y": [ 339 ]
+          }
+        },
+        "$auto$opt_dff.cc:320:make_patterns_logic$6036": {
+          "hide_name": 1,
+          "type": "$reduce_bool",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 444, 445, 446, 447 ],
+            "Y": [ 448 ]
+          }
+        },
+        "$auto$opt_dff.cc:320:make_patterns_logic$6043": {
+          "hide_name": 1,
+          "type": "$reduce_bool",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 444, 445, 449 ],
+            "Y": [ 450 ]
+          }
+        },
+        "$auto$opt_dff.cc:320:make_patterns_logic$6045": {
+          "hide_name": 1,
+          "type": "$reduce_bool",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 444, 445, 446 ],
+            "Y": [ 451 ]
+          }
+        },
+        "$auto$opt_dff.cc:320:make_patterns_logic$6047": {
+          "hide_name": 1,
+          "type": "$ne",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 444, 445, 447 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 452 ]
+          }
+        },
+        "$auto$opt_dff.cc:320:make_patterns_logic$6049": {
+          "hide_name": 1,
+          "type": "$ne",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 444, 445, 453 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 454 ]
+          }
+        },
+        "$auto$opt_dff.cc:320:make_patterns_logic$6054": {
+          "hide_name": 1,
+          "type": "$ne",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 455, 456, 457 ],
+            "B": [ "0", "1" ],
+            "Y": [ 458 ]
+          }
+        },
+        "$auto$opt_dff.cc:320:make_patterns_logic$6056": {
+          "hide_name": 1,
+          "type": "$ne",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 459, 460, 461, 457 ],
+            "B": [ "0", "1" ],
+            "Y": [ 462 ]
+          }
+        },
+        "$auto$opt_dff.cc:320:make_patterns_logic$6063": {
+          "hide_name": 1,
+          "type": "$reduce_bool",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 444, 445, 446, 447, 453 ],
+            "Y": [ 463 ]
+          }
+        },
+        "$auto$opt_dff.cc:320:make_patterns_logic$6068": {
+          "hide_name": 1,
+          "type": "$reduce_bool",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 464 ],
+            "Y": [ 436 ]
+          }
+        },
+        "$auto$opt_dff.cc:337:make_patterns_logic$6014": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 442, 440 ],
+            "Y": [ 306 ]
+          }
+        },
+        "$auto$opt_dff.cc:337:make_patterns_logic$6019": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 438, 443 ],
+            "Y": [ 332 ]
+          }
+        },
+        "$auto$opt_dff.cc:337:make_patterns_logic$6025": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 465, 466 ],
+            "Y": [ 340 ]
+          }
+        },
+        "$auto$opt_dff.cc:337:make_patterns_logic$6028": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 467, 466 ],
+            "Y": [ 357 ]
+          }
+        },
+        "$auto$opt_dff.cc:337:make_patterns_logic$6031": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 468, 466 ],
+            "Y": [ 366 ]
+          }
+        },
+        "$auto$opt_dff.cc:337:make_patterns_logic$6040": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 454, 448, 450 ],
+            "Y": [ 383 ]
+          }
+        },
+        "$auto$opt_dff.cc:337:make_patterns_logic$6051": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 452, 451, 454, 450 ],
+            "Y": [ 392 ]
+          }
+        },
+        "$auto$opt_dff.cc:337:make_patterns_logic$6058": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 462, 458 ],
+            "Y": [ 397 ]
+          }
+        },
+        "$auto$opt_dff.cc:337:make_patterns_logic$6065": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 463, 450 ],
+            "Y": [ 408 ]
+          }
+        },
+        "$flatten\\u_cnt.$eq$/work/SPI_Timer/rtl/timer_counter.v:10$5601": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:10.25-10.35"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 80, 81, 82, 83, 84, 85, 86, 87 ],
+            "Y": [ 469 ]
+          }
+        },
+        "$flatten\\u_cnt.$eq$/work/SPI_Timer/rtl/timer_counter.v:10$5602": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:10.41-10.52"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 112, 113, 114, 115, 116, 117, 118, 119 ],
+            "Y": [ 470 ]
+          }
+        },
+        "$flatten\\u_cnt.$eq$/work/SPI_Timer/rtl/timer_counter.v:9$5599": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:9.56-9.67"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 144, 145, 146, 147, 148, 149, 150, 151 ],
+            "Y": [ 471 ]
+          }
+        },
+        "$flatten\\u_cnt.$logic_and$/work/SPI_Timer/rtl/timer_counter.v:10$5603": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:10.24-10.53"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 469 ],
+            "B": [ 470 ],
+            "Y": [ 472 ]
+          }
+        },
+        "$flatten\\u_cnt.$logic_and$/work/SPI_Timer/rtl/timer_counter.v:10$5605": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:10.24-10.70"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 472 ],
+            "B": [ 304 ],
+            "Y": [ 473 ]
+          }
+        },
+        "$flatten\\u_cnt.$logic_and$/work/SPI_Timer/rtl/timer_counter.v:9$5600": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:9.22-9.68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 472 ],
+            "B": [ 471 ],
+            "Y": [ 474 ]
+          }
+        },
+        "$flatten\\u_cnt.$ne$/work/SPI_Timer/rtl/timer_counter.v:22$5608": {
+          "hide_name": 1,
+          "type": "$reduce_bool",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:22.17-22.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 144, 145, 146, 147, 148, 149, 150, 151 ],
+            "Y": [ 453 ]
+          }
+        },
+        "$flatten\\u_cnt.$ne$/work/SPI_Timer/rtl/timer_counter.v:24$5610": {
+          "hide_name": 1,
+          "type": "$reduce_bool",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:24.22-24.30"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 112, 113, 114, 115, 116, 117, 118, 119 ],
+            "Y": [ 447 ]
+          }
+        },
+        "$flatten\\u_cnt.$ne$/work/SPI_Timer/rtl/timer_counter.v:27$5612": {
+          "hide_name": 1,
+          "type": "$reduce_bool",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:27.26-27.33"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 80, 81, 82, 83, 84, 85, 86, 87 ],
+            "Y": [ 446 ]
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5805": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:27.26-27.33|/work/SPI_Timer/rtl/timer_counter.v:27.22-31.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 104, 105, 106, 107, 108, 109, 110, 111 ],
+            "S": [ 446 ],
+            "Y": [ 475, 476, 477, 478, 479, 480, 481, 482 ]
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5808": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:24.22-24.30|/work/SPI_Timer/rtl/timer_counter.v:24.18-31.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 475, 476, 477, 478, 479, 480, 481, 482 ],
+            "B": [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "S": [ 447 ],
+            "Y": [ 483, 484, 485, 486, 487, 488, 489, 490 ]
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5811": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:22.17-22.25|/work/SPI_Timer/rtl/timer_counter.v:22.13-31.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 483, 484, 485, 486, 487, 488, 489, 490 ],
+            "B": [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "S": [ 453 ],
+            "Y": [ 491, 492, 493, 494, 495, 496, 497, 498 ]
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5813": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:21.22-21.25|/work/SPI_Timer/rtl/timer_counter.v:21.18-32.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 491, 492, 493, 494, 495, 496, 497, 498 ],
+            "S": [ 449 ],
+            "Y": [ 499, 500, 501, 502, 503, 504, 505, 506 ]
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5816": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:17.22-17.26|/work/SPI_Timer/rtl/timer_counter.v:17.18-32.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 499, 500, 501, 502, 503, 504, 505, 506 ],
+            "B": [ 341, 342, 343, 344, 345, 346, 347, 348 ],
+            "S": [ 444 ],
+            "Y": [ 507, 508, 509, 510, 511, 512, 513, 514 ]
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5819": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:15.22-15.27|/work/SPI_Timer/rtl/timer_counter.v:15.18-32.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 507, 508, 509, 510, 511, 512, 513, 514 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 445 ],
+            "Y": [ 384, 385, 386, 387, 388, 389, 390, 391 ]
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5824": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:24.22-24.30|/work/SPI_Timer/rtl/timer_counter.v:24.18-31.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 515, 516, 517, 518, 519, 520, 521, 522 ],
+            "B": [ 136, 137, 138, 139, 140, 141, 142, 143 ],
+            "S": [ 447 ],
+            "Y": [ 523, 524, 525, 526, 527, 528, 529, 530 ]
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5827": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:22.17-22.25|/work/SPI_Timer/rtl/timer_counter.v:22.13-31.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 523, 524, 525, 526, 527, 528, 529, 530 ],
+            "B": [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "S": [ 453 ],
+            "Y": [ 531, 532, 533, 534, 535, 536, 537, 538 ]
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5829": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:21.22-21.25|/work/SPI_Timer/rtl/timer_counter.v:21.18-32.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 531, 532, 533, 534, 535, 536, 537, 538 ],
+            "S": [ 449 ],
+            "Y": [ 539, 540, 541, 542, 543, 544, 545, 546 ]
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5832": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:17.22-17.26|/work/SPI_Timer/rtl/timer_counter.v:17.18-32.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 539, 540, 541, 542, 543, 544, 545, 546 ],
+            "B": [ 358, 359, 360, 361, 362, 363, 364, 365 ],
+            "S": [ 444 ],
+            "Y": [ 547, 548, 549, 550, 551, 552, 553, 554 ]
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5835": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:15.22-15.27|/work/SPI_Timer/rtl/timer_counter.v:15.18-32.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 547, 548, 549, 550, 551, 552, 553, 554 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 445 ],
+            "Y": [ 375, 376, 377, 378, 379, 380, 381, 382 ]
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5837": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:27.26-27.33|/work/SPI_Timer/rtl/timer_counter.v:27.22-31.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ "1", "1", "0", "1", "1", "1", "0", "0" ],
+            "S": [ 446 ],
+            "Y": [ 515, 516, 517, 518, 519, 520, 521, 522 ]
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5840": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:24.22-24.30|/work/SPI_Timer/rtl/timer_counter.v:24.18-31.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 515, 516, 517, 518, 519, 520, 521, 522 ],
+            "B": [ "1", "1", "0", "1", "1", "1", "0", "0" ],
+            "S": [ 447 ],
+            "Y": [ 555, 556, 557, 558, 559, 560, 561, 562 ]
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5843": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:22.17-22.25|/work/SPI_Timer/rtl/timer_counter.v:22.13-31.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 555, 556, 557, 558, 559, 560, 561, 562 ],
+            "B": [ 168, 169, 170, 171, 172, 173, 174, 175 ],
+            "S": [ 453 ],
+            "Y": [ 563, 564, 565, 566, 567, 568, 569, 570 ]
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5845": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:21.22-21.25|/work/SPI_Timer/rtl/timer_counter.v:21.18-32.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 563, 564, 565, 566, 567, 568, 569, 570 ],
+            "S": [ 449 ],
+            "Y": [ 571, 572, 573, 574, 575, 576, 577, 578 ]
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5848": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:17.22-17.26|/work/SPI_Timer/rtl/timer_counter.v:17.18-32.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 571, 572, 573, 574, 575, 576, 577, 578 ],
+            "B": [ 367, 368, 369, 370, 371, 372, 373, 374 ],
+            "S": [ 444 ],
+            "Y": [ 579, 580, 581, 582, 583, 584, 585, 586 ]
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5851": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:15.22-15.27|/work/SPI_Timer/rtl/timer_counter.v:15.18-32.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 579, 580, 581, 582, 583, 584, 585, 586 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 445 ],
+            "Y": [ 400, 401, 402, 403, 404, 405, 406, 407 ]
+          }
+        },
+        "$flatten\\u_fsm.$logic_and$/work/SPI_Timer/rtl/timer_fsm.v:37$5625": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:37.39-37.60"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 449 ],
+            "B": [ 473 ],
+            "Y": [ 587 ]
+          }
+        },
+        "$flatten\\u_fsm.$logic_and$/work/SPI_Timer/rtl/timer_fsm.v:60$5630": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:60.19-60.42"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 588 ],
+            "B": [ 589 ],
+            "Y": [ 590 ]
+          }
+        },
+        "$flatten\\u_fsm.$logic_and$/work/SPI_Timer/rtl/timer_fsm.v:60$5632": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:60.19-61.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 590 ],
+            "B": [ 591 ],
+            "Y": [ 444 ]
+          }
+        },
+        "$flatten\\u_fsm.$logic_not$/work/SPI_Timer/rtl/timer_fsm.v:60$5629": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:60.32-60.42"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 445 ],
+            "Y": [ 589 ]
+          }
+        },
+        "$flatten\\u_fsm.$logic_or$/work/SPI_Timer/rtl/timer_fsm.v:33$5624": {
+          "hide_name": 1,
+          "type": "$logic_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:33.21-33.42"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 445 ],
+            "B": [ 592 ],
+            "Y": [ 457 ]
+          }
+        },
+        "$flatten\\u_fsm.$logic_or$/work/SPI_Timer/rtl/timer_fsm.v:37$5626": {
+          "hide_name": 1,
+          "type": "$logic_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:37.26-37.61"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 474 ],
+            "B": [ 587 ],
+            "Y": [ 461 ]
+          }
+        },
+        "$flatten\\u_fsm.$logic_or$/work/SPI_Timer/rtl/timer_fsm.v:61$5631": {
+          "hide_name": 1,
+          "type": "$logic_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:61.20-61.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 398 ],
+            "B": [ 8 ],
+            "Y": [ 591 ]
+          }
+        },
+        "$flatten\\u_fsm.$procmux$5719": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:51.26-51.35|/work/SPI_Timer/rtl/timer_fsm.v:51.22-52.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 398, 9, 399, 8 ],
+            "B": [ "0", "1", "0", "0" ],
+            "S": [ 588 ],
+            "Y": [ 593, 594, 595, 596 ]
+          }
+        },
+        "$flatten\\u_fsm.$procmux$5725_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:46.16-46.16|/work/SPI_Timer/rtl/timer_fsm.v:26.9-56.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 398, 9, 399, 8 ],
+            "B": [ "0", "0", "0", "1" ],
+            "Y": [ 597 ]
+          }
+        },
+        "$flatten\\u_fsm.$procmux$5728": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:49.21-49.42|/work/SPI_Timer/rtl/timer_fsm.v:49.17-52.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 593, 594, 595, 596 ],
+            "B": [ "1", "0", "0", "0" ],
+            "S": [ 457 ],
+            "Y": [ 598, 599, 600, 601 ]
+          }
+        },
+        "$flatten\\u_fsm.$procmux$5735": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:44.26-44.36|/work/SPI_Timer/rtl/timer_fsm.v:44.22-45.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x" ],
+            "B": [ "0", "1", "0", "0" ],
+            "S": [ 455 ],
+            "Y": [ 602, 603, 604, 605 ]
+          }
+        },
+        "$flatten\\u_fsm.$procmux$5741_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:39.16-39.16|/work/SPI_Timer/rtl/timer_fsm.v:26.9-56.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 398, 9, 399, 8 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 456 ]
+          }
+        },
+        "$flatten\\u_fsm.$procmux$5745": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:42.21-42.42|/work/SPI_Timer/rtl/timer_fsm.v:42.17-45.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 602, 603, 604, 605 ],
+            "B": [ "1", "0", "0", "0" ],
+            "S": [ 457 ],
+            "Y": [ 606, 607, 608, 609 ]
+          }
+        },
+        "$flatten\\u_fsm.$procmux$5753": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:37.26-37.61|/work/SPI_Timer/rtl/timer_fsm.v:37.22-38.44"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x" ],
+            "B": [ "0", "0", "0", "1" ],
+            "S": [ 461 ],
+            "Y": [ 610, 611, 612, 613 ]
+          }
+        },
+        "$flatten\\u_fsm.$procmux$5762_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:30.16-30.16|/work/SPI_Timer/rtl/timer_fsm.v:26.9-56.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 398, 9, 399, 8 ],
+            "B": [ "0", "1" ],
+            "Y": [ 460 ]
+          }
+        },
+        "$flatten\\u_fsm.$procmux$5767": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:35.26-35.35|/work/SPI_Timer/rtl/timer_fsm.v:35.22-38.44"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 610, 611, 612, 613 ],
+            "B": [ "0", "0", "1", "0" ],
+            "S": [ 459 ],
+            "Y": [ 614, 615, 616, 617 ]
+          }
+        },
+        "$flatten\\u_fsm.$procmux$5778": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:33.21-33.42|/work/SPI_Timer/rtl/timer_fsm.v:33.17-38.44"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 614, 615, 616, 617 ],
+            "B": [ "1", "0", "0", "0" ],
+            "S": [ 457 ],
+            "Y": [ 618, 619, 620, 621 ]
+          }
+        },
+        "$flatten\\u_fsm.$procmux$5790_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:26.21-26.21|/work/SPI_Timer/rtl/timer_fsm.v:26.9-56.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 398, 9, 399, 8 ],
+            "B": [ "1" ],
+            "Y": [ 622 ]
+          }
+        },
+        "$flatten\\u_fsm.$procmux$5792": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000100",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:46.16-46.16|/work/SPI_Timer/rtl/timer_fsm.v:26.9-56.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1", "0", "0", "0" ],
+            "B": [ 598, 599, 600, 601, 606, 607, 608, 609, 618, 619, 620, 621, 593, 594, 595, 596 ],
+            "S": [ 597, 456, 460, 622 ],
+            "Y": [ 393, 394, 395, 396 ]
+          }
+        },
+        "$flatten\\u_regs.$procdff$5909": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:21.5-45.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 623 ],
+            "Q": [ 588 ]
+          }
+        },
+        "$flatten\\u_regs.$procdff$5914": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:21.5-45.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 624 ],
+            "Q": [ 592 ]
+          }
+        },
+        "$flatten\\u_regs.$procdff$5919": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:21.5-45.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 625 ],
+            "Q": [ 459 ]
+          }
+        },
+        "$flatten\\u_regs.$procdff$5924": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:21.5-45.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 626 ],
+            "Q": [ 455 ]
+          }
+        },
+        "$flatten\\u_regs.$procdff$5929": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:21.5-45.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 627 ],
+            "Q": [ 445 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5659": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000111",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:54.46-54.46|/work/SPI_Timer/rtl/reg_bank.v:48.9-57.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "B": [ 80, 81, 82, 83, 84, 85, 86, 87, 341, 342, 343, 344, 345, 346, 347, 348, 112, 113, 114, 115, 116, 117, 118, 119, 358, 359, 360, 361, 362, 363, 364, 365, 144, 145, 146, 147, 148, 149, 150, 151, 367, 368, 369, 370, 371, 372, 373, 374, 9, 399, 8, 398, "0", "0", "0", "0" ],
+            "S": [ 628, 629, 630, 631, 632, 633, 634 ],
+            "Y": [ 635, 636, 637, 638, 639, 640, 641, 642 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5660_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:54.46-54.46|/work/SPI_Timer/rtl/reg_bank.v:48.9-57.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16, 17, 18, 19, 20, 21, 22 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 628 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5661_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:53.46-53.46|/work/SPI_Timer/rtl/reg_bank.v:48.9-57.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16, 17, 18, 19, 20, 21, 22 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 629 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5662_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:52.47-52.47|/work/SPI_Timer/rtl/reg_bank.v:48.9-57.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16, 17, 18, 19, 20, 21, 22 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 630 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5663_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:51.46-51.46|/work/SPI_Timer/rtl/reg_bank.v:48.9-57.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16, 17, 18, 19, 20, 21, 22 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 631 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5664_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:50.47-50.47|/work/SPI_Timer/rtl/reg_bank.v:48.9-57.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16, 17, 18, 19, 20, 21, 22 ],
+            "B": [ "1", "1" ],
+            "Y": [ 632 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5665_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:49.45-49.45|/work/SPI_Timer/rtl/reg_bank.v:48.9-57.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16, 17, 18, 19, 20, 21, 22 ],
+            "B": [ "0", "1" ],
+            "Y": [ 633 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5666_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:48.23-48.23|/work/SPI_Timer/rtl/reg_bank.v:48.9-57.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16, 17, 18, 19, 20, 21, 22 ],
+            "B": [ "1" ],
+            "Y": [ 634 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5670": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:30.31-30.31|/work/SPI_Timer/rtl/reg_bank.v:30.17-42.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 20 ],
+            "S": [ 643 ],
+            "Y": [ 644 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5671_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:30.31-30.31|/work/SPI_Timer/rtl/reg_bank.v:30.17-42.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 325, 326, 327, 328, 329, 330, 331 ],
+            "Y": [ 643 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5672": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:29.17-29.22|/work/SPI_Timer/rtl/reg_bank.v:29.13-43.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 644 ],
+            "S": [ 466 ],
+            "Y": [ 627 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5677": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:30.31-30.31|/work/SPI_Timer/rtl/reg_bank.v:30.17-42.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 19 ],
+            "S": [ 643 ],
+            "Y": [ 645 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5679": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:29.17-29.22|/work/SPI_Timer/rtl/reg_bank.v:29.13-43.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 645 ],
+            "S": [ 466 ],
+            "Y": [ 626 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5684": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:30.31-30.31|/work/SPI_Timer/rtl/reg_bank.v:30.17-42.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 18 ],
+            "S": [ 643 ],
+            "Y": [ 646 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5686": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:29.17-29.22|/work/SPI_Timer/rtl/reg_bank.v:29.13-43.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 646 ],
+            "S": [ 466 ],
+            "Y": [ 625 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5691": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:30.31-30.31|/work/SPI_Timer/rtl/reg_bank.v:30.17-42.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 17 ],
+            "S": [ 643 ],
+            "Y": [ 647 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5693": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:29.17-29.22|/work/SPI_Timer/rtl/reg_bank.v:29.13-43.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 647 ],
+            "S": [ 466 ],
+            "Y": [ 624 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5698": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:30.31-30.31|/work/SPI_Timer/rtl/reg_bank.v:30.17-42.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 16 ],
+            "S": [ 643 ],
+            "Y": [ 648 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5700": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:29.17-29.22|/work/SPI_Timer/rtl/reg_bank.v:29.13-43.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 648 ],
+            "S": [ 466 ],
+            "Y": [ 623 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5703_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:39.61-39.61|/work/SPI_Timer/rtl/reg_bank.v:30.17-42.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 325, 326, 327, 328, 329, 330, 331 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 465 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5708_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:38.61-38.61|/work/SPI_Timer/rtl/reg_bank.v:30.17-42.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 325, 326, 327, 328, 329, 330, 331 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 467 ]
+          }
+        },
+        "$flatten\\u_regs.$procmux$5714_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:37.24-37.24|/work/SPI_Timer/rtl/reg_bank.v:30.17-42.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 325, 326, 327, 328, 329, 330, 331 ],
+            "B": [ "0", "1" ],
+            "Y": [ 468 ]
+          }
+        },
+        "$flatten\\u_regs.$ternary$/work/SPI_Timer/rtl/reg_bank.v:19$5634": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:19.31-19.66"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1", "1", "0", "1", "1", "1", "0", "0" ],
+            "B": [ 16, 17, 18, 19, 20, 21, 22, 23 ],
+            "S": [ 300 ],
+            "Y": [ 349, 350, 351, 352, 353, 354, 355, 356 ]
+          }
+        },
+        "$flatten\\u_spi.$and$/work/SPI_Timer/rtl/spi_slave.v:21$5639": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:21.22-21.44"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 649 ],
+            "B": [ 650 ],
+            "Y": [ 651 ]
+          }
+        },
+        "$flatten\\u_spi.$and$/work/SPI_Timer/rtl/spi_slave.v:22$5641": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:22.22-22.44"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 652 ],
+            "B": [ 653 ],
+            "Y": [ 441 ]
+          }
+        },
+        "$flatten\\u_spi.$and$/work/SPI_Timer/rtl/spi_slave.v:71$5657": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:71.20-71.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 654 ],
+            "B": [ 333 ],
+            "Y": [ 466 ]
+          }
+        },
+        "$flatten\\u_spi.$eq$/work/SPI_Timer/rtl/spi_slave.v:54$5651": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:54.25-54.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 47, 48, 49, 50, 51 ],
+            "B": [ "1", "1", "1", "1" ],
+            "Y": [ 655 ]
+          }
+        },
+        "$flatten\\u_spi.$logic_and$/work/SPI_Timer/rtl/spi_slave.v:51$5649": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:51.21-51.51"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 651 ],
+            "B": [ 15 ],
+            "Y": [ 443 ]
+          }
+        },
+        "$flatten\\u_spi.$logic_and$/work/SPI_Timer/rtl/spi_slave.v:61$5655": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:61.34-61.71"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 303 ],
+            "B": [ 15 ],
+            "Y": [ 439 ]
+          }
+        },
+        "$flatten\\u_spi.$not$/work/SPI_Timer/rtl/spi_slave.v:21$5638": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:21.34-21.44"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 653 ],
+            "Y": [ 650 ]
+          }
+        },
+        "$flatten\\u_spi.$not$/work/SPI_Timer/rtl/spi_slave.v:22$5640": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:22.22-22.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 649 ],
+            "Y": [ 652 ]
+          }
+        },
+        "$flatten\\u_spi.$procdff$5979": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:37.5-68.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 656 ],
+            "Q": [ 654 ]
+          }
+        },
+        "$flatten\\u_spi.$procdff$5984": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "000",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:25.5-35.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 4, 657, 649 ],
+            "Q": [ 657, 649, 653 ]
+          }
+        },
+        "$flatten\\u_spi.$procdff$5989": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "11",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:25.5-35.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 5, 658 ],
+            "Q": [ 658, 437 ]
+          }
+        },
+        "$flatten\\u_spi.$procdff$5994": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "00",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:25.5-35.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 6, 659 ],
+            "Q": [ 659, 324 ]
+          }
+        },
+        "$flatten\\u_spi.$procmux$5853": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:54.25-54.41|/work/SPI_Timer/rtl/spi_slave.v:54.21-55.44"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "1" ],
+            "S": [ 655 ],
+            "Y": [ 660 ]
+          }
+        },
+        "$flatten\\u_spi.$procmux$5855": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:51.21-51.51|/work/SPI_Timer/rtl/spi_slave.v:51.17-56.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 660 ],
+            "S": [ 443 ],
+            "Y": [ 661 ]
+          }
+        },
+        "$flatten\\u_spi.$procmux$5858": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:46.17-46.24|/work/SPI_Timer/rtl/spi_slave.v:46.13-66.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 661 ],
+            "B": [ "0" ],
+            "S": [ 437 ],
+            "Y": [ 656 ]
+          }
+        },
+        "$flatten\\u_spi.$procmux$5860": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:61.34-61.71|/work/SPI_Timer/rtl/spi_slave.v:61.30-64.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ 323 ],
+            "S": [ 439 ],
+            "Y": [ 662 ]
+          }
+        },
+        "$flatten\\u_spi.$procmux$5863": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:58.25-58.40|/work/SPI_Timer/rtl/spi_slave.v:58.21-64.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 662 ],
+            "B": [ 642 ],
+            "S": [ 301 ],
+            "Y": [ 663 ]
+          }
+        },
+        "$flatten\\u_spi.$procmux$5865": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:57.21-57.30|/work/SPI_Timer/rtl/spi_slave.v:57.17-65.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ 663 ],
+            "S": [ 441 ],
+            "Y": [ 664 ]
+          }
+        },
+        "$flatten\\u_spi.$procmux$5868": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:46.17-46.24|/work/SPI_Timer/rtl/spi_slave.v:46.13-66.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 664 ],
+            "B": [ "0" ],
+            "S": [ 437 ],
+            "Y": [ 305 ]
+          }
+        },
+        "$flatten\\u_spi.$procmux$5870": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:61.34-61.71|/work/SPI_Timer/rtl/spi_slave.v:61.30-64.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ "0", 316, 317, 318, 319, 320, 321, 322 ],
+            "S": [ 439 ],
+            "Y": [ 665, 666, 667, 668, 669, 670, 671, 672 ]
+          }
+        },
+        "$flatten\\u_spi.$procmux$5873": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:58.25-58.40|/work/SPI_Timer/rtl/spi_slave.v:58.21-64.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 665, 666, 667, 668, 669, 670, 671, 672 ],
+            "B": [ "0", 635, 636, 637, 638, 639, 640, 641 ],
+            "S": [ 301 ],
+            "Y": [ 673, 674, 675, 676, 677, 678, 679, 680 ]
+          }
+        },
+        "$flatten\\u_spi.$procmux$5875": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:57.21-57.30|/work/SPI_Timer/rtl/spi_slave.v:57.17-65.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 673, 674, 675, 676, 677, 678, 679, 680 ],
+            "S": [ 441 ],
+            "Y": [ 681, 682, 683, 684, 685, 686, 687, 688 ]
+          }
+        },
+        "$flatten\\u_spi.$procmux$5878": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:46.17-46.24|/work/SPI_Timer/rtl/spi_slave.v:46.13-66.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 681, 682, 683, 684, 685, 686, 687, 688 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 437 ],
+            "Y": [ 308, 309, 310, 311, 312, 313, 314, 315 ]
+          }
+        },
+        "$flatten\\u_spi.$procmux$5885": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:51.21-51.51|/work/SPI_Timer/rtl/spi_slave.v:51.17-56.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x" ],
+            "B": [ 186, 187, 188, 189, 190 ],
+            "S": [ 443 ],
+            "Y": [ 689, 690, 691, 692, 693 ]
+          }
+        },
+        "$flatten\\u_spi.$procmux$5888": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:46.17-46.24|/work/SPI_Timer/rtl/spi_slave.v:46.13-66.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 689, 690, 691, 692, 693 ],
+            "B": [ "0", "0", "0", "0", "0" ],
+            "S": [ 437 ],
+            "Y": [ 334, 335, 336, 337, 338 ]
+          }
+        },
+        "$flatten\\u_spi.$ternary$/work/SPI_Timer/rtl/spi_slave.v:70$5656": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:70.19-70.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 307 ],
+            "B": [ "0" ],
+            "S": [ 437 ],
+            "Y": [ 7 ]
+          }
+        },
+        "$flatten\\u_tick.$eq$/work/SPI_Timer/rtl/tick_gen.v:28$5619": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000011011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000011011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/tick_gen.v:28.17-28.31"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217 ],
+            "B": [ "1", "1", "1", "1", "1", "1", "1", "1", "0", "0", "0", "0", "0", "1", "1", "1", "1", "0", "1", "0", "1", "1", "1", "1", "1", "0", "1" ],
+            "Y": [ 694 ]
+          }
+        },
+        "$flatten\\u_tick.$logic_and$/work/SPI_Timer/rtl/tick_gen.v:20$5616": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/tick_gen.v:20.19-20.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 694 ],
+            "Y": [ 449 ]
+          }
+        },
+        "$flatten\\u_tick.$procmux$5798": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000011011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/tick_gen.v:28.17-28.31|/work/SPI_Timer/rtl/tick_gen.v:28.13-31.35"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 694 ],
+            "Y": [ 695, 696, 697, 698, 699, 700, 701, 702, 703, 704, 705, 706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 720, 721 ]
+          }
+        },
+        "$flatten\\u_tick.$procmux$5800": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000011011"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/tick_gen.v:27.18-27.20|/work/SPI_Timer/rtl/tick_gen.v:27.14-32.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 695, 696, 697, 698, 699, 700, 701, 702, 703, 704, 705, 706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 720, 721 ],
+            "S": [ 9 ],
+            "Y": [ 722, 723, 724, 725, 726, 727, 728, 729, 730, 731, 732, 733, 734, 735, 736, 737, 738, 739, 740, 741, 742, 743, 744, 745, 746, 747, 748 ]
+          }
+        },
+        "$flatten\\u_tick.$procmux$5803": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000011011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/SPI_Timer/rtl/tick_gen.v:25.18-25.21|/work/SPI_Timer/rtl/tick_gen.v:25.14-32.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 722, 723, 724, 725, 726, 727, 728, 729, 730, 731, 732, 733, 734, 735, 736, 737, 738, 739, 740, 741, 742, 743, 744, 745, 746, 747, 748 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 464 ],
+            "Y": [ 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435 ]
+          }
+        },
+        "$or$/work/SPI_Timer/rtl/spi_timer_top.v:48$5595": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:48.50-48.62"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 444 ],
+            "B": [ 445 ],
+            "Y": [ 464 ]
+          }
+        },
+        "u_cnt": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_module_not_derived": "00000000000000000000000000000001",
+            "cell_src": "/work/SPI_Timer/rtl/spi_timer_top.v:51.19-56.6",
+            "module": "timer_counter",
+            "module_hdlname": "timer_counter",
+            "module_src": "/work/SPI_Timer/rtl/timer_counter.v:2.1-34.10"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "u_fsm": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_module_not_derived": "00000000000000000000000000000001",
+            "cell_src": "/work/SPI_Timer/rtl/spi_timer_top.v:39.15-45.6",
+            "module": "timer_fsm",
+            "module_hdlname": "timer_fsm",
+            "module_src": "/work/SPI_Timer/rtl/timer_fsm.v:2.1-69.10"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "u_regs": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_module_not_derived": "00000000000000000000000000000001",
+            "cell_src": "/work/SPI_Timer/rtl/spi_timer_top.v:30.14-37.6",
+            "module": "reg_bank",
+            "module_hdlname": "reg_bank",
+            "module_src": "/work/SPI_Timer/rtl/reg_bank.v:2.1-59.10"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "u_spi": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_module_not_derived": "00000000000000000000000000000001",
+            "cell_src": "/work/SPI_Timer/rtl/spi_timer_top.v:24.15-28.6",
+            "module": "spi_slave",
+            "module_hdlname": "spi_slave",
+            "module_src": "/work/SPI_Timer/rtl/spi_slave.v:2.1-75.10"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "u_status": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_module_not_derived": "00000000000000000000000000000001",
+            "cell_src": "/work/SPI_Timer/rtl/spi_timer_top.v:58.16-61.6",
+            "module": "status_gen",
+            "module_hdlname": "status_gen",
+            "module_src": "/work/SPI_Timer/rtl/status_gen.v:2.1-7.10"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "u_tick": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_module_not_derived": "00000000000000000000000000000001",
+            "cell_src": "/work/SPI_Timer/rtl/spi_timer_top.v:47.37-49.6",
+            "module": "$paramod\\tick_gen\\DIV=s32'00000101111101011110000100000000",
+            "module_dynports": "00000000000000000000000000000001",
+            "module_hdlname": "tick_gen",
+            "module_src": "/work/SPI_Timer/rtl/tick_gen.v:2.1-34.10"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        }
+      },
+      "netnames": {
+        "$auto$alumacc.cc:483:extract_cmp_alu$6070": {
+          "hide_name": 1,
+          "bits": [ 75, 76, 77, 78, 79 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4"
+          }
+        },
+        "$auto$alumacc.cc:483:extract_cmp_alu$6071": {
+          "hide_name": 1,
+          "bits": [ 61, 62, 63, 64, 65 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4"
+          }
+        },
+        "$auto$alumacc.cc:483:extract_cmp_alu$6072": {
+          "hide_name": 1,
+          "bits": [ 39, 40, 41, 42, 43, 44, 45, 46 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7"
+          }
+        },
+        "$auto$alumacc.cc:564:replace_alu$6074": {
+          "hide_name": 1,
+          "bits": [ 31, 32, 33, 34, 35, 36, 37, 38 ],
+          "attributes": {
+          }
+        },
+        "$auto$alumacc.cc:564:replace_alu$6085": {
+          "hide_name": 1,
+          "bits": [ 56, 57, 58, 59, 60 ],
+          "attributes": {
+          }
+        },
+        "$auto$alumacc.cc:564:replace_alu$6096": {
+          "hide_name": 1,
+          "bits": [ 70, 71, 72, 73, 74 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4"
+          }
+        },
+        "$auto$alumacc.cc:564:replace_alu$6101": {
+          "hide_name": 1,
+          "bits": [ 96, 97, 98, 99, 100, 101, 102, 103 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7"
+          }
+        },
+        "$auto$alumacc.cc:564:replace_alu$6104": {
+          "hide_name": 1,
+          "bits": [ 128, 129, 130, 131, 132, 133, 134, 135 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7"
+          }
+        },
+        "$auto$alumacc.cc:564:replace_alu$6107": {
+          "hide_name": 1,
+          "bits": [ 160, 161, 162, 163, 164, 165, 166, 167 ],
+          "attributes": {
+          }
+        },
+        "$auto$alumacc.cc:564:replace_alu$6112": {
+          "hide_name": 1,
+          "bits": [ 181, 182, 183, 184, 185 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4"
+          }
+        },
+        "$auto$alumacc.cc:564:replace_alu$6115": {
+          "hide_name": 1,
+          "bits": [ 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26"
+          }
+        },
+        "$auto$alumacc.cc:565:replace_alu$6075": {
+          "hide_name": 1,
+          "bits": [ 24, 25, 26, 27, 28, 29, 30, 10 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6"
+          }
+        },
+        "$auto$alumacc.cc:565:replace_alu$6086": {
+          "hide_name": 1,
+          "bits": [ 52, 53, 54, 55, 12 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3"
+          }
+        },
+        "$auto$alumacc.cc:565:replace_alu$6097": {
+          "hide_name": 1,
+          "bits": [ 66, 67, 68, 69, 14 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3"
+          }
+        },
+        "$auto$alumacc.cc:565:replace_alu$6102": {
+          "hide_name": 1,
+          "bits": [ 88, 89, 90, 91, 92, 93, 94, 95 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7"
+          }
+        },
+        "$auto$alumacc.cc:565:replace_alu$6105": {
+          "hide_name": 1,
+          "bits": [ 120, 121, 122, 123, 124, 125, 126, 127 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7"
+          }
+        },
+        "$auto$alumacc.cc:565:replace_alu$6108": {
+          "hide_name": 1,
+          "bits": [ 152, 153, 154, 155, 156, 157, 158, 159 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7"
+          }
+        },
+        "$auto$alumacc.cc:565:replace_alu$6113": {
+          "hide_name": 1,
+          "bits": [ 176, 177, 178, 179, 180 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4"
+          }
+        },
+        "$auto$alumacc.cc:565:replace_alu$6116": {
+          "hide_name": 1,
+          "bits": [ 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26"
+          }
+        },
+        "$auto$opt_dff.cc:319:make_patterns_logic$6002": {
+          "hide_name": 1,
+          "bits": [ 440 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:319:make_patterns_logic$6004": {
+          "hide_name": 1,
+          "bits": [ 442 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:319:make_patterns_logic$6021": {
+          "hide_name": 1,
+          "bits": [ 339 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:319:make_patterns_logic$6033": {
+          "hide_name": 1,
+          "bits": [ 450 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:319:make_patterns_logic$6035": {
+          "hide_name": 1,
+          "bits": [ 448 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:319:make_patterns_logic$6037": {
+          "hide_name": 1,
+          "bits": [ 454 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:319:make_patterns_logic$6044": {
+          "hide_name": 1,
+          "bits": [ 451 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:319:make_patterns_logic$6046": {
+          "hide_name": 1,
+          "bits": [ 452 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:319:make_patterns_logic$6053": {
+          "hide_name": 1,
+          "bits": [ 458 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:319:make_patterns_logic$6055": {
+          "hide_name": 1,
+          "bits": [ 462 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:319:make_patterns_logic$6062": {
+          "hide_name": 1,
+          "bits": [ 463 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:319:make_patterns_logic$6067": {
+          "hide_name": 1,
+          "bits": [ 436 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:336:make_patterns_logic$6006": {
+          "hide_name": 1,
+          "bits": [ 306 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:336:make_patterns_logic$6018": {
+          "hide_name": 1,
+          "bits": [ 332 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:336:make_patterns_logic$6024": {
+          "hide_name": 1,
+          "bits": [ 340 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:336:make_patterns_logic$6027": {
+          "hide_name": 1,
+          "bits": [ 357 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:336:make_patterns_logic$6030": {
+          "hide_name": 1,
+          "bits": [ 366 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:336:make_patterns_logic$6039": {
+          "hide_name": 1,
+          "bits": [ 383 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:336:make_patterns_logic$6050": {
+          "hide_name": 1,
+          "bits": [ 392 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:336:make_patterns_logic$6057": {
+          "hide_name": 1,
+          "bits": [ 397 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:336:make_patterns_logic$6064": {
+          "hide_name": 1,
+          "bits": [ 408 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3267:Not$6017": {
+          "hide_name": 1,
+          "bits": [ 438 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3267:Not$6077": {
+          "hide_name": 1,
+          "bits": [ 11 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3267:Not$6088": {
+          "hide_name": 1,
+          "bits": [ 13 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3267:Not$6094": {
+          "hide_name": 1,
+          "bits": [ 303 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3267:Not$6099": {
+          "hide_name": 1,
+          "bits": [ 15 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3270:ReduceAnd$6079": {
+          "hide_name": 1,
+          "bits": [ 299 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3270:ReduceAnd$6090": {
+          "hide_name": 1,
+          "bits": [ 301 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3270:ReduceAnd$6110": {
+          "hide_name": 1,
+          "bits": [ 304 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3315:Or$6081": {
+          "hide_name": 1,
+          "bits": [ 300 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3315:Or$6092": {
+          "hide_name": 1,
+          "bits": [ 302 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_cnt.$0\\hr[7:0]": {
+          "hide_name": 1,
+          "bits": [ 384, 385, 386, 387, 388, 389, 390, 391 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:12.5-33.8"
+          }
+        },
+        "$flatten\\u_cnt.$0\\min[7:0]": {
+          "hide_name": 1,
+          "bits": [ 375, 376, 377, 378, 379, 380, 381, 382 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:12.5-33.8"
+          }
+        },
+        "$flatten\\u_cnt.$0\\sec[7:0]": {
+          "hide_name": 1,
+          "bits": [ 400, 401, 402, 403, 404, 405, 406, 407 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:12.5-33.8"
+          }
+        },
+        "$flatten\\u_cnt.$eq$/work/SPI_Timer/rtl/timer_counter.v:10$5601_Y": {
+          "hide_name": 1,
+          "bits": [ 469 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:10.25-10.35"
+          }
+        },
+        "$flatten\\u_cnt.$eq$/work/SPI_Timer/rtl/timer_counter.v:10$5602_Y": {
+          "hide_name": 1,
+          "bits": [ 470 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:10.41-10.52"
+          }
+        },
+        "$flatten\\u_cnt.$eq$/work/SPI_Timer/rtl/timer_counter.v:9$5599_Y": {
+          "hide_name": 1,
+          "bits": [ 471 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:9.56-9.67"
+          }
+        },
+        "$flatten\\u_cnt.$logic_and$/work/SPI_Timer/rtl/timer_counter.v:10$5603_Y": {
+          "hide_name": 1,
+          "bits": [ 472 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:10.24-10.53"
+          }
+        },
+        "$flatten\\u_cnt.$ne$/work/SPI_Timer/rtl/timer_counter.v:22$5608_Y": {
+          "hide_name": 1,
+          "bits": [ 453 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:22.17-22.25"
+          }
+        },
+        "$flatten\\u_cnt.$ne$/work/SPI_Timer/rtl/timer_counter.v:24$5610_Y": {
+          "hide_name": 1,
+          "bits": [ 447 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:24.22-24.30"
+          }
+        },
+        "$flatten\\u_cnt.$ne$/work/SPI_Timer/rtl/timer_counter.v:27$5612_Y": {
+          "hide_name": 1,
+          "bits": [ 446 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:27.26-27.33"
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5805_Y": {
+          "hide_name": 1,
+          "bits": [ 475, 476, 477, 478, 479, 480, 481, 482 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5808_Y": {
+          "hide_name": 1,
+          "bits": [ 483, 484, 485, 486, 487, 488, 489, 490 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5811_Y": {
+          "hide_name": 1,
+          "bits": [ 491, 492, 493, 494, 495, 496, 497, 498 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5813_Y": {
+          "hide_name": 1,
+          "bits": [ 499, 500, 501, 502, 503, 504, 505, 506 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5816_Y": {
+          "hide_name": 1,
+          "bits": [ 507, 508, 509, 510, 511, 512, 513, 514 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5821_Y": {
+          "hide_name": 1,
+          "bits": [ 515, 516, 517, 518, 519, 520, 521, 522 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5824_Y": {
+          "hide_name": 1,
+          "bits": [ 523, 524, 525, 526, 527, 528, 529, 530 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5827_Y": {
+          "hide_name": 1,
+          "bits": [ 531, 532, 533, 534, 535, 536, 537, 538 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5829_Y": {
+          "hide_name": 1,
+          "bits": [ 539, 540, 541, 542, 543, 544, 545, 546 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5832_Y": {
+          "hide_name": 1,
+          "bits": [ 547, 548, 549, 550, 551, 552, 553, 554 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5840_Y": {
+          "hide_name": 1,
+          "bits": [ 555, 556, 557, 558, 559, 560, 561, 562 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5843_Y": {
+          "hide_name": 1,
+          "bits": [ 563, 564, 565, 566, 567, 568, 569, 570 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5845_Y": {
+          "hide_name": 1,
+          "bits": [ 571, 572, 573, 574, 575, 576, 577, 578 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_cnt.$procmux$5848_Y": {
+          "hide_name": 1,
+          "bits": [ 579, 580, 581, 582, 583, 584, 585, 586 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_cnt.$sub$/work/SPI_Timer/rtl/timer_counter.v:23$5609_Y": {
+          "hide_name": 1,
+          "bits": [ 168, 169, 170, 171, 172, 173, 174, 175 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:23.24-23.34"
+          }
+        },
+        "$flatten\\u_cnt.$sub$/work/SPI_Timer/rtl/timer_counter.v:25$5611_Y": {
+          "hide_name": 1,
+          "bits": [ 136, 137, 138, 139, 140, 141, 142, 143 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:25.24-25.34"
+          }
+        },
+        "$flatten\\u_cnt.$sub$/work/SPI_Timer/rtl/timer_counter.v:28$5613_Y": {
+          "hide_name": 1,
+          "bits": [ 104, 105, 106, 107, 108, 109, 110, 111 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:28.23-28.32"
+          }
+        },
+        "$flatten\\u_fsm.$2\\next_state[3:0]": {
+          "hide_name": 1,
+          "bits": [ 593, 594, 595, 596 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:23.5-57.8"
+          }
+        },
+        "$flatten\\u_fsm.$3\\next_state[3:0]": {
+          "hide_name": 1,
+          "bits": [ 618, 619, 620, 621 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:23.5-57.8"
+          }
+        },
+        "$flatten\\u_fsm.$4\\next_state[3:0]": {
+          "hide_name": 1,
+          "bits": [ 614, 615, 616, 617 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:23.5-57.8"
+          }
+        },
+        "$flatten\\u_fsm.$5\\next_state[3:0]": {
+          "hide_name": 1,
+          "bits": [ 610, 611, 612, 613 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:23.5-57.8"
+          }
+        },
+        "$flatten\\u_fsm.$6\\next_state[3:0]": {
+          "hide_name": 1,
+          "bits": [ 606, 607, 608, 609 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:23.5-57.8"
+          }
+        },
+        "$flatten\\u_fsm.$7\\next_state[3:0]": {
+          "hide_name": 1,
+          "bits": [ 602, 603, 604, 605 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:23.5-57.8"
+          }
+        },
+        "$flatten\\u_fsm.$8\\next_state[3:0]": {
+          "hide_name": 1,
+          "bits": [ 598, 599, 600, 601 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:23.5-57.8"
+          }
+        },
+        "$flatten\\u_fsm.$logic_and$/work/SPI_Timer/rtl/timer_fsm.v:37$5625_Y": {
+          "hide_name": 1,
+          "bits": [ 587 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:37.39-37.60"
+          }
+        },
+        "$flatten\\u_fsm.$logic_and$/work/SPI_Timer/rtl/timer_fsm.v:60$5630_Y": {
+          "hide_name": 1,
+          "bits": [ 590 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:60.19-60.42"
+          }
+        },
+        "$flatten\\u_fsm.$logic_not$/work/SPI_Timer/rtl/timer_fsm.v:60$5629_Y": {
+          "hide_name": 1,
+          "bits": [ 589 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:60.32-60.42"
+          }
+        },
+        "$flatten\\u_fsm.$logic_or$/work/SPI_Timer/rtl/timer_fsm.v:33$5624_Y": {
+          "hide_name": 1,
+          "bits": [ 457 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:33.21-33.42"
+          }
+        },
+        "$flatten\\u_fsm.$logic_or$/work/SPI_Timer/rtl/timer_fsm.v:37$5626_Y": {
+          "hide_name": 1,
+          "bits": [ 461 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:37.26-37.61"
+          }
+        },
+        "$flatten\\u_fsm.$logic_or$/work/SPI_Timer/rtl/timer_fsm.v:61$5631_Y": {
+          "hide_name": 1,
+          "bits": [ 591 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:61.20-61.40"
+          }
+        },
+        "$flatten\\u_fsm.$procmux$5725_CMP": {
+          "hide_name": 1,
+          "bits": [ 597 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_fsm.$procmux$5741_CMP": {
+          "hide_name": 1,
+          "bits": [ 456 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_fsm.$procmux$5762_CMP": {
+          "hide_name": 1,
+          "bits": [ 460 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_fsm.$procmux$5790_CMP": {
+          "hide_name": 1,
+          "bits": [ 622 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_regs.$0\\cmd_pause[0:0]": {
+          "hide_name": 1,
+          "bits": [ 625 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:21.5-45.8"
+          }
+        },
+        "$flatten\\u_regs.$0\\cmd_reset[0:0]": {
+          "hide_name": 1,
+          "bits": [ 627 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:21.5-45.8"
+          }
+        },
+        "$flatten\\u_regs.$0\\cmd_resume[0:0]": {
+          "hide_name": 1,
+          "bits": [ 626 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:21.5-45.8"
+          }
+        },
+        "$flatten\\u_regs.$0\\cmd_start[0:0]": {
+          "hide_name": 1,
+          "bits": [ 623 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:21.5-45.8"
+          }
+        },
+        "$flatten\\u_regs.$0\\cmd_stop[0:0]": {
+          "hide_name": 1,
+          "bits": [ 624 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:21.5-45.8"
+          }
+        },
+        "$flatten\\u_regs.$procmux$5660_CMP": {
+          "hide_name": 1,
+          "bits": [ 628 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_regs.$procmux$5661_CMP": {
+          "hide_name": 1,
+          "bits": [ 629 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_regs.$procmux$5662_CMP": {
+          "hide_name": 1,
+          "bits": [ 630 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_regs.$procmux$5663_CMP": {
+          "hide_name": 1,
+          "bits": [ 631 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_regs.$procmux$5664_CMP": {
+          "hide_name": 1,
+          "bits": [ 632 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_regs.$procmux$5665_CMP": {
+          "hide_name": 1,
+          "bits": [ 633 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_regs.$procmux$5666_CMP": {
+          "hide_name": 1,
+          "bits": [ 634 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_regs.$procmux$5670_Y": {
+          "hide_name": 1,
+          "bits": [ 644 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_regs.$procmux$5671_CMP": {
+          "hide_name": 1,
+          "bits": [ 643 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_regs.$procmux$5677_Y": {
+          "hide_name": 1,
+          "bits": [ 645 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_regs.$procmux$5684_Y": {
+          "hide_name": 1,
+          "bits": [ 646 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_regs.$procmux$5691_Y": {
+          "hide_name": 1,
+          "bits": [ 647 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_regs.$procmux$5698_Y": {
+          "hide_name": 1,
+          "bits": [ 648 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_regs.$procmux$5703_CMP": {
+          "hide_name": 1,
+          "bits": [ 465 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_regs.$procmux$5708_CMP": {
+          "hide_name": 1,
+          "bits": [ 467 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_regs.$procmux$5714_CMP": {
+          "hide_name": 1,
+          "bits": [ 468 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_spi.$0\\bit_cnt[4:0]": {
+          "hide_name": 1,
+          "bits": [ 334, 335, 336, 337, 338 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:37.5-68.8"
+          }
+        },
+        "$flatten\\u_spi.$0\\frame_done[0:0]": {
+          "hide_name": 1,
+          "bits": [ 656 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:37.5-68.8"
+          }
+        },
+        "$flatten\\u_spi.$0\\miso_r[0:0]": {
+          "hide_name": 1,
+          "bits": [ 305 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:37.5-68.8"
+          }
+        },
+        "$flatten\\u_spi.$0\\tx_shift[7:0]": {
+          "hide_name": 1,
+          "bits": [ 308, 309, 310, 311, 312, 313, 314, 315 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:37.5-68.8"
+          }
+        },
+        "$flatten\\u_spi.$add$/work/SPI_Timer/rtl/spi_slave.v:53$5650_Y": {
+          "hide_name": 1,
+          "bits": [ 186, 187, 188, 189, 190 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:53.32-53.46"
+          }
+        },
+        "$flatten\\u_spi.$eq$/work/SPI_Timer/rtl/spi_slave.v:54$5651_Y": {
+          "hide_name": 1,
+          "bits": [ 655 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:54.25-54.41"
+          }
+        },
+        "$flatten\\u_spi.$logic_and$/work/SPI_Timer/rtl/spi_slave.v:51$5649_Y": {
+          "hide_name": 1,
+          "bits": [ 443 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:51.21-51.51"
+          }
+        },
+        "$flatten\\u_spi.$logic_and$/work/SPI_Timer/rtl/spi_slave.v:61$5655_Y": {
+          "hide_name": 1,
+          "bits": [ 439 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:61.34-61.71"
+          }
+        },
+        "$flatten\\u_spi.$not$/work/SPI_Timer/rtl/spi_slave.v:21$5638_Y": {
+          "hide_name": 1,
+          "bits": [ 650 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:21.34-21.44"
+          }
+        },
+        "$flatten\\u_spi.$not$/work/SPI_Timer/rtl/spi_slave.v:22$5640_Y": {
+          "hide_name": 1,
+          "bits": [ 652 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:22.22-22.32"
+          }
+        },
+        "$flatten\\u_spi.$procmux$5853_Y": {
+          "hide_name": 1,
+          "bits": [ 660 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_spi.$procmux$5855_Y": {
+          "hide_name": 1,
+          "bits": [ 661 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_spi.$procmux$5860_Y": {
+          "hide_name": 1,
+          "bits": [ 662 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_spi.$procmux$5863_Y": {
+          "hide_name": 1,
+          "bits": [ 663 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_spi.$procmux$5865_Y": {
+          "hide_name": 1,
+          "bits": [ 664 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_spi.$procmux$5870_Y": {
+          "hide_name": 1,
+          "bits": [ 665, 666, 667, 668, 669, 670, 671, 672 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_spi.$procmux$5873_Y": {
+          "hide_name": 1,
+          "bits": [ 673, 674, 675, 676, 677, 678, 679, 680 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_spi.$procmux$5875_Y": {
+          "hide_name": 1,
+          "bits": [ 681, 682, 683, 684, 685, 686, 687, 688 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_spi.$procmux$5885_Y": {
+          "hide_name": 1,
+          "bits": [ 689, 690, 691, 692, 693 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_tick.$0\\cnt[26:0]": {
+          "hide_name": 1,
+          "bits": [ 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/tick_gen.v:22.5-33.8"
+          }
+        },
+        "$flatten\\u_tick.$add$/work/SPI_Timer/rtl/tick_gen.v:31$5620_Y": {
+          "hide_name": 1,
+          "bits": [ 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/tick_gen.v:31.24-31.34"
+          }
+        },
+        "$flatten\\u_tick.$eq$/work/SPI_Timer/rtl/tick_gen.v:20$5615_Y": {
+          "hide_name": 1,
+          "bits": [ 694 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/tick_gen.v:20.26-20.40"
+          }
+        },
+        "$flatten\\u_tick.$procmux$5798_Y": {
+          "hide_name": 1,
+          "bits": [ 695, 696, 697, 698, 699, 700, 701, 702, 703, 704, 705, 706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 720, 721 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_tick.$procmux$5800_Y": {
+          "hide_name": 1,
+          "bits": [ 722, 723, 724, 725, 726, 727, 728, 729, 730, 731, 732, 733, 734, 735, 736, 737, 738, 739, 740, 741, 742, 743, 744, 745, 746, 747, 748 ],
+          "attributes": {
+          }
+        },
+        "clear": {
+          "hide_name": 0,
+          "bits": [ 445 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:22.16-22.21"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:5.17-5.20"
+          }
+        },
+        "cmd_pause": {
+          "hide_name": 0,
+          "bits": [ 459 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:20.31-20.40"
+          }
+        },
+        "cmd_reset": {
+          "hide_name": 0,
+          "bits": [ 445 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:20.54-20.63"
+          }
+        },
+        "cmd_resume": {
+          "hide_name": 0,
+          "bits": [ 455 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:20.42-20.52"
+          }
+        },
+        "cmd_start": {
+          "hide_name": 0,
+          "bits": [ 588 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:20.10-20.19"
+          }
+        },
+        "cmd_stop": {
+          "hide_name": 0,
+          "bits": [ 592 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:20.21-20.29"
+          }
+        },
+        "cnt_will_zero": {
+          "hide_name": 0,
+          "bits": [ 473 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:21.26-21.39"
+          }
+        },
+        "cnt_zero": {
+          "hide_name": 0,
+          "bits": [ 474 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:21.16-21.24"
+          }
+        },
+        "cs_n": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:8.17-8.21"
+          }
+        },
+        "cur_hr": {
+          "hide_name": 0,
+          "bits": [ 80, 81, 82, 83, 84, 85, 86, 87 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:19.34-19.40"
+          }
+        },
+        "cur_min": {
+          "hide_name": 0,
+          "bits": [ 112, 113, 114, 115, 116, 117, 118, 119 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:19.25-19.32"
+          }
+        },
+        "cur_sec": {
+          "hide_name": 0,
+          "bits": [ 144, 145, 146, 147, 148, 149, 150, 151 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:19.16-19.23"
+          }
+        },
+        "expired": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:11.17-11.24"
+          }
+        },
+        "hr_load": {
+          "hide_name": 0,
+          "bits": [ 341, 342, 343, 344, 345, 346, 347, 348 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:18.36-18.43"
+          }
+        },
+        "idle": {
+          "hide_name": 0,
+          "bits": [ 398 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:22.36-22.40"
+          }
+        },
+        "load": {
+          "hide_name": 0,
+          "bits": [ 444 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:22.10-22.14"
+          }
+        },
+        "min_load": {
+          "hide_name": 0,
+          "bits": [ 358, 359, 360, 361, 362, 363, 364, 365 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:18.26-18.34"
+          }
+        },
+        "miso": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:10.17-10.21"
+          }
+        },
+        "mosi": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:9.17-9.21"
+          }
+        },
+        "paused": {
+          "hide_name": 0,
+          "bits": [ 399 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:22.28-22.34"
+          }
+        },
+        "rd_addr": {
+          "hide_name": 0,
+          "bits": [ 16, 17, 18, 19, 20, 21, 22 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:15.25-15.32"
+          }
+        },
+        "rd_data": {
+          "hide_name": 0,
+          "bits": [ 635, 636, 637, 638, 639, 640, 641, 642 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:16.25-16.32"
+          }
+        },
+        "rst_n": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:6.17-6.22"
+          }
+        },
+        "run": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:22.23-22.26"
+          }
+        },
+        "running": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:12.17-12.24"
+          }
+        },
+        "sclk": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:7.17-7.21"
+          }
+        },
+        "sec_load": {
+          "hide_name": 0,
+          "bits": [ 367, 368, 369, 370, 371, 372, 373, 374 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:18.16-18.24"
+          }
+        },
+        "status": {
+          "hide_name": 0,
+          "bits": [ 9, 399, 8, 398 ],
+          "attributes": {
+          }
+        },
+        "tick": {
+          "hide_name": 0,
+          "bits": [ 449 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:21.10-21.14"
+          }
+        },
+        "u_cnt.clear": {
+          "hide_name": 0,
+          "bits": [ 445 ],
+          "attributes": {
+            "hdlname": "u_cnt clear",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:4.16-4.21"
+          }
+        },
+        "u_cnt.clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "u_cnt clk",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:3.16-3.19"
+          }
+        },
+        "u_cnt.dec": {
+          "hide_name": 0,
+          "bits": [ 449 ],
+          "attributes": {
+            "hdlname": "u_cnt dec",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:4.29-4.32"
+          }
+        },
+        "u_cnt.hr": {
+          "hide_name": 0,
+          "bits": [ 80, 81, 82, 83, 84, 85, 86, 87 ],
+          "attributes": {
+            "hdlname": "u_cnt hr",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:6.32-6.34"
+          }
+        },
+        "u_cnt.hr_in": {
+          "hide_name": 0,
+          "bits": [ 341, 342, 343, 344, 345, 346, 347, 348 ],
+          "attributes": {
+            "hdlname": "u_cnt hr_in",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:5.38-5.43"
+          }
+        },
+        "u_cnt.is_zero": {
+          "hide_name": 0,
+          "bits": [ 474 ],
+          "attributes": {
+            "hdlname": "u_cnt is_zero",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:7.17-7.24"
+          }
+        },
+        "u_cnt.load": {
+          "hide_name": 0,
+          "bits": [ 444 ],
+          "attributes": {
+            "hdlname": "u_cnt load",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:4.23-4.27"
+          }
+        },
+        "u_cnt.min": {
+          "hide_name": 0,
+          "bits": [ 112, 113, 114, 115, 116, 117, 118, 119 ],
+          "attributes": {
+            "hdlname": "u_cnt min",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:6.27-6.30"
+          }
+        },
+        "u_cnt.min_in": {
+          "hide_name": 0,
+          "bits": [ 358, 359, 360, 361, 362, 363, 364, 365 ],
+          "attributes": {
+            "hdlname": "u_cnt min_in",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:5.30-5.36"
+          }
+        },
+        "u_cnt.rst_n": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "hdlname": "u_cnt rst_n",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:3.32-3.37"
+          }
+        },
+        "u_cnt.sec": {
+          "hide_name": 0,
+          "bits": [ 144, 145, 146, 147, 148, 149, 150, 151 ],
+          "attributes": {
+            "hdlname": "u_cnt sec",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:6.22-6.25"
+          }
+        },
+        "u_cnt.sec_in": {
+          "hide_name": 0,
+          "bits": [ 367, 368, 369, 370, 371, 372, 373, 374 ],
+          "attributes": {
+            "hdlname": "u_cnt sec_in",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:5.22-5.28"
+          }
+        },
+        "u_cnt.will_zero": {
+          "hide_name": 0,
+          "bits": [ 473 ],
+          "attributes": {
+            "hdlname": "u_cnt will_zero",
+            "src": "/work/SPI_Timer/rtl/timer_counter.v:7.26-7.35"
+          }
+        },
+        "u_fsm.clear": {
+          "hide_name": 0,
+          "bits": [ 445 ],
+          "attributes": {
+            "hdlname": "u_fsm clear",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:6.23-6.28"
+          }
+        },
+        "u_fsm.clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "u_fsm clk",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:3.16-3.19"
+          }
+        },
+        "u_fsm.cmd_pause": {
+          "hide_name": 0,
+          "bits": [ 459 ],
+          "attributes": {
+            "hdlname": "u_fsm cmd_pause",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:4.37-4.46"
+          }
+        },
+        "u_fsm.cmd_reset": {
+          "hide_name": 0,
+          "bits": [ 445 ],
+          "attributes": {
+            "hdlname": "u_fsm cmd_reset",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:4.60-4.69"
+          }
+        },
+        "u_fsm.cmd_resume": {
+          "hide_name": 0,
+          "bits": [ 455 ],
+          "attributes": {
+            "hdlname": "u_fsm cmd_resume",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:4.48-4.58"
+          }
+        },
+        "u_fsm.cmd_start": {
+          "hide_name": 0,
+          "bits": [ 588 ],
+          "attributes": {
+            "hdlname": "u_fsm cmd_start",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:4.16-4.25"
+          }
+        },
+        "u_fsm.cmd_stop": {
+          "hide_name": 0,
+          "bits": [ 592 ],
+          "attributes": {
+            "hdlname": "u_fsm cmd_stop",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:4.27-4.35"
+          }
+        },
+        "u_fsm.cnt_will_zero": {
+          "hide_name": 0,
+          "bits": [ 473 ],
+          "attributes": {
+            "hdlname": "u_fsm cnt_will_zero",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:5.32-5.45"
+          }
+        },
+        "u_fsm.cnt_zero": {
+          "hide_name": 0,
+          "bits": [ 474 ],
+          "attributes": {
+            "hdlname": "u_fsm cnt_zero",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:5.22-5.30"
+          }
+        },
+        "u_fsm.expired": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "hdlname": "u_fsm expired",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:6.52-6.59"
+          }
+        },
+        "u_fsm.idle": {
+          "hide_name": 0,
+          "bits": [ 398 ],
+          "attributes": {
+            "hdlname": "u_fsm idle",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:6.61-6.65"
+          }
+        },
+        "u_fsm.load": {
+          "hide_name": 0,
+          "bits": [ 444 ],
+          "attributes": {
+            "hdlname": "u_fsm load",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:6.17-6.21"
+          }
+        },
+        "u_fsm.next_state": {
+          "hide_name": 0,
+          "bits": [ 393, 394, 395, 396 ],
+          "attributes": {
+            "hdlname": "u_fsm next_state",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:14.22-14.32"
+          }
+        },
+        "u_fsm.paused": {
+          "hide_name": 0,
+          "bits": [ 399 ],
+          "attributes": {
+            "hdlname": "u_fsm paused",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:6.44-6.50"
+          }
+        },
+        "u_fsm.rst_n": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "hdlname": "u_fsm rst_n",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:3.32-3.37"
+          }
+        },
+        "u_fsm.run": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "hdlname": "u_fsm run",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:6.30-6.33"
+          }
+        },
+        "u_fsm.running": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "hdlname": "u_fsm running",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:6.35-6.42"
+          }
+        },
+        "u_fsm.state": {
+          "hide_name": 0,
+          "bits": [ 398, 9, 399, 8 ],
+          "attributes": {
+            "hdlname": "u_fsm state",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:14.15-14.20"
+          }
+        },
+        "u_fsm.tick": {
+          "hide_name": 0,
+          "bits": [ 449 ],
+          "attributes": {
+            "hdlname": "u_fsm tick",
+            "src": "/work/SPI_Timer/rtl/timer_fsm.v:5.16-5.20"
+          }
+        },
+        "u_regs.clamped_time": {
+          "hide_name": 0,
+          "bits": [ 349, 350, 351, 352, 353, 354, 355, 356 ],
+          "attributes": {
+            "hdlname": "u_regs clamped_time",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:19.16-19.28"
+          }
+        },
+        "u_regs.clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "u_regs clk",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:3.16-3.19"
+          }
+        },
+        "u_regs.cmd_pause": {
+          "hide_name": 0,
+          "bits": [ 459 ],
+          "attributes": {
+            "hdlname": "u_regs cmd_pause",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:8.37-8.46"
+          }
+        },
+        "u_regs.cmd_reset": {
+          "hide_name": 0,
+          "bits": [ 445 ],
+          "attributes": {
+            "hdlname": "u_regs cmd_reset",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:8.60-8.69"
+          }
+        },
+        "u_regs.cmd_resume": {
+          "hide_name": 0,
+          "bits": [ 455 ],
+          "attributes": {
+            "hdlname": "u_regs cmd_resume",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:8.48-8.58"
+          }
+        },
+        "u_regs.cmd_start": {
+          "hide_name": 0,
+          "bits": [ 588 ],
+          "attributes": {
+            "hdlname": "u_regs cmd_start",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:8.16-8.25"
+          }
+        },
+        "u_regs.cmd_stop": {
+          "hide_name": 0,
+          "bits": [ 592 ],
+          "attributes": {
+            "hdlname": "u_regs cmd_stop",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:8.27-8.35"
+          }
+        },
+        "u_regs.cur_hr": {
+          "hide_name": 0,
+          "bits": [ 80, 81, 82, 83, 84, 85, 86, 87 ],
+          "attributes": {
+            "hdlname": "u_regs cur_hr",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:6.48-6.54"
+          }
+        },
+        "u_regs.cur_min": {
+          "hide_name": 0,
+          "bits": [ 112, 113, 114, 115, 116, 117, 118, 119 ],
+          "attributes": {
+            "hdlname": "u_regs cur_min",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:6.39-6.46"
+          }
+        },
+        "u_regs.cur_sec": {
+          "hide_name": 0,
+          "bits": [ 144, 145, 146, 147, 148, 149, 150, 151 ],
+          "attributes": {
+            "hdlname": "u_regs cur_sec",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:6.30-6.37"
+          }
+        },
+        "u_regs.hr_load": {
+          "hide_name": 0,
+          "bits": [ 341, 342, 343, 344, 345, 346, 347, 348 ],
+          "attributes": {
+            "hdlname": "u_regs hr_load",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:7.42-7.49"
+          }
+        },
+        "u_regs.min_load": {
+          "hide_name": 0,
+          "bits": [ 358, 359, 360, 361, 362, 363, 364, 365 ],
+          "attributes": {
+            "hdlname": "u_regs min_load",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:7.32-7.40"
+          }
+        },
+        "u_regs.rd_addr": {
+          "hide_name": 0,
+          "bits": [ 16, 17, 18, 19, 20, 21, 22 ],
+          "attributes": {
+            "hdlname": "u_regs rd_addr",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:5.22-5.29"
+          }
+        },
+        "u_regs.rd_data": {
+          "hide_name": 0,
+          "bits": [ 635, 636, 637, 638, 639, 640, 641, 642 ],
+          "attributes": {
+            "hdlname": "u_regs rd_data",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:5.48-5.55"
+          }
+        },
+        "u_regs.rst_n": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "hdlname": "u_regs rst_n",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:3.32-3.37"
+          }
+        },
+        "u_regs.sec_load": {
+          "hide_name": 0,
+          "bits": [ 367, 368, 369, 370, 371, 372, 373, 374 ],
+          "attributes": {
+            "hdlname": "u_regs sec_load",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:7.22-7.30"
+          }
+        },
+        "u_regs.status": {
+          "hide_name": 0,
+          "bits": [ 9, 399, 8, 398, "0", "0", "0", "0" ],
+          "attributes": {
+            "hdlname": "u_regs status",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:6.22-6.28"
+          }
+        },
+        "u_regs.wr_addr": {
+          "hide_name": 0,
+          "bits": [ 325, 326, 327, 328, 329, 330, 331 ],
+          "attributes": {
+            "hdlname": "u_regs wr_addr",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:4.40-4.47"
+          }
+        },
+        "u_regs.wr_data": {
+          "hide_name": 0,
+          "bits": [ 16, 17, 18, 19, 20, 21, 22, 23 ],
+          "attributes": {
+            "hdlname": "u_regs wr_data",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:4.66-4.73"
+          }
+        },
+        "u_regs.wr_en": {
+          "hide_name": 0,
+          "bits": [ 466 ],
+          "attributes": {
+            "hdlname": "u_regs wr_en",
+            "src": "/work/SPI_Timer/rtl/reg_bank.v:4.16-4.21"
+          }
+        },
+        "u_spi.bit_cnt": {
+          "hide_name": 0,
+          "bits": [ 47, 48, 49, 50, 51 ],
+          "attributes": {
+            "hdlname": "u_spi bit_cnt",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:15.15-15.22"
+          }
+        },
+        "u_spi.clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "u_spi clk",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:3.16-3.19"
+          }
+        },
+        "u_spi.cs_n": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "hdlname": "u_spi cs_n",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:4.33-4.37"
+          }
+        },
+        "u_spi.cs_s": {
+          "hide_name": 0,
+          "bits": [ 658, 437 ],
+          "attributes": {
+            "hdlname": "u_spi cs_s",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:13.15-13.19"
+          }
+        },
+        "u_spi.frame_done": {
+          "hide_name": 0,
+          "bits": [ 654 ],
+          "attributes": {
+            "hdlname": "u_spi frame_done",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:19.9-19.19"
+          }
+        },
+        "u_spi.miso": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "hdlname": "u_spi miso",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:5.17-5.21"
+          }
+        },
+        "u_spi.miso_r": {
+          "hide_name": 0,
+          "bits": [ 307 ],
+          "attributes": {
+            "hdlname": "u_spi miso_r",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:18.9-18.15"
+          }
+        },
+        "u_spi.mosi": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "hdlname": "u_spi mosi",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:4.50-4.54"
+          }
+        },
+        "u_spi.mosi_s": {
+          "hide_name": 0,
+          "bits": [ 659, 324 ],
+          "attributes": {
+            "hdlname": "u_spi mosi_s",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:14.15-14.21"
+          }
+        },
+        "u_spi.rd_addr": {
+          "hide_name": 0,
+          "bits": [ 16, 17, 18, 19, 20, 21, 22 ],
+          "attributes": {
+            "hdlname": "u_spi rd_addr",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:9.23-9.30"
+          }
+        },
+        "u_spi.rd_data": {
+          "hide_name": 0,
+          "bits": [ 635, 636, 637, 638, 639, 640, 641, 642 ],
+          "attributes": {
+            "hdlname": "u_spi rd_data",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:10.22-10.29"
+          }
+        },
+        "u_spi.rst_n": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "hdlname": "u_spi rst_n",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:3.32-3.37"
+          }
+        },
+        "u_spi.sclk": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "hdlname": "u_spi sclk",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:4.16-4.20"
+          }
+        },
+        "u_spi.sclk_fall": {
+          "hide_name": 0,
+          "bits": [ 441 ],
+          "attributes": {
+            "hdlname": "u_spi sclk_fall",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:22.10-22.19"
+          }
+        },
+        "u_spi.sclk_rise": {
+          "hide_name": 0,
+          "bits": [ 651 ],
+          "attributes": {
+            "hdlname": "u_spi sclk_rise",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:21.10-21.19"
+          }
+        },
+        "u_spi.sclk_s": {
+          "hide_name": 0,
+          "bits": [ 657, 649, 653 ],
+          "attributes": {
+            "hdlname": "u_spi sclk_s",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:12.15-12.21"
+          }
+        },
+        "u_spi.shift_in": {
+          "hide_name": 0,
+          "bits": [ 16, 17, 18, 19, 20, 21, 22, 23, 325, 326, 327, 328, 329, 330, 331, 333 ],
+          "attributes": {
+            "hdlname": "u_spi shift_in",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:16.16-16.24"
+          }
+        },
+        "u_spi.tx_shift": {
+          "hide_name": 0,
+          "bits": [ 316, 317, 318, 319, 320, 321, 322, 323 ],
+          "attributes": {
+            "hdlname": "u_spi tx_shift",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:17.15-17.23"
+          }
+        },
+        "u_spi.wr_addr": {
+          "hide_name": 0,
+          "bits": [ 325, 326, 327, 328, 329, 330, 331 ],
+          "attributes": {
+            "hdlname": "u_spi wr_addr",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:7.23-7.30"
+          }
+        },
+        "u_spi.wr_data": {
+          "hide_name": 0,
+          "bits": [ 16, 17, 18, 19, 20, 21, 22, 23 ],
+          "attributes": {
+            "hdlname": "u_spi wr_data",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:8.23-8.30"
+          }
+        },
+        "u_spi.wr_en": {
+          "hide_name": 0,
+          "bits": [ 466 ],
+          "attributes": {
+            "hdlname": "u_spi wr_en",
+            "src": "/work/SPI_Timer/rtl/spi_slave.v:6.17-6.22"
+          }
+        },
+        "u_status.expired": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "hdlname": "u_status expired",
+            "src": "/work/SPI_Timer/rtl/status_gen.v:3.33-3.40"
+          }
+        },
+        "u_status.idle": {
+          "hide_name": 0,
+          "bits": [ 398 ],
+          "attributes": {
+            "hdlname": "u_status idle",
+            "src": "/work/SPI_Timer/rtl/status_gen.v:3.42-3.46"
+          }
+        },
+        "u_status.paused": {
+          "hide_name": 0,
+          "bits": [ 399 ],
+          "attributes": {
+            "hdlname": "u_status paused",
+            "src": "/work/SPI_Timer/rtl/status_gen.v:3.25-3.31"
+          }
+        },
+        "u_status.running": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "hdlname": "u_status running",
+            "src": "/work/SPI_Timer/rtl/status_gen.v:3.16-3.23"
+          }
+        },
+        "u_status.status": {
+          "hide_name": 0,
+          "bits": [ 9, 399, 8, 398, "0", "0", "0", "0" ],
+          "attributes": {
+            "hdlname": "u_status status",
+            "src": "/work/SPI_Timer/rtl/status_gen.v:4.23-4.29"
+          }
+        },
+        "u_tick.clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "u_tick clk",
+            "src": "/work/SPI_Timer/rtl/tick_gen.v:3.16-3.19"
+          }
+        },
+        "u_tick.clr": {
+          "hide_name": 0,
+          "bits": [ 464 ],
+          "attributes": {
+            "hdlname": "u_tick clr",
+            "src": "/work/SPI_Timer/rtl/tick_gen.v:4.31-4.34"
+          }
+        },
+        "u_tick.cnt": {
+          "hide_name": 0,
+          "bits": [ 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217 ],
+          "attributes": {
+            "hdlname": "u_tick cnt",
+            "src": "/work/SPI_Timer/rtl/tick_gen.v:18.17-18.20"
+          }
+        },
+        "u_tick.en": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "hdlname": "u_tick en",
+            "src": "/work/SPI_Timer/rtl/tick_gen.v:4.16-4.18"
+          }
+        },
+        "u_tick.rst_n": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "hdlname": "u_tick rst_n",
+            "src": "/work/SPI_Timer/rtl/tick_gen.v:3.32-3.37"
+          }
+        },
+        "u_tick.tick": {
+          "hide_name": 0,
+          "bits": [ 449 ],
+          "attributes": {
+            "hdlname": "u_tick tick",
+            "src": "/work/SPI_Timer/rtl/tick_gen.v:5.17-5.21"
+          }
+        },
+        "wr_addr": {
+          "hide_name": 0,
+          "bits": [ 325, 326, 327, 328, 329, 330, 331 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:15.16-15.23"
+          }
+        },
+        "wr_data": {
+          "hide_name": 0,
+          "bits": [ 16, 17, 18, 19, 20, 21, 22, 23 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:16.16-16.23"
+          }
+        },
+        "wr_en": {
+          "hide_name": 0,
+          "bits": [ 466 ],
+          "attributes": {
+            "src": "/work/SPI_Timer/rtl/spi_timer_top.v:14.10-14.15"
+          }
+        }
+      }
+    }
+  }
+}
