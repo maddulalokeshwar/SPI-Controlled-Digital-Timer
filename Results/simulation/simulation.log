@@ -10,4 +10,4 @@ PASS: status is EXPIRED got=04
 --------------------------------
 BASIC TESTS PASSED = 8 FAILED = 0
 BASIC TESTBENCH PASSED
-SPI_Timer/testbench/tb_spi_timer.v:141: $finish called at 84500000 (1ps)
+SPI_Timer/testbench/tb_spi_timer.v:145: $finish called at 84500000 (1ps)

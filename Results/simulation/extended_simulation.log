@@ -18,4 +18,4 @@ PASS: Hour rollover seconds got=3b
 ----------------------------------------
 EXTENDED TESTS PASSED = 16 FAILED = 0
 EXTENDED TESTBENCH PASSED
-SPI_Timer/testbench/tb_spi_timer_extended.v:217: $finish called at 138100000 (1ps)
+SPI_Timer/testbench/tb_spi_timer_extended.v:220: $finish called at 138100000 (1ps)

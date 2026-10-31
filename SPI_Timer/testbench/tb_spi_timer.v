@@ -134,16 +134,19 @@ module tb_spi_timer;
         $display("--------------------------------");
         $display("BASIC TESTS PASSED = %0d FAILED = %0d",
                  pass_count, fail_count);
-        if (fail_count == 0)
+        if (fail_count == 0) begin
             $display("BASIC TESTBENCH PASSED");
-        else
+        end else begin
             $display("BASIC TESTBENCH FAILED");
+            $fatal(1, "Basic testbench failed with %0d failures",
+                   fail_count);
+        end
+
         $finish;
     end
 
     initial begin
         #2000000;
-        $display("WATCHDOG TIMEOUT");
-        $finish;
+        $fatal(1, "WATCHDOG TIMEOUT");
     end
 endmodule

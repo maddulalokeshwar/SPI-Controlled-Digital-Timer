@@ -209,18 +209,20 @@ module tb_spi_timer_extended;
         $display("EXTENDED TESTS PASSED = %0d FAILED = %0d",
                  pass_count, fail_count);
 
-        if (fail_count == 0)
+        if (fail_count == 0) begin
             $display("EXTENDED TESTBENCH PASSED");
-        else
+        end else begin
             $display("EXTENDED TESTBENCH FAILED");
+            $fatal(1, "Extended testbench failed with %0d failures",
+                   fail_count);
+        end
 
         $finish;
     end
 
     initial begin
         #2000000;
-        $display("WATCHDOG TIMEOUT");
-        $finish;
+        $fatal(1, "WATCHDOG TIMEOUT");
     end
 
 endmodule
