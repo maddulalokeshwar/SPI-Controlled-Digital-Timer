@@ -1,64 +1,69 @@
-<<<<<<< HEAD
 # SPI-Controlled Digital Timer
 
-A Verilog HDL project implementing a programmable countdown timer controlled over an SPI mode-0 slave interface.
+A programmable countdown timer implemented using Verilog HDL
+and controlled through an SPI Mode-0 slave interface.
 
 ## Features
-- SPI mode 0, 16-bit MSB-first frames
-- Programmable hours, minutes, and seconds
-- Start, Stop, Pause, Resume, and Reset commands
-- Status and current-count readback
+
+- SPI Mode 0 communication
+- 16-bit MSB-first SPI frames
+- Programmable hours, minutes and seconds
+- Start, Stop, Pause, Resume and Reset
+- Status and timer count readback
 - Running and expired output signals
 - Parameterized one-second tick generator
 
-## Register map
+## Project Structure
 
-| Address | Register | Access |
-|---|---|---|
-| `0x00` | Control | Write |
-| `0x01` | Status | Read |
-| `0x02` | Seconds load | Read/Write |
-| `0x03` | Current seconds | Read |
-| `0x04` | Minutes load | Read/Write |
-| `0x05` | Current minutes | Read |
-| `0x06` | Hours load | Read/Write |
-| `0x07` | Current hours | Read |
+SPI_Timer/
+├── rtl/
+├── testbench/
+└── constraints/
 
-Control bits: bit 0 Start, bit 1 Stop, bit 2 Pause, bit 3 Resume, bit 4 Reset.
+Results/
+├── simulation/
+├── synthesis/
+└── waveforms/
 
-Status bits: bit 0 Running, bit 1 Paused, bit 2 Expired, bit 3 Idle.
+scripts/
+└── simulate.sh
 
-## Folder layout
-- `SPI_Timer/rtl/` — synthesizable Verilog modules
-- `SPI_Timer/testbench/` — basic self-checking simulation testbench
-- `SPI_Timer/constraints/` — 100 MHz clock constraint
-- `scripts/` — simulation helper script
-- `Results/` — simulation logs and waveforms
+## RTL Modules
 
-## Run in GitHub Codespaces
+- spi_slave.v
+- spi_timer_top.v
+- reg_bank.v
+- timer_fsm.v
+- timer_counter.v
+- tick_gen.v
+- status_gen.v
+
+## Simulation
 
 Install Icarus Verilog:
 
-```bash
 sudo apt-get update
-sudo apt-get install -y iverilog
-```
+sudo apt-get install iverilog
 
-Run:
+Run simulation:
 
-```bash
 chmod +x scripts/simulate.sh
 ./scripts/simulate.sh
-```
 
-The testbench uses `TICKS_PER_SEC=1000` to speed up simulation. The hardware default is 100,000,000 cycles per second for a 100 MHz clock.
+## FPGA Implementation
 
-## FPGA synthesis
-The XDC file defines a 10 ns system clock. For synthesis and bitstream generation, use Xilinx Vivado and select the target device specified by your board/project requirements. GitHub Codespaces does not include Vivado by default.
+The project includes an XDC clock
+constraint for a 100 MHz system clock.
 
-## Verification note
-The included testbench is a basic starter testbench. It is not the original 46-check testbench described in the accompanying project report. Run it and inspect the simulator output before reporting test results.
-=======
-# SPI-Controlled-Digital-Timer
-SPI-controlled digital timer designed using Verilog HDL
->>>>>>> origin/main
+Vivado can be used for synthesis
+and FPGA implementation.
+
+## Verification
+
+The included testbench is a starter
+testbench. Simulation must be run and
+verified before claiming successful results.
+
+## Author
+
+Maddulalokeshwar
