@@ -72,8 +72,8 @@ jobs:
           puts "===== ${corner} TIMING ANALYSIS ====="
           check_setup -verbose
           report_checks -path_delay ${delay} -format full_clock_expanded -group_count 10
-          report_worst_slack
-          report_tns
+          report_worst_slack -${delay}
+          report_tns -${delay}
           EOF
 
             docker run --rm \
