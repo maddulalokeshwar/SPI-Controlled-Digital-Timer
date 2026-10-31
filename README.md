@@ -145,6 +145,15 @@ SPI-Controlled-Digital-Timer/
 │   ├── simulate.sh
 │   └── plot_waveforms.py
 │
+├── physical_design/
+│   └── openroad/
+│       ├── config.mk
+│       └── constraint.sdc
+│
+├── .github/
+│   └── workflows/
+│       └── sky130-openroad.yml
+│
 ├── .gitignore
 └── README.md
 ```
@@ -370,11 +379,75 @@ FPGA implementation and physical hardware validation have not yet been completed
 - Yosys 0.52
 - SkyWater Sky130 HD standard-cell library
 - OpenSTA 2.0.17
+- OpenROAD
+- OpenROAD-flow-scripts
+- SkyWater Sky130 HD PDK
 - GTKWave (optional waveform viewer)
 - Git and GitHub
 - GitHub Codespaces
 
-## 13. Author
+## 13. Sky130 OpenROAD Physical Design
+
+The design was implemented using the SkyWater Sky130 HD standard-cell
+platform with the OpenROAD-flow-scripts physical-design flow.
+
+### Physical Design Results
+
+- Floorplanning completed.
+- Global placement and detailed placement completed.
+- Clock-tree synthesis completed.
+- Global routing and detailed routing completed.
+- Final GDS layout generated.
+
+### Detailed Routing Results
+
+| Metric | Result |
+|---|---:|
+| Nets routed | 679 |
+| Final detailed-route DRC violations | 0 |
+| Antenna net violations | 0 |
+| Antenna pin violations | 0 |
+| Total wire length | 16,453 µm |
+| Total vias | 5,299 |
+| OpenROAD flow errors | 0 |
+
+The detailed router reduced DRC violations from 474 in the initial
+iteration to zero in the final iteration.
+
+### Timing Results
+
+| Metric | Result |
+|---|---:|
+| Clock period | 10 ns |
+| Setup slack | +6.92 ns |
+| Hold slack | +0.25 ns |
+| Setup violations | 0 |
+| Hold violations | 0 |
+| Estimated maximum frequency | 324.91 MHz |
+
+The frequency is an estimate based on the reported timing constraints,
+not a guaranteed hardware operating frequency.
+
+### Warnings and Sign-off Notes
+
+OpenROAD reported 10 DRT-0349 warnings concerning unsupported
+LEF58_ENCLOSURE definitions without CUTCLASS for certain layers.
+These rules were skipped by the router.
+
+Zero detailed-route DRC and antenna violations were reported.
+This result does not replace independent foundry sign-off verification.
+
+### Physical Design Artifacts
+
+The GitHub Actions workflow generates the physical-design reports,
+logs, and GDS layout files.
+
+Workflow:
+[Sky130 OpenROAD Physical Design](https://github.com/maddulalokeshwar/SPI-Controlled-Digital-Timer/actions)
+
+Artifact:
+[Download Physical Design Results](https://github.com/maddulalokeshwar/SPI-Controlled-Digital-Timer/actions/runs/41193691326/artifacts/13039198623)
+## 14. Author
 
 **Maddulalokeshwar**
 
