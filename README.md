@@ -208,6 +208,23 @@ Waveform files:
 Results/waveforms/spi_timer.vcd
 Results/waveforms/spi_timer_extended.vcd
 ```
+### Extended Simulation Waveform
+
+The following waveform visualization was generated from the actual extended testbench VCD output using a Python plotting script.
+
+![SPI Timer Extended Simulation Waveform](Results/waveforms/spi_timer_extended_waveform.png)
+
+The plot includes SPI communication signals, timer control and status signals, and hours, minutes, and seconds counter values.
+
+The VCD timescale is 1 ps, and the displayed simulation duration is 138.1 microseconds.
+
+To regenerate the waveform image, run:
+
+```bash
+python3 scripts/plot_waveforms.py
+```
+
+The plotting script requires Python 3 and Matplotlib.
 
 The waveform files can be opened with GTKWave:
 
