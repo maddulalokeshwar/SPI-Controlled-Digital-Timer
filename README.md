@@ -519,7 +519,7 @@ Download the artifacts from the workflow run's **Artifacts** section. Artifact a
 
 Watch the complete SPI-Controlled Digital Timer project demonstration:
 
-[▶ Watch Project Demo on Google Drive]https://drive.google.com/file/d/13iJJcNNRmYAzC2_LkfToZYXOFrNycKMu/view?pli=1
+[▶ Project Video Link ]https://drive.google.com/file/d/13iJJcNNRmYAzC2_LkfToZYXOFrNycKMu/view?pli=1
 
 ## 16. Author
 
