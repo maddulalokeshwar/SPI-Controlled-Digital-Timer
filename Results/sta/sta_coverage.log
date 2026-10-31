@@ -1,0 +1,31 @@
+OpenSTA 2.0.17 GITDIR-NOT Copyright (c) 2019, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details.
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Warning: /home/vscode/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib, line 31 default_operating_condition tt_025C_1v80 not found.
+
+===== DESIGN SETUP CHECK =====
+Warning: There are 4 input ports missing set_input_delay.
+  cs_n
+  mosi
+  rst_n
+  sclk
+Warning: There are 3 output ports missing set_output_delay.
+  expired
+  miso
+  running
+Warning: There are 6 unconstrained endpoints.
+  expired
+  miso
+  running
+  u_spi/_169_/D
+  u_spi/_172_/D
+  u_spi/_174_/D
+
+===== UNCONSTRAINED PATHS =====
+Startpoint                           Endpoint                               Slack
+--------------------------------------------------------------------------------
+
+u_fsm/_23_/Q (sky130_fd_sc_hd__dfrtp_1) u_cnt/_303_/D (sky130_fd_sc_hd__dfrtp_1)    4.25

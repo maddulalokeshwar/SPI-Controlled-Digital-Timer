@@ -127,9 +127,19 @@ SPI-Controlled-Digital-Timer/
 │   │   ├── spi_timer_extended.vcd
 │   │   └── spi_timer_extended_waveform.png
 │   │
-│   └── synthesis/
-│       ├── spi_timer_netlist.v
-│       └── yosys_synthesis.log
+│   ├── synthesis/
+│   │   ├── spi_timer_netlist.v
+│   │   ├── yosys_synthesis.log
+│   │   └── sky130/
+│   │       ├── spi_timer_top_sky130.v
+│   │       └── yosys_sky130_mapping.log
+│   │
+│   └── sta/
+│       ├── spi_timer.sdc
+│       ├── run_sta.tcl
+│       ├── run_sta_sync.tcl
+│       ├── sta_report.log
+│       └── sta_sync_report.log
 │
 ├── scripts/
 │   ├── simulate.sh
@@ -259,34 +269,87 @@ Useful signals to inspect include:
 
 The RTL design was synthesized using **Yosys 0.52**.
 
-The synthesis flow used `spi_timer_top` as the top-level module and checked the design hierarchy before synthesis.
-
-### Synthesis Summary
+### Generic Synthesis Summary
 
 | Metric | Result |
 |---|---:|
 | Top module | `spi_timer_top` |
 | RTL hierarchy modules | 7 |
-| Generic logic cells (hierarchy aggregate) | 692 |
+| Generic logic cells | 692 |
 | Wires | 603 |
 | Wire bits | 951 |
 | Memory bits | 0 |
 | Structural check problems | 0 |
 
-The synthesis completed successfully, and Yosys reported zero structural check problems.
+Generated files:
 
-### Generated Files
+- `Results/synthesis/spi_timer_netlist.v`
+- `Results/synthesis/yosys_synthesis.log`
 
-- `Results/synthesis/spi_timer_netlist.v` — synthesized Verilog netlist.
-- `Results/synthesis/yosys_synthesis.log` — complete Yosys synthesis log.
+This is technology-independent generic synthesis.
 
-### Synthesis Scope and Limitations
+## 9. Sky130 HD Technology Mapping
 
-This is technology-independent generic synthesis. The reported cell count represents generic Yosys logic cells; it is not a mapped standard-cell area estimate.
+The synthesized RTL was mapped to the **SkyWater Sky130 HD standard-cell library** using Yosys and the typical `tt_025C_1v80` Liberty model.
 
-Sky130 technology mapping, Liberty-based static timing analysis, timing closure, floorplanning, placement, routing, GDSII generation, and DRC/LVS verification have not been completed.
+### Mapping Summary
 
-## 9. FPGA Constraints
+| Metric | Result |
+|---|---:|
+| Top module | `spi_timer_top` |
+| Standard-cell library | Sky130 HD |
+| Mapped standard cells | 548 |
+| Estimated standard-cell area | 5620.39 µm² |
+| Yosys structural check problems | 0 |
+
+The area is a synthesis-level estimate based on Liberty cell areas. It is not a placed or routed area.
+
+Generated files:
+
+- `Results/synthesis/sky130/spi_timer_top_sky130.v`
+- `Results/synthesis/sky130/yosys_sky130_mapping.log`
+
+The Sky130 PDK installation itself is not included in this repository.
+
+## 10. Preliminary Static Timing Analysis
+
+Static timing analysis was performed using **OpenSTA 2.0.17** and the Sky130 HD typical Liberty model.
+
+### Preliminary Timing Summary
+
+| Metric | Result |
+|---|---:|
+| Clock | `core_clk` |
+| Clock period | 10.000 ns |
+| Clock uncertainty | 0.100 ns |
+| Worst reported setup slack | +4.25 ns |
+| Total negative slack (TNS) | 0.00 ns |
+| Analysis type | Pre-layout |
+
+The reported worst setup path is from an FSM register to a timer-counter register. The reported path meets the 10 ns clock requirement in this preliminary analysis.
+
+### Timing Coverage and Limitations
+
+The current STA coverage check reports:
+
+- Four inputs without input-delay constraints: `cs_n`, `mosi`, `rst_n`, and `sclk`.
+- Three outputs without output-delay constraints: `expired`, `miso`, and `running`.
+- Six unconstrained endpoints, including the first-stage SPI synchronizer registers and external outputs.
+- An unresolved Liberty default operating-condition warning.
+
+The SPI inputs are sampled by registers clocked on the internal `clk`. The RTL uses synchronizer stages for `sclk`, `cs_n`, and `mosi`. A false-path exception to the first-stage registers has been included in the STA script, but the remaining coverage warnings require further review.
+
+The reported slack is therefore a **preliminary constrained-path result**, not complete interface timing closure. The analysis uses an ideal clock and does not include placement, clock-tree effects, or extracted routing parasitics.
+
+Generated files:
+
+- `Results/sta/spi_timer.sdc`
+- `Results/sta/run_sta.tcl`
+- `Results/sta/run_sta_sync.tcl`
+- `Results/sta/sta_report.log`
+- `Results/sta/sta_sync_report.log`
+
+## 11. FPGA Constraints
 
 The project includes an XDC clock constraint:
 
@@ -298,17 +361,20 @@ This specifies a 10 ns clock period (100 MHz).
 
 The top-level timer tick parameter defaults to 100,000,000 clock cycles per second.
 
-FPGA synthesis, implementation, timing closure and physical hardware validation have not yet been completed.
+FPGA implementation and physical hardware validation have not yet been completed.
 
-## 10. Tools Used
+## 12. Tools Used
 
 - Verilog HDL
 - Icarus Verilog
+- Yosys 0.52
+- SkyWater Sky130 HD standard-cell library
+- OpenSTA 2.0.17
 - GTKWave (optional waveform viewer)
 - Git and GitHub
 - GitHub Codespaces
 
-## 11. Author
+## 13. Author
 
 **Maddulalokeshwar**
 

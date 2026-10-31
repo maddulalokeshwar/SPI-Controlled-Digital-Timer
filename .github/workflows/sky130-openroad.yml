@@ -1,0 +1,67 @@
+name: Sky130 OpenROAD Physical Design
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "SPI_Timer/rtl/**"
+      - "physical_design/openroad/**"
+      - ".github/workflows/sky130-openroad.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  physical-design:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Sky130 RTL-to-GDS flow
+        run: |
+          docker run --rm \
+            -v "${GITHUB_WORKSPACE}:/work" \
+            -w /work \
+            openroad/orfs \
+            bash -lc '
+              set -euo pipefail
+              source /OpenROAD-flow-scripts/env.sh
+              export REPO_ROOT=/work
+
+              design_dir=/OpenROAD-flow-scripts/flow/designs/sky130hd/spi_timer_top
+              mkdir -p "$design_dir"
+
+              cp /work/physical_design/openroad/config.mk "$design_dir/config.mk"
+              cp /work/physical_design/openroad/constraint.sdc "$design_dir/constraint.sdc"
+
+              cd /OpenROAD-flow-scripts/flow
+
+              set +e
+              make DESIGN_CONFIG=./designs/sky130hd/spi_timer_top/config.mk NUM_CORES=4
+              flow_status=$?
+              set -e
+
+              out=/work/physical_design/output
+              mkdir -p "$out"
+
+              for stage in reports logs results; do
+                src="$stage/sky130hd/spi_timer_top/base"
+                if [ -d "$src" ]; then
+                  cp -a "$src" "$out/$stage"
+                fi
+              done
+
+              exit "$flow_status"
+            '
+
+      - name: Upload physical-design reports and outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: spi-timer-sky130-openroad-results
+          path: physical_design/output/
+          if-no-files-found: warn
+          retention-days: 14
