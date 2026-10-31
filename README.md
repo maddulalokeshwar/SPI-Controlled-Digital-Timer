@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SPI-Controlled Digital Timer
 
 A Verilog HDL project implementing a programmable countdown timer controlled over an SPI mode-0 slave interface.
@@ -57,3 +58,7 @@ The XDC file defines a 10 ns system clock. For synthesis and bitstream generatio
 
 ## Verification note
 The included testbench is a basic starter testbench. It is not the original 46-check testbench described in the accompanying project report. Run it and inspect the simulator output before reporting test results.
+=======
+# SPI-Controlled-Digital-Timer
+SPI-controlled digital timer designed using Verilog HDL
+>>>>>>> origin/main
