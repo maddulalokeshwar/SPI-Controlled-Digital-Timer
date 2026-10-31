@@ -1,0 +1,28 @@
+name: LVS Tool Availability Check
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-tools:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check ORFS tools and Sky130 LVS files
+        run: |
+          docker run --rm openroad/orfs bash -lc '
+            echo "=== TOOL VERSIONS ==="
+            for tool in klayout magic netgen yosys openroad; do
+              echo "--- $tool ---"
+              command -v "$tool" || true
+            done
+
+            echo
+            echo "=== SKY130 LVS FILES ==="
+            find /OpenROAD-flow-scripts/flow/platforms/sky130hd \
+              -maxdepth 3 -type f \
+              \( -name "*.cdl" -o -name "*.lylvs" -o -name "*.lib" \) \
+              -print 2>/dev/null | sort
+          '
