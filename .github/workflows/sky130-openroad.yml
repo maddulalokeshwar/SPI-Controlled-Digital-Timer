@@ -1,11 +1,14 @@
-name: Sky130 OpenROAD Physical Design
+name: Sky130 OpenROAD Physical Design and Post-Route STA
 
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
     paths:
       - "SPI_Timer/rtl/**"
       - "physical_design/openroad/**"
+      - "Results/sta/postroute_mcsta/**"
       - ".github/workflows/sky130-openroad.yml"
 
 permissions:
@@ -20,6 +23,32 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Download official SkyWater PDK
+        run: |
+          git clone --depth 1 https://github.com/google/skywater-pdk.git /tmp/skywater-pdk
+          cd /tmp/skywater-pdk
+          git submodule update --init --depth 1 libraries/sky130_fd_sc_hd/latest
+
+      - name: Install official Liberty generator
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install /tmp/skywater-pdk/scripts/python-skywater-pdk
+
+      - name: Generate SS TT and FF libraries
+        run: |
+          mkdir -p Results/Liberty
+          python -c 'from skywater_pdk.liberty import main; raise SystemExit(main())' \
+            /tmp/skywater-pdk/libraries/sky130_fd_sc_hd/latest \
+            ss_100C_1v60 \
+            tt_025C_1v80 \
+            ff_n40C_1v95 \
+            -o Results/Liberty
+
       - name: Run Sky130 RTL-to-GDS flow
         run: |
           docker run --rm \
@@ -29,7 +58,6 @@ jobs:
             bash -lc '
               set -euo pipefail
               source /OpenROAD-flow-scripts/env.sh
-              export REPO_ROOT=/work
 
               design_dir=/OpenROAD-flow-scripts/flow/designs/sky130hd/spi_timer_top
               mkdir -p "$design_dir"
@@ -38,11 +66,7 @@ jobs:
               cp /work/physical_design/openroad/constraint.sdc "$design_dir/constraint.sdc"
 
               cd /OpenROAD-flow-scripts/flow
-
-              set +e
               make DESIGN_CONFIG=./designs/sky130hd/spi_timer_top/config.mk NUM_CORES=4
-              flow_status=$?
-              set -e
 
               out=/work/physical_design/output
               mkdir -p "$out"
@@ -54,8 +78,46 @@ jobs:
                 fi
               done
 
-              exit "$flow_status"
+              test -s "$out/results/6_final.odb"
+              test -s "$out/results/6_final.spef"
             '
+
+      - name: Run post-route SS TT and FF STA
+        run: |
+          set -euo pipefail
+          mkdir -p Results/sta/postroute_mcsta
+
+          docker run --rm \
+            -v "${GITHUB_WORKSPACE}:/work" \
+            -w /work \
+            openroad/orfs \
+            bash -lc '
+              set -euo pipefail
+              source /OpenROAD-flow-scripts/env.sh
+
+              for corner in SS TT FF; do
+                echo "===== Running post-route $corner STA ====="
+                export CORNER="$corner"
+
+                openroad -exit /work/Results/sta/postroute_mcsta/run_corner.tcl \
+                  2>&1 | tee "/work/Results/sta/postroute_mcsta/${corner}.log"
+              done
+            '
+
+      - name: Verify post-route reports
+        run: |
+          set -euo pipefail
+
+          for corner in SS TT FF; do
+            test -s "Results/sta/postroute_mcsta/${corner}.log"
+            grep -q "END POST-ROUTE ${corner}" \
+              "Results/sta/postroute_mcsta/${corner}.log"
+            grep -q "worst slack" \
+              "Results/sta/postroute_mcsta/${corner}.log"
+            echo "$corner post-route STA report generated."
+          done
+
+          echo "All three post-route corner analyses completed."
 
       - name: Upload physical-design reports and outputs
         if: always()
@@ -63,5 +125,23 @@ jobs:
         with:
           name: spi-timer-sky130-openroad-results
           path: physical_design/output/
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Upload post-route multi-corner STA reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: spi-timer-postroute-mcsta
+          path: Results/sta/postroute_mcsta/
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Upload generated Liberty libraries
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sky130-hd-liberty-libraries
+          path: Results/Liberty/*.lib
           if-no-files-found: warn
           retention-days: 14
