@@ -10,22 +10,16 @@ jobs:
   inspect-platform:
     runs-on: ubuntu-24.04
     steps:
-      - name: Inspect Sky130 platform configuration
+      - name: Search all available Sky130 timing libraries
         run: |
           docker run --rm openroad/orfs bash -lc '
-            set -e
-            PLATFORM=/OpenROAD-flow-scripts/flow/platforms/sky130hd
+            echo "=== Sky130 HD platform libraries ==="
+            find /OpenROAD-flow-scripts/flow/platforms/sky130hd \
+              -type f \( -name "*.lib" -o -name "*.lib.gz" \) | sort
 
-            echo "=== Liberty configuration references ==="
-            grep -RniE "LIB|liberty|corner|tt|ss|ff" \
-              "$PLATFORM/config.mk" \
-              "$PLATFORM"/*.mk 2>/dev/null || true
-
-            echo "=== All Sky130 HD library files ==="
-            find "$PLATFORM" -type f \
-              \( -name "*.lib" -o -name "*.lib.gz" \) | sort
-
-            echo "=== Timing-related configuration files ==="
-            find "$PLATFORM" -maxdepth 2 -type f \
-              \( -name "*.mk" -o -name "*.tcl" \) | sort
+            echo "=== Sky130 libraries across container ==="
+            find / -type f \
+              \( -name "sky130_fd_sc_hd__*.lib" \
+              -o -name "sky130_fd_sc_hd__*.lib.gz" \) \
+              -print 2>/dev/null | sort
           '
