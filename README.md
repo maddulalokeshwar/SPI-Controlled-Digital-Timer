@@ -1,66 +1,62 @@
-# SPI-Controlled Digital Timer
+# SPI-Controlled Digital Timer Using Verilog HDL
 
-A programmable countdown timer implemented in Verilog HDL and controlled through an SPI Mode-0 slave interface.
+A programmable countdown timer designed using Verilog HDL with an SPI Mode-0 slave interface. The timer supports configurable hours, minutes and seconds, along with start, stop, pause, resume and reset operations.
 
-The design supports configurable hours, minutes, and seconds, with SPI commands for starting, stopping, pausing, resuming, and resetting the timer.
-
-## Features
+## 1. Features
 
 - SPI Mode 0 communication
 - 16-bit, MSB-first SPI frames
-- Programmable hours, minutes, and seconds
-- Start, Stop, Pause, Resume, and Reset commands
-- Timer status and count readback through SPI
-- Running and expired status outputs
-- Parameterized one-second tick generator
-- RTL simulation using Icarus Verilog
-- Basic and extended testbenches
+- Configurable hours, minutes and seconds
+- Start, Stop, Pause, Resume and Reset commands
+- Timer configuration and current-time readback through SPI
+- Four timer status conditions: IDLE, RUNNING, PAUSED and EXPIRED
+- Parameterized countdown tick generator
+- Modular Verilog RTL design
+- Basic and extended self-checking testbenches
 - Simulation logs and waveform files
 
-## Project Structure
+## 2. Project Architecture
 
-```text
-SPI-Controlled-Digital-Timer/
-├── SPI_Timer/
-│   ├── rtl/
-│   │   ├── reg_bank.v
-│   │   ├── spi_slave.v
-│   │   ├── spi_timer_top.v
-│   │   ├── status_gen.v
-│   │   ├── tick_gen.v
-│   │   ├── timer_counter.v
-│   │   └── timer_fsm.v
-│   ├── testbench/
-│   │   ├── tb_spi_timer.v
-│   │   ├── tb_spi_timer_original.v
-│   │   └── tb_spi_timer_extended.v
-│   └── constraints/
-├── Results/
-│   ├── simulation/
-│   │   ├── simulation.log
-│   │   └── extended_simulation.log
-│   ├── synthesis/
-│   └── waveforms/
-│       ├── spi_timer.vcd
-│       └── spi_timer_extended.vcd
-├── scripts/
-│   └── simulate.sh
-└── README.md
+The design is divided into six main functional blocks connected through the top-level module.
+
+```mermaid
+flowchart TD
+    A["SPI Master"] -->|"SCLK, CS, MOSI"| B["SPI Slave"]
+    B -->|"Read / Write Interface"| C["Register Bank"]
+    C -->|"Control Commands"| D["Timer FSM"]
+    D -->|"Enable / Clear / Load"| E["Tick Generator"]
+    E -->|"Countdown Tick"| F["Timer Counter"]
+    D -->|"Run Control"| E
+    E -->|"Tick"| D
+    F -->|"Hours / Minutes / Seconds"| C
+    C -->|"Status Inputs"| G["Status Generator"]
+    G -->|"Status Register"| C
+    C -->|"Read Data"| B
+    B -->|"MISO"| A
 ```
 
-## RTL Architecture
+### Module Description
 
-| Module | Description |
+| RTL Module | Function |
 |---|---|
-| `spi_slave.v` | Handles SPI communication and serial data transfer |
-| `spi_timer_top.v` | Top-level module connecting the timer components |
-| `reg_bank.v` | Stores configuration registers and provides readback |
-| `timer_fsm.v` | Controls the timer operating states |
-| `timer_counter.v` | Implements countdown and time rollover |
-| `tick_gen.v` | Generates the programmable timer tick |
+| `spi_timer_top.v` | Top-level module connecting all functional blocks |
+| `spi_slave.v` | Handles SPI serial communication |
+| `reg_bank.v` | Stores timer configuration and control registers |
+| `timer_fsm.v` | Controls timer operating states |
+| `tick_gen.v` | Generates the programmable countdown tick |
+| `timer_counter.v` | Maintains countdown values and time rollover |
 | `status_gen.v` | Generates timer status information |
 
-## Register Map
+### Timer Operating States
+
+- **IDLE:** Timer is waiting for a start command.
+- **RUN:** Timer is counting down.
+- **PAUSE:** Countdown is temporarily stopped.
+- **EXPIRED:** Countdown has reached zero.
+
+## 3. SPI Register Map
+
+The timer is controlled through the following register addresses.
 
 | Address | Register | Access |
 |---|---|---|
@@ -75,9 +71,9 @@ SPI-Controlled-Digital-Timer/
 
 ### Control Register
 
-The control register at address `0x00` uses the following command bits:
+Register address: `0x00`
 
-| Bit | Command |
+| Bit | Operation |
 |---|---|
 | Bit 0 | Start |
 | Bit 1 | Stop |
@@ -87,6 +83,8 @@ The control register at address `0x00` uses the following command bits:
 
 ### Status Register
 
+Register address: `0x01`
+
 | Bit | Status |
 |---|---|
 | Bit 0 | Running |
@@ -94,11 +92,51 @@ The control register at address `0x00` uses the following command bits:
 | Bit 2 | Expired |
 | Bit 3 | Idle |
 
-## Simulation Setup
+## 4. Project Directory Structure
+
+```text
+SPI-Controlled-Digital-Timer/
+│
+├── SPI_Timer/
+│   ├── rtl/
+│   │   ├── reg_bank.v
+│   │   ├── spi_slave.v
+│   │   ├── spi_timer_top.v
+│   │   ├── status_gen.v
+│   │   ├── tick_gen.v
+│   │   ├── timer_counter.v
+│   │   ├── timer_fsm.v
+│   │   └── README_rtl.md
+│   │
+│   ├── testbench/
+│   │   ├── tb_spi_timer.v
+│   │   ├── tb_spi_timer_extended.v
+│   │   └── tb_spi_timer_original.v
+│   │
+│   └── constraints/
+│       └── timer.xdc
+│
+├── Results/
+│   ├── simulation/
+│   │   ├── simulation.log
+│   │   └── extended_simulation.log
+│   ├── synthesis/
+│   └── waveforms/
+│       ├── spi_timer.vcd
+│       └── spi_timer_extended.vcd
+│
+├── scripts/
+│   └── simulate.sh
+│
+├── .gitignore
+└── README.md
+```
+
+## 5. Simulation Setup
 
 The project uses Icarus Verilog for RTL simulation.
 
-### 1. Install Icarus Verilog
+### Install Icarus Verilog
 
 On Ubuntu or GitHub Codespaces:
 
@@ -107,72 +145,116 @@ sudo apt-get update
 sudo apt-get install -y iverilog
 ```
 
-Verify the installation:
+Check the installation:
 
 ```bash
 iverilog -V
 vvp -V
 ```
 
-### 2. Run the Testbenches
+### Run the Simulation
 
 From the repository root:
 
 ```bash
-chmod +x scripts/simulate.sh
 bash scripts/simulate.sh
 ```
 
-The script compiles and runs both testbenches.
+The script compiles and executes both testbenches.
 
-## Verification Results
+## 6. Verification Results
 
-The current simulation run completed successfully.
+Both testbenches completed successfully.
 
-| Testbench | Passing checks | Failing checks |
+| Testbench | Passed | Failed |
 |---|---:|---:|
-| Original testbench | 8 | 0 |
+| Basic testbench | 8 | 0 |
 | Extended testbench | 16 | 0 |
-| **Combined** | **24** | **0** |
+| **Total** | **24** | **0** |
 
-The extended testbench covers register readback, invalid register access, timer start and stop, countdown, pause and resume, reset, and time rollover.
+### Verification Coverage
 
-These are simulation test results, not formal verification or FPGA hardware test results.
+The extended testbench checks:
 
-## Simulation Outputs
+- Reset and initial IDLE status
+- Timer register readback
+- Invalid register access
+- Timer start and countdown
+- Pause and counter hold
+- Resume operation
+- Stop operation
+- Reset during operation
+- Minute rollover
+- Hour rollover
 
-Simulation logs are stored in:
+The testbenches use a reduced tick parameter to make countdown simulation practical.
+
+Testbench failures and watchdog timeouts use `$fatal` to return a nonzero simulation exit code.
+
+These results represent RTL simulation testing, not formal verification or physical FPGA testing.
+
+## 7. Simulation Results and Waveforms
+
+Simulation logs:
 
 ```text
-Results/simulation/
-├── simulation.log
-└── extended_simulation.log
+Results/simulation/simulation.log
+Results/simulation/extended_simulation.log
 ```
 
-Waveform files are stored in:
+Waveform files:
 
 ```text
-Results/waveforms/
-├── spi_timer.vcd
-└── spi_timer_extended.vcd
+Results/waveforms/spi_timer.vcd
+Results/waveforms/spi_timer_extended.vcd
 ```
 
-The VCD files can be inspected using GTKWave or another compatible waveform viewer.
-
-To open a waveform when GTKWave is installed:
+The waveform files can be opened with GTKWave:
 
 ```bash
-gtkwave Results/waveforms/spi_timer.vcd
+gtkwave Results/waveforms/spi_timer_extended.vcd
 ```
 
-## FPGA Implementation
+Useful signals to inspect include:
 
-The project includes an XDC clock constraint intended for a 100 MHz system clock.
+- `clk`
+- `rst_n`
+- `sclk`
+- `cs_n`
+- `mosi`
+- `miso`
+- `running`
+- `paused`
+- `expired`
+- `cur_sec`
+- `cur_min`
+- `cur_hr`
+- `state`
 
-Vivado can be used for synthesis, implementation, timing analysis, and FPGA programming.
+## 8. FPGA Constraints
 
-**Note:** FPGA synthesis, implementation, timing closure, and physical hardware validation should be completed separately before claiming successful FPGA deployment.
+The project includes an XDC clock constraint:
 
-## Author
+```tcl
+create_clock -period 10.000 -name clk [get_ports clk]
+```
+
+This specifies a 10 ns clock period (100 MHz).
+
+The top-level timer tick parameter defaults to 100,000,000 clock cycles per second.
+
+FPGA synthesis, implementation, timing closure and physical hardware validation have not yet been completed.
+
+## 9. Tools Used
+
+- Verilog HDL
+- Icarus Verilog
+- GTKWave (optional waveform viewer)
+- Git and GitHub
+- GitHub Codespaces
+
+## 10. Author
 
 **Maddulalokeshwar**
+
+Project: SPI-Controlled Digital Timer Using Verilog HDL
