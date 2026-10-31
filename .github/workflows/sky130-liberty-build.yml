@@ -1,0 +1,59 @@
+name: Sky130 Liberty Library Build
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-liberty:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Download official SkyWater PDK
+        run: |
+          git clone --depth 1 https://github.com/google/skywater-pdk.git /tmp/skywater-pdk
+          cd /tmp/skywater-pdk
+          git submodule update --init --depth 1 libraries/sky130_fd_sc_hd/latest
+
+      - name: Install official Liberty generator
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install /tmp/skywater-pdk/scripts/python-skywater-pdk
+
+      - name: Generate SS TT and FF libraries
+        run: |
+          mkdir -p Results/Liberty
+
+          python -m skywater_pdk.liberty \
+            /tmp/skywater-pdk/libraries/sky130_fd_sc_hd/latest \
+            ss_100C_1v60 \
+            tt_025C_1v80 \
+            ff_n40C_1v95 \
+            -o Results/Liberty
+
+      - name: Verify generated libraries
+        run: |
+          echo "=== Generated Liberty files ==="
+          ls -lh Results/Liberty/*.lib
+
+          test -s Results/Liberty/sky130_fd_sc_hd__ss_100C_1v60.lib
+          test -s Results/Liberty/sky130_fd_sc_hd__tt_025C_1v80.lib
+          test -s Results/Liberty/sky130_fd_sc_hd__ff_n40C_1v95.lib
+
+      - name: Upload Liberty libraries
+        uses: actions/upload-artifact@v4
+        with:
+          name: sky130-hd-liberty-libraries
+          path: Results/Liberty/*.lib
+          if-no-files-found: error
+          retention-days: 14
