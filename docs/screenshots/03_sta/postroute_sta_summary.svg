@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#101827"/>
+  <g font-family="Arial">
+    <text x="60" y="75" fill="#ffffff" font-size="34" font-weight="bold">SPI Timer — Post-route STA</text>
+    <text x="60" y="112" fill="#aab8ca" font-size="18">Multi-corner timing summary · OpenROAD / STA logs</text>
+
+    <rect x="60" y="155" width="330" height="180" rx="16" fill="#1d2b40" stroke="#49627e"/>
+    <text x="90" y="200" fill="#aab8ca" font-size="19">SS · Setup</text>
+    <text x="90" y="275" fill="#ffffff" font-size="52" font-weight="bold">+3.63 ns</text>
+    <text x="90" y="310" fill="#aab8ca" font-size="17">TNS: 0.00 ns</text>
+
+    <rect x="435" y="155" width="330" height="180" rx="16" fill="#1d2b40" stroke="#49627e"/>
+    <text x="465" y="200" fill="#aab8ca" font-size="19">TT · Setup</text>
+    <text x="465" y="275" fill="#ffffff" font-size="52" font-weight="bold">+6.85 ns</text>
+    <text x="465" y="310" fill="#aab8ca" font-size="17">TNS: 0.00 ns</text>
+
+    <rect x="810" y="155" width="330" height="180" rx="16" fill="#1d2b40" stroke="#49627e"/>
+    <text x="840" y="200" fill="#aab8ca" font-size="19">FF · Hold</text>
+    <text x="840" y="275" fill="#ffffff" font-size="52" font-weight="bold">+0.12 ns</text>
+    <text x="840" y="310" fill="#aab8ca" font-size="17">TNS: 0.00 ns</text>
+
+    <text x="60" y="405" fill="#ffffff" font-size="23" font-weight="bold">Timing interpretation</text>
+    <text x="60" y="450" fill="#dce6f2" font-size="19">Reported worst setup slack is positive at SS and TT.</text>
+    <text x="60" y="485" fill="#dce6f2" font-size="19">Reported worst hold slack is positive at FF.</text>
+
+    <rect x="60" y="525" width="1080" height="92" rx="12" fill="#3b2d1d" stroke="#a87935"/>
+    <text x="85" y="562" fill="#ffd28a" font-size="20" font-weight="bold">Timing coverage limitation</text>
+    <text x="85" y="592" fill="#f4e5cc" font-size="17">6 unconstrained endpoints were reported. Positive slack applies only to checked paths.</text>
+
+    <text x="60" y="650" fill="#aab8ca" font-size="15">Source: Results/sta/postroute_mcsta/downloaded/{SS,TT,FF}.log</text>
+    <text x="60" y="675" fill="#aab8ca" font-size="14">Summary graphic based on tool reports; not a screenshot of the STA interface.</text>
+  </g>
+</svg>

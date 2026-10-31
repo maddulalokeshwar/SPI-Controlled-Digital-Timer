@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420">
+<rect width="1000" height="420" rx="22" fill="#101827"/>
+<text x="500" y="65" fill="#ffffff" font-family="Arial" font-size="30" font-weight="bold" text-anchor="middle">KLayout LVS Verification</text>
+<rect x="170" y="105" width="660" height="145" rx="18" fill="#123d35" stroke="#36c99a" stroke-width="3"/>
+<text x="500" y="165" fill="#6ee7b7" font-family="Arial" font-size="42" font-weight="bold" text-anchor="middle">NETLISTS MATCH</text>
+<text x="500" y="207" fill="#ffffff" font-family="Arial" font-size="19" text-anchor="middle">LVS verification passed</text>
+<text x="500" y="300" fill="#d1d5db" font-family="Arial" font-size="19" text-anchor="middle">Source: Results/LVS/6_lvs.log</text>
+<text x="500" y="335" fill="#d1d5db" font-family="Arial" font-size="17" text-anchor="middle">Log message: “Congratulations! Netlists match.”</text>
+<text x="500" y="385" fill="#9ca3af" font-family="Arial" font-size="14" text-anchor="middle">Generated visual summary of the actual LVS log; not a tool screenshot.</text>
+</svg>

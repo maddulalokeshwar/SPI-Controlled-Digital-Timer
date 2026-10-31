@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <rect width="1200" height="680" fill="#101827"/>
+  <text x="60" y="75" fill="#ffffff" font-family="Arial" font-size="34" font-weight="bold">SPI Timer — Sky130 HD Synthesis</text>
+  <text x="60" y="112" fill="#aab8ca" font-family="Arial" font-size="18">Yosys report summary · spi_timer_top</text>
+  <g font-family="Arial">
+    <rect x="60" y="160" width="330" height="170" rx="16" fill="#1d2b40" stroke="#49627e"/>
+    <text x="90" y="205" fill="#aab8ca" font-size="18">Mapped standard cells</text>
+    <text x="90" y="280" fill="#ffffff" font-size="58" font-weight="bold">634</text>
+    <rect x="435" y="160" width="330" height="170" rx="16" fill="#1d2b40" stroke="#49627e"/>
+    <text x="465" y="205" fill="#aab8ca" font-size="18">Reported cell area</text>
+    <text x="465" y="270" fill="#ffffff" font-size="43" font-weight="bold">6,332.3232</text>
+    <text x="465" y="305" fill="#aab8ca" font-size="17">µm²</text>
+    <rect x="810" y="160" width="330" height="170" rx="16" fill="#1d2b40" stroke="#49627e"/>
+    <text x="840" y="205" fill="#aab8ca" font-size="18">Sequential area</text>
+    <text x="840" y="270" fill="#ffffff" font-size="52" font-weight="bold">47.88%</text>
+    <text x="60" y="400" fill="#ffffff" font-size="23" font-weight="bold">Sequential cell breakdown</text>
+    <rect x="60" y="430" width="1080" height="24" rx="12" fill="#29384d"/>
+    <rect x="60" y="430" width="517" height="24" rx="12" fill="#56a6d8"/>
+    <text x="60" y="500" fill="#dce6f2" font-size="20">118 × sky130_fd_sc_hd__dfrtp_1</text>
+    <text x="60" y="540" fill="#dce6f2" font-size="20">3 × sky130_fd_sc_hd__dfstp_2</text>
+    <text x="60" y="595" fill="#aab8ca" font-size="16">Source: physical_design/onehot_results/reports/synth_stat.txt</text>
+    <text x="60" y="625" fill="#aab8ca" font-size="16">Generated visual summary of the reported Yosys statistics; not a tool screenshot.</text>
+  </g>
+</svg>

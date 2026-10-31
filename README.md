@@ -329,6 +329,8 @@ The RTL was mapped to the **SkyWater Sky130 HD standard-cell library** using Yos
 | Sequential cell area | 3,031.6576 µm² |
 | Yosys structural check problems | 0 |
 
+![Sky130 HD synthesis summary](docs/screenshots/02_synthesis/sky130_synthesis_summary.svg)
+
 The area is a synthesis-level estimate based on Liberty cell areas, not a placed or routed core area.
 
 Generated files:
@@ -374,6 +376,8 @@ Static timing analysis was performed using OpenSTA with Sky130 HD timing librari
 | SS setup | +3.63 ns | 0.00 ns |
 | TT setup | +6.85 ns | 0.00 ns |
 | FF hold | +0.12 ns | 0.00 ns |
+
+![Post-route multi-corner STA summary](docs/screenshots/03_sta/postroute_sta_summary.svg)
 
 The final physical-design report also reports zero setup and hold violations, with +6.85 ns worst setup slack and +0.25 ns hold slack in that report.
 
@@ -436,6 +440,21 @@ The design was implemented using the SkyWater Sky130 HD standard-cell platform a
 - Global routing and detailed routing completed.
 - Final GDS layout generated.
 
+### OpenROAD Physical Design Visual Evidence
+
+**Final placement view**
+
+![OpenROAD final placement](docs/screenshots/04_openroad/final_placement.webp)
+
+**Final detailed routing view**
+
+![OpenROAD final routing](docs/screenshots/04_openroad/final_routing.webp)
+
+**Combined final physical-design overview**
+
+![OpenROAD final overview](docs/screenshots/04_openroad/final_all.webp)
+
+
 ### Detailed Routing and Antenna Results
 
 | Metric | Result |
@@ -482,6 +501,8 @@ KLayout-based LVS verification passed. The LVS log reports: `Congratulations! Ne
 - `Results/LVS/spi_timer_top_extracted.cir`
 
 This confirms layout-to-reference netlist matching for this run; it is not foundry sign-off.
+
+![KLayout LVS verification summary](docs/screenshots/05_lvs/klayout_lvs_summary.svg)
 
 ### Physical Design Artifacts
 
