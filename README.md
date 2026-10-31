@@ -299,7 +299,7 @@ This is technology-independent generic synthesis.
 
 ## 9. Sky130 HD Technology Mapping
 
-The synthesized RTL was mapped to the **SkyWater Sky130 HD standard-cell library** using Yosys and the typical `tt_025C_1v80` Liberty model.
+The RTL was mapped to the **SkyWater Sky130 HD standard-cell library** using Yosys and the typical `tt_025C_1v80` Liberty model. The reported netlist reflects the one-hot FSM implementation used in the physical-design run.
 
 ### Mapping Summary
 
@@ -307,11 +307,12 @@ The synthesized RTL was mapped to the **SkyWater Sky130 HD standard-cell library
 |---|---:|
 | Top module | `spi_timer_top` |
 | Standard-cell library | Sky130 HD |
-| Mapped standard cells | 548 |
-| Estimated standard-cell area | 5620.39 µm² |
+| Mapped standard cells | 634 |
+| Estimated standard-cell area | 6,332.3232 µm² |
+| Sequential cell area | 3,031.6576 µm² |
 | Yosys structural check problems | 0 |
 
-The area is a synthesis-level estimate based on Liberty cell areas. It is not a placed or routed area.
+The area is a synthesis-level estimate based on Liberty cell areas, not a placed or routed core area.
 
 Generated files:
 
@@ -320,43 +321,38 @@ Generated files:
 
 The Sky130 PDK installation itself is not included in this repository.
 
-## 10. Preliminary Static Timing Analysis
+## 10. Static Timing Analysis
 
-Static timing analysis was performed using **OpenSTA 2.0.17** and the Sky130 HD typical Liberty model.
+Static timing analysis was performed using OpenSTA with Sky130 HD timing libraries. The physical-design flow uses a 10 ns core clock constraint and extracted post-route parasitics.
 
-### Preliminary Timing Summary
+### Post-route Multi-corner Timing Summary
 
-| Metric | Result |
-|---|---:|
-| Clock | `core_clk` |
-| Clock period | 10.000 ns |
-| Clock uncertainty | 0.100 ns |
-| Worst reported setup slack | +4.25 ns |
-| Total negative slack (TNS) | 0.00 ns |
-| Analysis type | Pre-layout |
+| Corner / Check | Worst slack | TNS |
+|---|---:|---:|
+| SS setup | +3.63 ns | 0.00 ns |
+| TT setup | +6.85 ns | 0.00 ns |
+| FF hold | +0.12 ns | 0.00 ns |
 
-The reported worst setup path is from an FSM register to a timer-counter register. The reported path meets the 10 ns clock requirement in this preliminary analysis.
+The final physical-design report also reports zero setup and hold violations, with +6.85 ns worst setup slack and +0.25 ns hold slack in that report.
+
+The SS, TT and FF timing-library analyses use the same extracted SPEF parasitics; they are timing-library corners, not separate RC extraction corners.
 
 ### Timing Coverage and Limitations
 
-The current STA coverage check reports:
+The post-route reports identify the following coverage limitations:
 
-- Four inputs without input-delay constraints: `cs_n`, `mosi`, `rst_n`, and `sclk`.
-- Three outputs without output-delay constraints: `expired`, `miso`, and `running`.
-- Six unconstrained endpoints, including the first-stage SPI synchronizer registers and external outputs.
-- An unresolved Liberty default operating-condition warning.
+- Four inputs have no input-delay constraints: `cs_n`, `mosi`, `rst_n`, and `sclk`.
+- Three outputs have no output-delay constraints: `expired`, `miso`, and `running`.
+- Six endpoints are unconstrained, including the three output ports and first-stage SPI synchronizer registers.
+- The parasitic annotation report lists 19 unannotated drivers and zero partially unannotated drivers. Inspection identifies four unused half-adder SUM outputs and 15 clock-load cell outputs among these drivers.
+- The Liberty model reports a `default_fanout_load` warning.
 
-The SPI inputs are sampled by registers clocked on the internal `clk`. The RTL uses synchronizer stages for `sclk`, `cs_n`, and `mosi`. A false-path exception to the first-stage registers has been included in the STA script, but the remaining coverage warnings require further review.
+Therefore, the reported positive slack and zero violations apply to the analyzed constrained paths. They do not establish complete interface timing closure or full sign-off.
 
-The reported slack is therefore a **preliminary constrained-path result**, not complete interface timing closure. The analysis uses an ideal clock and does not include placement, clock-tree effects, or extracted routing parasitics.
+Generated STA files include:
 
-Generated files:
-
-- `Results/sta/spi_timer.sdc`
-- `Results/sta/run_sta.tcl`
-- `Results/sta/run_sta_sync.tcl`
-- `Results/sta/sta_report.log`
-- `Results/sta/sta_sync_report.log`
+- `Results/sta/postroute_mcsta/run_corner.tcl`
+- Post-route corner logs are available in the GitHub Actions artifact `spi-timer-postroute-mcsta`.
 
 ## 11. FPGA Constraints
 
@@ -388,8 +384,7 @@ FPGA implementation and physical hardware validation have not yet been completed
 
 ## 13. Sky130 OpenROAD Physical Design
 
-The design was implemented using the SkyWater Sky130 HD standard-cell
-platform with the OpenROAD-flow-scripts physical-design flow.
+The design was implemented using the SkyWater Sky130 HD standard-cell platform and the OpenROAD-flow-scripts physical-design flow. The latest successful physical-design workflow run is [run #41211495938](https://github.com/maddulalokeshwar/SPI-Controlled-Digital-Timer/actions/runs/41211495938).
 
 ### Physical Design Results
 
@@ -399,54 +394,63 @@ platform with the OpenROAD-flow-scripts physical-design flow.
 - Global routing and detailed routing completed.
 - Final GDS layout generated.
 
-### Detailed Routing Results
+### Detailed Routing and Antenna Results
 
 | Metric | Result |
 |---|---:|
-| Nets routed | 679 |
+| Nets routed | 644 |
 | Final detailed-route DRC violations | 0 |
 | Antenna net violations | 0 |
 | Antenna pin violations | 0 |
-| Total wire length | 16,453 µm |
-| Total vias | 5,299 |
-| OpenROAD flow errors | 0 |
+| Total wire length | 14,397 µm |
+| Total vias | 4,724 |
 
-The detailed router reduced DRC violations from 474 in the initial
-iteration to zero in the final iteration.
+The detailed router reported intermediate violations during routing and reduced the final violation count to zero. The global-route and detailed-route logs also report zero antenna net and pin violations.
 
-### Timing Results
+### Final Physical Timing and Checks
 
 | Metric | Result |
 |---|---:|
-| Clock period | 10 ns |
-| Setup slack | +6.92 ns |
-| Hold slack | +0.25 ns |
+| Core clock period | 10 ns |
+| Worst setup slack (TT) | +6.85 ns |
+| Hold slack in final finish report | +0.25 ns |
 | Setup violations | 0 |
 | Hold violations | 0 |
-| Estimated maximum frequency | 324.91 MHz |
+| Max slew violations | 0 |
+| Max fanout violations | 0 |
+| Max capacitance violations | 0 |
+| Total negative slack | 0.00 ns |
 
-The frequency is an estimate based on the reported timing constraints,
-not a guaranteed hardware operating frequency.
+Post-route multi-corner timing results are summarized in Section 10.
 
 ### Warnings and Sign-off Notes
 
-OpenROAD reported 10 DRT-0349 warnings concerning unsupported
-LEF58_ENCLOSURE definitions without CUTCLASS for certain layers.
-These rules were skipped by the router.
+The router reported 10 DRT-0349 warnings concerning unsupported LEF58_ENCLOSURE definitions without CUTCLASS for certain layers; those rules were skipped by the router.
 
-Zero detailed-route DRC and antenna violations were reported.
-This result does not replace independent foundry sign-off verification.
+The parasitic annotation report identifies 19 unannotated drivers. Inspection associates these with four unused half-adder SUM outputs and 15 clock-load cell outputs. The timing results should be interpreted with this annotation limitation and the unconstrained interface paths described in Section 10.
+
+Zero final detailed-route DRC violations and zero antenna net and pin violations were reported for this run. These results do not replace independent foundry sign-off or physical hardware validation.
+
+### LVS Verification
+
+KLayout-based LVS verification passed. The LVS log reports: `Congratulations! Netlists match.` Evidence is stored in:
+
+- `Results/LVS/README.md`
+- `Results/LVS/6_lvs.lvsdb`
+- `Results/LVS/spi_timer_top_extracted.cir`
+
+This confirms layout-to-reference netlist matching for this run; it is not foundry sign-off.
 
 ### Physical Design Artifacts
 
-The GitHub Actions workflow generates the physical-design reports,
-logs, and GDS layout files.
+The GitHub Actions workflow uploads the physical-design outputs, including the final GDS, ODB, SPEF, DEF, netlist, logs and reports.
 
-Workflow:
-[Sky130 OpenROAD Physical Design](https://github.com/maddulalokeshwar/SPI-Controlled-Digital-Timer/actions)
+- [Latest successful Sky130 OpenROAD workflow run](https://github.com/maddulalokeshwar/SPI-Controlled-Digital-Timer/actions/runs/41211495938)
+- Physical-design artifact: `spi-timer-sky130-openroad-results`
+- Post-route STA artifact: `spi-timer-postroute-mcsta`
 
-Artifact:
-[Download Physical Design Results](https://github.com/maddulalokeshwar/SPI-Controlled-Digital-Timer/actions/runs/41193691326/artifacts/13039198623)
+Download the artifacts from the workflow run's **Artifacts** section. Artifact availability is subject to GitHub Actions retention settings.
+
 ## 14. Author
 
 **Maddulalokeshwar**
