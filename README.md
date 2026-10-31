@@ -105,28 +105,33 @@ SPI-Controlled-Digital-Timer/
 │   │   ├── status_gen.v
 │   │   ├── tick_gen.v
 │   │   ├── timer_counter.v
-│   │   ├── timer_fsm.v
-│   │   └── README_rtl.md
+│   │   └── timer_fsm.v
 │   │
 │   ├── testbench/
 │   │   ├── tb_spi_timer.v
-│   │   ├── tb_spi_timer_extended.v
-│   │   └── tb_spi_timer_original.v
+│   │   ├── tb_spi_timer_original.v
+│   │   └── tb_spi_timer_extended.v
 │   │
-│   └── constraints/
-│       └── timer.xdc
+│   ├── constraints/
+│   │   └── timer.xdc
+│   │
+│   └── README_rtl.md
 │
 ├── Results/
 │   ├── simulation/
 │   │   ├── simulation.log
 │   │   └── extended_simulation.log
-│   ├── synthesis/
-│   └── waveforms/
-│       ├── spi_timer.vcd
-│       └── spi_timer_extended.vcd
+│   │
+│   ├── waveforms/
+│   │   ├── spi_timer.vcd
+│   │   ├── spi_timer_extended.vcd
+│   │   └── spi_timer_extended_waveform.png
+│   │
+│   └── synthesis/
 │
 ├── scripts/
-│   └── simulate.sh
+│   ├── simulate.sh
+│   └── plot_waveforms.py
 │
 ├── .gitignore
 └── README.md
