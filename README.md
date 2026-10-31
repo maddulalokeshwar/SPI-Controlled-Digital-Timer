@@ -128,6 +128,8 @@ SPI-Controlled-Digital-Timer/
 │   │   └── spi_timer_extended_waveform.png
 │   │
 │   └── synthesis/
+│       ├── spi_timer_netlist.v
+│       └── yosys_synthesis.log
 │
 ├── scripts/
 │   ├── simulate.sh
@@ -253,7 +255,38 @@ Useful signals to inspect include:
 - `cur_hr`
 - `state`
 
-## 8. FPGA Constraints
+## 8. Yosys Synthesis Results
+
+The RTL design was synthesized using **Yosys 0.52**.
+
+The synthesis flow used `spi_timer_top` as the top-level module and checked the design hierarchy before synthesis.
+
+### Synthesis Summary
+
+| Metric | Result |
+|---|---:|
+| Top module | `spi_timer_top` |
+| RTL hierarchy modules | 7 |
+| Generic logic cells (hierarchy aggregate) | 692 |
+| Wires | 603 |
+| Wire bits | 951 |
+| Memory bits | 0 |
+| Structural check problems | 0 |
+
+The synthesis completed successfully, and Yosys reported zero structural check problems.
+
+### Generated Files
+
+- `Results/synthesis/spi_timer_netlist.v` — synthesized Verilog netlist.
+- `Results/synthesis/yosys_synthesis.log` — complete Yosys synthesis log.
+
+### Synthesis Scope and Limitations
+
+This is technology-independent generic synthesis. The reported cell count represents generic Yosys logic cells; it is not a mapped standard-cell area estimate.
+
+Sky130 technology mapping, Liberty-based static timing analysis, timing closure, floorplanning, placement, routing, GDSII generation, and DRC/LVS verification have not been completed.
+
+## 9. FPGA Constraints
 
 The project includes an XDC clock constraint:
 
@@ -267,7 +300,7 @@ The top-level timer tick parameter defaults to 100,000,000 clock cycles per seco
 
 FPGA synthesis, implementation, timing closure and physical hardware validation have not yet been completed.
 
-## 9. Tools Used
+## 10. Tools Used
 
 - Verilog HDL
 - Icarus Verilog
@@ -275,7 +308,7 @@ FPGA synthesis, implementation, timing closure and physical hardware validation 
 - Git and GitHub
 - GitHub Codespaces
 
-## 10. Author
+## 11. Author
 
 **Maddulalokeshwar**
 

@@ -1,0 +1,2101 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2025  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)
+
+-- Running command `read_verilog SPI_Timer/rtl/reg_bank.v SPI_Timer/rtl/spi_slave.v SPI_Timer/rtl/spi_timer_top.v SPI_Timer/rtl/status_gen.v SPI_Timer/rtl/tick_gen.v SPI_Timer/rtl/timer_counter.v SPI_Timer/rtl/timer_fsm.v; hierarchy -check -top spi_timer_top; synth -top spi_timer_top; check; stat; write_verilog -noattr Results/synthesis/spi_timer_netlist.v' --
+
+1. Executing Verilog-2005 frontend: SPI_Timer/rtl/reg_bank.v
+Parsing Verilog input from `SPI_Timer/rtl/reg_bank.v' to AST representation.
+Generating RTLIL representation for module `\reg_bank'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: SPI_Timer/rtl/spi_slave.v
+Parsing Verilog input from `SPI_Timer/rtl/spi_slave.v' to AST representation.
+Generating RTLIL representation for module `\spi_slave'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: SPI_Timer/rtl/spi_timer_top.v
+Parsing Verilog input from `SPI_Timer/rtl/spi_timer_top.v' to AST representation.
+Generating RTLIL representation for module `\spi_timer_top'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: SPI_Timer/rtl/status_gen.v
+Parsing Verilog input from `SPI_Timer/rtl/status_gen.v' to AST representation.
+Generating RTLIL representation for module `\status_gen'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: SPI_Timer/rtl/tick_gen.v
+Parsing Verilog input from `SPI_Timer/rtl/tick_gen.v' to AST representation.
+Generating RTLIL representation for module `\tick_gen'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: SPI_Timer/rtl/timer_counter.v
+Parsing Verilog input from `SPI_Timer/rtl/timer_counter.v' to AST representation.
+Generating RTLIL representation for module `\timer_counter'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: SPI_Timer/rtl/timer_fsm.v
+Parsing Verilog input from `SPI_Timer/rtl/timer_fsm.v' to AST representation.
+Generating RTLIL representation for module `\timer_fsm'.
+Successfully finished Verilog frontend.
+
+8. Executing HIERARCHY pass (managing design hierarchy).
+
+8.1. Analyzing design hierarchy..
+Top module:  \spi_timer_top
+Used module:     \status_gen
+Used module:     \timer_counter
+Used module:     \tick_gen
+Used module:     \timer_fsm
+Used module:     \reg_bank
+Used module:     \spi_slave
+Parameter \DIV = 100000000
+
+8.2. Executing AST frontend in derive mode using pre-parsed AST for module `\tick_gen'.
+Parameter \DIV = 100000000
+Generating RTLIL representation for module `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000'.
+
+8.3. Analyzing design hierarchy..
+Top module:  \spi_timer_top
+Used module:     \status_gen
+Used module:     \timer_counter
+Used module:     $paramod\tick_gen\DIV=s32'00000101111101011110000100000000
+Used module:     \timer_fsm
+Used module:     \reg_bank
+Used module:     \spi_slave
+
+8.4. Analyzing design hierarchy..
+Top module:  \spi_timer_top
+Used module:     \status_gen
+Used module:     \timer_counter
+Used module:     $paramod\tick_gen\DIV=s32'00000101111101011110000100000000
+Used module:     \timer_fsm
+Used module:     \reg_bank
+Used module:     \spi_slave
+Removing unused module `\tick_gen'.
+Removed 1 unused modules.
+
+9. Executing SYNTH pass.
+
+9.1. Executing HIERARCHY pass (managing design hierarchy).
+
+9.1.1. Analyzing design hierarchy..
+Top module:  \spi_timer_top
+Used module:     \status_gen
+Used module:     \timer_counter
+Used module:     $paramod\tick_gen\DIV=s32'00000101111101011110000100000000
+Used module:     \timer_fsm
+Used module:     \reg_bank
+Used module:     \spi_slave
+
+9.1.2. Analyzing design hierarchy..
+Top module:  \spi_timer_top
+Used module:     \status_gen
+Used module:     \timer_counter
+Used module:     $paramod\tick_gen\DIV=s32'00000101111101011110000100000000
+Used module:     \timer_fsm
+Used module:     \reg_bank
+Used module:     \spi_slave
+Removed 0 unused modules.
+
+9.2. Executing PROC pass (convert processes to netlists).
+
+9.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+9.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 1 dead cases from process $proc$SPI_Timer/rtl/timer_fsm.v:22$55 in module timer_fsm.
+Marked 9 switch rules as full_case in process $proc$SPI_Timer/rtl/timer_fsm.v:22$55 in module timer_fsm.
+Marked 1 switch rules as full_case in process $proc$SPI_Timer/rtl/timer_fsm.v:15$53 in module timer_fsm.
+Marked 5 switch rules as full_case in process $proc$SPI_Timer/rtl/timer_counter.v:12$45 in module timer_counter.
+Marked 3 switch rules as full_case in process $proc$SPI_Timer/rtl/tick_gen.v:22$75 in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+Marked 3 switch rules as full_case in process $proc$SPI_Timer/rtl/spi_slave.v:37$13 in module spi_slave.
+Marked 1 switch rules as full_case in process $proc$SPI_Timer/rtl/spi_slave.v:25$11 in module spi_slave.
+Marked 1 switch rules as full_case in process $proc$SPI_Timer/rtl/reg_bank.v:47$5 in module reg_bank.
+Marked 1 switch rules as full_case in process $proc$SPI_Timer/rtl/reg_bank.v:21$3 in module reg_bank.
+Removed a total of 1 dead cases.
+
+9.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 10 redundant assignments.
+Promoted 2 assignments to connections.
+
+9.2.4. Executing PROC_INIT pass (extract init attributes).
+
+9.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_n in `\timer_fsm.$proc$SPI_Timer/rtl/timer_fsm.v:15$53'.
+Found async reset \rst_n in `\timer_counter.$proc$SPI_Timer/rtl/timer_counter.v:12$45'.
+Found async reset \rst_n in `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000.$proc$SPI_Timer/rtl/tick_gen.v:22$75'.
+Found async reset \rst_n in `\spi_slave.$proc$SPI_Timer/rtl/spi_slave.v:37$13'.
+Found async reset \rst_n in `\spi_slave.$proc$SPI_Timer/rtl/spi_slave.v:25$11'.
+Found async reset \rst_n in `\reg_bank.$proc$SPI_Timer/rtl/reg_bank.v:21$3'.
+
+9.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~27 debug messages>
+
+9.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\timer_fsm.$proc$SPI_Timer/rtl/timer_fsm.v:22$55'.
+     1/9: $9\next_state[1:0]
+     2/9: $8\next_state[1:0]
+     3/9: $7\next_state[1:0]
+     4/9: $6\next_state[1:0]
+     5/9: $5\next_state[1:0]
+     6/9: $4\next_state[1:0]
+     7/9: $3\next_state[1:0]
+     8/9: $2\next_state[1:0]
+     9/9: $1\next_state[1:0]
+Creating decoders for process `\timer_fsm.$proc$SPI_Timer/rtl/timer_fsm.v:15$53'.
+     1/1: $0\state[1:0]
+Creating decoders for process `\timer_counter.$proc$SPI_Timer/rtl/timer_counter.v:12$45'.
+     1/3: $0\hr[7:0]
+     2/3: $0\min[7:0]
+     3/3: $0\sec[7:0]
+Creating decoders for process `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000.$proc$SPI_Timer/rtl/tick_gen.v:22$75'.
+     1/1: $0\cnt[26:0]
+Creating decoders for process `\spi_slave.$proc$SPI_Timer/rtl/spi_slave.v:37$13'.
+     1/5: $0\frame_done[0:0]
+     2/5: $0\miso_r[0:0]
+     3/5: $0\tx_shift[7:0]
+     4/5: $0\shift_in[15:0]
+     5/5: $0\bit_cnt[4:0]
+Creating decoders for process `\spi_slave.$proc$SPI_Timer/rtl/spi_slave.v:25$11'.
+     1/3: $0\mosi_s[1:0]
+     2/3: $0\cs_s[1:0]
+     3/3: $0\sclk_s[2:0]
+Creating decoders for process `\reg_bank.$proc$SPI_Timer/rtl/reg_bank.v:47$5'.
+     1/1: $1\rd_data[7:0]
+Creating decoders for process `\reg_bank.$proc$SPI_Timer/rtl/reg_bank.v:21$3'.
+     1/8: $0\cmd_reset[0:0]
+     2/8: $0\cmd_resume[0:0]
+     3/8: $0\cmd_pause[0:0]
+     4/8: $0\cmd_stop[0:0]
+     5/8: $0\cmd_start[0:0]
+     6/8: $0\hr_load[7:0]
+     7/8: $0\min_load[7:0]
+     8/8: $0\sec_load[7:0]
+
+9.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\timer_fsm.\next_state' from process `\timer_fsm.$proc$SPI_Timer/rtl/timer_fsm.v:22$55'.
+No latch inferred for signal `\reg_bank.\rd_data' from process `\reg_bank.$proc$SPI_Timer/rtl/reg_bank.v:47$5'.
+
+9.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\timer_fsm.\state' using process `\timer_fsm.$proc$SPI_Timer/rtl/timer_fsm.v:15$53'.
+  created $adff cell `$procdff$306' with positive edge clock and positive level reset.
+Creating register for signal `\timer_counter.\sec' using process `\timer_counter.$proc$SPI_Timer/rtl/timer_counter.v:12$45'.
+  created $adff cell `$procdff$311' with positive edge clock and positive level reset.
+Creating register for signal `\timer_counter.\min' using process `\timer_counter.$proc$SPI_Timer/rtl/timer_counter.v:12$45'.
+  created $adff cell `$procdff$316' with positive edge clock and positive level reset.
+Creating register for signal `\timer_counter.\hr' using process `\timer_counter.$proc$SPI_Timer/rtl/timer_counter.v:12$45'.
+  created $adff cell `$procdff$321' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000.\cnt' using process `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000.$proc$SPI_Timer/rtl/tick_gen.v:22$75'.
+  created $adff cell `$procdff$326' with positive edge clock and positive level reset.
+Creating register for signal `\spi_slave.\bit_cnt' using process `\spi_slave.$proc$SPI_Timer/rtl/spi_slave.v:37$13'.
+  created $adff cell `$procdff$331' with positive edge clock and positive level reset.
+Creating register for signal `\spi_slave.\shift_in' using process `\spi_slave.$proc$SPI_Timer/rtl/spi_slave.v:37$13'.
+  created $adff cell `$procdff$336' with positive edge clock and positive level reset.
+Creating register for signal `\spi_slave.\tx_shift' using process `\spi_slave.$proc$SPI_Timer/rtl/spi_slave.v:37$13'.
+  created $adff cell `$procdff$341' with positive edge clock and positive level reset.
+Creating register for signal `\spi_slave.\miso_r' using process `\spi_slave.$proc$SPI_Timer/rtl/spi_slave.v:37$13'.
+  created $adff cell `$procdff$346' with positive edge clock and positive level reset.
+Creating register for signal `\spi_slave.\frame_done' using process `\spi_slave.$proc$SPI_Timer/rtl/spi_slave.v:37$13'.
+  created $adff cell `$procdff$351' with positive edge clock and positive level reset.
+Creating register for signal `\spi_slave.\sclk_s' using process `\spi_slave.$proc$SPI_Timer/rtl/spi_slave.v:25$11'.
+  created $adff cell `$procdff$356' with positive edge clock and positive level reset.
+Creating register for signal `\spi_slave.\cs_s' using process `\spi_slave.$proc$SPI_Timer/rtl/spi_slave.v:25$11'.
+  created $adff cell `$procdff$361' with positive edge clock and positive level reset.
+Creating register for signal `\spi_slave.\mosi_s' using process `\spi_slave.$proc$SPI_Timer/rtl/spi_slave.v:25$11'.
+  created $adff cell `$procdff$366' with positive edge clock and positive level reset.
+Creating register for signal `\reg_bank.\sec_load' using process `\reg_bank.$proc$SPI_Timer/rtl/reg_bank.v:21$3'.
+  created $adff cell `$procdff$371' with positive edge clock and positive level reset.
+Creating register for signal `\reg_bank.\min_load' using process `\reg_bank.$proc$SPI_Timer/rtl/reg_bank.v:21$3'.
+  created $adff cell `$procdff$376' with positive edge clock and positive level reset.
+Creating register for signal `\reg_bank.\hr_load' using process `\reg_bank.$proc$SPI_Timer/rtl/reg_bank.v:21$3'.
+  created $adff cell `$procdff$381' with positive edge clock and positive level reset.
+Creating register for signal `\reg_bank.\cmd_start' using process `\reg_bank.$proc$SPI_Timer/rtl/reg_bank.v:21$3'.
+  created $adff cell `$procdff$386' with positive edge clock and positive level reset.
+Creating register for signal `\reg_bank.\cmd_stop' using process `\reg_bank.$proc$SPI_Timer/rtl/reg_bank.v:21$3'.
+  created $adff cell `$procdff$391' with positive edge clock and positive level reset.
+Creating register for signal `\reg_bank.\cmd_pause' using process `\reg_bank.$proc$SPI_Timer/rtl/reg_bank.v:21$3'.
+  created $adff cell `$procdff$396' with positive edge clock and positive level reset.
+Creating register for signal `\reg_bank.\cmd_resume' using process `\reg_bank.$proc$SPI_Timer/rtl/reg_bank.v:21$3'.
+  created $adff cell `$procdff$401' with positive edge clock and positive level reset.
+Creating register for signal `\reg_bank.\cmd_reset' using process `\reg_bank.$proc$SPI_Timer/rtl/reg_bank.v:21$3'.
+  created $adff cell `$procdff$406' with positive edge clock and positive level reset.
+
+9.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+9.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 9 empty switches in `\timer_fsm.$proc$SPI_Timer/rtl/timer_fsm.v:22$55'.
+Removing empty process `timer_fsm.$proc$SPI_Timer/rtl/timer_fsm.v:22$55'.
+Removing empty process `timer_fsm.$proc$SPI_Timer/rtl/timer_fsm.v:15$53'.
+Found and cleaned up 6 empty switches in `\timer_counter.$proc$SPI_Timer/rtl/timer_counter.v:12$45'.
+Removing empty process `timer_counter.$proc$SPI_Timer/rtl/timer_counter.v:12$45'.
+Found and cleaned up 3 empty switches in `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000.$proc$SPI_Timer/rtl/tick_gen.v:22$75'.
+Removing empty process `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000.$proc$SPI_Timer/rtl/tick_gen.v:22$75'.
+Found and cleaned up 6 empty switches in `\spi_slave.$proc$SPI_Timer/rtl/spi_slave.v:37$13'.
+Removing empty process `spi_slave.$proc$SPI_Timer/rtl/spi_slave.v:37$13'.
+Removing empty process `spi_slave.$proc$SPI_Timer/rtl/spi_slave.v:25$11'.
+Found and cleaned up 1 empty switch in `\reg_bank.$proc$SPI_Timer/rtl/reg_bank.v:47$5'.
+Removing empty process `reg_bank.$proc$SPI_Timer/rtl/reg_bank.v:47$5'.
+Found and cleaned up 2 empty switches in `\reg_bank.$proc$SPI_Timer/rtl/reg_bank.v:21$3'.
+Removing empty process `reg_bank.$proc$SPI_Timer/rtl/reg_bank.v:21$3'.
+Cleaned up 27 empty switches.
+
+9.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module timer_fsm.
+<suppressed ~6 debug messages>
+Optimizing module timer_counter.
+<suppressed ~14 debug messages>
+Optimizing module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+<suppressed ~2 debug messages>
+Optimizing module status_gen.
+Optimizing module spi_timer_top.
+Optimizing module spi_slave.
+<suppressed ~18 debug messages>
+Optimizing module reg_bank.
+<suppressed ~21 debug messages>
+
+9.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module timer_fsm.
+Optimizing module timer_counter.
+Optimizing module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+Optimizing module status_gen.
+Optimizing module spi_timer_top.
+Optimizing module spi_slave.
+Optimizing module reg_bank.
+
+9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \timer_fsm..
+Finding unused cells or wires in module \timer_counter..
+Finding unused cells or wires in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+Finding unused cells or wires in module \status_gen..
+Finding unused cells or wires in module \spi_timer_top..
+Finding unused cells or wires in module \spi_slave..
+Finding unused cells or wires in module \reg_bank..
+Removed 28 unused cells and 157 unused wires.
+<suppressed ~34 debug messages>
+
+9.5. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000...
+Checking module reg_bank...
+Checking module spi_slave...
+Checking module spi_timer_top...
+Checking module status_gen...
+Checking module timer_counter...
+Checking module timer_fsm...
+Found and reported 0 problems.
+
+9.6. Executing OPT pass (performing simple optimizations).
+
+9.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+Optimizing module reg_bank.
+Optimizing module spi_slave.
+Optimizing module spi_timer_top.
+Optimizing module status_gen.
+Optimizing module timer_counter.
+Optimizing module timer_fsm.
+
+9.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\reg_bank'.
+<suppressed ~12 debug messages>
+Finding identical cells in module `\spi_slave'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\spi_timer_top'.
+Finding identical cells in module `\status_gen'.
+Finding identical cells in module `\timer_counter'.
+<suppressed ~9 debug messages>
+Finding identical cells in module `\timer_fsm'.
+<suppressed ~51 debug messages>
+Removed a total of 26 cells.
+
+9.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \reg_bank..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \spi_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \spi_timer_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \status_gen..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \timer_counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \timer_fsm..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$105.
+    dead port 1/2 on $mux $procmux$113.
+    dead port 1/2 on $mux $procmux$116.
+    dead port 2/2 on $mux $procmux$118.
+    dead port 1/2 on $mux $procmux$126.
+    dead port 2/2 on $mux $procmux$128.
+    dead port 2/2 on $mux $procmux$135.
+    dead port 2/2 on $mux $procmux$143.
+    dead port 1/2 on $mux $procmux$83.
+    dead port 2/2 on $mux $procmux$85.
+    dead port 2/2 on $mux $procmux$90.
+    dead port 1/2 on $mux $procmux$97.
+    dead port 2/2 on $mux $procmux$99.
+Removed 13 multiplexer ports.
+<suppressed ~21 debug messages>
+
+9.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+  Optimizing cells in module \reg_bank.
+  Optimizing cells in module \spi_slave.
+  Optimizing cells in module \spi_timer_top.
+  Optimizing cells in module \status_gen.
+  Optimizing cells in module \timer_counter.
+  Optimizing cells in module \timer_fsm.
+Performed a total of 0 changes.
+
+9.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000'.
+Finding identical cells in module `\reg_bank'.
+Finding identical cells in module `\spi_slave'.
+Finding identical cells in module `\spi_timer_top'.
+Finding identical cells in module `\status_gen'.
+Finding identical cells in module `\timer_counter'.
+Finding identical cells in module `\timer_fsm'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+9.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+Finding unused cells or wires in module \reg_bank..
+Finding unused cells or wires in module \spi_slave..
+Finding unused cells or wires in module \spi_timer_top..
+Finding unused cells or wires in module \status_gen..
+Finding unused cells or wires in module \timer_counter..
+Finding unused cells or wires in module \timer_fsm..
+Removed 0 unused cells and 39 unused wires.
+<suppressed ~5 debug messages>
+
+9.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+Optimizing module reg_bank.
+Optimizing module spi_slave.
+Optimizing module spi_timer_top.
+Optimizing module status_gen.
+Optimizing module timer_counter.
+Optimizing module timer_fsm.
+
+9.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \reg_bank..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \spi_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \spi_timer_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \status_gen..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \timer_counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \timer_fsm..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~22 debug messages>
+
+9.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+  Optimizing cells in module \reg_bank.
+  Optimizing cells in module \spi_slave.
+  Optimizing cells in module \spi_timer_top.
+  Optimizing cells in module \status_gen.
+  Optimizing cells in module \timer_counter.
+  Optimizing cells in module \timer_fsm.
+Performed a total of 0 changes.
+
+9.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000'.
+Finding identical cells in module `\reg_bank'.
+Finding identical cells in module `\spi_slave'.
+Finding identical cells in module `\spi_timer_top'.
+Finding identical cells in module `\status_gen'.
+Finding identical cells in module `\timer_counter'.
+Finding identical cells in module `\timer_fsm'.
+Removed a total of 0 cells.
+
+9.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+Finding unused cells or wires in module \reg_bank..
+Finding unused cells or wires in module \spi_slave..
+Finding unused cells or wires in module \spi_timer_top..
+Finding unused cells or wires in module \status_gen..
+Finding unused cells or wires in module \timer_counter..
+Finding unused cells or wires in module \timer_fsm..
+
+9.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+Optimizing module reg_bank.
+Optimizing module spi_slave.
+Optimizing module spi_timer_top.
+Optimizing module status_gen.
+Optimizing module timer_counter.
+Optimizing module timer_fsm.
+
+9.6.16. Finished OPT passes. (There is nothing left to do.)
+
+9.7. Executing FSM pass (extract and optimize FSM).
+
+9.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking timer_fsm.state as FSM state register:
+    Circuit seems to be self-resetting.
+
+9.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+9.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+9.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+Finding unused cells or wires in module \reg_bank..
+Finding unused cells or wires in module \spi_slave..
+Finding unused cells or wires in module \spi_timer_top..
+Finding unused cells or wires in module \status_gen..
+Finding unused cells or wires in module \timer_counter..
+Finding unused cells or wires in module \timer_fsm..
+
+9.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+9.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+9.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+9.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+9.8. Executing OPT pass (performing simple optimizations).
+
+9.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+Optimizing module reg_bank.
+Optimizing module spi_slave.
+Optimizing module spi_timer_top.
+Optimizing module status_gen.
+Optimizing module timer_counter.
+Optimizing module timer_fsm.
+
+9.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000'.
+Finding identical cells in module `\reg_bank'.
+Finding identical cells in module `\spi_slave'.
+Finding identical cells in module `\spi_timer_top'.
+Finding identical cells in module `\status_gen'.
+Finding identical cells in module `\timer_counter'.
+Finding identical cells in module `\timer_fsm'.
+Removed a total of 0 cells.
+
+9.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \reg_bank..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \spi_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \spi_timer_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \status_gen..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \timer_counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \timer_fsm..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~22 debug messages>
+
+9.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+  Optimizing cells in module \reg_bank.
+  Optimizing cells in module \spi_slave.
+  Optimizing cells in module \spi_timer_top.
+  Optimizing cells in module \status_gen.
+  Optimizing cells in module \timer_counter.
+  Optimizing cells in module \timer_fsm.
+Performed a total of 0 changes.
+
+9.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000'.
+Finding identical cells in module `\reg_bank'.
+Finding identical cells in module `\spi_slave'.
+Finding identical cells in module `\spi_timer_top'.
+Finding identical cells in module `\status_gen'.
+Finding identical cells in module `\timer_counter'.
+Finding identical cells in module `\timer_fsm'.
+Removed a total of 0 cells.
+
+9.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$326 ($adff) from module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000 (D = $0\cnt[26:0], Q = \cnt).
+Adding EN signal on $procdff$381 ($adff) from module reg_bank (D = \wr_data, Q = \hr_load).
+Adding EN signal on $procdff$376 ($adff) from module reg_bank (D = \clamped_time, Q = \min_load).
+Adding EN signal on $procdff$371 ($adff) from module reg_bank (D = \clamped_time, Q = \sec_load).
+Adding EN signal on $procdff$346 ($adff) from module spi_slave (D = $0\miso_r[0:0], Q = \miso_r).
+Adding EN signal on $procdff$341 ($adff) from module spi_slave (D = $0\tx_shift[7:0], Q = \tx_shift).
+Adding EN signal on $procdff$336 ($adff) from module spi_slave (D = { \shift_in [14:0] \mosi_s [1] }, Q = \shift_in).
+Adding EN signal on $procdff$331 ($adff) from module spi_slave (D = $0\bit_cnt[4:0], Q = \bit_cnt).
+Adding EN signal on $procdff$321 ($adff) from module timer_counter (D = $0\hr[7:0], Q = \hr).
+Adding EN signal on $procdff$316 ($adff) from module timer_counter (D = $0\min[7:0], Q = \min).
+Adding EN signal on $procdff$311 ($adff) from module timer_counter (D = $0\sec[7:0], Q = \sec).
+Adding EN signal on $procdff$306 ($adff) from module timer_fsm (D = \next_state, Q = \state).
+
+9.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+Finding unused cells or wires in module \reg_bank..
+Finding unused cells or wires in module \spi_slave..
+Finding unused cells or wires in module \spi_timer_top..
+Finding unused cells or wires in module \status_gen..
+Finding unused cells or wires in module \timer_counter..
+Finding unused cells or wires in module \timer_fsm..
+Removed 8 unused cells and 8 unused wires.
+<suppressed ~10 debug messages>
+
+9.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+<suppressed ~1 debug messages>
+Optimizing module reg_bank.
+Optimizing module spi_slave.
+<suppressed ~3 debug messages>
+Optimizing module spi_timer_top.
+Optimizing module status_gen.
+Optimizing module timer_counter.
+<suppressed ~3 debug messages>
+Optimizing module timer_fsm.
+
+9.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \reg_bank..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \spi_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \spi_timer_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \status_gen..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \timer_counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \timer_fsm..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~18 debug messages>
+
+9.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+  Optimizing cells in module \reg_bank.
+  Optimizing cells in module \spi_slave.
+  Optimizing cells in module \spi_timer_top.
+  Optimizing cells in module \status_gen.
+  Optimizing cells in module \timer_counter.
+  Optimizing cells in module \timer_fsm.
+Performed a total of 0 changes.
+
+9.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000'.
+Finding identical cells in module `\reg_bank'.
+Finding identical cells in module `\spi_slave'.
+<suppressed ~9 debug messages>
+Finding identical cells in module `\spi_timer_top'.
+Finding identical cells in module `\status_gen'.
+Finding identical cells in module `\timer_counter'.
+<suppressed ~18 debug messages>
+Finding identical cells in module `\timer_fsm'.
+Removed a total of 9 cells.
+
+9.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+Finding unused cells or wires in module \reg_bank..
+Finding unused cells or wires in module \spi_slave..
+Finding unused cells or wires in module \spi_timer_top..
+Finding unused cells or wires in module \status_gen..
+Finding unused cells or wires in module \timer_counter..
+Finding unused cells or wires in module \timer_fsm..
+Removed 0 unused cells and 9 unused wires.
+<suppressed ~2 debug messages>
+
+9.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+Optimizing module reg_bank.
+Optimizing module spi_slave.
+Optimizing module spi_timer_top.
+Optimizing module status_gen.
+Optimizing module timer_counter.
+Optimizing module timer_fsm.
+
+9.8.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.8.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \reg_bank..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \spi_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \spi_timer_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \status_gen..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \timer_counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \timer_fsm..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~19 debug messages>
+
+9.8.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+  Optimizing cells in module \reg_bank.
+  Optimizing cells in module \spi_slave.
+  Optimizing cells in module \spi_timer_top.
+  Optimizing cells in module \status_gen.
+  Optimizing cells in module \timer_counter.
+  Optimizing cells in module \timer_fsm.
+Performed a total of 0 changes.
+
+9.8.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000'.
+Finding identical cells in module `\reg_bank'.
+Finding identical cells in module `\spi_slave'.
+Finding identical cells in module `\spi_timer_top'.
+Finding identical cells in module `\status_gen'.
+Finding identical cells in module `\timer_counter'.
+Finding identical cells in module `\timer_fsm'.
+Removed a total of 0 cells.
+
+9.8.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.8.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+Finding unused cells or wires in module \reg_bank..
+Finding unused cells or wires in module \spi_slave..
+Finding unused cells or wires in module \spi_timer_top..
+Finding unused cells or wires in module \status_gen..
+Finding unused cells or wires in module \timer_counter..
+Finding unused cells or wires in module \timer_fsm..
+
+9.8.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+Optimizing module reg_bank.
+Optimizing module spi_slave.
+Optimizing module spi_timer_top.
+Optimizing module status_gen.
+Optimizing module timer_counter.
+Optimizing module timer_fsm.
+
+9.8.23. Finished OPT passes. (There is nothing left to do.)
+
+9.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 2 bits (of 8) from port B of cell reg_bank.$gt$SPI_Timer/rtl/reg_bank.v:19$1 ($gt).
+Removed top 4 bits (of 7) from port B of cell reg_bank.$procmux$245_CMP0 ($eq).
+Removed top 4 bits (of 7) from port B of cell reg_bank.$procmux$246_CMP0 ($eq).
+Removed top 4 bits (of 7) from port B of cell reg_bank.$procmux$247_CMP0 ($eq).
+Removed top 4 bits (of 7) from port B of cell reg_bank.$procmux$248_CMP0 ($eq).
+Removed top 5 bits (of 7) from port B of cell reg_bank.$procmux$249_CMP0 ($eq).
+Removed top 5 bits (of 7) from port B of cell reg_bank.$procmux$250_CMP0 ($eq).
+Removed top 6 bits (of 7) from port B of cell reg_bank.$procmux$251_CMP0 ($eq).
+Removed top 4 bits (of 7) from port B of cell reg_bank.$procmux$288_CMP0 ($eq).
+Removed top 4 bits (of 7) from port B of cell reg_bank.$procmux$293_CMP0 ($eq).
+Removed top 5 bits (of 7) from port B of cell reg_bank.$procmux$299_CMP0 ($eq).
+Removed top 4 bits (of 5) from port B of cell spi_slave.$add$SPI_Timer/rtl/spi_slave.v:53$18 ($add).
+Removed top 1 bits (of 5) from port B of cell spi_slave.$eq$SPI_Timer/rtl/spi_slave.v:54$19 ($eq).
+Removed top 1 bits (of 5) from port B of cell spi_slave.$eq$SPI_Timer/rtl/spi_slave.v:58$20 ($eq).
+Removed top 1 bits (of 5) from port B of cell spi_slave.$gt$SPI_Timer/rtl/spi_slave.v:61$21 ($gt).
+Removed top 2 bits (of 4) from port B of cell spi_slave.$auto$opt_dff.cc:195:make_patterns_logic$423 ($ne).
+Removed top 3 bits (of 6) from port B of cell timer_counter.$auto$opt_dff.cc:195:make_patterns_logic$445 ($ne).
+Removed top 7 bits (of 8) from port B of cell timer_counter.$eq$SPI_Timer/rtl/timer_counter.v:10$43 ($eq).
+Removed top 1 bits (of 3) from port B of cell timer_fsm.$auto$opt_dff.cc:195:make_patterns_logic$472 ($ne).
+Removed top 1 bits (of 2) from port B of cell timer_fsm.$eq$SPI_Timer/rtl/timer_fsm.v:56$67 ($eq).
+Removed top 2 bits (of 4) from port B of cell timer_fsm.$auto$opt_dff.cc:195:make_patterns_logic$470 ($ne).
+
+9.10. Executing PEEPOPT pass (run peephole optimizers).
+
+9.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+Finding unused cells or wires in module \reg_bank..
+Finding unused cells or wires in module \spi_slave..
+Finding unused cells or wires in module \spi_timer_top..
+Finding unused cells or wires in module \status_gen..
+Finding unused cells or wires in module \timer_counter..
+Finding unused cells or wires in module \timer_fsm..
+
+9.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000:
+  creating $macc model for $add$SPI_Timer/rtl/tick_gen.v:31$78 ($add).
+  creating $alu model for $macc $add$SPI_Timer/rtl/tick_gen.v:31$78.
+  creating $alu cell for $add$SPI_Timer/rtl/tick_gen.v:31$78: $auto$alumacc.cc:495:replace_alu$475
+  created 1 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module reg_bank:
+  creating $alu model for $gt$SPI_Timer/rtl/reg_bank.v:19$1 ($gt): new $alu
+  creating $alu cell for $gt$SPI_Timer/rtl/reg_bank.v:19$1: $auto$alumacc.cc:495:replace_alu$479
+  created 1 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module spi_slave:
+  creating $macc model for $add$SPI_Timer/rtl/spi_slave.v:53$18 ($add).
+  creating $alu model for $macc $add$SPI_Timer/rtl/spi_slave.v:53$18.
+  creating $alu model for $gt$SPI_Timer/rtl/spi_slave.v:61$21 ($gt): new $alu
+  creating $alu model for $lt$SPI_Timer/rtl/spi_slave.v:51$16 ($lt): new $alu
+  creating $alu model for $eq$SPI_Timer/rtl/spi_slave.v:58$20 ($eq): merged with $gt$SPI_Timer/rtl/spi_slave.v:61$21.
+  creating $alu cell for $lt$SPI_Timer/rtl/spi_slave.v:51$16: $auto$alumacc.cc:495:replace_alu$492
+  creating $alu cell for $gt$SPI_Timer/rtl/spi_slave.v:61$21, $eq$SPI_Timer/rtl/spi_slave.v:58$20: $auto$alumacc.cc:495:replace_alu$497
+  creating $alu cell for $add$SPI_Timer/rtl/spi_slave.v:53$18: $auto$alumacc.cc:495:replace_alu$508
+  created 3 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module spi_timer_top:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module status_gen:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module timer_counter:
+  creating $macc model for $sub$SPI_Timer/rtl/timer_counter.v:23$48 ($sub).
+  creating $macc model for $sub$SPI_Timer/rtl/timer_counter.v:25$50 ($sub).
+  creating $macc model for $sub$SPI_Timer/rtl/timer_counter.v:28$52 ($sub).
+  creating $alu model for $macc $sub$SPI_Timer/rtl/timer_counter.v:28$52.
+  creating $alu model for $macc $sub$SPI_Timer/rtl/timer_counter.v:25$50.
+  creating $alu model for $macc $sub$SPI_Timer/rtl/timer_counter.v:23$48.
+  creating $alu model for $eq$SPI_Timer/rtl/timer_counter.v:10$43 ($eq): merged with $sub$SPI_Timer/rtl/timer_counter.v:23$48.
+  creating $alu cell for $sub$SPI_Timer/rtl/timer_counter.v:23$48, $eq$SPI_Timer/rtl/timer_counter.v:10$43: $auto$alumacc.cc:495:replace_alu$511
+  creating $alu cell for $sub$SPI_Timer/rtl/timer_counter.v:25$50: $auto$alumacc.cc:495:replace_alu$516
+  creating $alu cell for $sub$SPI_Timer/rtl/timer_counter.v:28$52: $auto$alumacc.cc:495:replace_alu$519
+  created 3 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module timer_fsm:
+  created 0 $alu and 0 $macc cells.
+
+9.13. Executing SHARE pass (SAT-based resource sharing).
+
+9.14. Executing OPT pass (performing simple optimizations).
+
+9.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+Optimizing module reg_bank.
+<suppressed ~1 debug messages>
+Optimizing module spi_slave.
+Optimizing module spi_timer_top.
+Optimizing module status_gen.
+Optimizing module timer_counter.
+Optimizing module timer_fsm.
+
+9.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000'.
+Finding identical cells in module `\reg_bank'.
+Finding identical cells in module `\spi_slave'.
+Finding identical cells in module `\spi_timer_top'.
+Finding identical cells in module `\status_gen'.
+Finding identical cells in module `\timer_counter'.
+Finding identical cells in module `\timer_fsm'.
+Removed a total of 0 cells.
+
+9.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \reg_bank..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \spi_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \spi_timer_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \status_gen..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \timer_counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \timer_fsm..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~19 debug messages>
+
+9.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+  Optimizing cells in module \reg_bank.
+  Optimizing cells in module \spi_slave.
+  Optimizing cells in module \spi_timer_top.
+  Optimizing cells in module \status_gen.
+  Optimizing cells in module \timer_counter.
+  Optimizing cells in module \timer_fsm.
+Performed a total of 0 changes.
+
+9.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000'.
+Finding identical cells in module `\reg_bank'.
+Finding identical cells in module `\spi_slave'.
+Finding identical cells in module `\spi_timer_top'.
+Finding identical cells in module `\status_gen'.
+Finding identical cells in module `\timer_counter'.
+Finding identical cells in module `\timer_fsm'.
+Removed a total of 0 cells.
+
+9.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+Finding unused cells or wires in module \reg_bank..
+Finding unused cells or wires in module \spi_slave..
+Finding unused cells or wires in module \spi_timer_top..
+Finding unused cells or wires in module \status_gen..
+Finding unused cells or wires in module \timer_counter..
+Finding unused cells or wires in module \timer_fsm..
+Removed 1 unused cells and 6 unused wires.
+<suppressed ~4 debug messages>
+
+9.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+Optimizing module reg_bank.
+Optimizing module spi_slave.
+Optimizing module spi_timer_top.
+Optimizing module status_gen.
+Optimizing module timer_counter.
+Optimizing module timer_fsm.
+
+9.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \reg_bank..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \spi_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \spi_timer_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \status_gen..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \timer_counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \timer_fsm..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~19 debug messages>
+
+9.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+  Optimizing cells in module \reg_bank.
+  Optimizing cells in module \spi_slave.
+  Optimizing cells in module \spi_timer_top.
+  Optimizing cells in module \status_gen.
+  Optimizing cells in module \timer_counter.
+  Optimizing cells in module \timer_fsm.
+Performed a total of 0 changes.
+
+9.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000'.
+Finding identical cells in module `\reg_bank'.
+Finding identical cells in module `\spi_slave'.
+Finding identical cells in module `\spi_timer_top'.
+Finding identical cells in module `\status_gen'.
+Finding identical cells in module `\timer_counter'.
+Finding identical cells in module `\timer_fsm'.
+Removed a total of 0 cells.
+
+9.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+Finding unused cells or wires in module \reg_bank..
+Finding unused cells or wires in module \spi_slave..
+Finding unused cells or wires in module \spi_timer_top..
+Finding unused cells or wires in module \status_gen..
+Finding unused cells or wires in module \timer_counter..
+Finding unused cells or wires in module \timer_fsm..
+
+9.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+Optimizing module reg_bank.
+Optimizing module spi_slave.
+Optimizing module spi_timer_top.
+Optimizing module status_gen.
+Optimizing module timer_counter.
+Optimizing module timer_fsm.
+
+9.14.16. Finished OPT passes. (There is nothing left to do.)
+
+9.15. Executing MEMORY pass.
+
+9.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+9.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+9.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+9.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+9.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+9.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+Finding unused cells or wires in module \reg_bank..
+Finding unused cells or wires in module \spi_slave..
+Finding unused cells or wires in module \spi_timer_top..
+Finding unused cells or wires in module \status_gen..
+Finding unused cells or wires in module \timer_counter..
+Finding unused cells or wires in module \timer_fsm..
+
+9.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+9.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+9.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+Finding unused cells or wires in module \reg_bank..
+Finding unused cells or wires in module \spi_slave..
+Finding unused cells or wires in module \spi_timer_top..
+Finding unused cells or wires in module \status_gen..
+Finding unused cells or wires in module \timer_counter..
+Finding unused cells or wires in module \timer_fsm..
+
+9.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+9.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+Finding unused cells or wires in module \reg_bank..
+Finding unused cells or wires in module \spi_slave..
+Finding unused cells or wires in module \spi_timer_top..
+Finding unused cells or wires in module \status_gen..
+Finding unused cells or wires in module \timer_counter..
+Finding unused cells or wires in module \timer_fsm..
+
+9.17. Executing OPT pass (performing simple optimizations).
+
+9.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+<suppressed ~1 debug messages>
+Optimizing module reg_bank.
+<suppressed ~10 debug messages>
+Optimizing module spi_slave.
+<suppressed ~9 debug messages>
+Optimizing module spi_timer_top.
+Optimizing module status_gen.
+Optimizing module timer_counter.
+<suppressed ~9 debug messages>
+Optimizing module timer_fsm.
+<suppressed ~3 debug messages>
+
+9.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000'.
+Finding identical cells in module `\reg_bank'.
+Finding identical cells in module `\spi_slave'.
+<suppressed ~9 debug messages>
+Finding identical cells in module `\spi_timer_top'.
+Finding identical cells in module `\status_gen'.
+Finding identical cells in module `\timer_counter'.
+Finding identical cells in module `\timer_fsm'.
+Removed a total of 3 cells.
+
+9.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+Finding unused cells or wires in module \reg_bank..
+Finding unused cells or wires in module \spi_slave..
+Finding unused cells or wires in module \spi_timer_top..
+Finding unused cells or wires in module \status_gen..
+Finding unused cells or wires in module \timer_counter..
+Finding unused cells or wires in module \timer_fsm..
+Removed 1 unused cells and 25 unused wires.
+<suppressed ~5 debug messages>
+
+9.17.5. Finished fast OPT passes.
+
+9.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+9.19. Executing OPT pass (performing simple optimizations).
+
+9.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+Optimizing module reg_bank.
+Optimizing module spi_slave.
+Optimizing module spi_timer_top.
+Optimizing module status_gen.
+Optimizing module timer_counter.
+Optimizing module timer_fsm.
+
+9.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000'.
+Finding identical cells in module `\reg_bank'.
+Finding identical cells in module `\spi_slave'.
+Finding identical cells in module `\spi_timer_top'.
+Finding identical cells in module `\status_gen'.
+Finding identical cells in module `\timer_counter'.
+Finding identical cells in module `\timer_fsm'.
+Removed a total of 0 cells.
+
+9.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \reg_bank..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \spi_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \spi_timer_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \status_gen..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \timer_counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \timer_fsm..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+9.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+  Optimizing cells in module \reg_bank.
+  Optimizing cells in module \spi_slave.
+    Consolidated identical input bits for $mux cell $procmux$226:
+      Old ports: A={ \tx_shift [6:0] 1'0 }, B={ \rd_data [6:0] 1'0 }, Y=$procmux$226_Y
+      New ports: A=\tx_shift [6:0], B=\rd_data [6:0], Y=$procmux$226_Y [7:1]
+      New connections: $procmux$226_Y [0] = 1'0
+  Optimizing cells in module \spi_slave.
+    Consolidated identical input bits for $mux cell $procmux$231:
+      Old ports: A=$procmux$226_Y, B=8'00000000, Y=$0\tx_shift[7:0]
+      New ports: A=$procmux$226_Y [7:1], B=7'0000000, Y=$0\tx_shift[7:0] [7:1]
+      New connections: $0\tx_shift[7:0] [0] = 1'0
+  Optimizing cells in module \spi_slave.
+  Optimizing cells in module \spi_timer_top.
+  Optimizing cells in module \status_gen.
+  Optimizing cells in module \timer_counter.
+  Optimizing cells in module \timer_fsm.
+    Consolidated identical input bits for $mux cell $procmux$103:
+      Old ports: A=2'01, B=2'00, Y=$6\next_state[1:0]
+      New ports: A=1'1, B=1'0, Y=$6\next_state[1:0] [0]
+      New connections: $6\next_state[1:0] [1] = 1'0
+    Consolidated identical input bits for $mux cell $procmux$123:
+      Old ports: A=2'11, B=2'10, Y=$4\next_state[1:0]
+      New ports: A=1'1, B=1'0, Y=$4\next_state[1:0] [0]
+      New connections: $4\next_state[1:0] [1] = 1'1
+  Optimizing cells in module \timer_fsm.
+Performed a total of 4 changes.
+
+9.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000'.
+Finding identical cells in module `\reg_bank'.
+Finding identical cells in module `\spi_slave'.
+Finding identical cells in module `\spi_timer_top'.
+Finding identical cells in module `\status_gen'.
+Finding identical cells in module `\timer_counter'.
+Finding identical cells in module `\timer_fsm'.
+Removed a total of 0 cells.
+
+9.19.6. Executing OPT_SHARE pass.
+
+9.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+Finding unused cells or wires in module \reg_bank..
+Finding unused cells or wires in module \spi_slave..
+Finding unused cells or wires in module \spi_timer_top..
+Finding unused cells or wires in module \status_gen..
+Finding unused cells or wires in module \timer_counter..
+Finding unused cells or wires in module \timer_fsm..
+
+9.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+Optimizing module reg_bank.
+Optimizing module spi_slave.
+Optimizing module spi_timer_top.
+Optimizing module status_gen.
+Optimizing module timer_counter.
+Optimizing module timer_fsm.
+<suppressed ~2 debug messages>
+
+9.19.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.19.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \reg_bank..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \spi_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \spi_timer_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \status_gen..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \timer_counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \timer_fsm..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+9.19.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+  Optimizing cells in module \reg_bank.
+  Optimizing cells in module \spi_slave.
+  Optimizing cells in module \spi_timer_top.
+  Optimizing cells in module \status_gen.
+  Optimizing cells in module \timer_counter.
+  Optimizing cells in module \timer_fsm.
+Performed a total of 0 changes.
+
+9.19.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000'.
+Finding identical cells in module `\reg_bank'.
+Finding identical cells in module `\spi_slave'.
+Finding identical cells in module `\spi_timer_top'.
+Finding identical cells in module `\status_gen'.
+Finding identical cells in module `\timer_counter'.
+Finding identical cells in module `\timer_fsm'.
+Removed a total of 0 cells.
+
+9.19.14. Executing OPT_SHARE pass.
+
+9.19.15. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$426 ($adffe) from module spi_slave.
+
+9.19.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+Finding unused cells or wires in module \reg_bank..
+Finding unused cells or wires in module \spi_slave..
+Finding unused cells or wires in module \spi_timer_top..
+Finding unused cells or wires in module \status_gen..
+Finding unused cells or wires in module \timer_counter..
+Finding unused cells or wires in module \timer_fsm..
+
+9.19.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+Optimizing module reg_bank.
+Optimizing module spi_slave.
+Optimizing module spi_timer_top.
+Optimizing module status_gen.
+Optimizing module timer_counter.
+Optimizing module timer_fsm.
+
+9.19.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.19.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \reg_bank..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \spi_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \spi_timer_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \status_gen..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \timer_counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \timer_fsm..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+9.19.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+  Optimizing cells in module \reg_bank.
+  Optimizing cells in module \spi_slave.
+  Optimizing cells in module \spi_timer_top.
+  Optimizing cells in module \status_gen.
+  Optimizing cells in module \timer_counter.
+  Optimizing cells in module \timer_fsm.
+Performed a total of 0 changes.
+
+9.19.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000'.
+Finding identical cells in module `\reg_bank'.
+Finding identical cells in module `\spi_slave'.
+Finding identical cells in module `\spi_timer_top'.
+Finding identical cells in module `\status_gen'.
+Finding identical cells in module `\timer_counter'.
+Finding identical cells in module `\timer_fsm'.
+Removed a total of 0 cells.
+
+9.19.22. Executing OPT_SHARE pass.
+
+9.19.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.19.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+Finding unused cells or wires in module \reg_bank..
+Finding unused cells or wires in module \spi_slave..
+Finding unused cells or wires in module \spi_timer_top..
+Finding unused cells or wires in module \status_gen..
+Finding unused cells or wires in module \timer_counter..
+Finding unused cells or wires in module \timer_fsm..
+
+9.19.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+Optimizing module reg_bank.
+Optimizing module spi_slave.
+Optimizing module spi_timer_top.
+Optimizing module status_gen.
+Optimizing module timer_counter.
+Optimizing module timer_fsm.
+
+9.19.26. Finished OPT passes. (There is nothing left to do.)
+
+9.20. Executing TECHMAP pass (map to technology primitives).
+
+9.20.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+9.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $not.
+Using template $paramod$97565c3687be688407d1272a293bd9d0ae6852dc\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $and.
+Using template $paramod$403a3c2fa431a154c52a6a5429d7a6260b5d144f\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000001000 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $or.
+Using template $paramod$ba698a254f9a5947e85cbe7beae6b161eefc5386\_90_alu for cells of type $alu.
+Using template $paramod$672a140277c71df8314410f22acc08d55222c3c7\_90_alu for cells of type $alu.
+Using template $paramod$fc972a7a46956c1788f3cb5257b53c8f1df2d0cc\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $adff.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000010 for cells of type $lcu.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000101 for cells of type $lcu.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000001 for cells of type $lcu.
+Using template $paramod$2ab0ff81670440372478bad90d3da37d43208ad1\_90_alu for cells of type $alu.
+Using template $paramod$d7387fdb214042e5ef2d69a3f74948694b4bb65e\_90_pmux for cells of type $pmux.
+Using template $paramod$956e79e8f8c5e64be7438155ae50a966e615cb04\_90_alu for cells of type $alu.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000011011 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~1252 debug messages>
+
+9.21. Executing OPT pass (performing simple optimizations).
+
+9.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+<suppressed ~203 debug messages>
+Optimizing module reg_bank.
+<suppressed ~114 debug messages>
+Optimizing module spi_slave.
+<suppressed ~54 debug messages>
+Optimizing module spi_timer_top.
+Optimizing module status_gen.
+Optimizing module timer_counter.
+<suppressed ~123 debug messages>
+Optimizing module timer_fsm.
+<suppressed ~17 debug messages>
+
+9.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000'.
+<suppressed ~60 debug messages>
+Finding identical cells in module `\reg_bank'.
+<suppressed ~141 debug messages>
+Finding identical cells in module `\spi_slave'.
+<suppressed ~36 debug messages>
+Finding identical cells in module `\spi_timer_top'.
+Finding identical cells in module `\status_gen'.
+Finding identical cells in module `\timer_counter'.
+<suppressed ~108 debug messages>
+Finding identical cells in module `\timer_fsm'.
+<suppressed ~9 debug messages>
+Removed a total of 118 cells.
+
+9.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+Finding unused cells or wires in module \reg_bank..
+Finding unused cells or wires in module \spi_slave..
+Finding unused cells or wires in module \spi_timer_top..
+Finding unused cells or wires in module \status_gen..
+Finding unused cells or wires in module \timer_counter..
+Finding unused cells or wires in module \timer_fsm..
+Removed 47 unused cells and 514 unused wires.
+<suppressed ~52 debug messages>
+
+9.21.5. Finished fast OPT passes.
+
+9.22. Executing ABC pass (technology mapping using ABC).
+
+9.22.1. Extracting gate netlist of module `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000' to `<abc-temp-dir>/input.blif'..
+Extracted 172 gates and 202 wires to a netlist network with 29 inputs and 29 outputs.
+
+9.22.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+9.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:            ANDNOT cells:       34
+ABC RESULTS:              NAND cells:       18
+ABC RESULTS:               NOT cells:        2
+ABC RESULTS:                OR cells:       54
+ABC RESULTS:             ORNOT cells:       11
+ABC RESULTS:              XNOR cells:        2
+ABC RESULTS:               XOR cells:       24
+ABC RESULTS:        internal signals:      144
+ABC RESULTS:           input signals:       29
+ABC RESULTS:          output signals:       29
+Removing temp directory.
+
+9.22.2. Extracting gate netlist of module `\reg_bank' to `<abc-temp-dir>/input.blif'..
+Extracted 209 gates and 290 wires to a netlist network with 79 inputs and 24 outputs.
+
+9.22.2.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+9.22.2.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:            ANDNOT cells:       94
+ABC RESULTS:              NAND cells:        6
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:                OR cells:       66
+ABC RESULTS:             ORNOT cells:       19
+ABC RESULTS:        internal signals:      187
+ABC RESULTS:           input signals:       79
+ABC RESULTS:          output signals:       24
+Removing temp directory.
+
+9.22.3. Extracting gate netlist of module `\spi_slave' to `<abc-temp-dir>/input.blif'..
+Extracted 67 gates and 94 wires to a netlist network with 26 inputs and 19 outputs.
+
+9.22.3.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+9.22.3.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:            ANDNOT cells:       20
+ABC RESULTS:               MUX cells:        7
+ABC RESULTS:              NAND cells:        5
+ABC RESULTS:               NOR cells:        2
+ABC RESULTS:               NOT cells:        2
+ABC RESULTS:                OR cells:        5
+ABC RESULTS:             ORNOT cells:        6
+ABC RESULTS:              XNOR cells:        2
+ABC RESULTS:               XOR cells:        2
+ABC RESULTS:        internal signals:       49
+ABC RESULTS:           input signals:       26
+ABC RESULTS:          output signals:       19
+Removing temp directory.
+
+9.22.4. Extracting gate netlist of module `\spi_timer_top' to `<abc-temp-dir>/input.blif'..
+Extracted 1 gates and 3 wires to a netlist network with 2 inputs and 1 outputs.
+
+9.22.4.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+9.22.4.2. Re-integrating ABC results.
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        2
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+9.22.5. Extracting gate netlist of module `\status_gen' to `<abc-temp-dir>/input.blif'..
+Extracted 0 gates and 0 wires to a netlist network with 0 inputs and 0 outputs.
+Don't call ABC as there is nothing to map.
+Removing temp directory.
+
+9.22.6. Extracting gate netlist of module `\timer_counter' to `<abc-temp-dir>/input.blif'..
+Extracted 209 gates and 262 wires to a netlist network with 51 inputs and 29 outputs.
+
+9.22.6.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+9.22.6.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:            ANDNOT cells:       57
+ABC RESULTS:               MUX cells:       24
+ABC RESULTS:              NAND cells:        4
+ABC RESULTS:               NOR cells:       21
+ABC RESULTS:               NOT cells:        6
+ABC RESULTS:                OR cells:       18
+ABC RESULTS:             ORNOT cells:        7
+ABC RESULTS:              XNOR cells:        5
+ABC RESULTS:               XOR cells:       16
+ABC RESULTS:        internal signals:      182
+ABC RESULTS:           input signals:       51
+ABC RESULTS:          output signals:       29
+Removing temp directory.
+
+9.22.7. Extracting gate netlist of module `\timer_fsm' to `<abc-temp-dir>/input.blif'..
+Extracted 42 gates and 54 wires to a netlist network with 10 inputs and 8 outputs.
+
+9.22.7.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+9.22.7.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:            ANDNOT cells:       13
+ABC RESULTS:               MUX cells:        2
+ABC RESULTS:              NAND cells:        2
+ABC RESULTS:               NOR cells:        4
+ABC RESULTS:                OR cells:        9
+ABC RESULTS:             ORNOT cells:        1
+ABC RESULTS:        internal signals:       36
+ABC RESULTS:           input signals:       10
+ABC RESULTS:          output signals:        8
+Removing temp directory.
+
+9.23. Executing OPT pass (performing simple optimizations).
+
+9.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000.
+Optimizing module reg_bank.
+Optimizing module spi_slave.
+Optimizing module spi_timer_top.
+Optimizing module status_gen.
+Optimizing module timer_counter.
+Optimizing module timer_fsm.
+
+9.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000'.
+Finding identical cells in module `\reg_bank'.
+Finding identical cells in module `\spi_slave'.
+Finding identical cells in module `\spi_timer_top'.
+Finding identical cells in module `\status_gen'.
+Finding identical cells in module `\timer_counter'.
+<suppressed ~21 debug messages>
+Finding identical cells in module `\timer_fsm'.
+<suppressed ~3 debug messages>
+Removed a total of 8 cells.
+
+9.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000..
+Finding unused cells or wires in module \reg_bank..
+Finding unused cells or wires in module \spi_slave..
+Finding unused cells or wires in module \spi_timer_top..
+Finding unused cells or wires in module \status_gen..
+Finding unused cells or wires in module \timer_counter..
+Finding unused cells or wires in module \timer_fsm..
+Removed 0 unused cells and 569 unused wires.
+<suppressed ~8 debug messages>
+
+9.23.5. Finished fast OPT passes.
+
+9.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `spi_timer_top'. Setting top module to spi_timer_top.
+
+9.24.1. Analyzing design hierarchy..
+Top module:  \spi_timer_top
+Used module:     \timer_counter
+Used module:     \timer_fsm
+Used module:     \reg_bank
+Used module:     \spi_slave
+Used module:     \status_gen
+Used module:     $paramod\tick_gen\DIV=s32'00000101111101011110000100000000
+
+9.24.2. Analyzing design hierarchy..
+Top module:  \spi_timer_top
+Used module:     \timer_counter
+Used module:     \timer_fsm
+Used module:     \reg_bank
+Used module:     \spi_slave
+Used module:     \status_gen
+Used module:     $paramod\tick_gen\DIV=s32'00000101111101011110000100000000
+Removed 0 unused modules.
+
+9.25. Printing statistics.
+
+=== $paramod\tick_gen\DIV=s32'00000101111101011110000100000000 ===
+
+   Number of wires:                126
+   Number of wire bits:            178
+   Number of public wires:           6
+   Number of public wire bits:      32
+   Number of ports:                  5
+   Number of port bits:              5
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                174
+     $_ANDNOT_                      34
+     $_AND_                          2
+     $_DFFE_PN0P_                   27
+     $_NAND_                        18
+     $_NOT_                          2
+     $_ORNOT_                       11
+     $_OR_                          54
+     $_XNOR_                         2
+     $_XOR_                         24
+
+=== reg_bank ===
+
+   Number of wires:                192
+   Number of wire bits:            274
+   Number of public wires:          20
+   Number of public wire bits:     102
+   Number of ports:                 19
+   Number of port bits:             94
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                217
+     $_ANDNOT_                      94
+     $_AND_                          2
+     $_DFFE_PN0P_                   24
+     $_DFF_PN0_                      5
+     $_NAND_                         6
+     $_NOR_                          1
+     $_ORNOT_                       19
+     $_OR_                          66
+
+=== spi_slave ===
+
+   Number of wires:                 60
+   Number of wire bits:            127
+   Number of public wires:          19
+   Number of public wire bits:      75
+   Number of ports:                 11
+   Number of port bits:             37
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 90
+     $_ANDNOT_                      20
+     $_AND_                          2
+     $_DFFE_PN0P_                   29
+     $_DFF_PN0_                      6
+     $_DFF_PN1_                      2
+     $_MUX_                          7
+     $_NAND_                         5
+     $_NOR_                          2
+     $_NOT_                          2
+     $_ORNOT_                        6
+     $_OR_                           5
+     $_XNOR_                         2
+     $_XOR_                          2
+
+=== spi_timer_top ===
+
+   Number of wires:                 34
+   Number of wire bits:            109
+   Number of public wires:          33
+   Number of public wire bits:     108
+   Number of ports:                  8
+   Number of port bits:              8
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  7
+     $_OR_                           1
+     $paramod\tick_gen\DIV=s32'00000101111101011110000100000000      1
+     reg_bank                        1
+     spi_slave                       1
+     status_gen                      1
+     timer_counter                   1
+     timer_fsm                       1
+
+=== status_gen ===
+
+   Number of wires:                  5
+   Number of wire bits:             12
+   Number of public wires:           5
+   Number of public wire bits:      12
+   Number of ports:                  5
+   Number of port bits:             12
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  0
+
+=== timer_counter ===
+
+   Number of wires:                142
+   Number of wire bits:            205
+   Number of public wires:          13
+   Number of public wire bits:      55
+   Number of ports:                 13
+   Number of port bits:             55
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                176
+     $_ANDNOT_                      57
+     $_AND_                          1
+     $_DFFE_PN0P_                   24
+     $_MUX_                         24
+     $_NAND_                         4
+     $_NOR_                         14
+     $_NOT_                          6
+     $_ORNOT_                        7
+     $_OR_                          18
+     $_XNOR_                         5
+     $_XOR_                         16
+
+=== timer_fsm ===
+
+   Number of wires:                 44
+   Number of wire bits:             46
+   Number of public wires:          19
+   Number of public wire bits:      21
+   Number of ports:                 17
+   Number of port bits:             17
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 34
+     $_ANDNOT_                      13
+     $_AND_                          2
+     $_DFFE_PN0P_                    2
+     $_MUX_                          2
+     $_NAND_                         2
+     $_NOR_                          3
+     $_ORNOT_                        1
+     $_OR_                           9
+
+=== design hierarchy ===
+
+   spi_timer_top                     1
+     $paramod\tick_gen\DIV=s32'00000101111101011110000100000000      1
+     reg_bank                        1
+     spi_slave                       1
+     status_gen                      1
+     timer_counter                   1
+     timer_fsm                       1
+
+   Number of wires:                603
+   Number of wire bits:            951
+   Number of public wires:         115
+   Number of public wire bits:     405
+   Number of ports:                 78
+   Number of port bits:            228
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                692
+     $_ANDNOT_                     218
+     $_AND_                          9
+     $_DFFE_PN0P_                  106
+     $_DFF_PN0_                     11
+     $_DFF_PN1_                      2
+     $_MUX_                         33
+     $_NAND_                        35
+     $_NOR_                         20
+     $_NOT_                         10
+     $_ORNOT_                       44
+     $_OR_                         153
+     $_XNOR_                         9
+     $_XOR_                         42
+
+9.26. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000...
+Checking module reg_bank...
+Checking module spi_slave...
+Checking module spi_timer_top...
+Checking module status_gen...
+Checking module timer_counter...
+Checking module timer_fsm...
+Found and reported 0 problems.
+
+10. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\tick_gen\DIV=s32'00000101111101011110000100000000...
+Checking module reg_bank...
+Checking module spi_slave...
+Checking module spi_timer_top...
+Checking module status_gen...
+Checking module timer_counter...
+Checking module timer_fsm...
+Found and reported 0 problems.
+
+11. Printing statistics.
+
+=== $paramod\tick_gen\DIV=s32'00000101111101011110000100000000 ===
+
+   Number of wires:                126
+   Number of wire bits:            178
+   Number of public wires:           6
+   Number of public wire bits:      32
+   Number of ports:                  5
+   Number of port bits:              5
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                174
+     $_ANDNOT_                      34
+     $_AND_                          2
+     $_DFFE_PN0P_                   27
+     $_NAND_                        18
+     $_NOT_                          2
+     $_ORNOT_                       11
+     $_OR_                          54
+     $_XNOR_                         2
+     $_XOR_                         24
+
+=== reg_bank ===
+
+   Number of wires:                192
+   Number of wire bits:            274
+   Number of public wires:          20
+   Number of public wire bits:     102
+   Number of ports:                 19
+   Number of port bits:             94
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                217
+     $_ANDNOT_                      94
+     $_AND_                          2
+     $_DFFE_PN0P_                   24
+     $_DFF_PN0_                      5
+     $_NAND_                         6
+     $_NOR_                          1
+     $_ORNOT_                       19
+     $_OR_                          66
+
+=== spi_slave ===
+
+   Number of wires:                 60
+   Number of wire bits:            127
+   Number of public wires:          19
+   Number of public wire bits:      75
+   Number of ports:                 11
+   Number of port bits:             37
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 90
+     $_ANDNOT_                      20
+     $_AND_                          2
+     $_DFFE_PN0P_                   29
+     $_DFF_PN0_                      6
+     $_DFF_PN1_                      2
+     $_MUX_                          7
+     $_NAND_                         5
+     $_NOR_                          2
+     $_NOT_                          2
+     $_ORNOT_                        6
+     $_OR_                           5
+     $_XNOR_                         2
+     $_XOR_                          2
+
+=== spi_timer_top ===
+
+   Number of wires:                 34
+   Number of wire bits:            109
+   Number of public wires:          33
+   Number of public wire bits:     108
+   Number of ports:                  8
+   Number of port bits:              8
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  7
+     $_OR_                           1
+     $paramod\tick_gen\DIV=s32'00000101111101011110000100000000      1
+     reg_bank                        1
+     spi_slave                       1
+     status_gen                      1
+     timer_counter                   1
+     timer_fsm                       1
+
+=== status_gen ===
+
+   Number of wires:                  5
+   Number of wire bits:             12
+   Number of public wires:           5
+   Number of public wire bits:      12
+   Number of ports:                  5
+   Number of port bits:             12
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  0
+
+=== timer_counter ===
+
+   Number of wires:                142
+   Number of wire bits:            205
+   Number of public wires:          13
+   Number of public wire bits:      55
+   Number of ports:                 13
+   Number of port bits:             55
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                176
+     $_ANDNOT_                      57
+     $_AND_                          1
+     $_DFFE_PN0P_                   24
+     $_MUX_                         24
+     $_NAND_                         4
+     $_NOR_                         14
+     $_NOT_                          6
+     $_ORNOT_                        7
+     $_OR_                          18
+     $_XNOR_                         5
+     $_XOR_                         16
+
+=== timer_fsm ===
+
+   Number of wires:                 44
+   Number of wire bits:             46
+   Number of public wires:          19
+   Number of public wire bits:      21
+   Number of ports:                 17
+   Number of port bits:             17
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 34
+     $_ANDNOT_                      13
+     $_AND_                          2
+     $_DFFE_PN0P_                    2
+     $_MUX_                          2
+     $_NAND_                         2
+     $_NOR_                          3
+     $_ORNOT_                        1
+     $_OR_                           9
+
+=== design hierarchy ===
+
+   spi_timer_top                     1
+     $paramod\tick_gen\DIV=s32'00000101111101011110000100000000      1
+     reg_bank                        1
+     spi_slave                       1
+     status_gen                      1
+     timer_counter                   1
+     timer_fsm                       1
+
+   Number of wires:                603
+   Number of wire bits:            951
+   Number of public wires:         115
+   Number of public wire bits:     405
+   Number of ports:                 78
+   Number of port bits:            228
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                692
+     $_ANDNOT_                     218
+     $_AND_                          9
+     $_DFFE_PN0P_                  106
+     $_DFF_PN0_                     11
+     $_DFF_PN1_                      2
+     $_MUX_                         33
+     $_NAND_                        35
+     $_NOR_                         20
+     $_NOT_                         10
+     $_ORNOT_                       44
+     $_OR_                         153
+     $_XNOR_                         9
+     $_XOR_                         42
+
+12. Executing Verilog backend.
+
+12.1. Executing BMUXMAP pass.
+
+12.2. Executing DEMUXMAP pass.
+Dumping module `$paramod\tick_gen\DIV=s32'00000101111101011110000100000000'.
+Dumping module `\reg_bank'.
+Dumping module `\spi_slave'.
+Dumping module `\spi_timer_top'.
+Dumping module `\status_gen'.
+Dumping module `\timer_counter'.
+Dumping module `\timer_fsm'.
+
+End of script. Logfile hash: b9e96b0f44, CPU: user 0.54s system 0.02s, MEM: 22.00 MB peak
+Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)
+Time spent: 36% 1x abc (0 sec), 18% 29x opt_expr (0 sec), ...
