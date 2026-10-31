@@ -41,6 +41,46 @@ jobs:
             ff_n40C_1v95 \
             -o Results/Liberty
 
+      - name: Run SS TT and FF multi-corner STA
+        run: |
+          set -euo pipefail
+          mkdir -p Results/sta/mcsta
+
+          run_corner() {
+            corner="$1"
+            lib="$2"
+            delay="$3"
+            oc="${lib#sky130_fd_sc_hd__}"
+            oc="${oc%.lib}"
+
+            cat > "Results/sta/mcsta/${corner}.tcl" <<EOF
+          read_liberty /work/Results/Liberty/${lib}
+          set_operating_conditions -analysis_type single -library sky130_fd_sc_hd__${oc} ${oc}
+          read_verilog /work/Results/synthesis/sky130/spi_timer_top_sky130.v
+          link_design spi_timer_top
+          read_sdc /work/Results/sta/spi_timer.sdc
+
+          puts "===== ${corner} TIMING ANALYSIS ====="
+          check_setup -verbose
+          report_checks -path_delay ${delay} -format full_clock_expanded -group_count 10
+          report_worst_slack
+          report_tns
+          EOF
+
+            docker run --rm \
+              -v "${GITHUB_WORKSPACE}:/work" \
+              -w /work \
+              openroad/orfs \
+              bash -lc "source /OpenROAD-flow-scripts/env.sh && openroad -exit /work/Results/sta/mcsta/${corner}.tcl" \
+              2>&1 | tee "Results/sta/mcsta/${corner}.log"
+          }
+
+          run_corner SS sky130_fd_sc_hd__ss_100C_1v60.lib max
+          run_corner TT sky130_fd_sc_hd__tt_025C_1v80.lib max
+          run_corner FF sky130_fd_sc_hd__ff_n40C_1v95.lib min
+
+          echo "All three corner analyses completed."
+
       - name: Verify generated libraries
         run: |
           echo "=== Generated Liberty files ==="
@@ -49,6 +89,15 @@ jobs:
           test -s Results/Liberty/sky130_fd_sc_hd__ss_100C_1v60.lib
           test -s Results/Liberty/sky130_fd_sc_hd__tt_025C_1v80.lib
           test -s Results/Liberty/sky130_fd_sc_hd__ff_n40C_1v95.lib
+
+      - name: Upload multi-corner STA reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sky130-multi-corner-sta-reports
+          path: Results/sta/mcsta/
+          if-no-files-found: warn
+          retention-days: 14
 
       - name: Upload Liberty libraries
         uses: actions/upload-artifact@v4
