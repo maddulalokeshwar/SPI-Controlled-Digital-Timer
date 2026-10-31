@@ -96,6 +96,16 @@ Register address: `0x01`
 
 ```text
 SPI-Controlled-Digital-Timer/
+├── .devcontainer/
+│   └── devcontainer.json
+│
+├── .github/
+│   └── workflows/
+│       ├── lvs-tool-check.yml
+│       ├── sky130-corner-check.yml
+│       ├── sky130-liberty-build.yml
+│       ├── sky130-openroad.yml
+│       └── sky130-platform-inspect.yml
 │
 ├── SPI_Timer/
 │   ├── rtl/
@@ -105,58 +115,65 @@ SPI-Controlled-Digital-Timer/
 │   │   ├── status_gen.v
 │   │   ├── tick_gen.v
 │   │   ├── timer_counter.v
-│   │   └── timer_fsm.v
-│   │
+│   │   ├── timer_fsm.v
+│   │   └── README_rtl.md
 │   ├── testbench/
 │   │   ├── tb_spi_timer.v
-│   │   ├── tb_spi_timer_original.v
-│   │   └── tb_spi_timer_extended.v
-│   │
-│   ├── constraints/
-│   │   └── timer.xdc
-│   │
-│   └── README_rtl.md
+│   │   ├── tb_spi_timer_extended.v
+│   │   └── tb_spi_timer_original.v
+│   └── constraints/
+│       └── timer.xdc
 │
 ├── Results/
+│   ├── LVS/
+│   │   ├── 6_lvs.lvsdb
+│   │   ├── README.md
+│   │   └── spi_timer_top_extracted.cir
 │   ├── simulation/
 │   │   ├── simulation.log
 │   │   └── extended_simulation.log
-│   │
-│   ├── waveforms/
-│   │   ├── spi_timer.vcd
-│   │   ├── spi_timer_extended.vcd
-│   │   └── spi_timer_extended_waveform.png
-│   │
 │   ├── synthesis/
 │   │   ├── spi_timer_netlist.v
 │   │   ├── yosys_synthesis.log
 │   │   └── sky130/
 │   │       ├── spi_timer_top_sky130.v
 │   │       └── yosys_sky130_mapping.log
-│   │
-│   └── sta/
-│       ├── spi_timer.sdc
-│       ├── run_sta.tcl
-│       ├── run_sta_sync.tcl
-│       ├── sta_report.log
-│       └── sta_sync_report.log
-│
-├── scripts/
-│   ├── simulate.sh
-│   └── plot_waveforms.py
+│   ├── sta/
+│   │   ├── mcsta/
+│   │   ├── mcsta_onehot/
+│   │   ├── postroute_mcsta/
+│   │   │   └── run_corner.tcl
+│   │   ├── run_sta.tcl
+│   │   ├── run_sta_sync.tcl
+│   │   ├── spi_timer.sdc
+│   │   └── STA reports and coverage logs
+│   └── waveforms/
+│       ├── spi_timer.vcd
+│       ├── spi_timer_extended.vcd
+│       └── spi_timer_extended_waveform.png
 │
 ├── physical_design/
+│   ├── onehot_results/
+│   │   ├── logs/
+│   │   ├── reports/
+│   │   └── results/
+│   │       ├── 6_final.gds
+│   │       ├── 6_final.def
+│   │       ├── 6_final.spef
+│   │       └── 6_final.v
 │   └── openroad/
 │       ├── config.mk
 │       └── constraint.sdc
 │
-├── .github/
-│   └── workflows/
-│       └── sky130-openroad.yml
+├── scripts/
+│   ├── plot_waveforms.py
+│   └── simulate.sh
 │
 ├── .gitignore
 └── README.md
 ```
+
+Generated files not tracked by Git: The Sky130 Liberty libraries are placed in `Results/Liberty/`. Additional downloaded physical-design outputs are stored under `physical_design/output/` and `Results/sta/postroute_mcsta/downloaded/`. These directories are excluded through `.gitignore`. The libraries can be obtained from the corresponding GitHub Actions artifact or regenerated using the project's Liberty workflow.
 
 ## 5. Simulation Setup
 
@@ -321,7 +338,32 @@ Generated files:
 
 The Sky130 PDK installation itself is not included in this repository.
 
-## 10. Static Timing Analysis
+## 10. Sky130 HD Liberty Library Setup
+
+Technology mapping and static timing analysis use the SkyWater SKY130 High-Density standard-cell Liberty timing libraries.
+
+Required files in `Results/Liberty/`:
+
+| Timing corner | Liberty file |
+|---|---|
+| Slow (SS) | `sky130_fd_sc_hd__ss_100C_1v60.lib` |
+| Typical (TT) | `sky130_fd_sc_hd__tt_025C_1v80.lib` |
+| Fast (FF) | `sky130_fd_sc_hd__ff_n40C_1v95.lib` |
+
+These three files occupy approximately 93 MB and are intentionally excluded from Git.
+
+### Obtaining the libraries
+
+1. Open the [Sky130 Liberty Build workflow](https://github.com/maddulalokeshwar/SPI-Controlled-Digital-Timer/actions/workflows/sky130-liberty-build.yml).
+2. Open a successful workflow run and download the `sky130-hd-liberty-libraries` artifact.
+3. Extract the three `.lib` files into `Results/Liberty/`.
+4. Verify the files with `ls -lh Results/Liberty/`.
+
+The libraries can also be regenerated using `.github/workflows/sky130-liberty-build.yml`. Artifact availability depends on GitHub Actions retention settings.
+
+Do not commit these large library files. The `.gitignore` configuration excludes `Results/Liberty/`.
+
+## 11. Static Timing Analysis
 
 Static timing analysis was performed using OpenSTA with Sky130 HD timing libraries. The physical-design flow uses a 10 ns core clock constraint and extracted post-route parasitics.
 
@@ -354,7 +396,7 @@ Generated STA files include:
 - `Results/sta/postroute_mcsta/run_corner.tcl`
 - Post-route corner logs are available in the GitHub Actions artifact `spi-timer-postroute-mcsta`.
 
-## 11. FPGA Constraints
+## 12. FPGA Constraints
 
 The project includes an XDC clock constraint:
 
@@ -368,7 +410,7 @@ The top-level timer tick parameter defaults to 100,000,000 clock cycles per seco
 
 FPGA implementation and physical hardware validation have not yet been completed.
 
-## 12. Tools Used
+## 13. Tools Used
 
 - Verilog HDL
 - Icarus Verilog
@@ -382,7 +424,7 @@ FPGA implementation and physical hardware validation have not yet been completed
 - Git and GitHub
 - GitHub Codespaces
 
-## 13. Sky130 OpenROAD Physical Design
+## 14. Sky130 OpenROAD Physical Design
 
 The design was implemented using the SkyWater Sky130 HD standard-cell platform and the OpenROAD-flow-scripts physical-design flow. The latest successful physical-design workflow run is [run #41211495938](https://github.com/maddulalokeshwar/SPI-Controlled-Digital-Timer/actions/runs/41211495938).
 
@@ -421,13 +463,13 @@ The detailed router reported intermediate violations during routing and reduced 
 | Max capacitance violations | 0 |
 | Total negative slack | 0.00 ns |
 
-Post-route multi-corner timing results are summarized in Section 10.
+Post-route multi-corner timing results are summarized in Section 11.
 
 ### Warnings and Sign-off Notes
 
 The router reported 10 DRT-0349 warnings concerning unsupported LEF58_ENCLOSURE definitions without CUTCLASS for certain layers; those rules were skipped by the router.
 
-The parasitic annotation report identifies 19 unannotated drivers. Inspection associates these with four unused half-adder SUM outputs and 15 clock-load cell outputs. The timing results should be interpreted with this annotation limitation and the unconstrained interface paths described in Section 10.
+The parasitic annotation report identifies 19 unannotated drivers. Inspection associates these with four unused half-adder SUM outputs and 15 clock-load cell outputs. The timing results should be interpreted with this annotation limitation and the unconstrained interface paths described in Section 11.
 
 Zero final detailed-route DRC violations and zero antenna net and pin violations were reported for this run. These results do not replace independent foundry sign-off or physical hardware validation.
 
@@ -451,7 +493,7 @@ The GitHub Actions workflow uploads the physical-design outputs, including the f
 
 Download the artifacts from the workflow run's **Artifacts** section. Artifact availability is subject to GitHub Actions retention settings.
 
-## 14. Author
+## 15. Author
 
 **Maddulalokeshwar**
 
