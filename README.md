@@ -514,7 +514,14 @@ The GitHub Actions workflow uploads the physical-design outputs, including the f
 
 Download the artifacts from the workflow run's **Artifacts** section. Artifact availability is subject to GitHub Actions retention settings.
 
-## 15. Author
+
+## 15. Project Demonstration Video
+
+Watch the complete SPI-Controlled Digital Timer project demonstration:
+
+[▶ Watch Project Demo on Google Drive]https://drive.google.com/file/d/13iJJcNNRmYAzC2_LkfToZYXOFrNycKMu/view?pli=1
+
+## 16. Author
 
 **Maddulalokeshwar**
 
