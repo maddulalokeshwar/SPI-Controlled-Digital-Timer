@@ -23,3 +23,4 @@ Results/sta/mcsta_run2/
 physical_design/onehot_results/results/*.odb
 physical_design/onehot_results/results/1_1_yosys_canonicalize.rtlil
 physical_design/onehot_results/results/6_1_merged.gds
+Results/Liberty/
